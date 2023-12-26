@@ -1,0 +1,27 @@
+---
+title: "About"
+image: profile.jpg
+about:
+  template: jolla
+  links:
+    - icon: twitter
+      text: Twitter
+      href: https://twitter.com
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com
+    - icon: github
+      text: Github
+      href: https://github.com
+
+---
+
+Hi, I'm Agastya. Welcome to my second brain which I share over internet.\
+I'm currently working as Technical Artist and Developer. My responsibility involves developing custom in house solutions also whilst leveraging power of open source models for the creative team. I'm currently working on shot tracking product with the cloud team.
+
+My interst in deep learning has been growing over me since I started using open source models which have lead into learning about it. I believe in constant learning and hence this is a good platform for sharing what I'm currently working/learning about.
+
+**Tech Stack**\
+- Python, Javascript, C++, SQL, HTML -\
+- Framework/libs FastAI, PyQT, Flask, DCC Based APIs -\
+- DCC: Blender, Unreal, Houdini, Maya - 

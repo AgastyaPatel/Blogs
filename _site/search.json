@@ -1,0 +1,65 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "Folder\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nQuarto ipynb blog test\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 24, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "posts/post-with-code/index.html",
+    "href": "posts/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hi, I’m Agastya. Welcome to my second brain which I share over internet.\nI’m currently working as Technical Artist and Developer. My responsibility involves developing custom in house solutions also whilst leveraging power of open source models for the creative team. I’m currently working on shot tracking product with the cloud team.\nMy interst in deep learning has been growing over me since I started using open source models which have lead into learning about it. I believe in constant learning and hence this is a good platform for sharing what I’m currently working/learning about.\nTech Stack\n- Python, Javascript, C++, SQL, HTML -\n- Framework/libs FastAI, PyQT, Flask, DCC Based APIs -\n- DCC: Blender, Unreal, Houdini, Maya -"
+  },
+  {
+    "objectID": "posts/welcome/index.html",
+    "href": "posts/welcome/index.html",
+    "title": "Welcome To My Blog",
+    "section": "",
+    "text": "This is the first post in a Quarto blog. Welcome!\n\nSince this post doesn’t specify an explicit image, the first image in the post will be used in the listing page of posts."
+  },
+  {
+    "objectID": "about.html#tech-stack",
+    "href": "about.html#tech-stack",
+    "title": "About",
+    "section": "Tech Stack",
+    "text": "Tech Stack"
+  },
+  {
+    "objectID": "posts/Folder/post-with-code/index.html",
+    "href": "posts/Folder/post-with-code/index.html",
+    "title": "Post With Code",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/Folder/index.html",
+    "href": "posts/Folder/index.html",
+    "title": "Folder",
+    "section": "",
+    "text": "This is a post with executable code."
+  },
+  {
+    "objectID": "posts/QuickStart.html",
+    "href": "posts/QuickStart.html",
+    "title": "Quarto ipynb blog test",
+    "section": "",
+    "text": "Quarto JP Notebook\n\nfrom fastai.vision.all import *\n\n\ndevice = torch.device('cuda' if torch.cuda.is_available() else 'cpu')\nprint('Using device:', device)\n\nUsing device: cuda\n\n\n\npath = untar_data(URLs.PETS)/'images'\n\nDownloading a new version of this dataset...\n\n\n\n\n\n\n\n    \n      \n      100.00% [811712512/811706944 18:21&lt;00:00]\n    \n    \n\n\n\n\ndef is_cat(x): return x[0].isupper()\ndls = ImageDataLoaders.from_name_func(\n    path, get_image_files(path), valid_pct=0.2, seed=42,\n    label_func=is_cat, item_tfms=Resize(224))\n\nlearn = vision_learner(dls, resnet34, metrics=error_rate)\nlearn.fine_tune(1)\n\nDownloading: \"https://download.pytorch.org/models/resnet34-b627a593.pth\" to /home/agastya/.cache/torch/hub/checkpoints/resnet34-b627a593.pth\n100%|██████████████████████████████████████████████████| 83.3M/83.3M [00:14&lt;00:00, 6.18MB/s]\n\n\n\n\n\n\n\n\n\nepoch\ntrain_loss\nvalid_loss\nerror_rate\ntime\n\n\n\n\n0\n0.166146\n0.011790\n0.004060\n00:42\n\n\n\n\n\n\n\n\n\n\n\n\nepoch\ntrain_loss\nvalid_loss\nerror_rate\ntime\n\n\n\n\n0\n0.053903\n0.018103\n0.003383\n00:47"
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Folder\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nPost With Code\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nQuarto ipynb blog test\n\n\n\n\n\n\n\nnews\n\n\ncode\n\n\nanalysis\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nHarlow Malloc\n\n\n\n\n\n\n  \n\n\n\n\nWelcome To My Blog\n\n\n\n\n\n\n\nnews\n\n\n\n\n\n\n\n\n\n\n\nDec 24, 2023\n\n\nTristan O’Malley\n\n\n\n\n\n\nNo matching items"
+  }
+]

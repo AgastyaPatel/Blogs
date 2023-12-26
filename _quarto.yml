@@ -1,0 +1,34 @@
+project:
+  type: website
+
+website:
+  title: "Agastya Patel"
+  navbar:
+    # left:
+      # - projects.qmd
+    right:
+      - about.qmd
+      - icon: github
+        href: https://github.com/AgastyaPatel
+      - icon: twitter
+        href: https://twitter.com/4gastyaPatel
+      - icon: linkedin
+        href: https://twitter.com/in/4gastyaPatel
+
+  page-footer: 
+    border: true
+    left: "Copyright 2024, Agastya Patel" 
+    right: 
+      - icon: github
+        href: https://github.com/AgastyaPatel
+      - icon: twitter 
+        href: https://twitter.com/ 
+format:
+  html:
+    theme: cosmo
+    css: styles.css
+    toc: true
+    
+
+
+
