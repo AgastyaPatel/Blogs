@@ -1,5 +1,5 @@
 ---
-title: "Welcome To My Blog"
+title: "Welcome To My Blog 2"
 author: "Tristan O'Malley"
 date: "2023-12-24"
 last-modified: "2023-12-28"

@@ -1,8 +1,9 @@
 project:
   type: website
-  output-dir: docs
+  # output-dir: docs
 
 website:
+  page-navigation: true
   title: "Agastya Patel"
   navbar:
     # left:
@@ -23,13 +24,22 @@ website:
       - icon: github
         href: https://github.com/AgastyaPatel
       - icon: twitter 
-        href: https://twitter.com/ 
+        href: https://twitter.com/4gastyaPatel
+
+  # sidebar: 
+  #   style: "docked"
+  #   search: true
+  #   contents:
+  #     - section: "Basics"
+  #       contents:
+
 format:
   html:
-    theme: cosmo
     css: styles.css
     toc: true
-    
-
-
-
+    theme:
+      light: cosmo
+      dark: [cosmo, theme-dark.scss]
+      
+execute:
+  freeze: auto

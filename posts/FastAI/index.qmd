@@ -1,0 +1,23 @@
+---
+title: "FastAI Journey"
+author: "Agastya Patel"
+date: "2023-12-27"
+categories: [Folder, DeepLearning, FastAI]
+sidebar-position: 1
+metadata-files: ["_listing_meta.yml"]
+sidebar: 
+    style: "docked"
+    search: true
+    contents:
+      - section: "Basics"
+        contents:
+          - "/*.qmd"
+  
+listing:
+  type: "table"
+  contents: 
+   - "/*.qmd"
+   - "/*/index.qmd"
+---
+
+This is a post with executable code.

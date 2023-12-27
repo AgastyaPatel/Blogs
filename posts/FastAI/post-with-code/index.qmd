@@ -1,7 +1,8 @@
 ---
-title: "Folder"
-author: "Harlow Malloc"
+title: "Post With Code"
+author: "Agastya Patel"
 date: "2023-12-27"
+date-modified: "2023-12-29"
 categories: [news, code, analysis]
 image: "image.jpg"
 ---
