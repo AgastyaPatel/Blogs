@@ -2,29 +2,40 @@
   {
     "listing": "/projects.html",
     "items": [
+      "/posts/FastAI/Status.html",
+      "/posts/Notes/FastAI/FastAI Setup.html",
+      "/posts/Notes/FastAI/index.html",
       "/posts/FastAI/index.html",
-      "/posts/FastAI/post-with-code/index.html",
-      "/posts/hello/index.html",
-      "/posts/QuickStart.html",
-      "/posts/welcome/index.html",
-      "/posts/welcome/index2.html"
+      "/posts/QuickStart.html"
     ]
   },
   {
-    "listing": "/posts/FastAI/index.html",
+    "listing": "/posts/Notes/FastAI/index.html",
     "items": [
-      "/posts/FastAI/post-with-code/index.html"
+      "/posts/Notes/FastAI/FastAI Setup.html"
+    ]
+  },
+  {
+    "listing": "/notesIndex.html",
+    "items": [
+      "/posts/Notes/FastAI/index.html",
+      "/posts/Notes/FastAI/FastAI Setup.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
+      "/posts/FastAI/Status.html",
+      "/posts/Notes/FastAI/FastAI Setup.html",
+      "/posts/Notes/FastAI/index.html",
       "/posts/FastAI/index.html",
-      "/posts/FastAI/post-with-code/index.html",
-      "/posts/hello/index.html",
-      "/posts/QuickStart.html",
-      "/posts/welcome/index.html",
-      "/posts/welcome/index2.html"
+      "/posts/QuickStart.html"
+    ]
+  },
+  {
+    "listing": "/posts/FastAI/index.html",
+    "items": [
+      "/posts/FastAI/Status.html"
     ]
   }
 ]
