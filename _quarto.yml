@@ -6,8 +6,8 @@ website:
   page-navigation: true
   title: "Agastya Patel"
   navbar:
-    # left:
-      # - projects.qmd
+    left:
+      - notesIndex.qmd
     right:
       - about.qmd
       - icon: github

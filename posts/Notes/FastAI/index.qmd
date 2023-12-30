@@ -1,0 +1,17 @@
+---
+title: "FastAI Notes"
+author: "Agastya Patel"
+date: "2023-12-29"
+date-modified: "2023-12-30"
+categories: [notes, FastAI]
+metadata-files: ["_listing_meta.yml"]
+listing:
+  type: "table"
+  contents: 
+   - "*/*.qmd"
+   - "/*/index.qmd"
+   - "*.md"
+   - "*/*.md"
+---
+
+This is a post with executable code.

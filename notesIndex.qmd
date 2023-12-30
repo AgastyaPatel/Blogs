@@ -1,0 +1,13 @@
+---
+title: "Notes"
+author: "Agastya Patel"
+image: "image.png"
+sidebar-position: 1
+metadata-files: ["_notesMetadata.yml"]
+listing:
+  type: "table"
+  contents: 
+   - "Notes/*.qmd"
+   - "Notes/*/index.qmd"
+   - "Notes/*/*.md"
+---

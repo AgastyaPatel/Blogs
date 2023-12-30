@@ -3,8 +3,17 @@ title: "FastAI Journey"
 author: "Agastya Patel"
 date: "2023-12-27"
 categories: [Folder, DeepLearning, FastAI]
+image: "image.png"
 sidebar-position: 1
 metadata-files: ["_listing_meta.yml"]
+listing:
+  type: "table"
+  contents: 
+   - "*/*.qmd"
+   - "/*/index.qmd"
+   - "/*.md"
+   - "*/*.md"
+
 sidebar: 
     style: "docked"
     search: true
@@ -12,12 +21,8 @@ sidebar:
       - section: "Basics"
         contents:
           - "/*.qmd"
-  
-listing:
-  type: "table"
-  contents: 
-   - "/*.qmd"
-   - "/*/index.qmd"
 ---
 
-This is a post with executable code.
+Here's my current journey of Fast AI learning. I'll be keeping tab of the projects and the current status of journey here!.
+
+My FastAI/Course Journey:  [github](https://github.com/AgastyaPatel/FastAI-course)
