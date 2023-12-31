@@ -13,14 +13,6 @@ listing:
    - "/*/index.qmd"
    - "/*.md"
    - "*/*.md"
-
-sidebar: 
-    style: "docked"
-    search: true
-    contents:
-      - section: "Basics"
-        contents:
-          - "/*.qmd"
 ---
 
 Here's my current journey of Fast AI learning. I'll be keeping tab of the projects and the current status of journey here!.

@@ -1,0 +1,155 @@
+---
+title: "FastAI Lecture 01"
+author: "Agastya Patel"
+date: "2023-12-31"
+date-modified: "2023-12-31"
+categories: [Notes, FastAI, History, Neural Network, Theory]
+---
+
+**Useful Resources**
+[Alliance MAP](https://media.licdn.com/dms/image/D5622AQG2ruMOtm-4dg/feedshare-shrink_2048_1536/0/1701785511419?e=1704931200&v=beta&t=LpttnF0KHAlLyy6e43GNmQYrVu4j-5cACbXAMKiUmII)
+[JH's jupyter NB 101](https://www.kaggle.com/code/jhoward/jupyter-notebook-101/notebook) 
+[Kaggle: Comprehensive data exploration with Python](https://www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python/notebook)” 
+
+Lesson1 Notes : 07/12/2023
+- learn about functional programming
+- What is fine tuning?
+
+## History of Neural Network
+- Warren McCulloch, Walter Pitts: Developed mathematical model of artificial neuron. [Logical Calculus of the ideas immanent in Nervous Activity](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2FBF02478259) ;Defined "all-or-none" characteristic of neuron; can be represented using simple addition and thresholding.
+- Rosenblatt Built artificial neuron - 'Mark I Perceptron' using above principles; Machine capable of recognizing and identifying its surrounding (Simple features) without human training and supervision.
+
+### AI Winter #1
+- Marvin Minsky wrote a book 'Perceptron' and conveyed that *single layer of these devices were unable to learn simple mathematical function* like XOR. But also *proposed that use of multiple layers would remove this limitation*. 
+- World looked at the first of his outcome and research depleted for 2 decades.
+- Parallel Distribution Processing's idea of using computational framework for modeling cognitive processing similar to brain.
+
+#### PDP's approach still being used today in creating modern neural networks
+A set of processing units
+state of activation
+output function for each unit/node
+pattern of connectivity,
+rule for propagating patterns of activity in the network
+activation rule for combining the inputs at a node with current state to produce output for that node
+learning rule where connection patterns are modified with experience
+environment where system can operate
+
+### AI Winter #2
+- With PDP's approach, researchers started adding another layer in network but due to being complex, large and slow in nature; the field got deserted.
+
+### Today
+- Multiple layers of networks are being built due to technological advancements, data availability and better algorithm. The performance has increased drastically.
+
+> Paper ^50k citations written by Alec Radford ["Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks"](https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Farxiv.org%2Fabs%2F1511.06434) [READ PENDING]\
+> Musk - "https://twitter.com/elonmusk/status/1224089444963311616"
+
+> GPU (Graphics Card) - Special kind of processors that handles thousands of single task at the same time. These tasks are similar to neural networks do, such that GPU''s run neural network much faster than CPU
+
+## What is machine learning?
+Discipline where we define program not by writing it ourself but by allowing it to learn from data and experience.
+### What is deep learning? - A general & modern discipline of ML
+Deep learning is a computer technique to extract and transform data.
+It is based on multiple layer of neural network and these network are trained to minimize error and maximize accuracy.
+
+## Arthur Samuel, IBM's research 
+- "Artificial Intelligence: A frontier of Automation"
+- Programming a computer for complex computation like recognition is difficult task not because of complexity in the computer but because of the need specify every minute step of the process in detail.
+- Idea: Instead of telling computer each step require to solve; we show examples f problems to solve and let it figure out how to solve it. 
+- This was effective in his **checker playing program** which learned to play by learning from experience.
+ 
+> [!idea] Breaking down his idea
+> *Suppose we arrange for some <u>automatic means of testing</u> 
+> the effectiveness of any <u>current weight assignment</u>
+> in terms of <u>actual performance</u>
+> and <u>provide a mechanism</u> for altering the weight assignment so as to maximize the performance.*
+> We need not go into the details of such a procedure to see that it could be made entirely automatic and to see that a machine so programmed would 'learn' from it's experience.
+
+## Getting into details about Samuel's Idea for ML
+### Weights / Model Parameters
+- Weights are variables and weights assignment is a particular values in those variables. 
+- Weights are additional values which define how the program will operate.
+- Altering the weights can change the model's behavior. 
+
+```{mermaid}
+flowchart LR
+    I[Inputs] -->M{Model} 
+    W(Weights) --> M
+    M -->F[Resut]
+```
+
+  Contextual Example: different weights in checker program would result in different checkers playing strategies
+
+### Actual Performance
+- Actual performance in checker playing program would be how well does the program plays
+
+### Automatic means of testing
+- Set two checker playing models to play against each other and see which one is winning
+
+### Mechanism for altering the weight assignment so as to maximize the performance
+- Difference in the weights of the winning model and losing model; and adjusting the weights little further in the winning direction
+
+```{dot}
+digraph {
+  labelloc="l"
+  label="Machine programmed to learn from experience"
+  ordering=in
+    model[shape=box3d width=1 height=0.7 label=architecture]
+    inputs->model->predictions; parameters->model; labels->loss; predictions->loss
+    loss->parameters[constraint=false label=update]
+}
+```
+
+### Once Model has been trained
+We pack the parameters/weights as being part of the model as we won't be changing that.
+The model used for prediction is know as **Inferenece**
+```{dot}
+digraph {
+  rankdir=LR;
+  label="Inference (Trained Model + Fixed Weight)"
+  ordering=in
+     Inference[shape=box3d width=1 height=0.7]
+     inputs->Inference->predictions;
+}
+```
+
+## Neural Networks
+
+- These are **Universal Function** which can solve any problem just by varying its weights.
+- If you regard Neural network as a mathematical function, it turns out to be a extremely variable function depending on its weights.
+> A mathematical proof called the universal approximation theorem shows that this function can solve any problem to any level of accuracy in theory.
+
+The fact that neural networks are so flexible means that, in practice, they are often a suitable kind of model, and you can focus your effort on the process of training them—that is, of finding good weight assignments.
+
+### Search for mechanism which can automatically update the weights according to problem
+**Stochastic gradient descent(SGD)**
+
+Neural networks are special because they are highly flexible, which means they can solve an unusually wide range of problems just by finding the right weights. And SGD provides us a way to find those values automatically!
+
+| Case : Cat vs Dog Classifier | Samuel's Machine Learning Model |
+| ---- | ---- |
+| Input Images | Inputs |
+| Weights in neural network | Weights |
+| Result ('Dog'/'Cat') | Result |
+| Actual Performance at predicting the correct answer | Automatic means of testing effectiveness of current weights |
+| Updating weights | SGD mechanism of updating weights |
+
+# Common Terms and its meanings
+
+| Term | Meaning |
+| ---- | ---- |
+| Label | The data that we're trying to predict, such as "dog" or "cat" |
+| Architecture/Model | The _functional template_ of the model that we're trying to fit; the actual mathematical function that we're passing the input data and parameters to. |
+| Parameters | The values in the model that change what task it can do, and are updated through model training |
+| Fit/Train<br>aka Training model from Scratch | Update the parameters of the model such that the predictions of the model using the input data match the target labels<br><br>*Usually starts with random weights* |
+| Pretrained model | A model that has already been trained, generally using a large dataset, and will be fine-tuned |
+| Fine-tune | Update a pretrained model for a different task (Transfer Learning)<br><br>*Uses pretrained model as starting point* |
+| Model/Inference | The combination of the architecture with a particular set of parameters |
+| Epoch | One complete pass through the input data |
+| Loss | A measure of performance of the model is, chosen to drive training via SGD |
+| Metric | A measurement of how good the model is, using the validation set, chosen for human consumption |
+| Validation set | A set of data held out from training, used only for measuring how good the model is |
+| Training set | The data used for fitting the model; does not include any data from the validation set |
+| Overfitting | Training a model in such a way that it _remembers_ specific features of the input data, rather than generalizing well to data not seen during training |
+| CNN | Convolutional neural network; a type of neural network that works particularly well for computer vision tasks |
+
+### Model, Pretrained 

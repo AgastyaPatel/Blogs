@@ -8,6 +8,7 @@ metadata-files: ["_listing_meta.yml"]
 listing:
   type: "table"
   contents: 
+   - "*.qmd"
    - "*/*.qmd"
    - "/*/index.qmd"
    - "*.md"
