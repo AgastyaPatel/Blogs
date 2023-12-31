@@ -3,6 +3,8 @@
     "listing": "/projects.html",
     "items": [
       "/posts/FastAI/Status.html",
+      "/posts/Notes/FastAI/FastAI Lecture 01.html",
+      "/posts/Notes/FastAI/FastAI Snippets.html",
       "/posts/Notes/FastAI/FastAI Setup.html",
       "/posts/Notes/FastAI/index.html",
       "/posts/FastAI/index.html",
@@ -12,20 +14,25 @@
   {
     "listing": "/posts/Notes/FastAI/index.html",
     "items": [
-      "/posts/Notes/FastAI/FastAI Setup.html"
+      "/posts/Notes/FastAI/FastAI Lecture 01.html",
+      "/posts/Notes/FastAI/FastAI Setup.html",
+      "/posts/Notes/FastAI/FastAI Snippets.html"
     ]
   },
   {
     "listing": "/notesIndex.html",
     "items": [
       "/posts/Notes/FastAI/index.html",
-      "/posts/Notes/FastAI/FastAI Setup.html"
+      "/posts/Notes/FastAI/FastAI Setup.html",
+      "/posts/Notes/FastAI/FastAI Snippets.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
       "/posts/FastAI/Status.html",
+      "/posts/Notes/FastAI/FastAI Lecture 01.html",
+      "/posts/Notes/FastAI/FastAI Snippets.html",
       "/posts/Notes/FastAI/FastAI Setup.html",
       "/posts/Notes/FastAI/index.html",
       "/posts/FastAI/index.html",
