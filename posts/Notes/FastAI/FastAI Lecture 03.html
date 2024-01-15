@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Agastya Patel">
-<meta name="dcterms.date" content="2023-12-27">
+<meta name="dcterms.date" content="2024-01-13">
 
-<title>Agastya Patel - Testing Hello</title>
+<title>Agastya Patel - FastAI Lecture 02</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -84,6 +118,12 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../notesIndex.html" rel="" target="">
+ <span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../../about.html" rel="" target="">
@@ -113,54 +153,113 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Testing Hello</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Folder</div>
-                <div class="quarto-category">DeepLearning</div>
-                <div class="quarto-category">FastAI</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Agastya Patel </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">December 27, 2023</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
+  <li><a href="#calculating-loss" id="toc-calculating-loss" class="nav-link" data-scroll-target="#calculating-loss">Calculating Loss</a>
+  <ul class="collapse">
+  <li><a href="#what-are-derivatives" id="toc-what-are-derivatives" class="nav-link" data-scroll-target="#what-are-derivatives">What are derivatives?</a></li>
+  <li><a href="#calculating-derivatives-for-weights-in-nn" id="toc-calculating-derivatives-for-weights-in-nn" class="nav-link" data-scroll-target="#calculating-derivatives-for-weights-in-nn">Calculating derivatives for weights in NN</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FastAI Lecture 02</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Notes</div>
+    <div class="quarto-category">FastAI</div>
+    <div class="quarto-category">History</div>
+    <div class="quarto-category">Neural Network</div>
+    <div class="quarto-category">Theory</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>Hello this a markdown file for checking if it is rendered onto html</p>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Agastya Patel </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 13, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">January 13, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="goal" class="level2">
+<h2 class="anchored" data-anchor-id="goal">Goal</h2>
+<ul>
+<li>Arrays/Tensor</li>
+<li>Broadcasting</li>
+<li>SGD</li>
+<li>Loss function</li>
+<li>Role of mini batches</li>
+<li>describe the math that a basic neural network is actually doing</li>
+</ul>
+</section>
+<section id="calculating-loss" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-loss">Calculating Loss</h2>
+<section id="what-are-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-derivatives">What are derivatives?</h3>
+<p>Derivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function</p>
+</section>
+<section id="calculating-derivatives-for-weights-in-nn" class="level3">
+<h3 class="anchored" data-anchor-id="calculating-derivatives-for-weights-in-nn">Calculating derivatives for weights in NN</h3>
+<p>Our function has large number of weights. We calculate the derivative for one weight while we consider rest as constant and repeat the same process.</p>
+<p>&nbsp;&gt; in deep learning, “gradients” usually means the&nbsp;<em>value</em>&nbsp;of a function’s derivative at a particular argument value whereas in math the derivative gives us another function(rate)</p>
+<p>pytorch provides <code>requires_grad_()</code> which tags the variable and keeps track to calculate derivative when passed in a function</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x): <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>xt <span class="op">=</span> tensor(<span class="fl">3.</span>).requires_grad_()</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="co">## Calculating function with the value </span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>yt <span class="op">=</span> f(xt)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>yt</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span>tensor(<span class="fl">9.</span>, grad_fn<span class="op">=&lt;</span>PowBackward0<span class="op">&gt;</span>)</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co">## Asking pytorch to calculate gradient for us</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>yt.backwards()</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a><span class="co"># The "backward" here refers to&nbsp;_backpropagation_, which is the name given to the process of calculating the derivative of each layer.</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>xt.grad</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> tensor(<span class="fl">6.</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>derivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)</p>
+<blockquote class="blockquote">
+<p>The gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value.</p>
+</blockquote>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

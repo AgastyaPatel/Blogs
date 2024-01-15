@@ -22,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -63,9 +97,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script src="../../../site_libs/quarto-diagram/mermaid.min.js"></script>
-<script src="../../../site_libs/quarto-diagram/mermaid-init.js"></script>
-<link href="../../../site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
 
 <link rel="stylesheet" href="../../../styles.css">
@@ -130,30 +161,29 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#history-of-neural-network" id="toc-history-of-neural-network" class="nav-link active" data-scroll-target="#history-of-neural-network">History of Neural Network</a>
+  <li><a href="#fastai-api" id="toc-fastai-api" class="nav-link active" data-scroll-target="#fastai-api">FastAI API</a>
   <ul class="collapse">
-  <li><a href="#ai-winter-1" id="toc-ai-winter-1" class="nav-link" data-scroll-target="#ai-winter-1">AI Winter #1</a></li>
-  <li><a href="#ai-winter-2" id="toc-ai-winter-2" class="nav-link" data-scroll-target="#ai-winter-2">AI Winter #2</a></li>
-  <li><a href="#today" id="toc-today" class="nav-link" data-scroll-target="#today">Today</a></li>
+  <li><a href="#datablocks-dataloaders" id="toc-datablocks-dataloaders" class="nav-link" data-scroll-target="#datablocks-dataloaders">Datablocks &amp; DataLoaders</a></li>
   </ul></li>
+  <li><a href="#history-of-neural-network" id="toc-history-of-neural-network" class="nav-link" data-scroll-target="#history-of-neural-network">History of Neural Network</a></li>
   <li><a href="#what-is-machine-learning" id="toc-what-is-machine-learning" class="nav-link" data-scroll-target="#what-is-machine-learning">What is machine learning?</a></li>
   <li><a href="#arthur-samuel-ibms-research" id="toc-arthur-samuel-ibms-research" class="nav-link" data-scroll-target="#arthur-samuel-ibms-research">Arthur Samuel, IBM’s research</a></li>
   <li><a href="#getting-into-details-about-samuels-idea-for-ml" id="toc-getting-into-details-about-samuels-idea-for-ml" class="nav-link" data-scroll-target="#getting-into-details-about-samuels-idea-for-ml">Getting into details about Samuel’s Idea for ML</a>
   <ul class="collapse">
   <li><a href="#weights-model-parameters" id="toc-weights-model-parameters" class="nav-link" data-scroll-target="#weights-model-parameters">Weights / Model Parameters</a></li>
-  <li><a href="#actual-performance" id="toc-actual-performance" class="nav-link" data-scroll-target="#actual-performance">Actual Performance</a></li>
-  <li><a href="#automatic-means-of-testing" id="toc-automatic-means-of-testing" class="nav-link" data-scroll-target="#automatic-means-of-testing">Automatic means of testing</a></li>
-  <li><a href="#mechanism-for-altering-the-weight-assignment-so-as-to-maximize-the-performance" id="toc-mechanism-for-altering-the-weight-assignment-so-as-to-maximize-the-performance" class="nav-link" data-scroll-target="#mechanism-for-altering-the-weight-assignment-so-as-to-maximize-the-performance">Mechanism for altering the weight assignment so as to maximize the performance</a></li>
   <li><a href="#once-model-has-been-trained" id="toc-once-model-has-been-trained" class="nav-link" data-scroll-target="#once-model-has-been-trained">Once Model has been trained</a></li>
   </ul></li>
-  <li><a href="#neural-networks" id="toc-neural-networks" class="nav-link" data-scroll-target="#neural-networks">Neural Networks</a>
+  <li><a href="#neural-networks" id="toc-neural-networks" class="nav-link" data-scroll-target="#neural-networks">Neural Networks</a></li>
+  <li><a href="#common-terms-and-its-meanings" id="toc-common-terms-and-its-meanings" class="nav-link" data-scroll-target="#common-terms-and-its-meanings">Common Terms and its meanings</a></li>
+  <li><a href="#feedback-lop" id="toc-feedback-lop" class="nav-link" data-scroll-target="#feedback-lop">Feedback lop</a></li>
+  <li><a href="#overfitting" id="toc-overfitting" class="nav-link" data-scroll-target="#overfitting">Overfitting</a></li>
+  <li><a href="#metric" id="toc-metric" class="nav-link" data-scroll-target="#metric">Metric</a>
   <ul class="collapse">
-  <li><a href="#search-for-mechanism-which-can-automatically-update-the-weights-according-to-problem" id="toc-search-for-mechanism-which-can-automatically-update-the-weights-according-to-problem" class="nav-link" data-scroll-target="#search-for-mechanism-which-can-automatically-update-the-weights-according-to-problem">Search for mechanism which can automatically update the weights according to problem</a></li>
+  <li><a href="#why-loss-isnt-a-metric" id="toc-why-loss-isnt-a-metric" class="nav-link" data-scroll-target="#why-loss-isnt-a-metric">Why Loss isn’t a metric?</a></li>
   </ul></li>
-  <li><a href="#common-terms-and-its-meanings" id="toc-common-terms-and-its-meanings" class="nav-link" data-scroll-target="#common-terms-and-its-meanings">Common Terms and its meanings</a>
-  <ul class="collapse">
-  <li><a href="#model-pretrained" id="toc-model-pretrained" class="nav-link" data-scroll-target="#model-pretrained">Model, Pretrained</a></li>
-  </ul></li>
+  <li><a href="#transfer-learning" id="toc-transfer-learning" class="nav-link" data-scroll-target="#transfer-learning">Transfer Learning</a></li>
+  <li><a href="#fit-vs-fine-tune" id="toc-fit-vs-fine-tune" class="nav-link" data-scroll-target="#fit-vs-fine-tune">Fit vs Fine Tune</a></li>
+  <li><a href="#fine-tune-process" id="toc-fine-tune-process" class="nav-link" data-scroll-target="#fine-tune-process">Fine Tune Process</a></li>
   </ul>
 </nav>
     </div>
@@ -202,45 +232,36 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p><strong>Useful Resources</strong> <a href="https://media.licdn.com/dms/image/D5622AQG2ruMOtm-4dg/feedshare-shrink_2048_1536/0/1701785511419?e=1704931200&amp;v=beta&amp;t=LpttnF0KHAlLyy6e43GNmQYrVu4j-5cACbXAMKiUmII">Alliance MAP</a> <a href="https://www.kaggle.com/code/jhoward/jupyter-notebook-101/notebook">JH’s jupyter NB 101</a> <a href="https://www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python/notebook">Kaggle: Comprehensive data exploration with Python</a>”</p>
+<p><strong>Useful Resources</strong> This is how I found out about fastAI :) <a href="https://media.licdn.com/dms/image/D5622AQG2ruMOtm-4dg/feedshare-shrink_2048_1536/0/1701785511419?e=1704931200&amp;v=beta&amp;t=LpttnF0KHAlLyy6e43GNmQYrVu4j-5cACbXAMKiUmII">Alliance MAP</a> <a href="https://www.kaggle.com/code/jhoward/jupyter-notebook-101/notebook">JH’s jupyter NB 101</a> <a href="https://www.kaggle.com/code/pmarcelino/comprehensive-data-exploration-with-python/notebook">Kaggle: Comprehensive data exploration with Python</a>”</p>
 <p>Lesson1 Notes : 07/12/2023 - learn about functional programming - What is fine tuning?</p>
+<section id="fastai-api" class="level2">
+<h2 class="anchored" data-anchor-id="fastai-api">FastAI API</h2>
+<section id="datablocks-dataloaders" class="level3">
+<h3 class="anchored" data-anchor-id="datablocks-dataloaders">Datablocks &amp; DataLoaders</h3>
+<p>Datablocks are template which are used for creating <code>DataLoaders</code> (FastAI) based on <code>DataLoader</code> (PyTorch)</p>
+<p><code>DataLoader</code>&nbsp;class creates object which makes generally makes two sets ie,&nbsp;<code>train</code>&nbsp;and&nbsp;<code>valid</code>&nbsp;sets. To convert our data into&nbsp;<code>DataLoader</code>. We need - To know what kinds of data we are working with ie,&nbsp;<code>input</code>&nbsp;data type and&nbsp;<code>result</code>&nbsp;data type. - how to get the list of the item - how to get the labels of the item - how to create validation set Here, Datablock Provides the functionality to add all these information.</p>
+<p>DataBlock-&gt;DataLoader-&gt;ModelTraining</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co"># Get images from a folder (recursively)</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>get_image_files (path, recurse<span class="op">=</span><span class="va">True</span>, folders<span class="op">=</span><span class="va">None</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
 <section id="history-of-neural-network" class="level2">
 <h2 class="anchored" data-anchor-id="history-of-neural-network">History of Neural Network</h2>
 <ul>
 <li>Warren McCulloch, Walter Pitts: Developed mathematical model of artificial neuron. <a href="https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Flink.springer.com%2Farticle%2F10.1007%2FBF02478259">Logical Calculus of the ideas immanent in Nervous Activity</a> ;Defined “all-or-none” characteristic of neuron; can be represented using simple addition and thresholding.</li>
-<li>Rosenblatt Built artificial neuron - ‘Mark I Perceptron’ using above principles; Machine capable of recognizing and identifying its surrounding (Simple features) without human training and supervision.</li>
-</ul>
-<section id="ai-winter-1" class="level3">
-<h3 class="anchored" data-anchor-id="ai-winter-1">AI Winter #1</h3>
-<ul>
-<li>Marvin Minsky wrote a book ‘Perceptron’ and conveyed that <em>single layer of these devices were unable to learn simple mathematical function</em> like XOR. But also <em>proposed that use of multiple layers would remove this limitation</em>.</li>
+<li>Rosenblatt Built artificial neuron - ‘Mark I Perceptron’ using above principles; Machine capable of recognizing and identifying its surrounding (Simple features) without human training and supervision. ### AI Winter #1</li>
+<li>Marvin Minsky wrote a book ‘Perceptron’ and conveyed that <em>single layer of these devices were unable to learn simple mathematical function</em> like XOR. But also <em>proposed that use of multiple layers which would remove this limitation</em>.</li>
 <li>World looked at the first of his outcome and research depleted for 2 decades.</li>
-<li>Parallel Distribution Processing’s idea of using computational framework for modeling cognitive processing similar to brain.</li>
-</ul>
-<section id="pdps-approach-still-being-used-today-in-creating-modern-neural-networks" class="level4">
-<h4 class="anchored" data-anchor-id="pdps-approach-still-being-used-today-in-creating-modern-neural-networks">PDP’s approach still being used today in creating modern neural networks</h4>
-<p>A set of processing units state of activation output function for each unit/node pattern of connectivity, rule for propagating patterns of activity in the network activation rule for combining the inputs at a node with current state to produce output for that node learning rule where connection patterns are modified with experience environment where system can operate</p>
-</section>
-</section>
-<section id="ai-winter-2" class="level3">
-<h3 class="anchored" data-anchor-id="ai-winter-2">AI Winter #2</h3>
-<ul>
-<li>With PDP’s approach, researchers started adding another layer in network but due to being complex, large and slow in nature; the field got deserted.</li>
-</ul>
-</section>
-<section id="today" class="level3">
-<h3 class="anchored" data-anchor-id="today">Today</h3>
-<ul>
+<li>Parallel Distribution Processing’s idea of using computational framework for modeling cognitive processing similar to brain. #### PDP’s approach still being used today in creating modern neural networks A set of processing units state of activation output function for each unit/node pattern of connectivity, rule for propagating patterns of activity in the network activation rule for combining the inputs at a node with current state to produce output for that node learning rule where connection patterns are modified with experience environment where system can operate ### AI Winter #2</li>
+<li>With PDP’s approach, researchers started adding another layer in network but due to being complex, large and slow in nature; the field got deserted. ### Today</li>
 <li>Multiple layers of networks are being built due to technological advancements, data availability and better algorithm. The performance has increased drastically.</li>
 </ul>
 <blockquote class="blockquote">
-<p>Paper ^50k citations written by Alec Radford <a href="https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Farxiv.org%2Fabs%2F1511.06434">“Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”</a> [READ PENDING]<br>
-Musk - “https://twitter.com/elonmusk/status/1224089444963311616”</p>
+<p>Paper ^50k citations written by Alec Radford <a href="https://colab.research.google.com/corgiredirector?site=https%3A%2F%2Farxiv.org%2Fabs%2F1511.06434">“Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks”</a> [READ PENDING] Musk - “https://twitter.com/elonmusk/status/1224089444963311616”</p>
 </blockquote>
 <blockquote class="blockquote">
 <p>GPU (Graphics Card) - Special kind of processors that handles thousands of single task at the same time. These tasks are similar to neural networks do, such that GPU’’s run neural network much faster than CPU</p>
 </blockquote>
-</section>
 </section>
 <section id="what-is-machine-learning" class="level2">
 <h2 class="anchored" data-anchor-id="what-is-machine-learning">What is machine learning?</h2>
@@ -267,38 +288,11 @@ Musk - “https://twitter.com/elonmusk/status/1224089444963311616”</p>
 <li>Weights are additional values which define how the program will operate.</li>
 <li>Altering the weights can change the model’s behavior.</li>
 </ul>
-<div class="cell">
-<div class="cell-output-display">
-<div>
-<div>
-<pre class="mermaid mermaid-js">flowchart LR
+<pre class="mermaid"><code>flowchart LR
     I[Inputs] --&gt;M{Model} 
     W(Weights) --&gt; M
-    M --&gt;F[Resut]
-</pre>
-</div>
-</div>
-</div>
-</div>
-<p>Contextual Example: different weights in checker program would result in different checkers playing strategies</p>
-</section>
-<section id="actual-performance" class="level3">
-<h3 class="anchored" data-anchor-id="actual-performance">Actual Performance</h3>
-<ul>
-<li>Actual performance in checker playing program would be how well does the program plays</li>
-</ul>
-</section>
-<section id="automatic-means-of-testing" class="level3">
-<h3 class="anchored" data-anchor-id="automatic-means-of-testing">Automatic means of testing</h3>
-<ul>
-<li>Set two checker playing models to play against each other and see which one is winning</li>
-</ul>
-</section>
-<section id="mechanism-for-altering-the-weight-assignment-so-as-to-maximize-the-performance" class="level3">
-<h3 class="anchored" data-anchor-id="mechanism-for-altering-the-weight-assignment-so-as-to-maximize-the-performance">Mechanism for altering the weight assignment so as to maximize the performance</h3>
-<ul>
-<li>Difference in the weights of the winning model and losing model; and adjusting the weights little further in the winning direction</li>
-</ul>
+    M --&gt;F[Resut]</code></pre>
+<p>Contextual Example: different weights in checker program would result in different checkers playing strategies ### Actual Performance - Actual performance in checker playing program would be how well does the program plays ### Automatic means of testing - Set two checker playing models to play against each other and see which one is winning ### Mechanism for altering the weight assignment so as to maximize the performance - Difference in the weights of the winning model and losing model; and adjusting the weights little further in the winning direction</p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -361,7 +355,7 @@ loss-&gt;parameters
 </section>
 <section id="once-model-has-been-trained" class="level3">
 <h3 class="anchored" data-anchor-id="once-model-has-been-trained">Once Model has been trained</h3>
-<p>We pack the parameters/weights as being part of the model as we won’t be changing that. The model used for prediction is know as <strong>Inferenece</strong></p>
+<p>We pack the parameters/weights as being part of the model as we won’t be changing that. The model used for prediction is know as <strong>Inference</strong></p>
 <div class="cell">
 <div class="cell-output-display">
 <div>
@@ -399,13 +393,14 @@ inputs-&gt;Inference
 <h2 class="anchored" data-anchor-id="neural-networks">Neural Networks</h2>
 <ul>
 <li>These are <strong>Universal Function</strong> which can solve any problem just by varying its weights.</li>
-<li>If you regard Neural network as a mathematical function, it turns out to be a extremely variable function depending on its weights. &gt; A mathematical proof called the universal approximation theorem shows that this function can solve any problem to any level of accuracy in theory.</li>
+<li>If you regard Neural network as a mathematical function, it turns out to be a extremely variable function depending on its weights.</li>
+<li>A mathematical proof called the <strong>universal approximation theorem</strong> shows that this function(NN) can solve any problem to any level of accuracy in theory.</li>
 </ul>
-<p>The fact that neural networks are so flexible means that, in practice, they are often a suitable kind of model, and you can focus your effort on the process of training them—that is, of finding good weight assignments.</p>
-<section id="search-for-mechanism-which-can-automatically-update-the-weights-according-to-problem" class="level3">
-<h3 class="anchored" data-anchor-id="search-for-mechanism-which-can-automatically-update-the-weights-according-to-problem">Search for mechanism which can automatically update the weights according to problem</h3>
-<p><strong>Stochastic gradient descent(SGD)</strong></p>
+<p>The fact that neural networks are so flexible means that, in practice, they are often a suitable kind of model, and you can focus your effort on the process of training them—that is, of finding good weight assignments. ### Search for mechanism which can automatically update the weights according to problem <strong>Stochastic gradient descent(SGD</strong>)</p>
 <p>Neural networks are special because they are highly flexible, which means they can solve an unusually wide range of problems just by finding the right weights. And SGD provides us a way to find those values automatically!</p>
+<blockquote class="blockquote">
+<p>[!TIP] NN Is particular kind of ML model which fits into the definition of Samuel’s ML program.</p>
+</blockquote>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -441,9 +436,8 @@ inputs-&gt;Inference
 </tbody>
 </table>
 </section>
-</section>
-<section id="common-terms-and-its-meanings" class="level1">
-<h1>Common Terms and its meanings</h1>
+<section id="common-terms-and-its-meanings" class="level2">
+<h2 class="anchored" data-anchor-id="common-terms-and-its-meanings">Common Terms and its meanings</h2>
 <table class="table">
 <colgroup>
 <col style="width: 50%">
@@ -490,7 +484,7 @@ inputs-&gt;Inference
 </tr>
 <tr class="odd">
 <td>Loss</td>
-<td>A measure of performance of the model is, chosen to drive training via SGD</td>
+<td>A <strong>measure of performance of the model</strong> is, chosen to drive training via SGD</td>
 </tr>
 <tr class="even">
 <td>Metric</td>
@@ -512,13 +506,72 @@ inputs-&gt;Inference
 <td>CNN</td>
 <td>Convolutional neural network; a type of neural network that works particularly well for computer vision tasks</td>
 </tr>
+<tr class="odd">
+<td>Classification</td>
+<td>A classification Model is used to predict a class or category.</td>
+</tr>
+<tr class="even">
+<td>Regression</td>
+<td>A regression model is used to predict one or more numeric quantities, such as temperature or a location.</td>
+</tr>
 </tbody>
 </table>
-<section id="model-pretrained" class="level3">
-<h3 class="anchored" data-anchor-id="model-pretrained">Model, Pretrained</h3>
-
-
 </section>
+<section id="feedback-lop" class="level2">
+<h2 class="anchored" data-anchor-id="feedback-lop">Feedback lop</h2>
+<blockquote class="blockquote">
+<p>Feedback loop is the process and outcomes which tends to make model bias towards particular label. Once model starts using it’s initial outcome for training purpose it tends to make prediction which are aligned to new data which in turns creates more prediction for that label This loop is know as positive feedback loop and predictive policing, conspiracy theorist are good example for it.</p>
+</blockquote>
+</section>
+<section id="overfitting" class="level2">
+<h2 class="anchored" data-anchor-id="overfitting">Overfitting</h2>
+<ul>
+<li>Even when model has not fully memorized all data, while training it may have memorized certain parts of it.</li>
+<li>As a result, the longer you train for, the better your accuracy will get on training set and for a while the accuracy will improve in validation set.</li>
+<li>Eventually accuracy of validation set will start to get worse as model will set to memorize the training set, rather than finding generalizable underlying patterns in the data.</li>
+<li>This process is know as overfitting.</li>
+</ul>
+</section>
+<section id="metric" class="level2">
+<h2 class="anchored" data-anchor-id="metric">Metric</h2>
+<p>&nbsp;<em>metric</em>&nbsp;is a function that measures the quality of the model’s predictions using the validation set, and will be printed at the end of each&nbsp;<em>epoch</em>. In this case, we’re using&nbsp;<code>error_rate</code>, which is a function provided by fastai that does just what it says: tells you what percentage of images in the validation set are being classified incorrectly.</p>
+<section id="why-loss-isnt-a-metric" class="level3">
+<h3 class="anchored" data-anchor-id="why-loss-isnt-a-metric">Why Loss isn’t a metric?</h3>
+<p>The concept of a metric may remind you of&nbsp;<em>loss</em>, but there is an important distinction. The entire purpose of loss is to define a “measure of performance” that the training system can use to update weights automatically. In other words, a good choice for loss is a choice that is easy for stochastic gradient descent to use. But a metric is defined for human consumption, so a good metric is one that is easy for you to understand</p>
+</section>
+</section>
+<section id="transfer-learning" class="level2">
+<h2 class="anchored" data-anchor-id="transfer-learning">Transfer Learning</h2>
+<p>When using a pretrained model, the last layer, specific to the original task, is replaced with a new head for the target dataset. Pretrained models are crucial for training accurate models quickly and efficiently with limited data and resources. However, transfer learning, using pretrained models for different tasks, is under-studied, limiting its application in some domains like medicine. Despite its potential, the importance of pretrained models is often overlooked in academic deep learning.</p>
+</section>
+<section id="fit-vs-fine-tune" class="level2">
+<h2 class="anchored" data-anchor-id="fit-vs-fine-tune">Fit vs Fine Tune</h2>
+<p>The architecture only describes a&nbsp;<em>template</em>&nbsp;for a mathematical function; it doesn’t actually do anything until we provide values for the millions of parameters it contains.</p>
+<p>This is the key to deep learning—determining how to fit the parameters of a model to get it to solve your problem. In order to fit a model, we have to provide at least one piece of information: how many times to look at each image (known as number of&nbsp;<em>epochs</em>). The number of epochs you select will largely depend on how much time you have available, and how long you find it takes in practice to fit your model. If you select a number that is too small, you can always train for more epochs later.</p>
+<p>But why is the method called&nbsp;<code>fine_tune</code>, and not&nbsp;<code>fit</code>? fastai actually&nbsp;<em>does</em>&nbsp;have a method called&nbsp;<code>fit</code>, which does indeed fit a model (i.e.&nbsp;look at images in the training set multiple times, each time updating the parameters to make the predictions closer and closer to the target labels). But in this case, we’ve started with a pretrained model, and we don’t want to throw away all those capabilities that it already has. As you’ll learn in this book, there are some important tricks to adapt a pretrained model for a new dataset—a process called&nbsp;<em>fine-tuning</em>.</p>
+<ul>
+<li>Deep learning architecture is a template for a function, requiring parameter values to be effective.</li>
+<li>The key in deep learning is fitting the model parameters to solve a specific problem.</li>
+<li>The number of epochs (how many times to look at each image) is crucial for model fitting.</li>
+<li><code>fine_tune</code> is used instead of <code>fit</code> when starting with a pretrained model to retain its capabilities.</li>
+<li>Fine-tuning involves adapting a pretrained model for a new dataset, preserving its learned features.</li>
+</ul>
+<p>CNN: Current state of the art approach to creating computer vision models.</p>
+</section>
+<section id="fine-tune-process" class="level2">
+<h2 class="anchored" data-anchor-id="fine-tune-process">Fine Tune Process</h2>
+<p>When you use the&nbsp;<code>fine_tune</code>&nbsp;method, fastai will use these tricks for you. There are a few parameters you can set (which we’ll discuss later), but in the default form shown here, it does two steps:</p>
+<ol type="1">
+<li>Use one epoch to fit just those parts of the model necessary to get the new random head to work correctly with your dataset.</li>
+<li>Use the number of epochs requested when calling the method to fit the entire model, updating the weights of the later layers (especially the head) faster than the earlier layers (which, as we’ll see, generally don’t require many changes from the pretrained weights).</li>
+</ol>
+<p>The&nbsp;<em>head</em>&nbsp;of a model is the part that is newly added to be specific to the new dataset. An&nbsp;<em>epoch</em>&nbsp;is one complete pass through the dataset. After calling&nbsp;<code>fit</code>, the results after each epoch are printed, showing the epoch number, the training and validation set losses (the “measure of performance” used for training the model), and any&nbsp;<em>metrics</em>&nbsp;you’ve requested (error rate, in this case).</p>
+<blockquote class="blockquote">
+<p>Go over Jargon recap in fastbook lesson 1</p>
+</blockquote>
+<p>Reduce batch size if you are hitting cuda out of memory</p>
+
+
 </section>
 
 </main> <!-- /main -->

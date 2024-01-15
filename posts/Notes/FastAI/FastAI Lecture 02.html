@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Agastya Patel">
-<meta name="dcterms.date" content="2023-12-27">
+<meta name="dcterms.date" content="2024-01-11">
 
-<title>Agastya Patel - Testing Hello</title>
+<title>Agastya Patel - FastAI Lecture 02</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,6 +84,12 @@ ul.task-list li input[type="checkbox"] {
   <span class="navbar-toggler-icon"></span>
 </button>
           <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../notesIndex.html" rel="" target="">
+ <span class="menu-text">Notes</span></a>
+  </li>  
+</ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
     <a class="nav-link" href="../../../about.html" rel="" target="">
@@ -113,54 +119,75 @@ ul.task-list li input[type="checkbox"] {
     </nav>
 </header>
 <!-- content -->
-<header id="title-block-header" class="quarto-title-block default page-columns page-full">
-  <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-body">
-      <h1 class="title">Testing Hello</h1>
-                                <div class="quarto-categories">
-                <div class="quarto-category">Folder</div>
-                <div class="quarto-category">DeepLearning</div>
-                <div class="quarto-category">FastAI</div>
-              </div>
-                  </div>
-  </div>
-    
-  
-  <div class="quarto-title-meta">
-
-      <div>
-      <div class="quarto-title-meta-heading">Author</div>
-      <div class="quarto-title-meta-contents">
-               <p>Agastya Patel </p>
-            </div>
-    </div>
-      
-      <div>
-      <div class="quarto-title-meta-heading">Published</div>
-      <div class="quarto-title-meta-contents">
-        <p class="date">December 27, 2023</p>
-      </div>
-    </div>
-    
-      
-    </div>
-    
-  
-  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#dataloaders" id="toc-dataloaders" class="nav-link active" data-scroll-target="#dataloaders">DataLoaders</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content quarto-banner-title-block" id="quarto-document-content">
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">FastAI Lecture 02</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Notes</div>
+    <div class="quarto-category">FastAI</div>
+    <div class="quarto-category">History</div>
+    <div class="quarto-category">Neural Network</div>
+    <div class="quarto-category">Theory</div>
+  </div>
+  </div>
 
 
 
+<div class="quarto-title-meta">
 
-<p>Hello this a markdown file for checking if it is rendered onto html</p>
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Agastya Patel </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 11, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">December 31, 2023</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<section id="dataloaders" class="level2">
+<h2 class="anchored" data-anchor-id="dataloaders">DataLoaders</h2>
+<ul>
+<li>Dataloaders is a container which contains the data (train and validation) we want to use to for our machine learning model; it organizes the data.</li>
+<li>DataLoaders class is the class that passes the data to the fastai model. It is essentially a class that required Dataloader objects (usually for train and validation subset)</li>
+</ul>
+<p><strong>item_tfms:</strong> Our images are all different sizes, and this is a problem for deep learning: we don’t feed the model one image at a time but several of them (what we call a mini-batch). To group them in a big array (usually called a tensor) that is going to go through our model, they all need to be of the same size. So, we need to add a transform which will resize these images to the same size. Item transforms are pieces of code that run on each individual item, whether it be an image, category, or so forth. fastai includes many predefined transforms; we use the Resize transform here:</p>
+<p><strong>DataBlock:</strong> This command has given us a&nbsp;<code>DataBlock</code>&nbsp;object. This is like a&nbsp;<em>template</em>&nbsp;for creating a&nbsp;<code>DataLoaders</code>. We still need to tell fastai the actual source of our data—in this case, the path where the images can be found</p>
+<p>A&nbsp;<code>DataLoaders</code>&nbsp;includes validation and training&nbsp;<code>DataLoader</code>s.&nbsp;<code>DataLoader</code>&nbsp;is a class that provides batches of a few items at a time to the GPU. We’ll be learning a lot more about this class in the next chapter. When you loop through a&nbsp;<code>DataLoader</code>&nbsp;fastai will give you 64 (by default) items at a time, all stacked up into a single tensor. We can take a look at a few of those items by calling the&nbsp;<code>show_batch</code>&nbsp;method on a&nbsp;<code>DataLoader</code>: <code>dls.valid.show_batch(max_n=4, nrows=1)</code> dls is a dataloaders dls.valid and dls.train is dataloader ## Cropping - Resize(size): crops the image to fit a square of the size requested, using the full width or height. - ResizeMethod.Squish: can result in loosing of some detail as images gets squished or stretched. - ResizeMethod.Pad, pad_mode=‘zero’: Fits the image in square with black padding. These approaches are unoptimized and result in lower accurate models. We can train our model on random parts of image during each training round (EPOCH), making it adaptable to different features, similar to how photos can have different perspective. It helps the model to generalize the feature and learn the basic concept of object - RandomResizedCrop(size, min_scale=0.3): Creates random zoom images during epoch in vram <code>dls.train.show_batch(max_n=4, nrows=1, unique=True)</code> We used&nbsp;<code>unique=True</code>&nbsp;to have the same image repeated with different versions of this&nbsp;<code>RandomResizedCrop</code>&nbsp;transform. This is a specific example of a more general technique, called data augmentation. ## Data Augmentation With resize our images are now all the same size, we can apply these augmentations to an entire batch of them using the GPU, which will save a lot of time.</p>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
