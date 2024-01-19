@@ -1,1 +1,19 @@
 /* css styles */
+/* Reset some default styles */
+h3 {
+    color: #2880f2;
+}
+h4 {
+    color: #dfb067;
+}
+
+strong{
+    color: #ff6981;
+}
+
+em{
+    color: #49f181;
+}
+code{
+    background-color: rgb(180, 180, 180);
+}

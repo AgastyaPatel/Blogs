@@ -9,7 +9,7 @@
 <meta name="author" content="Agastya Patel">
 <meta name="dcterms.date" content="2024-01-13">
 
-<title>Agastya Patel - FastAI Lecture 02</title>
+<title>Agastya Patel - FastAI Lecture 03</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -102,7 +102,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link rel="stylesheet" href="../../../styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -120,7 +120,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../notesIndex.html" rel="" target="">
+    <a class="nav-link" href="../../../notes/index.html" rel="" target="">
  <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -151,21 +151,102 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">FastAI Lecture 03</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/Networking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Internet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/PyTorch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PyTorch Reference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../../notes/FastAI/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/FastAI/FastAI Lecture 02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/FastAI/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Setup; Understanding Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../../notes/FastAI/FastAI Snippets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Snippets 01</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a></li>
-  <li><a href="#calculating-loss" id="toc-calculating-loss" class="nav-link" data-scroll-target="#calculating-loss">Calculating Loss</a>
+  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a>
   <ul class="collapse">
-  <li><a href="#what-are-derivatives" id="toc-what-are-derivatives" class="nav-link" data-scroll-target="#what-are-derivatives">What are derivatives?</a></li>
   <li><a href="#calculating-derivatives-for-weights-in-nn" id="toc-calculating-derivatives-for-weights-in-nn" class="nav-link" data-scroll-target="#calculating-derivatives-for-weights-in-nn">Calculating derivatives for weights in NN</a></li>
+  </ul></li>
+  <li><a href="#loss-vs-metric" id="toc-loss-vs-metric" class="nav-link" data-scroll-target="#loss-vs-metric">Loss vs Metric</a></li>
+  <li><a href="#why-batches" id="toc-why-batches" class="nav-link" data-scroll-target="#why-batches">Why Batches?</a>
+  <ul class="collapse">
+  <li><a href="#randomization-with-mini-batches" id="toc-randomization-with-mini-batches" class="nav-link" data-scroll-target="#randomization-with-mini-batches">Randomization with mini batches</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -175,7 +256,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">FastAI Lecture 02</h1>
+<h1 class="title">FastAI Lecture 03</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Notes</div>
     <div class="quarto-category">FastAI</div>
@@ -219,19 +300,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="goal">Goal</h2>
 <ul>
 <li>Arrays/Tensor</li>
-<li>Broadcasting</li>
+<li>Broadcasting (Understand it better)</li>
 <li>SGD</li>
 <li>Loss function</li>
 <li>Role of mini batches</li>
 <li>describe the math that a basic neural network is actually doing</li>
 </ul>
-</section>
-<section id="calculating-loss" class="level2">
-<h2 class="anchored" data-anchor-id="calculating-loss">Calculating Loss</h2>
-<section id="what-are-derivatives" class="level3">
-<h3 class="anchored" data-anchor-id="what-are-derivatives">What are derivatives?</h3>
-<p>Derivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function</p>
-</section>
+<p>Rectified linear Unit : y = mx + b ## Calculating Loss ### What are derivatives? Derivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function</p>
 <section id="calculating-derivatives-for-weights-in-nn" class="level3">
 <h3 class="anchored" data-anchor-id="calculating-derivatives-for-weights-in-nn">Calculating derivatives for weights in NN</h3>
 <p>Our function has large number of weights. We calculate the derivative for one weight while we consider rest as constant and repeat the same process.</p>
@@ -256,6 +331,147 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>The gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value.</p>
 </blockquote>
+<p>The key difference is that the metric is to drive human understanding and the loss is to drive automated learning. To drive automated learning, the loss must be a function that has a <strong>meaningful derivative</strong>. It can’t have big flat sections and large jumps, but instead must be reasonably smooth. This is why we designed a loss function that would respond to small changes in confidence level. This requirement means that sometimes it does not really reflect exactly what we are trying to achieve, but is rather a compromise between our real goal and a function that can be optimized using its gradient. The loss function is calculated for each item in our dataset, and then at the end of an epoch the loss values are all averaged and the overall mean is reported for the epoch. Metrics, on the other hand, are the numbers that we really care about. These are the values that are printed at the end of each epoch that tell us how our model is really doing. It is important that we learn to focus on these metrics, rather than the loss, when judging the performance of a model.</p>
+</section>
+</section>
+<section id="loss-vs-metric" class="level2">
+<h2 class="anchored" data-anchor-id="loss-vs-metric">Loss vs Metric</h2>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Aspect</th>
+<th>Metric</th>
+<th>Loss</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>Purpose Difference</strong></td>
+<td>Drives human understanding of performance</td>
+<td>Drives automated learning by optimization</td>
+</tr>
+<tr class="even">
+<td><strong>Smoothness Requirement</strong></td>
+<td>Not constrained by smoothness</td>
+<td>Requires smoothness for meaningful derivative</td>
+</tr>
+<tr class="odd">
+<td><strong>Optimization vs.&nbsp;Real Goal</strong></td>
+<td>Reflects actual goals</td>
+<td>Compromise between real goals and optimization</td>
+</tr>
+<tr class="even">
+<td><strong>Calculation Process</strong></td>
+<td>Provides overall model evaluation</td>
+<td>Calculated per item, averaged at epoch end</td>
+</tr>
+<tr class="odd">
+<td><strong>Focus Consideration</strong></td>
+<td>Primary focus for judging performance</td>
+<td>Important for automated learning, may not directly represent end goal</td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="why-batches" class="level2">
+<h2 class="anchored" data-anchor-id="why-batches">Why Batches?</h2>
+<p><em>After loss function calculation; When should the system update weights?</em> if loss is calculated for one item it would not be much informational as it would result in imprecise and unstable gradient if loss is calculated for entire dataset it would take very long ### Mini Batch So, we count the average loss for few data items at a time (<strong>Mini Batch</strong>) BatchSize = Number of items</p>
+<table class="table">
+<colgroup>
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+<col style="width: 25%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Batch Size</th>
+<th>Quality</th>
+<th>Time</th>
+<th>Size</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Larger</td>
+<td>more accurate and stable estimate of your dataset’s gradients from the loss function</td>
+<td>longer time to process</td>
+<td>&nbsp;will process fewer mini-batches per epoch</td>
+</tr>
+</tbody>
+</table>
+<blockquote class="blockquote">
+<p>NOTE: We can’t use large batch size due to limitation of GPU memory</p>
+</blockquote>
+<section id="randomization-with-mini-batches" class="level3">
+<h3 class="anchored" data-anchor-id="randomization-with-mini-batches">Randomization with mini batches</h3>
+<p>Rather than simply enumerating our dataset in order for every epoch, instead what we normally do is randomly shuffle it on every epoch, before we create mini-batches. PyTorch and fastai provide a class that will do the shuffling and mini-batch collation for you, called&nbsp;<code>DataLoader</code>.</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> L(<span class="bu">enumerate</span>(string.ascii_lowercase))</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ds</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> (<span class="co">#26) [(0, 'a'),(1, 'b'),(2, 'c'),(3, 'd'),(4, 'e'),(5, 'f'),(6, 'g'),(7, 'h'),(8, 'i'),(9, 'j')...]</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>dl <span class="op">=</span> DataLoader(ds, batch_size<span class="op">=</span><span class="dv">6</span>, shuffle<span class="op">=</span><span class="va">True</span>)</span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="bu">list</span>(dl)</span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> [(tensor([<span class="dv">17</span>, <span class="dv">18</span>, <span class="dv">10</span>, <span class="dv">22</span>,  <span class="dv">8</span>, <span class="dv">14</span>]), (<span class="st">'r'</span>, <span class="st">'s'</span>, <span class="st">'k'</span>, <span class="st">'w'</span>, <span class="st">'i'</span>, <span class="st">'o'</span>)),</span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a> (tensor([<span class="dv">20</span>, <span class="dv">15</span>,  <span class="dv">9</span>, <span class="dv">13</span>, <span class="dv">21</span>, <span class="dv">12</span>]), (<span class="st">'u'</span>, <span class="st">'p'</span>, <span class="st">'j'</span>, <span class="st">'n'</span>, <span class="st">'v'</span>, <span class="st">'m'</span>)),</span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a> (tensor([ <span class="dv">7</span>, <span class="dv">25</span>,  <span class="dv">6</span>,  <span class="dv">5</span>, <span class="dv">11</span>, <span class="dv">23</span>]), (<span class="st">'h'</span>, <span class="st">'z'</span>, <span class="st">'g'</span>, <span class="st">'f'</span>, <span class="st">'l'</span>, <span class="st">'x'</span>)),</span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a> (tensor([ <span class="dv">1</span>,  <span class="dv">3</span>,  <span class="dv">0</span>, <span class="dv">24</span>, <span class="dv">19</span>, <span class="dv">16</span>]), (<span class="st">'b'</span>, <span class="st">'d'</span>, <span class="st">'a'</span>, <span class="st">'y'</span>, <span class="st">'t'</span>, <span class="st">'q'</span>)),</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a> (tensor([<span class="dv">2</span>, <span class="dv">4</span>]), (<span class="st">'c'</span>, <span class="st">'e'</span>))]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Term</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>ReLU</td>
+<td>Function&nbsp;that&nbsp;returns&nbsp;0&nbsp;for&nbsp;negative&nbsp;numbers&nbsp;and&nbsp;doesn’t&nbsp;change&nbsp;positive&nbsp;numbers.</td>
+</tr>
+<tr class="even">
+<td>Mini-batch</td>
+<td>A&nbsp;small&nbsp;group&nbsp;of&nbsp;inputs&nbsp;and&nbsp;labels&nbsp;gathered&nbsp;together&nbsp;in&nbsp;two&nbsp;arrays.&nbsp;A&nbsp;gradient&nbsp;descent&nbsp;step&nbsp;is&nbsp;updated&nbsp;on&nbsp;this&nbsp;batch&nbsp;(rather&nbsp;than&nbsp;a&nbsp;whole&nbsp;epoch).</td>
+</tr>
+<tr class="odd">
+<td>Forward&nbsp;pass</td>
+<td>Applying&nbsp;the&nbsp;model&nbsp;to&nbsp;some&nbsp;input&nbsp;and&nbsp;computing&nbsp;the&nbsp;predictions.</td>
+</tr>
+<tr class="even">
+<td>Loss</td>
+<td>A&nbsp;value&nbsp;that&nbsp;represents&nbsp;how&nbsp;well&nbsp;(or&nbsp;badly)&nbsp;our&nbsp;model&nbsp;is&nbsp;doing.</td>
+</tr>
+<tr class="odd">
+<td>Gradient</td>
+<td>The&nbsp;derivative&nbsp;of&nbsp;the&nbsp;loss&nbsp;with&nbsp;respect&nbsp;to&nbsp;some&nbsp;parameter&nbsp;of&nbsp;the&nbsp;model.</td>
+</tr>
+<tr class="even">
+<td>Backward&nbsp;pass</td>
+<td>Computing&nbsp;the&nbsp;gradients&nbsp;of&nbsp;the&nbsp;loss&nbsp;with&nbsp;respect&nbsp;to&nbsp;all&nbsp;model&nbsp;parameters.</td>
+</tr>
+<tr class="odd">
+<td>Gradient&nbsp;descent</td>
+<td>Taking&nbsp;a&nbsp;step&nbsp;in&nbsp;the&nbsp;directions&nbsp;opposite&nbsp;to&nbsp;the&nbsp;gradients&nbsp;to&nbsp;make&nbsp;the&nbsp;model&nbsp;parameters&nbsp;a&nbsp;little&nbsp;bit&nbsp;better.</td>
+</tr>
+<tr class="even">
+<td>Learning&nbsp;rate</td>
+<td>The&nbsp;size&nbsp;of&nbsp;the&nbsp;step&nbsp;we&nbsp;take&nbsp;when&nbsp;applying&nbsp;SGD&nbsp;to&nbsp;update&nbsp;the&nbsp;parameters&nbsp;of&nbsp;the&nbsp;model.</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
 
 
 </section>

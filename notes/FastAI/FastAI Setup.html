@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Agastya Patel">
-<meta name="dcterms.date" content="2024-01-11">
+<meta name="dcterms.date" content="2023-12-29">
 
-<title>Agastya Patel - FastAI Lecture 02</title>
+<title>Agastya Patel - FastAI Setup; Understanding Tools</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../notes/FastAI/FastAI Snippets.html" rel="next">
+<link href="../../notes/FastAI/FastAI Lecture 03.html" rel="prev">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -65,7 +67,7 @@ ul.task-list li input[type="checkbox"] {
 }</script>
 
 
-<link rel="stylesheet" href="../../../styles.css">
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
 <body class="nav-sidebar docked nav-fixed">
@@ -75,7 +77,7 @@ ul.task-list li input[type="checkbox"] {
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Agastya Patel</span>
     </a>
   </div>
@@ -86,13 +88,13 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../notes/index.html" rel="" target="">
+    <a class="nav-link" href="../../notes/index.html" rel="" target="">
  <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -122,7 +124,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">FastAI Lecture 02</li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/FastAI/index.html">FastAI Notes</a></li><li class="breadcrumb-item"><a href="../../notes/FastAI/FastAI Setup.html">FastAI Setup; Understanding Tools</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -144,19 +146,19 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/Networking.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/Networking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internet</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/PyTorch.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/PyTorch.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">PyTorch Reference</span></a>
   </div>
 </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../../notes/FastAI/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../notes/FastAI/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Notes</span></a>
           <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
@@ -165,31 +167,31 @@ ul.task-list li input[type="checkbox"] {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Lecture 01</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Lecture 02.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/FastAI/FastAI Lecture 02.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Lecture 02</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/FastAI/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Lecture 03</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">FastAI Setup; Understanding Tools</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Snippets.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/FastAI/FastAI Snippets.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Snippets 01</span></a>
   </div>
 </li>
@@ -205,8 +207,22 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cropping" id="toc-cropping" class="nav-link active" data-scroll-target="#cropping">Cropping</a></li>
-  <li><a href="#data-augmentation" id="toc-data-augmentation" class="nav-link" data-scroll-target="#data-augmentation">Data Augmentation</a></li>
+  <li><a href="#q.-what-is-conda-mamba-mambaforge-miniforge" id="toc-q.-what-is-conda-mamba-mambaforge-miniforge" class="nav-link active" data-scroll-target="#q.-what-is-conda-mamba-mambaforge-miniforge">Q. What is conda, mamba, mambaforge, miniforge?</a></li>
+  <li><a href="#setting-up-windows-subsystem" id="toc-setting-up-windows-subsystem" class="nav-link" data-scroll-target="#setting-up-windows-subsystem">Setting up Windows Subsystem</a></li>
+  <li><a href="#useful-bash-commands-tables" id="toc-useful-bash-commands-tables" class="nav-link" data-scroll-target="#useful-bash-commands-tables">Useful Bash Commands Tables</a></li>
+  <li><a href="#mamba-commands" id="toc-mamba-commands" class="nav-link" data-scroll-target="#mamba-commands">Mamba Commands</a></li>
+  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous">Miscellaneous</a>
+  <ul class="collapse">
+  <li><a href="#tmux" id="toc-tmux" class="nav-link" data-scroll-target="#tmux">tmux</a></li>
+  <li><a href="#nvidia-smi" id="toc-nvidia-smi" class="nav-link" data-scroll-target="#nvidia-smi">nvidia-smi</a>
+  <ul class="collapse">
+  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
+  </ul></li>
+  <li><a href="#cloud-environments" id="toc-cloud-environments" class="nav-link" data-scroll-target="#cloud-environments">Cloud Environments</a>
+  <ul class="collapse">
+  <li><a href="#paperspace" id="toc-paperspace" class="nav-link" data-scroll-target="#paperspace">Paperspace</a></li>
+  </ul></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -215,13 +231,11 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">FastAI Lecture 02</h1>
+<h1 class="title">FastAI Setup; Understanding Tools</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Notes</div>
     <div class="quarto-category">FastAI</div>
-    <div class="quarto-category">History</div>
-    <div class="quarto-category">Neural Network</div>
-    <div class="quarto-category">Theory</div>
+    <div class="quarto-category">Tools</div>
   </div>
   </div>
 
@@ -239,14 +253,14 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 11, 2024</p>
+      <p class="date">December 29, 2023</p>
     </div>
   </div>
   
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">December 31, 2023</p>
+      <p class="date-modified">December 30, 2023</p>
     </div>
   </div>
     
@@ -255,24 +269,179 @@ ul.task-list li input[type="checkbox"] {
 
 </header>
 
-<p>DataLoaders - Dataloaders is a container which contains the data (train and validation) we want to use to for our machine learning model; it organises the data. - DataLoaders class is the class that passes the data to the fastai model. It is essentially a class that required Dataloader objects (usually for train and validation subset)</p>
-<p>item_tfms: Our images are all different sizes, and this is a problem for deep learning: we don’t feed the model one image at a time but several of them (what we call a mini-batch). To group them in a big array (usually called a tensor) that is going to go through our model, they all need to be of the same size. So, we need to add a transform which will resize these images to the same size. Item transforms are pieces of code that run on each individual item, whether it be an image, category, or so forth. fastai includes many predefined transforms; we use the Resize transform here:</p>
-<p>DataBlock: This command has given us a&nbsp;<code>DataBlock</code>&nbsp;object. This is like a&nbsp;<em>template</em>&nbsp;for creating a&nbsp;<code>DataLoaders</code>. We still need to tell fastai the actual source of our data—in this case, the path where the images can be found</p>
-<p>A&nbsp;<code>DataLoaders</code>&nbsp;includes validation and training&nbsp;<code>DataLoader</code>s.&nbsp;<code>DataLoader</code>&nbsp;is a class that provides batches of a few items at a time to the GPU. We’ll be learning a lot more about this class in the next chapter. When you loop through a&nbsp;<code>DataLoader</code>&nbsp;fastai will give you 64 (by default) items at a time, all stacked up into a single tensor. We can take a look at a few of those items by calling the&nbsp;<code>show_batch</code>&nbsp;method on a&nbsp;<code>DataLoader</code>: <code>dls.valid.show_batch(max_n=4, nrows=1)</code> dls is a dataloaders dls.valid and dls.train is dataloader</p>
-<section id="cropping" class="level2">
-<h2 class="anchored" data-anchor-id="cropping">Cropping</h2>
+<p>We’ll be taking a look at package managers like conda, mamba; peek on some important tools like bash, tmux etc.</p>
+<section id="q.-what-is-conda-mamba-mambaforge-miniforge" class="level3">
+<h3 class="anchored" data-anchor-id="q.-what-is-conda-mamba-mambaforge-miniforge">Q. What is conda, mamba, mambaforge, miniforge?</h3>
+<p>Conda is a package and environment manager similar to pip for python. Mamba is C++ based implementation of conda offering faster package installation MambaForge is mamba based distribution which contains a preset collection of set packages for quicker setup and ready to go operation feasibility. Miniforge is conda based distribution</p>
+<blockquote class="blockquote">
+<p>pip does not manage the installation of any code other than python. Eg: PyTorch relies on CUDA so, PIP isn’t the preferable way of installing it instead use <code>conda/mamba</code> Any python library can be installed using PIP</p>
+</blockquote>
+</section>
+<section id="setting-up-windows-subsystem" class="level2">
+<h2 class="anchored" data-anchor-id="setting-up-windows-subsystem">Setting up Windows Subsystem</h2>
 <ul>
-<li>Resize(size): crops the image to fit a square of the size requested, using the full width or height.</li>
-<li>ResizeMethod.Squish: can result in loosing of some detail as images gets squished or stretched.</li>
-<li>ResizeMethod.Pad, pad_mode=‘zero’: Fits the image in square with black padding. These approaches are unoptimized and result in lower accurate models. We can train our model on random parts of image during each training round (EPOCH), making it adaptable to different features, similar to how photos can have different perspective. It helps the model to generalize the feature and learn the basic concept of object</li>
-<li>RandomResizedCrop(size, min_scale=0.3): Creates random zoom images during epoch in vram <code>dls.train.show_batch(max_n=4, nrows=1, unique=True)</code> We used&nbsp;<code>unique=True</code>&nbsp;to have the same image repeated with different versions of this&nbsp;<code>RandomResizedCrop</code>&nbsp;transform. This is a specific example of a more general technique, called data augmentation.</li>
+<li>Set wsl</li>
+<li>get the miniforge/mambaforge(deprected)</li>
+<li>run the miniforge.sh</li>
+<li><code>mamba install ipython</code></li>
+<li><code>mamba install jupyter lab</code></li>
+<li><code>mamba install pytorch</code></li>
+<li><code>conda install fastai</code></li>
 </ul>
 </section>
-<section id="data-augmentation" class="level2">
-<h2 class="anchored" data-anchor-id="data-augmentation">Data Augmentation</h2>
-<p>With resize our images are now all the same size, we can apply these augmentations to an entire batch of them using the GPU, which will save a lot of time.</p>
+<section id="useful-bash-commands-tables" class="level1">
+<h1>Useful Bash Commands Tables</h1>
+<table class="table">
+<colgroup>
+<col style="width: 50%">
+<col style="width: 50%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ls -l</code></td>
+<td>get long form (file, data, size-bytes)</td>
+</tr>
+<tr class="even">
+<td><code>ls -l -h</code></td>
+<td>human readable data like the size of the file in MB</td>
+</tr>
+<tr class="odd">
+<td><code>less &lt;filename&gt;</code></td>
+<td>Open the file</td>
+</tr>
+<tr class="even">
+<td><code>wget &lt;url&gt;</code></td>
+<td>Download file</td>
+</tr>
+<tr class="odd">
+<td><code>sudo -u &lt;user&gt; -i</code></td>
+<td>Change user</td>
+</tr>
+<tr class="even">
+<td>ctrl+d</td>
+<td>Exit any application running in shell</td>
+</tr>
+<tr class="odd">
+<td><code>! &lt;some_letter&gt;</code></td>
+<td>Opens similar letter recent application Eg; <code>!ju</code> # Might open jupyterLab</td>
+</tr>
+<tr class="even">
+<td><code>!!</code></td>
+<td>Opens last command</td>
+</tr>
+<tr class="odd">
+<td><code>cd --</code></td>
+<td>Most recent Directory</td>
+</tr>
+<tr class="even">
+<td><code>pushd ~</code></td>
+<td>Stash Dir</td>
+</tr>
+<tr class="odd">
+<td><code>popd</code></td>
+<td>Unstash Dir (Pop Dir)</td>
+</tr>
+<tr class="even">
+<td>echo $ENV_VAR<br><code>echo $PATH</code></td>
+<td>Returns value of environment variables like Path Variable</td>
+</tr>
+<tr class="odd">
+<td><code>df -h</code></td>
+<td>disk usage</td>
+</tr>
+<tr class="even">
+<td><code>logout</code></td>
+<td>exit</td>
+</tr>
+<tr class="odd">
+<td>ls . | Head</td>
+<td>Show first 10</td>
+</tr>
+<tr class="even">
+<td>ls . | Tail</td>
+<td>Show last 10</td>
+</tr>
+<tr class="odd">
+<td>ls . | wc -l</td>
+<td>Gives number of lines (items)</td>
+</tr>
+<tr class="even">
+<td>ls . | grep 33</td>
+<td>Search 33</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="mamba-commands" class="level1">
+<h1>Mamba Commands</h1>
+<ol type="1">
+<li>Create new environment ==<code>mamba create -n &lt;env_name&gt; &lt;dependency&gt;</code>== <code>mamba create -n tmp 'python&lt;3.10' fastcore</code></li>
+<li>Activate/deactivate <code>mamba activate &lt;env_name&gt;</code> <code>mamba deactivate</code> # PIP Commands <code>pip -U &lt;library&gt;</code> : Upgrade library <code>pip -U --user &lt;library&gt;</code> : Installs library in User Directory in <code>.local</code> folder</li>
+</ol>
+</section>
+<section id="miscellaneous" class="level1">
+<h1>Miscellaneous</h1>
+<section id="tmux" class="level3">
+<h3 class="anchored" data-anchor-id="tmux">tmux</h3>
+<p><code>sudo apt install tmux</code></p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Command</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><code>ctrl + b %</code><br><code>ctrl + b "</code></td>
+<td>Split Pane horizontal and vertical</td>
+</tr>
+<tr class="even">
+<td><code>ctrl + b Arrow</code></td>
+<td>Focus around Panes</td>
+</tr>
+<tr class="odd">
+<td><code>ctrl + b d</code></td>
+<td>Delete Pane</td>
+</tr>
+<tr class="even">
+<td><code>ctrl + b z</code></td>
+<td>Zoom into/out-of pane</td>
+</tr>
+<tr class="odd">
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="nvidia-smi" class="level2">
+<h2 class="anchored" data-anchor-id="nvidia-smi">nvidia-smi</h2>
+<p><code>nvidia-smi dmon</code>: Chec for sm and mem column ## Jupter <code>%%debug</code> : Used for non-graphical debugging <code>from pdb import set_trace</code> : <code>set_trace()</code> sets a breakpoint and automatically enables debugger mode ## Symblinks ### Linux <code>ln -s target-path</code> : Creates a symblink of the target directory in current directory <code>ln -la</code> : Displays the folders who are made up of symblink</p>
+<section id="windows" class="level3">
+<h3 class="anchored" data-anchor-id="windows">Windows</h3>
+<p><a href="https://www.youtube.com/watch?v=2uy4mR3q_jM">Youtube Tutorial</a></p>
+</section>
+</section>
+<section id="cloud-environments" class="level2">
+<h2 class="anchored" data-anchor-id="cloud-environments">Cloud Environments</h2>
+<section id="paperspace" class="level3">
+<h3 class="anchored" data-anchor-id="paperspace">Paperspace</h3>
+<p>Q. How to set common library? 1. pip install <code>--user</code> with this flag so that the lib is installed in <code>.local</code> 2. move the <code>.local</code> to <code>/storage/.local</code> 3. create symblink from <code>/storage/.local</code> as target and it would create <code>.bash.local</code> in <code>storage</code> which would fire up time new instance has been called</p>
 
 
+</section>
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -624,6 +793,18 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<nav class="page-navigation">
+  <div class="nav-page nav-page-previous">
+      <a href="../../notes/FastAI/FastAI Lecture 03.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FastAI Lecture 03</span>
+      </a>          
+  </div>
+  <div class="nav-page nav-page-next">
+      <a href="../../notes/FastAI/FastAI Snippets.html" class="pagination-link">
+        <span class="nav-page-text">FastAI Snippets 01</span> <i class="bi bi-arrow-right-short"></i>
+      </a>
+  </div>
+</nav>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">

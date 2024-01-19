@@ -74,9 +74,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
+      valueNames: [{ data: ['index'] },{ data: ['categories'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author"],
+      searchColumns: [],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -100,7 +100,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -118,7 +118,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link active" href="./notesIndex.html" rel="" target="" aria-current="page">
+    <a class="nav-link" href="./notes/index.html" rel="" target="">
  <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -149,6 +149,19 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Notes</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
@@ -175,6 +188,71 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/Networking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Internet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/PyTorch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PyTorch Reference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./notes/FastAI/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Lecture 02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Setup; Understanding Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Snippets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Snippets 01</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
@@ -191,25 +269,6 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-         <option value="listing-title-sort" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-author" data-direction="asc">
-          Author
-        </option>
-     </select>
-  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
@@ -219,51 +278,9 @@ ul.task-list li input[type="checkbox"] {
 <table class="quarto-listing-table table">
 <thead>
 <tr>
-<th>
-<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
-</th>
-<th>
-<a class="sort" data-sort="listing-author" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Author</a>
-</th>
 </tr>
 </thead>
 <tbody class="list">
-<tr data-index="0" data-categories="notes,FastAI" data-listing-date-sort="1703788200000" data-listing-file-modified-sort="1704036153509" data-listing-date-modified-sort="1703874600000" data-listing-reading-time-sort="1" data-listing-title-sort="FastAI Notes" data-listing-filename-sort="index.qmd">
-<td>
-<span class="listing-date">Dec 29, 2023</span>
-</td>
-<td>
-<a href="./posts/Notes/FastAI/index.html" class="title listing-title">FastAI Notes</a>
-</td>
-<td>
-<span class="listing-author">Agastya Patel</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Notes,FastAI,Tools" data-listing-date-sort="1703788200000" data-listing-file-modified-sort="1705136330698" data-listing-date-modified-sort="1703874600000" data-listing-reading-time-sort="3" data-listing-title-sort="FastAI Setup; Understanding Tools" data-listing-filename-sort="FastAI Setup.md">
-<td>
-<span class="listing-date">Dec 29, 2023</span>
-</td>
-<td>
-<a href="./posts/Notes/FastAI/FastAI Setup.html" class="title listing-title">FastAI Setup; Understanding Tools</a>
-</td>
-<td>
-<span class="listing-author">Agastya Patel</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="Notes,FastAI,Utils" data-listing-date-sort="1703961000000" data-listing-file-modified-sort="1704036327234" data-listing-date-modified-sort="1703961000000" data-listing-reading-time-sort="1" data-listing-title-sort="FastAI Snippets 01" data-listing-filename-sort="FastAI Snippets.md">
-<td>
-<span class="listing-date">Dec 31, 2023</span>
-</td>
-<td>
-<a href="./posts/Notes/FastAI/FastAI Snippets.html" class="title listing-title">FastAI Snippets 01</a>
-</td>
-<td>
-<span class="listing-author">Agastya Patel</span>
-</td>
-</tr>
 </tbody>
 
 </table>

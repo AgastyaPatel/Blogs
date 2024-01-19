@@ -1,54 +1,38 @@
 [
   {
-    "listing": "/projects.html",
-    "items": [
-      "/posts/FastAI/Status.html",
-      "/posts/Notes/FastAI/FastAI Lecture 03.html",
-      "/posts/Notes/FastAI/FastAI Lecture 02.html",
-      "/posts/Notes/FastAI/FastAI Lecture 01.html",
-      "/posts/Notes/FastAI/FastAI Snippets.html",
-      "/posts/Notes/FastAI/FastAI Setup.html",
-      "/posts/Notes/FastAI/index.html",
-      "/posts/FastAI/index.html",
-      "/posts/QuickStart.html"
-    ]
-  },
-  {
-    "listing": "/posts/Notes/FastAI/index.html",
-    "items": [
-      "/posts/Notes/FastAI/FastAI Lecture 01.html",
-      "/posts/Notes/FastAI/FastAI Lecture 02.html",
-      "/posts/Notes/FastAI/FastAI Lecture 03.html",
-      "/posts/Notes/FastAI/FastAI Setup.html",
-      "/posts/Notes/FastAI/FastAI Snippets.html"
-    ]
-  },
-  {
     "listing": "/notesIndex.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/FastAI/index.html",
     "items": [
-      "/posts/Notes/FastAI/index.html",
-      "/posts/Notes/FastAI/FastAI Setup.html",
-      "/posts/Notes/FastAI/FastAI Snippets.html"
+      "/notes/FastAI/FastAI Lecture 01.html",
+      "/notes/FastAI/FastAI Lecture 02.html",
+      "/notes/FastAI/FastAI Lecture 03.html",
+      "/notes/FastAI/FastAI Setup.html",
+      "/notes/FastAI/FastAI Snippets.html"
     ]
   },
   {
     "listing": "/index.html",
     "items": [
-      "/posts/FastAI/Status.html",
-      "/posts/Notes/FastAI/FastAI Lecture 03.html",
-      "/posts/Notes/FastAI/FastAI Lecture 02.html",
-      "/posts/Notes/FastAI/FastAI Lecture 01.html",
-      "/posts/Notes/FastAI/FastAI Snippets.html",
-      "/posts/Notes/FastAI/FastAI Setup.html",
-      "/posts/Notes/FastAI/index.html",
-      "/posts/FastAI/index.html",
-      "/posts/QuickStart.html"
+      "/blogs/FastAI/index.html"
     ]
   },
   {
-    "listing": "/posts/FastAI/index.html",
+    "listing": "/blogs/FastAI/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/index.html",
     "items": [
-      "/posts/FastAI/Status.html"
+      "/notes/FastAI/index.html",
+      "/notes/Networking.html",
+      "/notes/PyTorch.html"
     ]
+  },
+  {
+    "listing": "/projects.html",
+    "items": []
   }
 ]

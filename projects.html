@@ -73,9 +73,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-author','listing-image','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-categories"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -99,7 +99,7 @@ ul.task-list li input[type="checkbox"] {
 <link rel="stylesheet" href="styles.css">
 </head>
 
-<body class="nav-fixed">
+<body class="nav-sidebar docked nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
@@ -117,7 +117,7 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./notesIndex.html" rel="" target="">
+    <a class="nav-link" href="./notes/index.html" rel="" target="">
  <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
@@ -148,11 +148,24 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
+  <nav class="quarto-secondary-nav">
+    <div class="container-fluid d-flex">
+      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+        <i class="bi bi-layout-text-sidebar-reverse"></i>
+      </button>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">Projects</li></ol></nav>
+      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
+      </a>
+      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
+        <i class="bi bi-search"></i>
+      </button>
+    </div>
+  </nav>
 </header>
 <!-- content -->
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
-    <div class="quarto-title column-page-left">
+    <div class="quarto-title column-body">
       <h1 class="title">Projects</h1>
                       </div>
   </div>
@@ -168,12 +181,77 @@ ul.task-list li input[type="checkbox"] {
   
   </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-full page-navbar">
 <!-- sidebar -->
+  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
+        <div class="mt-2 flex-shrink-0 align-items-center">
+        <div class="sidebar-search">
+        <div id="quarto-search" class="" title="Search"></div>
+        </div>
+        </div>
+    <div class="sidebar-menu-container"> 
+    <ul class="list-unstyled mt-1">
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/Networking.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Internet</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/PyTorch.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">PyTorch Reference</span></a>
+  </div>
+</li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="./notes/FastAI/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Notes</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 01</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Lecture 02.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 02</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Lecture 03</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Setup; Understanding Tools</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="./notes/FastAI/FastAI Snippets.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI Snippets 01</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+    </ul>
+    </div>
+</nav>
+<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="DeepLearning">DeepLearning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="FastAI">FastAI <span class="quarto-category-count">(7)</span></div><div class="category" data-category="Folder">Folder <span class="quarto-category-count">(1)</span></div><div class="category" data-category="History">History <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Neural Network">Neural Network <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Notes">Notes <span class="quarto-category-count">(5)</span></div><div class="category" data-category="Theory">Theory <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Tools">Tools <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Utils">Utils <span class="quarto-category-count">(1)</span></div><div class="category" data-category="notes">notes <span class="quarto-category-count">(1)</span></div><div class="category" data-category="test">test <span class="quarto-category-count">(1)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(0)</span></div></div></div>
 <!-- main -->
-<main class="content quarto-banner-title-block column-page-left" id="quarto-document-content">
+<main class="content quarto-banner-title-block column-body" id="quarto-document-content">
 
 
 
@@ -184,372 +262,7 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-listing quarto-listing-container-default" id="listing-listing">
 <div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-date-sort="1705257000000" data-listing-file-modified-sort="1703895942695" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/FastAI/Status.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/FastAI/Status.html">
-<h3 class="no-anchor listing-title">
-FastAI Journey Status
-</h3>
-<div class="listing-subtitle">
 
-</div>
-<div class="listing-description">
-<em>Completed</em> : 1,2,3,6,7<br>
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/FastAI/Status.html">
-<div class="listing-date">
-Jan 15, 2024
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="Notes,FastAI,History,Neural Network,Theory" data-listing-date-sort="1705084200000" data-listing-file-modified-sort="1705260576867" data-listing-date-modified-sort="1705084200000" data-listing-reading-time-sort="2">
-<div class="thumbnail">
-<p><a href="./posts/Notes/FastAI/FastAI Lecture 03.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Notes/FastAI/FastAI Lecture 03.html">
-<h3 class="no-anchor listing-title">
-FastAI Lecture 02
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Notes'); return false;">
-Notes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FastAI'); return false;">
-FastAI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('History'); return false;">
-History
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Neural Network'); return false;">
-Neural Network
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Theory'); return false;">
-Theory
-</div>
-</div>
-<a href="./posts/Notes/FastAI/FastAI Lecture 03.html">
-<div class="listing-description">
-Derivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Notes/FastAI/FastAI Lecture 03.html">
-<div class="listing-date">
-Jan 13, 2024
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="Notes,FastAI,History,Neural Network,Theory" data-listing-date-sort="1704911400000" data-listing-file-modified-sort="1705136218891" data-listing-date-modified-sort="1703961000000" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/Notes/FastAI/FastAI Lecture 02.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Notes/FastAI/FastAI Lecture 02.html">
-<h3 class="no-anchor listing-title">
-FastAI Lecture 02
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Notes'); return false;">
-Notes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FastAI'); return false;">
-FastAI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('History'); return false;">
-History
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Neural Network'); return false;">
-Neural Network
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Theory'); return false;">
-Theory
-</div>
-</div>
-<a href="./posts/Notes/FastAI/FastAI Lecture 02.html">
-<div class="listing-description">
-<strong>item_tfms:</strong> Our images are all different sizes, and this is a problem for deep learning: we don’t feed the model one image at a time but several of them (what we call a mini-batch). To…
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Notes/FastAI/FastAI Lecture 02.html">
-<div class="listing-date">
-Jan 11, 2024
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="Notes,FastAI,History,Neural Network,Theory" data-listing-date-sort="1703961000000" data-listing-file-modified-sort="1705336883873" data-listing-date-modified-sort="1703961000000" data-listing-reading-time-sort="12">
-<div class="thumbnail">
-<p><a href="./posts/Notes/FastAI/FastAI Lecture 01.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Notes/FastAI/FastAI Lecture 01.html">
-<h3 class="no-anchor listing-title">
-FastAI Lecture 01
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Notes'); return false;">
-Notes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FastAI'); return false;">
-FastAI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('History'); return false;">
-History
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Neural Network'); return false;">
-Neural Network
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Theory'); return false;">
-Theory
-</div>
-</div>
-<a href="./posts/Notes/FastAI/FastAI Lecture 01.html">
-<div class="listing-description">
-<strong>Useful Resources</strong> This is how I found out about fastAI :) Alliance MAP JH’s jupyter NB 101 Kaggle: Comprehensive data exploration with Python”
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Notes/FastAI/FastAI Lecture 01.html">
-<div class="listing-date">
-Dec 31, 2023
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="Notes,FastAI,Utils" data-listing-date-sort="1703961000000" data-listing-file-modified-sort="1704036327234" data-listing-date-modified-sort="1703961000000" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Notes/FastAI/FastAI Snippets.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Notes/FastAI/FastAI Snippets.html">
-<h3 class="no-anchor listing-title">
-FastAI Snippets 01
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Notes'); return false;">
-Notes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FastAI'); return false;">
-FastAI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Utils'); return false;">
-Utils
-</div>
-</div>
-<a href="./posts/Notes/FastAI/FastAI Snippets.html">
-<div class="listing-description">
-Page contains some of the common and usefull snippets. Pathlib, parallel processing.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Notes/FastAI/FastAI Snippets.html">
-<div class="listing-date">
-Dec 31, 2023
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="Notes,FastAI,Tools" data-listing-date-sort="1703788200000" data-listing-file-modified-sort="1705136330698" data-listing-date-modified-sort="1703874600000" data-listing-reading-time-sort="3">
-<div class="thumbnail">
-<p><a href="./posts/Notes/FastAI/FastAI Setup.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Notes/FastAI/FastAI Setup.html">
-<h3 class="no-anchor listing-title">
-FastAI Setup; Understanding Tools
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Notes'); return false;">
-Notes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FastAI'); return false;">
-FastAI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Tools'); return false;">
-Tools
-</div>
-</div>
-<a href="./posts/Notes/FastAI/FastAI Setup.html">
-<div class="listing-description">
-We’ll be taking a look at package managers like conda, mamba; peek on some important tools like bash, tmux etc.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Notes/FastAI/FastAI Setup.html">
-<div class="listing-date">
-Dec 29, 2023
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="notes,FastAI" data-listing-date-sort="1703788200000" data-listing-file-modified-sort="1704036153509" data-listing-date-modified-sort="1703874600000" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/Notes/FastAI/index.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/Notes/FastAI/index.html">
-<h3 class="no-anchor listing-title">
-FastAI Notes
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('notes'); return false;">
-notes
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FastAI'); return false;">
-FastAI
-</div>
-</div>
-<a href="./posts/Notes/FastAI/index.html">
-<div class="listing-description">
-This is a post with executable code.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/Notes/FastAI/index.html">
-<div class="listing-date">
-Dec 29, 2023
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="Folder,DeepLearning,FastAI" data-listing-date-sort="1703615400000" data-listing-file-modified-sort="1705134991213" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/FastAI/index.html"> <img src="./posts/FastAI/image.png" class="thumbnail-image"> </a></p>
-</div>
-<div class="body">
-<a href="./posts/FastAI/index.html">
-<h3 class="no-anchor listing-title">
-FastAI Journey
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('Folder'); return false;">
-Folder
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('DeepLearning'); return false;">
-DeepLearning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('FastAI'); return false;">
-FastAI
-</div>
-</div>
-<a href="./posts/FastAI/index.html">
-<div class="listing-description">
-Here’s my current journey of Fast AI learning. I’ll be keeping tab of the projects and the current status of journey here!.
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/FastAI/index.html">
-<div class="listing-date">
-Dec 27, 2023
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="test" data-listing-date-sort="1703615400000" data-listing-file-modified-sort="1703895942698" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1">
-<div class="thumbnail">
-<p><a href="./posts/QuickStart.html"> <div class="listing-item-img-placeholder card-img-top" >&nbsp;</div> </a></p>
-</div>
-<div class="body">
-<a href="./posts/QuickStart.html">
-<h3 class="no-anchor listing-title">
-Quarto ipynb blog test
-</h3>
-<div class="listing-subtitle">
-
-</div>
-</a>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('test'); return false;">
-test
-</div>
-</div>
-<a href="./posts/QuickStart.html">
-<div class="listing-description">
-
-</div>
-</a>
-</div>
-<div class="metadata">
-<a href="./posts/QuickStart.html">
-<div class="listing-date">
-Dec 27, 2023
-</div>
-<div class="listing-author">
-Agastya Patel
-</div>
-</a>
-</div>
-</div>
 </div>
 <div class="listing-no-matching d-none">
 No matching items

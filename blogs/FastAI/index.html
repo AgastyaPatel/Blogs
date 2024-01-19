@@ -7,9 +7,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Agastya Patel">
-<meta name="dcterms.date" content="2024-01-11">
+<meta name="dcterms.date" content="2023-12-27">
 
-<title>Agastya Patel - FastAI Lecture 02</title>
+<title>Agastya Patel - FastAI Journey</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -25,24 +25,26 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
-<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
-<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
-<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="../../../">
-<script src="../../../site_libs/quarto-html/quarto.js"></script>
-<script src="../../../site_libs/quarto-html/popper.min.js"></script>
-<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
-<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="../../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -63,19 +65,50 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
 
-<link rel="stylesheet" href="../../../styles.css">
+    const options = {
+      valueNames: ['listing-title','listing-description','listing-date',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<link rel="stylesheet" href="../../styles.css">
 </head>
 
-<body class="nav-sidebar docked nav-fixed">
+<body class="nav-fixed">
 
 <div id="quarto-search-results"></div>
   <header id="quarto-header" class="headroom fixed-top">
     <nav class="navbar navbar-expand-lg navbar-dark ">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container">
-    <a class="navbar-brand" href="../../../index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title">Agastya Patel</span>
     </a>
   </div>
@@ -86,13 +119,13 @@ ul.task-list li input[type="checkbox"] {
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../notes/index.html" rel="" target="">
+    <a class="nav-link" href="../../notes/index.html" rel="" target="">
  <span class="menu-text">Notes</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
   <li class="nav-item">
-    <a class="nav-link" href="../../../about.html" rel="" target="">
+    <a class="nav-link" href="../../about.html" rel="" target="">
  <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item compact">
@@ -117,96 +150,18 @@ ul.task-list li input[type="checkbox"] {
           </div> <!-- /navcollapse -->
       </div> <!-- /container-fluid -->
     </nav>
-  <nav class="quarto-secondary-nav">
-    <div class="container-fluid d-flex">
-      <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
-        <i class="bi bi-layout-text-sidebar-reverse"></i>
-      </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">FastAI Lecture 02</li></ol></nav>
-      <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-      </a>
-      <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
-        <i class="bi bi-search"></i>
-      </button>
-    </div>
-  </nav>
 </header>
 <!-- content -->
 <div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
 <!-- sidebar -->
-  <nav id="quarto-sidebar" class="sidebar collapse collapse-horizontal sidebar-navigation docked overflow-auto">
-        <div class="mt-2 flex-shrink-0 align-items-center">
-        <div class="sidebar-search">
-        <div id="quarto-search" class="" title="Search"></div>
-        </div>
-        </div>
-    <div class="sidebar-menu-container"> 
-    <ul class="list-unstyled mt-1">
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/Networking.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Internet</span></a>
-  </div>
-</li>
-        <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/PyTorch.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">PyTorch Reference</span></a>
-  </div>
-</li>
-        <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../../notes/FastAI/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Notes</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-1" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Lecture 01</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Lecture 02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Lecture 02</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Lecture 03</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Setup; Understanding Tools</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../../notes/FastAI/FastAI Snippets.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Snippets 01</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-    </ul>
-    </div>
-</nav>
-<div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
         <nav id="TOC" role="doc-toc" class="toc-active">
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#cropping" id="toc-cropping" class="nav-link active" data-scroll-target="#cropping">Cropping</a></li>
-  <li><a href="#data-augmentation" id="toc-data-augmentation" class="nav-link" data-scroll-target="#data-augmentation">Data Augmentation</a></li>
+  <li><a href="#live-coding" id="toc-live-coding" class="nav-link active" data-scroll-target="#live-coding">Live Coding:</a></li>
+  <li><a href="#lesson" id="toc-lesson" class="nav-link" data-scroll-target="#lesson">Lesson</a></li>
   </ul>
 </nav>
     </div>
@@ -215,13 +170,10 @@ ul.task-list li input[type="checkbox"] {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">FastAI Lecture 02</h1>
+<h1 class="title">FastAI Journey</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Notes</div>
+    <div class="quarto-category">DeepLearning</div>
     <div class="quarto-category">FastAI</div>
-    <div class="quarto-category">History</div>
-    <div class="quarto-category">Neural Network</div>
-    <div class="quarto-category">Theory</div>
   </div>
   </div>
 
@@ -239,43 +191,121 @@ ul.task-list li input[type="checkbox"] {
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">January 11, 2024</p>
+      <p class="date">December 27, 2023</p>
     </div>
   </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">December 31, 2023</p>
-    </div>
-  </div>
     
   </div>
   
 
 </header>
 
-<p>DataLoaders - Dataloaders is a container which contains the data (train and validation) we want to use to for our machine learning model; it organises the data. - DataLoaders class is the class that passes the data to the fastai model. It is essentially a class that required Dataloader objects (usually for train and validation subset)</p>
-<p>item_tfms: Our images are all different sizes, and this is a problem for deep learning: we don’t feed the model one image at a time but several of them (what we call a mini-batch). To group them in a big array (usually called a tensor) that is going to go through our model, they all need to be of the same size. So, we need to add a transform which will resize these images to the same size. Item transforms are pieces of code that run on each individual item, whether it be an image, category, or so forth. fastai includes many predefined transforms; we use the Resize transform here:</p>
-<p>DataBlock: This command has given us a&nbsp;<code>DataBlock</code>&nbsp;object. This is like a&nbsp;<em>template</em>&nbsp;for creating a&nbsp;<code>DataLoaders</code>. We still need to tell fastai the actual source of our data—in this case, the path where the images can be found</p>
-<p>A&nbsp;<code>DataLoaders</code>&nbsp;includes validation and training&nbsp;<code>DataLoader</code>s.&nbsp;<code>DataLoader</code>&nbsp;is a class that provides batches of a few items at a time to the GPU. We’ll be learning a lot more about this class in the next chapter. When you loop through a&nbsp;<code>DataLoader</code>&nbsp;fastai will give you 64 (by default) items at a time, all stacked up into a single tensor. We can take a look at a few of those items by calling the&nbsp;<code>show_batch</code>&nbsp;method on a&nbsp;<code>DataLoader</code>: <code>dls.valid.show_batch(max_n=4, nrows=1)</code> dls is a dataloaders dls.valid and dls.train is dataloader</p>
-<section id="cropping" class="level2">
-<h2 class="anchored" data-anchor-id="cropping">Cropping</h2>
+<p>Here’s my current journey of Fast AI learning. I’ll be keeping tab of the projects and the current status of journey here!.</p>
+<p>My FastAI/Course Journey: <a href="https://github.com/AgastyaPatel/FastAI-course">github</a></p>
+<section id="live-coding" class="level1">
+<h1>Live Coding:</h1>
+<p><em>Completed</em> : 1,2,3,6,7<br>
+</p>
+</section>
+<section id="lesson" class="level1">
+<h1>Lesson</h1>
 <ul>
-<li>Resize(size): crops the image to fit a square of the size requested, using the full width or height.</li>
-<li>ResizeMethod.Squish: can result in loosing of some detail as images gets squished or stretched.</li>
-<li>ResizeMethod.Pad, pad_mode=‘zero’: Fits the image in square with black padding. These approaches are unoptimized and result in lower accurate models. We can train our model on random parts of image during each training round (EPOCH), making it adaptable to different features, similar to how photos can have different perspective. It helps the model to generalize the feature and learn the basic concept of object</li>
-<li>RandomResizedCrop(size, min_scale=0.3): Creates random zoom images during epoch in vram <code>dls.train.show_batch(max_n=4, nrows=1, unique=True)</code> We used&nbsp;<code>unique=True</code>&nbsp;to have the same image repeated with different versions of this&nbsp;<code>RandomResizedCrop</code>&nbsp;transform. This is a specific example of a more general technique, called data augmentation.</li>
+<li>✅ Done</li>
+<li>🌀 Current Sprint</li>
+<li>💤 Pending</li>
 </ul>
+<table class="table">
+<colgroup>
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+<col style="width: 16%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lesson</th>
+<th>Watched</th>
+<th>Read</th>
+<th>Questionnaire</th>
+<th>Re-Implementation</th>
+<th>Self-Implementation</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td><strong>1</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>✅</td>
+<td>🌀</td>
+</tr>
+<tr class="even">
+<td><strong>2</strong></td>
+<td>✅</td>
+<td>✅</td>
+<td>🌀</td>
+<td>✅</td>
+<td>💤</td>
+</tr>
+<tr class="odd">
+<td><strong>3</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="even">
+<td><strong>4</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr class="odd">
+<td><strong>5</strong></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+
+
+
 </section>
-<section id="data-augmentation" class="level2">
-<h2 class="anchored" data-anchor-id="data-augmentation">Data Augmentation</h2>
-<p>With resize our images are now all the same size, we can apply these augmentations to an entire batch of them using the GPU, which will save a lot of time.</p>
 
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 
-</section>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+Title
+</th>
+<th>
+Description
+</th>
+<th>
+Date
+</th>
+</tr>
+</thead>
+<tbody class="list">
+</tbody>
 
-</main> <!-- /main -->
+</table>
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
