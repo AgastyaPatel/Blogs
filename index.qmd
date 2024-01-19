@@ -1,7 +1,8 @@
 ---
 title: "Blogs"
+sidebar: false
 listing:
-  contents: posts
+  contents: blogs
   sort: "date desc"
   type: default
   categories: true

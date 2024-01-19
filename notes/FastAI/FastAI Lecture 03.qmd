@@ -1,0 +1,111 @@
+---
+title: FastAI Lecture 03
+author: Agastya Patel
+date: 2024-01-13
+date-modified: 2024-01-13
+categories:
+  - Notes
+  - FastAI
+  - History
+  - Neural Network
+  - Theory
+---
+## Goal
+- Arrays/Tensor
+- Broadcasting (Understand it better)
+- SGD
+- Loss function
+- Role of mini batches
+- describe the math that a basic neural network is actually doing
+
+Rectified linear Unit : y = mx + b
+## Calculating Loss
+### What are derivatives?
+Derivatives define the rate of change for the particular function at that particular point of parameter.
+> In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function
+
+### Calculating derivatives for weights in NN
+Our function has large number of weights. We calculate the derivative for one weight while we consider rest as constant and repeat the same process.
+
+ > in deep learning, "gradients" usually means the _value_ of a function's derivative at a particular argument value whereas in math the derivative gives us another function(rate)
+
+pytorch provides `requires_grad_()` which tags the variable and keeps track to calculate derivative when passed in a function
+
+```py
+def f(x): return x**2
+
+xt = tensor(3.).requires_grad_()
+
+## Calculating function with the value 
+yt = f(xt)
+yt
+>>tensor(9., grad_fn=<PowBackward0>)
+
+## Asking pytorch to calculate gradient for us
+yt.backwards()
+# The "backward" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.
+
+xt.grad
+>> tensor(6.)
+```
+
+derivative of f(x) = x^2 is 2\*x
+We found the same value with the xt.grad (gradient)
+
+>The gradients only tell us the slope of our function, they don't actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value.
+
+The key difference is that the metric is to drive human understanding and the loss is to drive automated learning. To drive automated learning, the loss must be a function that has a **meaningful derivative**. It can't have big flat sections and large jumps, but instead must be reasonably smooth. This is why we designed a loss function that would respond to small changes in confidence level. This requirement means that sometimes it does not really reflect exactly what we are trying to achieve, but is rather a compromise between our real goal and a function that can be optimized using its gradient. The loss function is calculated for each item in our dataset, and then at the end of an epoch the loss values are all averaged and the overall mean is reported for the epoch.
+Metrics, on the other hand, are the numbers that we really care about. These are the values that are printed at the end of each epoch that tell us how our model is really doing. It is important that we learn to focus on these metrics, rather than the loss, when judging the performance of a model.
+
+
+## Loss vs Metric
+|Aspect|Metric|Loss|
+|---|---|---|
+|**Purpose Difference**|Drives human understanding of performance|Drives automated learning by optimization|
+|**Smoothness Requirement**|Not constrained by smoothness|Requires smoothness for meaningful derivative|
+|**Optimization vs. Real Goal**|Reflects actual goals|Compromise between real goals and optimization|
+|**Calculation Process**|Provides overall model evaluation|Calculated per item, averaged at epoch end|
+|**Focus Consideration**|Primary focus for judging performance|Important for automated learning, may not directly represent end goal|
+## Why Batches?
+*After loss function calculation; When should the system update weights?*
+if loss is calculated for one item it would not be much informational as it would result in imprecise and unstable gradient
+if loss is calculated for entire dataset it would take very long
+### Mini Batch
+So, we count the average loss for few data items at a time (**Mini Batch**) 
+BatchSize = Number of items
+
+| Batch Size | Quality | Time | Size |
+| ---- | ---- | ---- | ---- |
+| Larger  | more accurate and stable estimate of your dataset's gradients from the loss function | longer time to process  |  will process fewer mini-batches per epoch |
+> NOTE: We can't use large batch size due to limitation of GPU memory  
+
+### Randomization with mini batches
+Rather than simply enumerating our dataset in order for every epoch, instead what we normally do is randomly shuffle it on every epoch, before we create mini-batches. PyTorch and fastai provide a class that will do the shuffling and mini-batch collation for you, called `DataLoader`.
+
+```py
+ds = L(enumerate(string.ascii_lowercase))
+ds
+>> (#26) [(0, 'a'),(1, 'b'),(2, 'c'),(3, 'd'),(4, 'e'),(5, 'f'),(6, 'g'),(7, 'h'),(8, 'i'),(9, 'j')...]
+
+dl = DataLoader(ds, batch_size=6, shuffle=True)
+list(dl)
+>> [(tensor([17, 18, 10, 22,  8, 14]), ('r', 's', 'k', 'w', 'i', 'o')),
+ (tensor([20, 15,  9, 13, 21, 12]), ('u', 'p', 'j', 'n', 'v', 'm')),
+ (tensor([ 7, 25,  6,  5, 11, 23]), ('h', 'z', 'g', 'f', 'l', 'x')),
+ (tensor([ 1,  3,  0, 24, 19, 16]), ('b', 'd', 'a', 'y', 't', 'q')),
+ (tensor([2, 4]), ('c', 'e'))]
+```
+
+
+
+| Term | Meaning |
+| ---- | ---- |
+| ReLU | Function that returns 0 for negative numbers and doesn't change positive numbers. |
+| Mini-batch | A small group of inputs and labels gathered together in two arrays. A gradient descent step is updated on this batch (rather than a whole epoch). |
+| Forward pass | Applying the model to some input and computing the predictions. |
+| Loss | A value that represents how well (or badly) our model is doing. |
+| Gradient | The derivative of the loss with respect to some parameter of the model. |
+| Backward pass | Computing the gradients of the loss with respect to all model parameters. |
+| Gradient descent | Taking a step in the directions opposite to the gradients to make the model parameters a little bit better. |
+| Learning rate | The size of the step we take when applying SGD to update the parameters of the model. |
+|  |  |

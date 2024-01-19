@@ -7,7 +7,7 @@ website:
   title: "Agastya Patel"
   navbar:
     left:
-      - notesIndex.qmd
+      - notes/index.qmd
     right:
       - about.qmd
       - icon: github
@@ -26,12 +26,16 @@ website:
       - icon: twitter 
         href: https://twitter.com/4gastyaPatel
 
-  # sidebar: 
-  #   style: "docked"
-  #   search: true
-  #   contents:
-  #     - section: "Basics"
-  #       contents:
+  sidebar:
+    - title: 'Notes'
+      pinned: false
+      collapse-level: 0
+      style: docked
+      search: true
+      contents: notes/**
+      # contents: 
+      #   - section: "Notes"
+      #     contents: notes/**
 
 format:
   html:

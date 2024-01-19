@@ -1,0 +1,15 @@
+---
+title: "FastAI Notes"
+author: "Agastya Patel"
+date: "2023-12-29"
+date-modified: "2023-12-30"
+categories: [notes, FastAI]
+metadata-files: ["_listing_meta.yml"]
+listing:
+  contents: 
+   - "/*.qmd"
+   - "/*/index.qmd"
+   - "/*.md"
+---
+
+FastAI chapter notes summarised and good overview

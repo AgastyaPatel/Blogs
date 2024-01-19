@@ -1,0 +1,11 @@
+---
+id: notes
+title: Notes
+sidebar_position: 1
+metadata-files: ["_listing_meta.yml"]
+listing:
+  contents: 
+   - "/*.qmd"
+   - "/*/index.qmd"
+   - "/*.md"
+---
