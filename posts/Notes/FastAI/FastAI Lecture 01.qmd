@@ -152,4 +152,52 @@ Neural networks are special because they are highly flexible, which means they c
 | Overfitting | Training a model in such a way that it _remembers_ specific features of the input data, rather than generalizing well to data not seen during training |
 | CNN | Convolutional neural network; a type of neural network that works particularly well for computer vision tasks |
 
-### Model, Pretrained 
+## Feedback lop
+>  Feedback loop is the process and outcomes which tends to make model bias towards particular label.
+>  Once model starts using it's initial outcome for training purpose it tends to make prediction which are aligned to new data which in turns creates more prediction for that label
+>  This loop is know as positive feedback loop and predictive policing, conspiracy theorist are good example for it.  
+
+## Overfitting
+- Even when model has not fully memorized all data, while training it may have memorized certain parts of it. 
+- As a result, the longer you train for, the better your accuracy will get on training set and for a while the accuracy will improve in validation set.
+- Eventually accuracy of validation set will start to get worse as model will set to memorize the training set, rather than finding generalizable underlying patterns in the data.
+- This process is know as overfitting.
+
+## Metric
+ _metric_ is a function that measures the quality of the model's predictions using the validation set, and will be printed at the end of each _epoch_. In this case, we're using `error_rate`, which is a function provided by fastai that does just what it says: tells you what percentage of images in the validation set are being classified incorrectly.
+
+### Why Loss isn't a metric?
+The concept of a metric may remind you of _loss_, but there is an important distinction. The entire purpose of loss is to define a "measure of performance" that the training system can use to update weights automatically. In other words, a good choice for loss is a choice that is easy for stochastic gradient descent to use. But a metric is defined for human consumption, so a good metric is one that is easy for you to understand
+
+## Transfer Learning
+  
+When using a pretrained model, the last layer, specific to the original task, is replaced with a new head for the target dataset. Pretrained models are crucial for training accurate models quickly and efficiently with limited data and resources. However, transfer learning, using pretrained models for different tasks, is under-studied, limiting its application in some domains like medicine. Despite its potential, the importance of pretrained models is often overlooked in academic deep learning.
+
+## Fit vs Fine Tune
+The architecture only describes a _template_ for a mathematical function; it doesn't actually do anything until we provide values for the millions of parameters it contains.
+
+This is the key to deep learning—determining how to fit the parameters of a model to get it to solve your problem. In order to fit a model, we have to provide at least one piece of information: how many times to look at each image (known as number of _epochs_). The number of epochs you select will largely depend on how much time you have available, and how long you find it takes in practice to fit your model. If you select a number that is too small, you can always train for more epochs later.
+
+But why is the method called `fine_tune`, and not `fit`? fastai actually _does_ have a method called `fit`, which does indeed fit a model (i.e. look at images in the training set multiple times, each time updating the parameters to make the predictions closer and closer to the target labels). But in this case, we've started with a pretrained model, and we don't want to throw away all those capabilities that it already has. As you'll learn in this book, there are some important tricks to adapt a pretrained model for a new dataset—a process called _fine-tuning_.
+
+-  Deep learning architecture is a template for a function, requiring parameter values to be effective.
+- The key in deep learning is fitting the model parameters to solve a specific problem.
+- The number of epochs (how many times to look at each image) is crucial for model fitting.
+- `fine_tune` is used instead of `fit` when starting with a pretrained model to retain its capabilities.
+- Fine-tuning involves adapting a pretrained model for a new dataset, preserving its learned features.
+
+CNN: Current state of the art approach to  creating computer vision models.
+
+
+## Fine Tune Process
+When you use the `fine_tune` method, fastai will use these tricks for you. There are a few parameters you can set (which we'll discuss later), but in the default form shown here, it does two steps:
+
+1. Use one epoch to fit just those parts of the model necessary to get the new random head to work correctly with your dataset.
+2. Use the number of epochs requested when calling the method to fit the entire model, updating the weights of the later layers (especially the head) faster than the earlier layers (which, as we'll see, generally don't require many changes from the pretrained weights).
+
+The _head_ of a model is the part that is newly added to be specific to the new dataset. An _epoch_ is one complete pass through the dataset. After calling `fit`, the results after each epoch are printed, showing the epoch number, the training and validation set losses (the "measure of performance" used for training the model), and any _metrics_ you've requested (error rate, in this case).
+
+
+> Go over Jargon recap in fastbook lesson 1
+
+Reduce batch size if you are hitting cuda out of memry
