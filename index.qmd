@@ -1,6 +1,6 @@
 ---
 title: "Blogs"
-sidebar: false
+sidebar: true
 listing:
   contents: blogs
   sort: "date desc"

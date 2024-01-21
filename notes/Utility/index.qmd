@@ -1,0 +1,15 @@
+---
+title: "Utility"
+author: "Agastya Patel"
+date: "2023-12-29"
+date-modified: today
+categories: [notes, FastAI]
+metadata-files: ["_listing_meta.yml"]
+listing:
+  contents: 
+   - "/*.qmd"
+   - "/*/index.qmd"
+   - "/*.md"
+---
+
+This folder contains all the small utility snippets which you'd be using in daily operations.

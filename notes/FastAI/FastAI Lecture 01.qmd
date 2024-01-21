@@ -4,6 +4,9 @@ author: "Agastya Patel"
 date: "2023-12-31"
 date-modified: "2023-12-31"
 categories: [Notes, FastAI, History, Neural Network, Theory]
+format:
+  html:
+    anchor-sections: true
 ---
 
 **Useful Resources**

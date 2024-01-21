@@ -2,6 +2,7 @@
 title: "FastAI Journey"
 author: "Agastya Patel"
 date: "2023-12-27"
+date-modified: today
 categories: [DeepLearning, FastAI]
 image: "image.png"
 sidebar: false
@@ -17,20 +18,34 @@ listing:
 
 Here's my current journey of Fast AI learning. I'll be keeping tab of the projects and the current status of journey here!.
 
-My FastAI/Course Journey:  [github](https://github.com/AgastyaPatel/FastAI-course)
+My FastAI/Course Journey:  [Repository](https://github.com/AgastyaPatel/FastAI-course)
 
-# Live Coding:
-*Completed* : 1,2,3,6,7\
+_Thread/Progress_: I have created issues for each project so that I can keep the tabs on changes which are being made for the project. It has been tagged has label `Model-Training-Progrss` on github repository.
 
-# Lesson
+::: {.panel-tabset group="Progress"}
+
+## Self - Projects
+
+| Projects | Link | Description | Lesson Relation |  
+| -- | -- | -- | -- |
+| Pokemon Classifier | [Thread](https://github.com/AgastyaPatel/FastAI-course/issues/2), [HF-Spaces](https://huggingface.co/spaces/AgastyaPatel/Pokemon-Classifier) | Created pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it's usage. | 1,2 |
+
+
+## Lesson
 - ✅ Done
 - 🌀 Current Sprint
 - 💤 Pending
 
-| Lesson | Watched | Read | Questionnaire | Re-Implementation | Self-Implementation |
+| Lesson | Watched | Read | Questionnaire | Re-Implementation |
 | ---- | ---- | ---- | ---- | ---- | ---- |
-| **1** | ✅ | ✅ | ✅ | ✅ | 🌀 |
-| **2** | ✅ | ✅ | 🌀 | ✅ | 💤 |
-| **3** |  |  |  |  |  |
+| **1** | ✅ | Ch 01✅ | ✅ | ✅ | ✅ |
+| **2** | ✅ | Ch 02✅ | 🌀 | ✅ | ✅ |
+| **3** | ✅ | Ch 04✅|  |  |  |
 | **4** |  |  |  |  |  |
 | **5** |  |  |  |  |  |
+
+
+## Live Coding:
+*Completed* : 1,2,3,6,7\
+
+:::
