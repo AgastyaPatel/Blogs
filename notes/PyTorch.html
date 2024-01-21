@@ -180,6 +180,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../notes/Matplotlib.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Matplotlib</span></a>
+  </div>
+</li>
+        <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../notes/Networking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internet</span></a>
   </div>
@@ -231,13 +237,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
       </ul>
   </li>
+        <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../notes/Utility/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Utility</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../notes/Utility/Kaggle.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Kaggle</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
     </ul>
     </div>
 </nav>
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#getting-started" id="toc-getting-started" class="nav-link active" data-scroll-target="#getting-started">Getting started</a></li>
+  <li><a href="#pytorch-references-and-functions" id="toc-pytorch-references-and-functions" class="nav-link" data-scroll-target="#pytorch-references-and-functions">PyTorch references and functions</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
@@ -271,7 +301,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 16, 2024</p>
+      <p class="date-modified">January 22, 2024</p>
     </div>
   </div>
     
@@ -280,65 +310,153 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<p>Pytorch refernces and functions</p>
-<div class="sourceCode" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="co">#Creating tensor</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>rent_tensor <span class="op">=</span> torch.tensor(<span class="dv">2500</span>, dtype <span class="op">=</span> torch.<span class="bu">int</span>) <span class="co">## torch.float is another dtype</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="getting-started" class="level3">
+<h3 class="anchored" data-anchor-id="getting-started">Getting started</h3>
+<p>Creating tensor: <code>tns = torch.tensor(2500, dtype = torch.int)</code> ## torch.float is another dtype BaseClass for all neural networks : <code>nn.Module</code> <code>nn.Linear</code> and <code>nn.Sequential</code> are objects/derived class of <code>nn.Module</code> class/Parent Class.</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>nn.Linear(<span class="dv">2</span>,<span class="dv">3</span>)  <span class="op">//</span> Initializes <span class="cf">with</span> random paramters</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="co"># Building sequential network</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>model <span class="op">=</span>&nbsp;nn.Sequential(  </span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>&nbsp;&nbsp;&nbsp;&nbsp;nn.Linear(<span class="dv">2</span>,<span class="dv">3</span>),  </span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a>&nbsp;&nbsp;&nbsp;&nbsp;nn.ReLU(),  </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>&nbsp;&nbsp;&nbsp;&nbsp;nn.Linear(<span class="dv">3</span>,<span class="dv">1</span>))</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>model(<span class="bu">input</span>)   <span class="op">//</span>FeedForward</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a><span class="co"># buildinv custom network</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="kw">class</span> NN_Regression(nn.Module):</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>    <span class="bu">super</span>(NN_regression, <span class="va">self</span>).__init():</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="co">#initialize components</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.layer1 <span class="op">=</span> nn.Linear(<span class="dv">3</span>,<span class="dv">6</span>)</span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.layer2 <span class="op">=</span> nn.Linear(<span class="dv">4</span>,<span class="dv">1</span>)</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>        <span class="va">self</span>.relu <span class="op">=</span> nn.ReLU()</span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="kw">def</span> forward(<span class="va">self</span>, x):</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.layer1(x)</span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.relu(x)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        x <span class="op">=</span> <span class="va">self</span>.layer2(x)</span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> x</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>        </span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>optimizer <span class="op">=</span>&nbsp;optim.Adam(model.parameters(), lr<span class="op">=</span><span class="fl">0.01</span>)</span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>loss <span class="op">=</span> nn.MSELoss()</span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a>MSE <span class="op">=</span> loss(model(<span class="bu">input</span>), y)</span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>MSE.backward()   <span class="co">#Backward propogation or gradient calculation</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>optimizer.step() <span class="co">#Stepping</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>optimizer.zero_grad()  <span class="co">#reset the gradients</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a><span class="co"># Model Evaluation</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>model.<span class="bu">eval</span>()</span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a><span class="cf">with</span> torch.no_grad():</span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    test_MSE <span class="op">=</span> loss(model(X_test), y_test)</span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>torch.save(model, <span class="st">'model.pth'</span>)</span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>torch.load(<span class="st">'model.pth'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>To split dataset into validation and testing; use sklearn.model_selection.train_test_split</p>
+</section>
+<section id="pytorch-references-and-functions" class="level2">
+<h2 class="anchored" data-anchor-id="pytorch-references-and-functions">PyTorch references and functions</h2>
+<section id="non-linear-functions" class="level4">
+<h4 class="anchored" data-anchor-id="non-linear-functions">Non Linear Functions</h4>
 <table class="table">
-<colgroup>
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-<col style="width: 25%">
-</colgroup>
 <thead>
 <tr class="header">
-<th></th>
 <th>Name</th>
 <th>Functions</th>
-<th>Mathematical Expression</th>
+<th>Notes</th>
 </tr>
 </thead>
 <tbody>
 <tr class="odd">
-<td>Loss Function</td>
+<td>ReLU</td>
+<td><code>nn.ReLU()</code></td>
+<td></td>
+</tr>
+<tr class="even">
+<td>Sigmoid</td>
+<td><code>nn.Sigmoid()</code></td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="loss-functions" class="level4">
+<h4 class="anchored" data-anchor-id="loss-functions">Loss Functions</h4>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Functions</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
 <td>Absolute Mean Error or L1 norm</td>
 <td><code>torch.nn.functional.l1_loss(a,b)</code></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Loss Function</td>
 <td>Root Mean Square Error or L2 norm</td>
 <td><code>torch.nn.functional.mse_loss(a,b)</code></td>
 <td></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="optimizers" class="level4">
+<h4 class="anchored" data-anchor-id="optimizers">Optimizers</h4>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Functions</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
-<td></td>
-<td>Loop over tensor while making comparision</td>
-<td><code>torch.where(targets==1, 1-predictions, predictions)</code></td>
+<td>SGD</td>
+<td><code>torch.optim.SGD(model_paramets, lr)</code></td>
 <td></td>
 </tr>
 <tr class="even">
-<td>Normaliser</td>
-<td>Sigmoid</td>
-<td><code>torch.sigmoid</code></td>
-<td><code>1/(1+torch.exp(-x))</code></td>
+<td>Adam</td>
+<td><code>torch.optim.ADAM(model_paramets, lr)</code></td>
+<td></td>
 </tr>
+</tbody>
+</table>
+</section>
+<section id="linear-regressions" class="level4">
+<h4 class="anchored" data-anchor-id="linear-regressions">Linear Regressions</h4>
+<table class="table">
+<colgroup>
+<col style="width: 33%">
+<col style="width: 33%">
+<col style="width: 33%">
+</colgroup>
+<thead>
+<tr class="header">
+<th>Name</th>
+<th>Functions</th>
+<th>Notes</th>
+</tr>
+</thead>
+<tbody>
 <tr class="odd">
 <td>Linear Regression</td>
-<td></td>
-<td><code>nn.Linear(n_weights, bias)</code></td>
+<td><code>nn.Linear(n_weights/n_inputs, n_bias/n_outputs)</code></td>
 <td><code>wx + b</code></td>
-</tr>
-<tr class="even">
-<td></td>
-<td></td>
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
 
 
+</section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

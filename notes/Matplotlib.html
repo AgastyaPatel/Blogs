@@ -6,8 +6,10 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Agastya Patel">
+<meta name="dcterms.date" content="2024-01-20">
 
-<title>Agastya Patel – networking</title>
+<title>Agastya Patel - Matplotlib</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,8 +66,7 @@ ul.task-list li input[type="checkbox"] {
 <script src="../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../">
-<link href="../notes/PyTorch.html" rel="next">
-<link href="../notes/Matplotlib.html" rel="prev">
+<link href="../notes/Networking.html" rel="next">
 <script src="../site_libs/quarto-html/quarto.js"></script>
 <script src="../site_libs/quarto-html/popper.min.js"></script>
 <script src="../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -122,7 +157,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/Networking.html">Internet</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../notes/Matplotlib.html">Matplotlib</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -144,13 +179,13 @@ ul.task-list li input[type="checkbox"] {
     <ul class="list-unstyled mt-1">
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/Matplotlib.html" class="sidebar-item-text sidebar-link">
+  <a href="../notes/Matplotlib.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Matplotlib</span></a>
   </div>
 </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../notes/Networking.html" class="sidebar-item-text sidebar-link active">
+  <a href="../notes/Networking.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Internet</span></a>
   </div>
 </li>
@@ -224,172 +259,66 @@ ul.task-list li input[type="checkbox"] {
 <div id="quarto-sidebar-glass" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass"></div>
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#internet" id="toc-internet" class="nav-link active" data-scroll-target="#internet">Internet</a>
-  <ul class="collapse">
-  <li><a href="#what-is-ip-address" id="toc-what-is-ip-address" class="nav-link" data-scroll-target="#what-is-ip-address">What is IP Address?</a>
-  <ul class="collapse">
-  <li><a href="#port-address" id="toc-port-address" class="nav-link" data-scroll-target="#port-address">Port Address</a></li>
-  </ul></li>
-  <li><a href="#internet-protocols" id="toc-internet-protocols" class="nav-link" data-scroll-target="#internet-protocols">Internet Protocols</a>
-  <ul class="collapse">
-  <li><a href="#transmission-control-protocol" id="toc-transmission-control-protocol" class="nav-link" data-scroll-target="#transmission-control-protocol">Transmission Control Protocol</a></li>
-  <li><a href="#user-datagram-protocol" id="toc-user-datagram-protocol" class="nav-link" data-scroll-target="#user-datagram-protocol">User Datagram Protocol</a></li>
-  </ul></li>
-  </ul></li>
-  <li><a href="#what-is-a-socket" id="toc-what-is-a-socket" class="nav-link" data-scroll-target="#what-is-a-socket">What is a Socket?</a>
-  <ul class="collapse">
-  <li><a href="#section" id="toc-section" class="nav-link" data-scroll-target="#section">—</a></li>
-  </ul></li>
-  <li><a href="#what-is-http-hyper-text-transfer-protocol" id="toc-what-is-http-hyper-text-transfer-protocol" class="nav-link" data-scroll-target="#what-is-http-hyper-text-transfer-protocol">What is HTTP (Hyper Text Transfer Protocol)?</a>
-  <ul class="collapse">
-  <li><a href="#in-depth-working-get-request" id="toc-in-depth-working-get-request" class="nav-link" data-scroll-target="#in-depth-working-get-request">In Depth Working GET Request</a></li>
-  <li><a href="#http-vs-rest-related-but-distinct-concepts" id="toc-http-vs-rest-related-but-distinct-concepts" class="nav-link" data-scroll-target="#http-vs-rest-related-but-distinct-concepts">HTTP vs REST (related but distinct concepts)</a></li>
-  </ul></li>
-  </ul>
-</nav>
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">Matplotlib</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Reference</div>
+  </div>
+  </div>
 
 
-<section id="internet" class="level1">
-<h1>Internet</h1>
-<ul>
-<li>Global network of billions of electronic devices which acts as servers or clients.</li>
-<li><strong>Servers</strong> are machines which provide services to other machines.</li>
-<li><strong>Clients</strong> are machines used to connect to those services.</li>
-</ul>
-<p>Q. How do we distinguish each machines? Q. How do we transmit data</p>
-<table class="table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>WAN (Wide Area Network):</th>
-<th>LAN (Local Area Network)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td>Group of computers that span large geographic area.</td>
-<td>Group of computers connected in limited geographic area.</td>
-</tr>
-<tr class="even">
-<td>Eg: Internet</td>
-<td>Eg. Home Network, School Network</td>
-</tr>
-</tbody>
-</table>
-<section id="what-is-ip-address" class="level2">
-<h2 class="anchored" data-anchor-id="what-is-ip-address">What is IP Address?</h2>
-<ul>
-<li>An IP address is a unique address that is used to identify computers or nodes on the internet.</li>
-<li>Addresses are in this form: <code>#.#.#.#</code></li>
-</ul>
-<blockquote class="blockquote">
-<p>[!info] Your router is the only device on the internet with this <strong>public IP Address</strong> - Inside your home, your devices have most likely received a <strong>local IP Address</strong> from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)</p>
-</blockquote>
-<ul>
-<li>IPv4: Numbers range from <code>0</code> to <code>255</code>. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.</li>
-<li>IPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? <code>255.255.255.0</code> Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.</li>
-</ul>
-<pre class="mermaid"><code>graph TB
-  A["Your friend. In another house! 192.168.1.5"] --&gt; B[["Router 192.168.1.1 (Local IP)\n Router 77.45.82.17 (PUBLIC IP)"]]
-  K["Your friend... In another house! 192.168.1.4"] --&gt; B 
-  B &lt;--&gt; D["The Internet"]
-  D &lt;--&gt; E[["Router 77..45..19..6 (PUBLIC IP)\nRouter 192..168..1..1 (LOCAL IP)"]]
-  E --&gt; G["Computer 1 192.168.1.4\n Our machine running our server on port 12345!"]
-  E --&gt; I["Computer 2 192.168.1.7"]
-  E --&gt; J["Computer 3 192.168.14"]
-  E --&gt; L["Computer S 192.168.4.1"]
-  E --&gt; M["Computer A 192.168.2.1"]</code></pre>
-<p><img src="../../_MediaSource/Blogs/notes/Networking/IMG-20231204103818011.png" class="img-fluid"></p>
-<section id="port-address" class="level3">
-<h3 class="anchored" data-anchor-id="port-address">Port Address</h3>
-<p>Port Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure</p>
-<ul>
-<li><code>netstat -na</code> gives entire list of open ports on Windows</li>
-</ul>
-<blockquote class="blockquote">
-<p>[!Warning] Port Address conflicts [todo]</p>
-</blockquote>
-</section>
-</section>
-<section id="internet-protocols" class="level2">
-<h2 class="anchored" data-anchor-id="internet-protocols">Internet Protocols</h2>
-<section id="transmission-control-protocol" class="level3">
-<h3 class="anchored" data-anchor-id="transmission-control-protocol">Transmission Control Protocol</h3>
-<ul>
-<li>TCP is a connection based protocol.</li>
-<li>Connection must be made before any data is sent.</li>
-<li>Used to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.</li>
-<li>For Example HTTP and HTTPS service is based on TCP Protocol</li>
-</ul>
-</section>
-<section id="user-datagram-protocol" class="level3">
-<h3 class="anchored" data-anchor-id="user-datagram-protocol">User Datagram Protocol</h3>
-<ul>
-<li>UDP is a connectionless protocol.</li>
-<li>No connection has to be made before sending data</li>
-<li>UDP tends to be faster but you may not receive the data in order and you could have missing data.</li>
-</ul>
-</section>
-</section>
-</section>
-<section id="what-is-a-socket" class="level1">
-<h1>What is a Socket?</h1>
-<ul>
-<li>A socket is one endpoint of a two-way communication channel between two programs running on a network.</li>
-<li>A socket is a way of connecting two programs over a network so that they can exchange data.</li>
-<li>When we create a socket we must specify the internet protocol and the communication protocol the socket will use.</li>
-</ul>
-<section id="section" class="level2">
-<h2 class="anchored" data-anchor-id="section">—</h2>
-</section>
-</section>
-<section id="what-is-http-hyper-text-transfer-protocol" class="level1">
-<h1>What is HTTP (Hyper Text Transfer Protocol)?</h1>
-<ul>
-<li>It is used to structure request and responses over the internet to transfer data (html, images, css, etc) from one point to another.</li>
-<li>Transmission is based on TCP Protocol. TCP Manages the channels between browser and server. TCP is used to manage many different types of internet connection between devices.</li>
-<li>HTTP is the command language that devices on both side of the connection must follow to communicate. ## Basic Working</li>
-</ul>
-<ol type="1">
-<li>When webpage is requested using a URL. then browser opens a TCP Channel to the server that responds to that URL.</li>
-<li>Once the TCP Connection is established, the client sends <em>HTTP GET</em> request to retrieve the webpage it should display.</li>
-<li>After that server sends the response and closes the TCP Connection. &gt;This process is repeated each time the browser is opened or new URL connection needs to be established,</li>
-</ol>
-<section id="in-depth-working-get-request" class="level2">
-<h2 class="anchored" data-anchor-id="in-depth-working-get-request">In Depth Working GET Request</h2>
-<ol type="1">
-<li>URL Requested</li>
-<li>Browser extracts the protocol <em>http</em> or <em>https</em> and uses the specified.</li>
-<li>Identifies the domain name from the URL and queries the Internet Domain Name Server (<strong>DNS/Domain Name System)</strong> to return <em>Internet Protocol Address</em>.</li>
-<li>Browser, the client opens the opens a connection using the <strong>http</strong> protocol to the server at the IP Address resolved above.</li>
-<li>Client initiates a GET Request</li>
-</ol>
-<pre><code>-- CLIENT GET REQUEST --
-GET / HTTP/1.1
-Host: www.codecademy.com</code></pre>
-</section>
-<section id="http-vs-rest-related-but-distinct-concepts" class="level2">
-<h2 class="anchored" data-anchor-id="http-vs-rest-related-but-distinct-concepts">HTTP vs REST (related but distinct concepts)</h2>
-<p><strong>HTTP (Hypertext Transfer Protocol):</strong> - HTTP is the foundation of any data exchange on the Web. - It’s a protocol used for transferring hypertext (text that includes links to other texts, like web pages) over the internet. - It defines how messages are formatted and transmitted and what actions web servers and browsers should take in response to various commands. - In simpler terms, it’s the set of rules that allows your web browser to request a webpage from a server, and the server to send that webpage back to your browser as response.</p>
-<p><strong>REST (Representational State Transfer):</strong> #Guidelines https://www.codecademy.com/article/what-is-rest - REST is an architectural style, a set of principles that are often applied when building web services. - It’s not a protocol like HTTP; instead, it’s a set of guidelines for creating scalable and stateless web services. - RESTful services use standard HTTP methods (like GET, POST, PUT, DELETE) for operations on resources (like data entities), and they represent these resources as URIs (Uniform Resource Identifiers). - RESTful services typically use JSON or XML for data exchange. - In simpler terms, REST is an approach to designing networked applications in a way that is scalable, stateless, and relies on standard HTTP methods.</p>
-<blockquote class="blockquote">
-<p>[!Info] Stateless Web Service: Each request from client is independent &amp; carries all information. So, the server doesn’t store the client’s state between requests and treats each requests as isolated transaction.</p>
-</blockquote>
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Agastya Patel </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">January 20, 2024</p>
+    </div>
+  </div>
+  
+    <div>
+    <div class="quarto-title-meta-heading">Modified</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date-modified">January 22, 2024</p>
+    </div>
+  </div>
+    
+  </div>
+  
+
+</header>
+
+<div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize <span class="op">=</span> (<span class="dv">10</span>,<span class="dv">6</span>)) <span class="op">//</span>Aspect ratio of the plot</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>plt.suptitle(<span class="st">'Super Title)</span></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="er">plt.set_tile</span>(<span class="st">'Title'</span>, loc<span class="op">=</span><span class="st">'left)</span></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="er">plt.xlabel</span>(<span class="st">'X Label'</span>)</span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Y Label'</span>)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># Create scatter points</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>plt.scatter(y_test, predictions, label<span class="op">=</span><span class="st">'Predictions'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, color<span class="op">=</span><span class="st">'blue'</span>)</span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot a line</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>plt.plot([<span class="bu">min</span>(y_test), <span class="bu">max</span>(y_test)], [<span class="bu">min</span>(y_test), <span class="bu">max</span>(y_test)], linestyle<span class="op">=</span><span class="st">'--'</span>, color<span class="op">=</span><span class="st">'gray'</span>, linewidth<span class="op">=</span><span class="dv">2</span>, label<span class="op">=</span><span class="st">"Actual Observations"</span>)</span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a>plt.legend()  <span class="co"># Places legend on the plot</span></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
-</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
@@ -742,13 +671,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../notes/Matplotlib.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Matplotlib</span>
-      </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../notes/PyTorch.html" class="pagination-link">
-        <span class="nav-page-text">PyTorch Reference</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../notes/Networking.html" class="pagination-link">
+        <span class="nav-page-text">Internet</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
