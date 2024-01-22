@@ -1,5 +1,5 @@
 listing:
-  fields: [title, description, date]
+  fields: [title, description]
   type: table
   sort-ui: false
   filter-ui: false

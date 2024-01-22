@@ -1,14 +1,17 @@
 ---
 title: "Projects"
-listing:
-  contents: posts
-  sort: "date desc"
-  type: default
-  categories: true
-  sort-ui: false
-  filter-ui: false
-page-layout: full
+author: "Agastya Patel"
+date-modified: today
+categories: [Projects]
+image: "image.png"
+sidebar: false
 title-block-banner: true
+page-layout: full
 ---
 
+### FastAI Projects
+These are the projects that I did during my FastAI journey. Only including the self-implemented notebooks/deployments/projects.
+{{< include blogs/FastAI/FastAI-projects.qmd >}}
 
+### Web Projects
+These are the projects which I created in my web dev learning.

@@ -1,0 +1,20 @@
+---
+title: "Back of book index"
+author: "Agastya Patel"
+date-modified: today
+categories: [Projects]
+image: "image.png"
+sidebar: false
+listing: 
+  - id: blogs
+    type: "table"
+    contents:  
+    - "*/*.qmd"
+    - "/*/index.qmd"
+    - "/*.md"
+    - "*/*.md"
+---
+
+
+::: {#blogs}
+:::

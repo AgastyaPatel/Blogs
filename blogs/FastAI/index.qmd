@@ -25,11 +25,7 @@ _Thread/Progress_: I have created issues for each project so that I can keep the
 ::: {.panel-tabset group="Progress"}
 
 ## Self - Projects
-
-| Projects | Link | Description | Lesson Relation |  
-| -- | -- | -- | -- |
-| Pokemon Classifier | [Thread](https://github.com/AgastyaPatel/FastAI-course/issues/2), [HF-Spaces](https://huggingface.co/spaces/AgastyaPatel/Pokemon-Classifier) | Created pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it's usage. | 1,2 |
-
+{{< include FastAI-projects.qmd >}}
 
 ## Lesson
 - ✅ Done
@@ -49,3 +45,4 @@ _Thread/Progress_: I have created issues for each project so that I can keep the
 *Completed* : 1,2,3,6,7\
 
 :::
+
