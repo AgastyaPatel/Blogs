@@ -2,74 +2,74 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://AgastyaPatel.github.io/Blogs/readme.html</loc>
-    <lastmod>2024-01-21T22:33:03.084Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notesIndex.html</loc>
-    <lastmod>2024-01-21T22:33:02.210Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/index.html</loc>
-    <lastmod>2024-01-21T22:33:00.837Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/Networking.html</loc>
-    <lastmod>2024-01-21T22:32:59.572Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/index.html</loc>
-    <lastmod>2024-01-21T22:32:57.853Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Snippets.html</loc>
-    <lastmod>2024-01-21T22:32:56.677Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Lecture 03.html</loc>
-    <lastmod>2024-01-21T22:32:54.786Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Lecture 01.html</loc>
-    <lastmod>2024-01-21T22:32:53.268Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/blogs/FastAI/index.html</loc>
-    <lastmod>2024-01-21T22:32:51.194Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/about.html</loc>
-    <lastmod>2024-01-21T22:32:50.413Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/index.html</loc>
-    <lastmod>2024-01-21T22:32:51.910Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Lecture 02.html</loc>
-    <lastmod>2024-01-21T22:32:53.810Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Setup.html</loc>
-    <lastmod>2024-01-21T22:32:55.536Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/index.html</loc>
-    <lastmod>2024-01-21T22:32:57.318Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/Matplotlib.html</loc>
-    <lastmod>2024-01-21T22:32:58.454Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/PyTorch.html</loc>
-    <lastmod>2024-01-21T22:33:00.320Z</lastmod>
+    <lastmod>2024-01-22T02:08:33.457Z</lastmod>
   </url>
   <url>
     <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/Kaggle.html</loc>
-    <lastmod>2024-01-21T22:33:01.594Z</lastmod>
+    <lastmod>2024-01-22T02:08:32.612Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/PyTorch.html</loc>
+    <lastmod>2024-01-22T02:08:31.538Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Matplotlib.html</loc>
+    <lastmod>2024-01-22T02:08:30.117Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/index.html</loc>
+    <lastmod>2024-01-22T02:08:29.047Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Setup.html</loc>
+    <lastmod>2024-01-22T02:08:27.935Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Lecture 02.html</loc>
+    <lastmod>2024-01-22T02:08:26.678Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/index.html</loc>
+    <lastmod>2024-01-22T02:08:25.004Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/about.html</loc>
+    <lastmod>2024-01-22T02:08:22.409Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/blogs/FastAI/index.html</loc>
+    <lastmod>2024-01-22T02:08:23.415Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/bob.html</loc>
+    <lastmod>2024-01-22T02:08:24.492Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Lecture 01.html</loc>
+    <lastmod>2024-01-22T02:08:26.210Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Lecture 03.html</loc>
+    <lastmod>2024-01-22T02:08:27.415Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/FastAI/FastAI Snippets.html</loc>
+    <lastmod>2024-01-22T02:08:28.535Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/index.html</loc>
+    <lastmod>2024-01-22T02:08:29.520Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Networking.html</loc>
+    <lastmod>2024-01-22T02:08:30.872Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/index.html</loc>
+    <lastmod>2024-01-22T02:08:31.995Z</lastmod>
   </url>
   <url>
     <loc>https://AgastyaPatel.github.io/Blogs/projects.html</loc>
-    <lastmod>2024-01-21T22:33:02.652Z</lastmod>
+    <lastmod>2024-01-22T02:08:33.014Z</lastmod>
   </url>
 </urlset>
