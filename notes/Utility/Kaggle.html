@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/Utility/index.html" rel="prev">
+<link href="../../notes/Utility/HuggingFace.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -123,6 +123,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li class="nav-item">
     <a class="nav-link active" href="../../notes/index.html" rel="" target="" aria-current="page">
  <span class="menu-text">Notes</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../projects.html" rel="" target="">
+ <span class="menu-text">Projects</span></a>
   </li>  
 </ul>
             <ul class="navbar-nav navbar-nav-scroll ms-auto">
@@ -208,11 +212,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <div class="sidebar-item-container"> 
             <a href="../../notes/FastAI/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Notes</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
@@ -256,6 +260,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../notes/Utility/HuggingFace.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Hugging Face Utility</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../notes/Utility/Kaggle.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Kaggle</span></a>
   </div>
@@ -277,9 +287,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <li><a href="#access-kaggle-on-your-machine" id="toc-access-kaggle-on-your-machine" class="nav-link active" data-scroll-target="#access-kaggle-on-your-machine">Access kaggle on your machine</a>
   <ul class="collapse">
   <li><a href="#setting-up-kaggle-in-cli" id="toc-setting-up-kaggle-in-cli" class="nav-link" data-scroll-target="#setting-up-kaggle-in-cli">Setting up kaggle in CLI</a></li>
+  <li><a href="#create-new-notebook-in-local" id="toc-create-new-notebook-in-local" class="nav-link" data-scroll-target="#create-new-notebook-in-local">Create New Notebook in Local</a></li>
+  <li><a href="#accessing-dataset" id="toc-accessing-dataset" class="nav-link" data-scroll-target="#accessing-dataset">Accessing Dataset</a></li>
   <li><a href="#creating-dataset" id="toc-creating-dataset" class="nav-link" data-scroll-target="#creating-dataset">Creating dataset</a></li>
   </ul></li>
-  <li><a href="#hugging-face" id="toc-hugging-face" class="nav-link" data-scroll-target="#hugging-face">Hugging Face</a></li>
   </ul>
 </nav>
     </div>
@@ -316,7 +327,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Modified</div>
     <div class="quarto-title-meta-contents">
-      <p class="date-modified">January 22, 2024</p>
+      <p class="date-modified">January 25, 2024</p>
     </div>
   </div>
     
@@ -331,21 +342,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="setting-up-kaggle-in-cli">Setting up kaggle in CLI</h3>
 <ol type="1">
 <li><code>pip install kaggle</code></li>
-<li>Setup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json ### Create New Notebook in Local Initialize : <code>kaggle kernels init -p /path/to/folder</code> In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip <code>spaces, caps and symbols</code> in id; Add your nb name and any dataset used. &gt; More on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata</li>
+<li>Setup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json</li>
 </ol>
-<p>Push Command <code>kaggle kernels push -p /path/to/folder</code> (remove path flag if in cwd is dir with nb) ### Accessing Dataset</p>
+</section>
+<section id="create-new-notebook-in-local" class="level3">
+<h3 class="anchored" data-anchor-id="create-new-notebook-in-local">Create New Notebook in Local</h3>
+<p>Initialize : <code>kaggle kernels init -p /path/to/folder</code> In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip <code>spaces, caps and symbols</code> in id; Add your nb name and any dataset used.</p>
+<blockquote class="blockquote">
+<p>More on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata</p>
+</blockquote>
+<p>Push Command <code>kaggle kernels push -p /path/to/folder</code> (remove path flag if in cwd is dir with nb)</p>
+</section>
+<section id="accessing-dataset" class="level3">
+<h3 class="anchored" data-anchor-id="accessing-dataset">Accessing Dataset</h3>
 <div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>kaggle datasets <span class="bu">list</span> <span class="op">-</span>s [KEYWORD]      <span class="op">//</span>Search</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>kaggle datasets download <span class="op">-</span>d [DATASET]  <span class="op">//</span>download</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="creating-dataset" class="level3">
 <h3 class="anchored" data-anchor-id="creating-dataset">Creating dataset</h3>
 <p>Initialize: <code>kaggle datasets init -p /path/to/dataset</code> Add metadata in <code>datapackage.json</code> Push: <code>kaggle datasets create -p /path/to/dataset</code></p>
-</section>
-</section>
-<section id="hugging-face" class="level2">
-<h2 class="anchored" data-anchor-id="hugging-face">Hugging Face</h2>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
@@ -699,8 +717,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/Utility/index.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Utility</span>
+      <a href="../../notes/Utility/HuggingFace.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Hugging Face Utility</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

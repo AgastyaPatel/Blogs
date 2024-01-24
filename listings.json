@@ -1,23 +1,13 @@
 [
   {
-    "listing": "/notes/FastAI/index.html",
+    "listing": "/notes/index.html",
     "items": [
-      "/notes/FastAI/FastAI Lecture 01.html",
-      "/notes/FastAI/FastAI Lecture 02.html",
-      "/notes/FastAI/FastAI Lecture 03.html",
-      "/notes/FastAI/FastAI Setup.html",
-      "/notes/FastAI/FastAI Snippets.html"
+      "/notes/FastAI/index.html",
+      "/notes/Networking.html",
+      "/notes/Matplotlib.html",
+      "/notes/PyTorch.html",
+      "/notes/Utility/index.html"
     ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/blogs/FastAI/index.html"
-    ]
-  },
-  {
-    "listing": "/blogs/FastAI/index.html",
-    "items": []
   },
   {
     "listing": "/bob.html",
@@ -29,6 +19,7 @@
       "/notes/FastAI/index.html",
       "/notes/FastAI/FastAI Setup.html",
       "/notes/FastAI/FastAI Snippets.html",
+      "/notes/Utility/HuggingFace.html",
       "/notes/Networking.html",
       "/notes/Utility/Kaggle.html",
       "/notes/Matplotlib.html",
@@ -39,18 +30,29 @@
     ]
   },
   {
-    "listing": "/notes/index.html",
+    "listing": "/blogs/FastAI/index.html",
+    "items": []
+  },
+  {
+    "listing": "/index.html",
     "items": [
-      "/notes/FastAI/index.html",
-      "/notes/Networking.html",
-      "/notes/Matplotlib.html",
-      "/notes/PyTorch.html",
-      "/notes/Utility/index.html"
+      "/blogs/FastAI/index.html"
+    ]
+  },
+  {
+    "listing": "/notes/FastAI/index.html",
+    "items": [
+      "/notes/FastAI/FastAI Lecture 01.html",
+      "/notes/FastAI/FastAI Lecture 02.html",
+      "/notes/FastAI/FastAI Lecture 03.html",
+      "/notes/FastAI/FastAI Setup.html",
+      "/notes/FastAI/FastAI Snippets.html"
     ]
   },
   {
     "listing": "/notes/Utility/index.html",
     "items": [
+      "/notes/Utility/HuggingFace.html",
       "/notes/Utility/Kaggle.html"
     ]
   }
