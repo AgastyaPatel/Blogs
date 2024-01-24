@@ -8,6 +8,7 @@ website:
   navbar:
     left:
       - notes/index.qmd
+      - projects.qmd
     right:
       - about.qmd
       - icon: github
@@ -29,7 +30,7 @@ website:
   sidebar:
       title: 'Notes'
       pinned: false
-      collapse-level: 0
+      collapse-level: 3
       style: docked
       search: true
       # contents: notes/**

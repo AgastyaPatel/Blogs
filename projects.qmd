@@ -5,7 +5,7 @@ date-modified: today
 categories: [Projects]
 image: "image.png"
 sidebar: false
-title-block-banner: true
+title-block-banner: false
 page-layout: full
 ---
 
