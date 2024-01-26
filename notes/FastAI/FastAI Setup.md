@@ -1,22 +1,11 @@
 ---
-title: "FastAI Setup; Understanding Tools"
+title: "FastAI Setup"
 author: "Agastya Patel"
 date: "2023-12-29"
 date-modified: "2023-12-30"
 categories: [Notes, FastAI, Tools]
 ---
-We'll be taking a look at package managers like conda, mamba; peek on some important tools like bash, tmux etc.
-
-### Q. What is conda, mamba, mambaforge, miniforge?
-Conda is a package and environment manager similar to pip for python.
-Mamba is C++ based implementation of conda offering faster package installation
-MambaForge is mamba based distribution which contains a preset collection of set packages for quicker setup and ready to go operation feasibility.
-Miniforge is conda based distribution
-
-> pip does not manage the installation of any code other than python. 
-> Eg: PyTorch relies on CUDA so, PIP isn't the preferable way of installing it instead use `conda/mamba`
-> Any python library can be installed using PIP
-
+In this section we'll be going through the setting up the wsl for FastAI.
 ## Setting up Windows Subsystem
 - Set wsl
 - get the miniforge/mambaforge(deprected)
@@ -48,6 +37,7 @@ Miniforge is conda based distribution
 | ls . \| wc -l | Gives number of lines (items) |
 | ls . \| grep 33 | Search 33 |
 |  |  |
+
 # Mamba Commands
 1. Create new environment
    ==`mamba create -n <env_name> <dependency>`==
@@ -55,11 +45,13 @@ Miniforge is conda based distribution
 2. Activate/deactivate
    `mamba activate <env_name>`
    `mamba deactivate`
+
 # PIP Commands
 `pip -U <library>` : Upgrade library
 `pip -U --user <library>` : Installs library in User Directory in `.local` folder
 
 # Miscellaneous
+
 ### tmux
 `sudo apt install tmux`
 
@@ -73,9 +65,7 @@ Miniforge is conda based distribution
 
 ## nvidia-smi
 `nvidia-smi dmon`: Chec for sm and mem column
-## Jupter
-`%%debug` : Used for non-graphical debugging
-`from pdb import set_trace` : `set_trace()` sets a breakpoint and automatically enables debugger mode
+
 ## Symblinks
 ### Linux
 `ln -s target-path` : Creates a symblink of the target directory in current directory
@@ -87,6 +77,7 @@ Miniforge is conda based distribution
 ## Cloud Environments
 ### Paperspace
 Q. How to set common library?
+
 1. pip install `--user` with this flag so that the lib is installed in `.local`
 2. move the `.local` to `/storage/.local`
 3. create symblink from `/storage/.local` as target and it would create `.bash.local` in `storage` which would fire up time new instance has been called

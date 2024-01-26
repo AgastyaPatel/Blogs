@@ -1,27 +1,33 @@
 ---
 title: "About"
 image: profile.jpg
+sidebar: false
 about:
-  template: jolla
+  template: trestles
+  image-shape: round
   links:
     - icon: twitter
       text: Twitter
-      href: https://twitter.com
+      href: https://twitter.com/4gastyaPatel
     - icon: linkedin
       text: LinkedIn
-      href: https://linkedin.com
+      href: https://linkedin.com/4gastyaPatel
     - icon: github
       text: Github
-      href: https://github.com
+      href: https://github.com/AgastyaPatel
+    - text: Hugging Face
+      href: https://huggingface.co/AgastyaPatel
+    - text: kaggle
+      href: https://kaggle.com/AgastyaPatel
 
 ---
 
-Hi, I'm Agastya. Welcome to my second brain which I share over internet.\
+Hi, I'm Agastya. Welcome to my blogs and project showcase.
 I'm currently working as Technical Artist and Developer. My responsibility involves developing custom in house solutions also whilst leveraging power of open source models for the creative team. I'm currently working on shot tracking product with the cloud team.
 
-My interst in deep learning has been growing over me since I started using open source models which have lead into learning about it. I believe in constant learning and hence this is a good platform for sharing what I'm currently working/learning about.
+My interst in deep learning spiked when I started using open source models which led me into exploring them. I believe in constant learning and hence this is a good platform for sharing what I'm currently working/learning about.
 
 **Tech Stack**\
-- Python, Javascript, C++, SQL, HTML -\
-- Framework/libs FastAI, PyQT, Flask, DCC Based APIs -\
-- DCC: Blender, Unreal, Houdini, Maya - 
+- Python, Javascript, SQL, HTML -\
+- Framework/libs FastAI, PyTorch, PyQT, Django, Numpy, Pandas  -\
+- DCC: Blender, Unreal, Houdini, Maya, DCC Based APIs - 

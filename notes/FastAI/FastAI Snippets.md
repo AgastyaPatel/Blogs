@@ -39,7 +39,7 @@ def f(O): return PILImage.create(O).size
 ```py
 !pip install timm
 import timm
-timm.list_models('convnext*) # Prints available model
+timm.list_models('convnext*') # Prints available model
 ```
 ## Fine_Tune:
 Fine Tune Freezes the weights of all layers except the last layers.
