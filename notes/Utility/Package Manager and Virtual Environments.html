@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Agastya Patel">
-<meta name="dcterms.date" content="2023-12-29">
 
-<title>Agastya Patel - FastAI Setup</title>
+<title>Agastya Patel – package-manager-and-virtual-environments</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -22,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -32,8 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/FastAI/FastAI Snippets.html" rel="next">
-<link href="../../notes/FastAI/FastAI Lecture 03.html" rel="prev">
+<link href="../../notes/Resources/Deep Learning Resources.html" rel="next">
+<link href="../../notes/Utility/Kaggle.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -128,7 +160,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/FastAI/index.html">FastAI Notes</a></li><li class="breadcrumb-item"><a href="../../notes/FastAI/FastAI Setup.html">FastAI Setup</a></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/Utility/index.html">Utility</a></li><li class="breadcrumb-item"><a href="../../notes/Utility/Package Manager and Virtual Environments.html">venv</a></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
       <button type="button" class="btn quarto-search-button" aria-label="" onclick="window.quartoOpenSearch();">
@@ -192,7 +224,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Setup</span></a>
   </div>
 </li>
@@ -233,7 +265,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/Utility/Package Manager and Virtual Environments.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/Utility/Package Manager and Virtual Environments.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">venv</span></a>
   </div>
 </li>
@@ -268,22 +300,9 @@ ul.task-list li input[type="checkbox"] {
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#useful-bash-commands-tables" id="toc-useful-bash-commands-tables" class="nav-link active" data-scroll-target="#useful-bash-commands-tables">Useful Bash Commands Tables</a></li>
-  <li><a href="#mamba-commands" id="toc-mamba-commands" class="nav-link" data-scroll-target="#mamba-commands">Mamba Commands</a></li>
-  <li><a href="#pip-commands" id="toc-pip-commands" class="nav-link" data-scroll-target="#pip-commands">PIP Commands</a></li>
-  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous">Miscellaneous</a>
+  <li><a href="#q.-what-is-conda-mamba-mambaforge-miniforge" id="toc-q.-what-is-conda-mamba-mambaforge-miniforge" class="nav-link active" data-scroll-target="#q.-what-is-conda-mamba-mambaforge-miniforge">Q. What is conda, mamba, mambaforge, miniforge?</a>
   <ul class="collapse">
-  <li><a href="#tmux" id="toc-tmux" class="nav-link" data-scroll-target="#tmux">tmux</a></li>
-  <li><a href="#nvidia-smi" id="toc-nvidia-smi" class="nav-link" data-scroll-target="#nvidia-smi">nvidia-smi</a></li>
-  <li><a href="#symblinks" id="toc-symblinks" class="nav-link" data-scroll-target="#symblinks">Symblinks</a>
-  <ul class="collapse">
-  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux">Linux</a></li>
-  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
-  </ul></li>
-  <li><a href="#cloud-environments" id="toc-cloud-environments" class="nav-link" data-scroll-target="#cloud-environments">Cloud Environments</a>
-  <ul class="collapse">
-  <li><a href="#paperspace" id="toc-paperspace" class="nav-link" data-scroll-target="#paperspace">Paperspace</a></li>
-  </ul></li>
+  <li><a href="#conda---annaconda" id="toc-conda---annaconda" class="nav-link" data-scroll-target="#conda---annaconda">conda - Annaconda</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -291,215 +310,35 @@ ul.task-list li input[type="checkbox"] {
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default">
-<div class="quarto-title">
-<h1 class="title">FastAI Setup</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">Notes</div>
-    <div class="quarto-category">FastAI</div>
-    <div class="quarto-category">Tools</div>
-  </div>
-  </div>
 
 
-
-<div class="quarto-title-meta">
-
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Agastya Patel </p>
-          </div>
-  </div>
-    
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 29, 2023</p>
-    </div>
-  </div>
-  
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">December 30, 2023</p>
-    </div>
-  </div>
-    
-  </div>
-  
-
-</header>
-
-<p>In this section we’ll be going through the setting up the wsl for FastAI. ## Setting up Windows Subsystem - Set wsl - get the miniforge/mambaforge(deprected) - run the miniforge.sh - <code>mamba install ipython</code> - <code>mamba install jupyter lab</code> - <code>mamba install pytorch</code> - <code>conda install fastai</code></p>
-<section id="useful-bash-commands-tables" class="level1">
-<h1>Useful Bash Commands Tables</h1>
-<table class="table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>ls -l</code></td>
-<td>get long form (file, data, size-bytes)</td>
-</tr>
-<tr class="even">
-<td><code>ls -l -h</code></td>
-<td>human readable data like the size of the file in MB</td>
-</tr>
-<tr class="odd">
-<td><code>less &lt;filename&gt;</code></td>
-<td>Open the file</td>
-</tr>
-<tr class="even">
-<td><code>wget &lt;url&gt;</code></td>
-<td>Download file</td>
-</tr>
-<tr class="odd">
-<td><code>sudo -u &lt;user&gt; -i</code></td>
-<td>Change user</td>
-</tr>
-<tr class="even">
-<td>ctrl+d</td>
-<td>Exit any application running in shell</td>
-</tr>
-<tr class="odd">
-<td><code>! &lt;some_letter&gt;</code></td>
-<td>Opens similar letter recent application Eg; <code>!ju</code> # Might open jupyterLab</td>
-</tr>
-<tr class="even">
-<td><code>!!</code></td>
-<td>Opens last command</td>
-</tr>
-<tr class="odd">
-<td><code>cd --</code></td>
-<td>Most recent Directory</td>
-</tr>
-<tr class="even">
-<td><code>pushd ~</code></td>
-<td>Stash Dir</td>
-</tr>
-<tr class="odd">
-<td><code>popd</code></td>
-<td>Unstash Dir (Pop Dir)</td>
-</tr>
-<tr class="even">
-<td>echo $ENV_VAR<br><code>echo $PATH</code></td>
-<td>Returns value of environment variables like Path Variable</td>
-</tr>
-<tr class="odd">
-<td><code>df -h</code></td>
-<td>disk usage</td>
-</tr>
-<tr class="even">
-<td><code>logout</code></td>
-<td>exit</td>
-</tr>
-<tr class="odd">
-<td>ls . | Head</td>
-<td>Show first 10</td>
-</tr>
-<tr class="even">
-<td>ls . | Tail</td>
-<td>Show last 10</td>
-</tr>
-<tr class="odd">
-<td>ls . | wc -l</td>
-<td>Gives number of lines (items)</td>
-</tr>
-<tr class="even">
-<td>ls . | grep 33</td>
-<td>Search 33</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="mamba-commands" class="level1">
-<h1>Mamba Commands</h1>
-<ol type="1">
-<li>Create new environment ==<code>mamba create -n &lt;env_name&gt; &lt;dependency&gt;</code>== <code>mamba create -n tmp 'python&lt;3.10' fastcore</code></li>
-<li>Activate/deactivate <code>mamba activate &lt;env_name&gt;</code> <code>mamba deactivate</code></li>
-</ol>
-</section>
-<section id="pip-commands" class="level1">
-<h1>PIP Commands</h1>
-<p><code>pip -U &lt;library&gt;</code> : Upgrade library <code>pip -U --user &lt;library&gt;</code> : Installs library in User Directory in <code>.local</code> folder</p>
-</section>
-<section id="miscellaneous" class="level1">
-<h1>Miscellaneous</h1>
-<section id="tmux" class="level3">
-<h3 class="anchored" data-anchor-id="tmux">tmux</h3>
-<p><code>sudo apt install tmux</code></p>
-<table class="table">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>ctrl + b %</code><br><code>ctrl + b "</code></td>
-<td>Split Pane horizontal and vertical</td>
-</tr>
-<tr class="even">
-<td><code>ctrl + b Arrow</code></td>
-<td>Focus around Panes</td>
-</tr>
-<tr class="odd">
-<td><code>ctrl + b d</code></td>
-<td>Delete Pane</td>
-</tr>
-<tr class="even">
-<td><code>ctrl + b z</code></td>
-<td>Zoom into/out-of pane</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="nvidia-smi" class="level2">
-<h2 class="anchored" data-anchor-id="nvidia-smi">nvidia-smi</h2>
-<p><code>nvidia-smi dmon</code>: Chec for sm and mem column</p>
-</section>
-<section id="symblinks" class="level2">
-<h2 class="anchored" data-anchor-id="symblinks">Symblinks</h2>
-<section id="linux" class="level3">
-<h3 class="anchored" data-anchor-id="linux">Linux</h3>
-<p><code>ln -s target-path</code> : Creates a symblink of the target directory in current directory <code>ln -la</code> : Displays the folders who are made up of symblink</p>
-</section>
-<section id="windows" class="level3">
-<h3 class="anchored" data-anchor-id="windows">Windows</h3>
-<p><a href="https://www.youtube.com/watch?v=2uy4mR3q_jM">Youtube Tutorial</a></p>
-</section>
-</section>
-<section id="cloud-environments" class="level2">
-<h2 class="anchored" data-anchor-id="cloud-environments">Cloud Environments</h2>
-<section id="paperspace" class="level3">
-<h3 class="anchored" data-anchor-id="paperspace">Paperspace</h3>
-<p>Q. How to set common library?</p>
-<ol type="1">
-<li>pip install <code>--user</code> with this flag so that the lib is installed in <code>.local</code></li>
-<li>move the <code>.local</code> to <code>/storage/.local</code></li>
-<li>create symblink from <code>/storage/.local</code> as target and it would create <code>.bash.local</code> in <code>storage</code> which would fire up time new instance has been called</li>
-</ol>
+<blockquote class="blockquote">
+<p>[!info]- Common used python packages - numPy for working with custom data types - <a href="https://pandas.pydata.org/">pandas</a>&nbsp;for working with DataFrames. - <a href="https://scikit-learn.org/stable/">scikit-learn</a>&nbsp;for machine learning. - <a href="https://matplotlib.org/">Matplotlib</a>&nbsp;for visualizations. - <a href="https://seaborn.pydata.org/">seaborn</a>&nbsp;for statistical visualizations. - <a href="https://www.nltk.org/">NLTK</a>&nbsp;for text analysis. - <a href="https://spacy.io/">spaCy</a>&nbsp;for more text analysis.</p>
+</blockquote>
+<p>There are several virtual environments handler. Here’s a nice thread giving brief about those manageres https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe # venv I like to use the shipped manager <em>venv</em> because it’s simple to manage and doesn’t require install it additionally</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">python</span> <span class="at">-m</span> venv envName</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">cd</span> envName/scripts </span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="ex">activate.bat</span> //Activates the virtual enviroment in cmd</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="bu">source</span> activate //Activates in bash</span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a><span class="ex">deactivate</span> //deactivates in bash</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="ex">where</span> python //returns the path for python interpretor </span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="ex">get-command</span> <span class="at">-all</span> python //Same as above but used in powershell</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> freeze <span class="op">&gt;&gt;</span> requirements.txt// returns the dependencies of the workspace and save them to requirements.txt file</span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="ex">pip</span> install <span class="at">-r</span> requirements.txt</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="q.-what-is-conda-mamba-mambaforge-miniforge" class="level2">
+<h2 class="anchored" data-anchor-id="q.-what-is-conda-mamba-mambaforge-miniforge">Q. What is conda, mamba, mambaforge, miniforge?</h2>
+<p>Conda is a package and environment manager similar to pip for python. Mamba is C++ based implementation of conda offering faster package installation MambaForge is mamba based distribution which contains a preset collection of set packages for quicker setup and ready to go operation feasibility. Miniforge is conda based distribution</p>
+<blockquote class="blockquote">
+<p>pip does not manage the installation of any code other than python. Eg: PyTorch relies on CUDA so, PIP isn’t the preferable way of installing it instead use <code>conda/mamba</code> Any python library can be installed using PIP</p>
+</blockquote>
+<section id="conda---annaconda" class="level3">
+<h3 class="anchored" data-anchor-id="conda---annaconda">conda - Annaconda</h3>
+<p>https://www.dataquest.io/blog/python-vs-anaconda/</p>
+<div class="sourceCode" id="cb2"><pre class="sourceCode bash code-with-copy"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> <span class="at">--version</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">conda</span> install jupyter</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="ex">jupyter</span> notebook</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 
 
-</section>
 </section>
 </section>
 
@@ -854,13 +693,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/FastAI/FastAI Lecture 03.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FastAI Lecture 03</span>
+      <a href="../../notes/Utility/Kaggle.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Kaggle</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/FastAI/FastAI Snippets.html" class="pagination-link">
-        <span class="nav-page-text">FastAI Snippets 01</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/Resources/Deep Learning Resources.html" class="pagination-link">
+        <span class="nav-page-text">Resources</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

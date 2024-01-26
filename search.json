@@ -7,18 +7,32 @@
     "text": "ghpages: quarto publish preview: quarto preview render: quarto render"
   },
   {
-    "objectID": "notes/Utility/Kaggle.html",
-    "href": "notes/Utility/Kaggle.html",
-    "title": "Kaggle",
+    "objectID": "notes/Utility/Package Manager and Virtual Environments.html",
+    "href": "notes/Utility/Package Manager and Virtual Environments.html",
+    "title": "Agastya Patel",
     "section": "",
-    "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset"
+    "text": "[!info]- Common used python packages - numPy for working with custom data types - pandas for working with DataFrames. - scikit-learn for machine learning. - Matplotlib for visualizations. - seaborn for statistical visualizations. - NLTK for text analysis. - spaCy for more text analysis.\nThere are several virtual environments handler. Here’s a nice thread giving brief about those manageres https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe # venv I like to use the shipped manager venv because it’s simple to manage and doesn’t require install it additionally"
   },
   {
-    "objectID": "notes/Utility/Kaggle.html#access-kaggle-on-your-machine",
-    "href": "notes/Utility/Kaggle.html#access-kaggle-on-your-machine",
-    "title": "Kaggle",
+    "objectID": "notes/Utility/Package Manager and Virtual Environments.html#q.-what-is-conda-mamba-mambaforge-miniforge",
+    "href": "notes/Utility/Package Manager and Virtual Environments.html#q.-what-is-conda-mamba-mambaforge-miniforge",
+    "title": "Agastya Patel",
+    "section": "Q. What is conda, mamba, mambaforge, miniforge?",
+    "text": "Q. What is conda, mamba, mambaforge, miniforge?\nConda is a package and environment manager similar to pip for python. Mamba is C++ based implementation of conda offering faster package installation MambaForge is mamba based distribution which contains a preset collection of set packages for quicker setup and ready to go operation feasibility. Miniforge is conda based distribution\n\npip does not manage the installation of any code other than python. Eg: PyTorch relies on CUDA so, PIP isn’t the preferable way of installing it instead use conda/mamba Any python library can be installed using PIP\n\n\nconda - Annaconda\nhttps://www.dataquest.io/blog/python-vs-anaconda/\nconda --version\nconda install jupyter\njupyter notebook"
+  },
+  {
+    "objectID": "notes/Utility/JupyterNotebook.html",
+    "href": "notes/Utility/JupyterNotebook.html",
+    "title": "Jupyter Notebook",
     "section": "",
-    "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset"
+    "text": "%%debug : Used for non-graphical debugging from pdb import set_trace : set_trace() sets a breakpoint and automatically enables debugger mode"
+  },
+  {
+    "objectID": "notes/Utility/JupyterNotebook.html#debug",
+    "href": "notes/Utility/JupyterNotebook.html#debug",
+    "title": "Jupyter Notebook",
+    "section": "",
+    "text": "%%debug : Used for non-graphical debugging from pdb import set_trace : set_trace() sets a breakpoint and automatically enables debugger mode"
   },
   {
     "objectID": "notes/Utility/HuggingFace.html",
@@ -33,6 +47,146 @@
     "title": "Hugging Face Utility",
     "section": "",
     "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset"
+  },
+  {
+    "objectID": "notes/PyTorch.html",
+    "href": "notes/PyTorch.html",
+    "title": "PyTorch Reference",
+    "section": "",
+    "text": "Creating tensor: tns = torch.tensor(2500, dtype = torch.int) ## torch.float is another dtype BaseClass for all neural networks : nn.Module nn.Linear and nn.Sequential are objects/derived class of nn.Module class/Parent Class.\nnn.Linear(2,3)  // Initializes with random paramters\n\n# Building sequential network\nmodel = nn.Sequential(  \n    nn.Linear(2,3),  \n    nn.ReLU(),  \n    nn.Linear(3,1))\nmodel(input)   //FeedForward\n\n# buildinv custom network\nclass NN_Regression(nn.Module):\n    super(NN_regression, self).__init():\n    #initialize components\n        self.layer1 = nn.Linear(3,6)\n        self.layer2 = nn.Linear(4,1)\n        self.relu = nn.ReLU()\n    def forward(self, x):\n        x = self.layer1(x)\n        x = self.relu(x)\n        x = self.layer2(x)\n        return x\n        \noptimizer = optim.Adam(model.parameters(), lr=0.01)\nloss = nn.MSELoss()\n\nMSE = loss(model(input), y)\nMSE.backward()   #Backward propogation or gradient calculation\noptimizer.step() #Stepping\noptimizer.zero_grad()  #reset the gradients\n\n# Model Evaluation\nmodel.eval()\nwith torch.no_grad():\n    test_MSE = loss(model(X_test), y_test)\ntorch.save(model, 'model.pth')\ntorch.load('model.pth')\nTo split dataset into validation and testing; use sklearn.model_selection.train_test_split"
+  },
+  {
+    "objectID": "notes/PyTorch.html#pytorch-references-and-functions",
+    "href": "notes/PyTorch.html#pytorch-references-and-functions",
+    "title": "PyTorch Reference",
+    "section": "PyTorch references and functions",
+    "text": "PyTorch references and functions\n\nNon Linear Functions\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nReLU\nnn.ReLU()\n\n\n\nSigmoid\nnn.Sigmoid()\n\n\n\n\n\n\nLoss Functions\n\n\n\n\n\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nAbsolute Mean Error or L1 norm\ntorch.nn.functional.l1_loss(a,b)\n\n\n\nRoot Mean Square Error or L2 norm\ntorch.nn.functional.mse_loss(a,b)\n\n\n\n\n\n\nOptimizers\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nSGD\ntorch.optim.SGD(model_paramets, lr)\n\n\n\nAdam\ntorch.optim.ADAM(model_paramets, lr)\n\n\n\n\n\n\nLinear Regressions\n\n\n\n\n\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nLinear Regression\nnn.Linear(n_weights/n_inputs, n_bias/n_outputs)\nwx + b"
+  },
+  {
+    "objectID": "notes/Matplotlib.html",
+    "href": "notes/Matplotlib.html",
+    "title": "Matplotlib",
+    "section": "",
+    "text": "import matplotlib.pyplot as plt\n\nplt.figure(figsize = (10,6)) //Aspect ratio of the plot\nplt.suptitle('Super Title)\nplt.set_tile('Title', loc='left)\nplt.xlabel('X Label')\nplt.ylabel('Y Label')\n\n# Create scatter points\nplt.scatter(y_test, predictions, label='Predictions', alpha=0.5, color='blue')\n# Plot a line\nplt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], linestyle='--', color='gray', linewidth=2, label=\"Actual Observations\")\n\nplt.legend()  # Places legend on the plot\nplt.show()"
+  },
+  {
+    "objectID": "notes/FastAI/index.html",
+    "href": "notes/FastAI/index.html",
+    "title": "FastAI Notes",
+    "section": "",
+    "text": "FastAI chapter notes summarised and good overview\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nFastAI Lecture 03\n\n\n\n\n\n\n\nFastAI Setup\n\n\n\n\n\n\n\nFastAI Snippets 01\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Setup.html",
+    "href": "notes/FastAI/FastAI Setup.html",
+    "title": "FastAI Setup",
+    "section": "",
+    "text": "In this section we’ll be going through the setting up the wsl for FastAI. ## Setting up Windows Subsystem - Set wsl - get the miniforge/mambaforge(deprected) - run the miniforge.sh - mamba install ipython - mamba install jupyter lab - mamba install pytorch - conda install fastai"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Setup.html#nvidia-smi",
+    "href": "notes/FastAI/FastAI Setup.html#nvidia-smi",
+    "title": "FastAI Setup",
+    "section": "nvidia-smi",
+    "text": "nvidia-smi\nnvidia-smi dmon: Chec for sm and mem column"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Setup.html#symblinks",
+    "href": "notes/FastAI/FastAI Setup.html#symblinks",
+    "title": "FastAI Setup",
+    "section": "Symblinks",
+    "text": "Symblinks\n\nLinux\nln -s target-path : Creates a symblink of the target directory in current directory ln -la : Displays the folders who are made up of symblink\n\n\nWindows\nYoutube Tutorial"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Setup.html#cloud-environments",
+    "href": "notes/FastAI/FastAI Setup.html#cloud-environments",
+    "title": "FastAI Setup",
+    "section": "Cloud Environments",
+    "text": "Cloud Environments\n\nPaperspace\nQ. How to set common library?\n\npip install --user with this flag so that the lib is installed in .local\nmove the .local to /storage/.local\ncreate symblink from /storage/.local as target and it would create .bash.local in storage which would fire up time new instance has been called"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "FastAI Journey\n\n\n\n\n\n\n\nDeepLearning\n\n\nFastAI\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nAgastya Patel\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About",
+    "section": "",
+    "text": "Hi, I’m Agastya. Welcome to my blogs and project showcase. I’m currently working as Technical Artist and Developer. My responsibility involves developing custom in house solutions also whilst leveraging power of open source models for the creative team. I’m currently working on shot tracking product with the cloud team.\nMy interst in deep learning spiked when I started using open source models which led me into exploring them. I believe in constant learning and hence this is a good platform for sharing what I’m currently working/learning about.\nTech Stack\n- Python, Javascript, SQL, HTML -\n- Framework/libs FastAI, PyTorch, PyQT, Django, Numpy, Pandas -\n- DCC: Blender, Unreal, Houdini, Maya, DCC Based APIs -"
+  },
+  {
+    "objectID": "blogs/FastAI/index.html",
+    "href": "blogs/FastAI/index.html",
+    "title": "FastAI Projects",
+    "section": "",
+    "text": "Here’s my current journey of Fast AI learning. I’ll be keeping tab of the projects and the current status of journey here!.\nMy FastAI/Course Journey: Repository\nThread/Progress: I have created issues for each project so that I can keep the tabs on changes which are being made for the project. It has been tagged has label Model-Training-Progrss on github repository.\n\nSelf - ProjectsLessonLive Coding:\n\n\n\n\n\nProjects\nLink\nDescription\nLesson Relation\n\n\n\n\nPokemon Classifier\nThread, HF-Spaces\nCreated pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it’s usage.\n1,2\n\n\nMNIST Classifier\n\n\n\n\n\n\n\n\n\n✅ Done\n🌀 Current Sprint\n💤 Pending\n\n\n\n\nLesson\nWatched\nRead\nQuestionnaire\nRe-Implementation\n\n\n\n\n\n1\n✅\nCh 01✅\n✅\n✅\n✅\n\n\n2\n✅\nCh 02✅\n🌀\n✅\n✅\n\n\n3\n✅\nCh 04✅\n\n\n\n\n\n4\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\n\n\nCompleted : 1,2,3,6,7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "bob.html",
+    "href": "bob.html",
+    "title": "Back of book index",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 27, 2023\n\n\nFastAI Journey\n\n\nAgastya Patel\n\n\n\n\nJan 13, 2024\n\n\nFastAI Lecture 03\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Notes\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nJan 24, 2024\n\n\nHugging Face Utility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nInternet\n\n\n\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nNotes\n\n\n\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nResources\n\n\n\n\n\n\n\nDec 29, 2023\n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nvenv\n\n\n\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Lecture 03.html",
+    "href": "notes/FastAI/FastAI Lecture 03.html",
+    "title": "FastAI Lecture 03",
+    "section": "",
+    "text": "Rectified linear Unit : y = mx + b"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Lecture 03.html#calculating-loss",
+    "href": "notes/FastAI/FastAI Lecture 03.html#calculating-loss",
+    "title": "FastAI Lecture 03",
+    "section": "Calculating Loss",
+    "text": "Calculating Loss\n\nWhat are derivatives?\nDerivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function - fastbook\n\n\nCalculating derivatives for weights in NN\nFor neural networks with lots of weights, we find derivatives for each weight, treating others as constants. In deep learning, “gradients” mean values of a function’s derivatives. PyTorch’s requires_grad_() helps track and calculate these derivatives automatically.\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value. - fastbook"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Lecture 03.html#loss-vs-metric",
+    "href": "notes/FastAI/FastAI Lecture 03.html#loss-vs-metric",
+    "title": "FastAI Lecture 03",
+    "section": "Loss vs Metric",
+    "text": "Loss vs Metric\n\n\n\n\n\n\n\n\nAspect\nMetric\nLoss\n\n\n\n\nPurpose Difference\nDrives human understanding of performance\nDrives automated learning by optimization\n\n\nSmoothness Requirement\nNot constrained by smoothness\nRequires smoothness for meaningful derivative\n\n\nOptimization vs. Real Goal\nReflects actual goals\nCompromise between real goals and optimization\n\n\nCalculation Process\nProvides overall model evaluation\nCalculated per item, averaged at epoch end\n\n\nFocus Consideration\nPrimary focus for judging performance\nImportant for automated learning, may not directly represent end goal"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Snippets.html",
+    "href": "notes/FastAI/FastAI Snippets.html",
+    "title": "FastAI Snippets 01",
+    "section": "",
+    "text": "Page contains some of the common and usefull snippets. Pathlib, parallel processing."
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Snippets.html#path",
+    "href": "notes/FastAI/FastAI Snippets.html#path",
+    "title": "FastAI Snippets 01",
+    "section": "Path",
+    "text": "Path\nfrom pathlib import path\npath = Path() #Current Dir\n#path = Path('Content') #Relative Dir\n#path = Path('NB/content') #Absolute Dir"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Snippets.html#add-recent-models",
+    "href": "notes/FastAI/FastAI Snippets.html#add-recent-models",
+    "title": "FastAI Snippets 01",
+    "section": "Add recent models",
+    "text": "Add recent models\n!pip install timm\nimport timm\ntimm.list_models('convnext*') # Prints available model"
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Snippets.html#fine_tune",
+    "href": "notes/FastAI/FastAI Snippets.html#fine_tune",
+    "title": "FastAI Snippets 01",
+    "section": "Fine_Tune:",
+    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate"
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nFastAI Notes\n\n\n\n\n\n\n\nInternet\n\n\n\n\n\n\n\nMatplotlib\n\n\n\n\n\n\n\nPyTorch Reference\n\n\n\n\n\n\n\nUtility\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/Networking.html",
@@ -77,263 +231,32 @@
     "text": "HTTP vs REST (related but distinct concepts)\nHTTP (Hypertext Transfer Protocol): - HTTP is the foundation of any data exchange on the Web. - It’s a protocol used for transferring hypertext (text that includes links to other texts, like web pages) over the internet. - It defines how messages are formatted and transmitted and what actions web servers and browsers should take in response to various commands. - In simpler terms, it’s the set of rules that allows your web browser to request a webpage from a server, and the server to send that webpage back to your browser as response.\nREST (Representational State Transfer): #Guidelines https://www.codecademy.com/article/what-is-rest - REST is an architectural style, a set of principles that are often applied when building web services. - It’s not a protocol like HTTP; instead, it’s a set of guidelines for creating scalable and stateless web services. - RESTful services use standard HTTP methods (like GET, POST, PUT, DELETE) for operations on resources (like data entities), and they represent these resources as URIs (Uniform Resource Identifiers). - RESTful services typically use JSON or XML for data exchange. - In simpler terms, REST is an approach to designing networked applications in a way that is scalable, stateless, and relies on standard HTTP methods.\n\n[!Info] Stateless Web Service: Each request from client is independent & carries all information. So, the server doesn’t store the client’s state between requests and treats each requests as isolated transaction."
   },
   {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Notes",
+    "objectID": "notes/Resources/Deep Learning Resources.html",
+    "href": "notes/Resources/Deep Learning Resources.html",
+    "title": "Resources",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nFastAI Notes\n\n\n\n\n\n\n\nInternet\n\n\n\n\n\n\n\nMatplotlib\n\n\n\n\n\n\n\nPyTorch Reference\n\n\n\n\n\n\n\nUtility\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Snippets.html",
-    "href": "notes/FastAI/FastAI Snippets.html",
-    "title": "FastAI Snippets 01",
-    "section": "",
-    "text": "Page contains some of the common and usefull snippets. Pathlib, parallel processing."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Snippets.html#path",
-    "href": "notes/FastAI/FastAI Snippets.html#path",
-    "title": "FastAI Snippets 01",
-    "section": "Path",
-    "text": "Path\nfrom pathlib import path\npath = Path() #Current Dir\n#path = Path('Content') #Relative Dir\n#path = Path('NB/content') #Absolute Dir"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Snippets.html#add-recent-models",
-    "href": "notes/FastAI/FastAI Snippets.html#add-recent-models",
-    "title": "FastAI Snippets 01",
-    "section": "Add recent models",
-    "text": "Add recent models\n!pip install timm\nimport timm\ntimm.list_models('convnext*) # Prints available model"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Snippets.html#fine_tune",
-    "href": "notes/FastAI/FastAI Snippets.html#fine_tune",
-    "title": "FastAI Snippets 01",
-    "section": "Fine_Tune:",
-    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 03.html",
-    "href": "notes/FastAI/FastAI Lecture 03.html",
-    "title": "FastAI Lecture 03",
-    "section": "",
-    "text": "Arrays/Tensor\nBroadcasting (Understand it better)\nSGD\nLoss function\nRole of mini batches\ndescribe the math that a basic neural network is actually doing\n\nRectified linear Unit : y = mx + b ## Calculating Loss ### What are derivatives? Derivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function\n\n\nOur function has large number of weights. We calculate the derivative for one weight while we consider rest as constant and repeat the same process.\n &gt; in deep learning, “gradients” usually means the value of a function’s derivative at a particular argument value whereas in math the derivative gives us another function(rate)\npytorch provides requires_grad_() which tags the variable and keeps track to calculate derivative when passed in a function\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value.\n\nThe key difference is that the metric is to drive human understanding and the loss is to drive automated learning. To drive automated learning, the loss must be a function that has a meaningful derivative. It can’t have big flat sections and large jumps, but instead must be reasonably smooth. This is why we designed a loss function that would respond to small changes in confidence level. This requirement means that sometimes it does not really reflect exactly what we are trying to achieve, but is rather a compromise between our real goal and a function that can be optimized using its gradient. The loss function is calculated for each item in our dataset, and then at the end of an epoch the loss values are all averaged and the overall mean is reported for the epoch. Metrics, on the other hand, are the numbers that we really care about. These are the values that are printed at the end of each epoch that tell us how our model is really doing. It is important that we learn to focus on these metrics, rather than the loss, when judging the performance of a model."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 03.html#goal",
-    "href": "notes/FastAI/FastAI Lecture 03.html#goal",
-    "title": "FastAI Lecture 03",
-    "section": "",
-    "text": "Arrays/Tensor\nBroadcasting (Understand it better)\nSGD\nLoss function\nRole of mini batches\ndescribe the math that a basic neural network is actually doing\n\nRectified linear Unit : y = mx + b ## Calculating Loss ### What are derivatives? Derivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function\n\n\nOur function has large number of weights. We calculate the derivative for one weight while we consider rest as constant and repeat the same process.\n &gt; in deep learning, “gradients” usually means the value of a function’s derivative at a particular argument value whereas in math the derivative gives us another function(rate)\npytorch provides requires_grad_() which tags the variable and keeps track to calculate derivative when passed in a function\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value.\n\nThe key difference is that the metric is to drive human understanding and the loss is to drive automated learning. To drive automated learning, the loss must be a function that has a meaningful derivative. It can’t have big flat sections and large jumps, but instead must be reasonably smooth. This is why we designed a loss function that would respond to small changes in confidence level. This requirement means that sometimes it does not really reflect exactly what we are trying to achieve, but is rather a compromise between our real goal and a function that can be optimized using its gradient. The loss function is calculated for each item in our dataset, and then at the end of an epoch the loss values are all averaged and the overall mean is reported for the epoch. Metrics, on the other hand, are the numbers that we really care about. These are the values that are printed at the end of each epoch that tell us how our model is really doing. It is important that we learn to focus on these metrics, rather than the loss, when judging the performance of a model."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 03.html#loss-vs-metric",
-    "href": "notes/FastAI/FastAI Lecture 03.html#loss-vs-metric",
-    "title": "FastAI Lecture 03",
-    "section": "Loss vs Metric",
-    "text": "Loss vs Metric\n\n\n\n\n\n\n\n\nAspect\nMetric\nLoss\n\n\n\n\nPurpose Difference\nDrives human understanding of performance\nDrives automated learning by optimization\n\n\nSmoothness Requirement\nNot constrained by smoothness\nRequires smoothness for meaningful derivative\n\n\nOptimization vs. Real Goal\nReflects actual goals\nCompromise between real goals and optimization\n\n\nCalculation Process\nProvides overall model evaluation\nCalculated per item, averaged at epoch end\n\n\nFocus Consideration\nPrimary focus for judging performance\nImportant for automated learning, may not directly represent end goal"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 03.html#why-batches",
-    "href": "notes/FastAI/FastAI Lecture 03.html#why-batches",
-    "title": "FastAI Lecture 03",
-    "section": "Why Batches?",
-    "text": "Why Batches?\nAfter loss function calculation; When should the system update weights? if loss is calculated for one item it would not be much informational as it would result in imprecise and unstable gradient if loss is calculated for entire dataset it would take very long ### Mini Batch So, we count the average loss for few data items at a time (Mini Batch) BatchSize = Number of items\n\n\n\n\n\n\n\n\n\nBatch Size\nQuality\nTime\nSize\n\n\n\n\nLarger\nmore accurate and stable estimate of your dataset’s gradients from the loss function\nlonger time to process\n will process fewer mini-batches per epoch\n\n\n\n\nNOTE: We can’t use large batch size due to limitation of GPU memory\n\n\nRandomization with mini batches\nRather than simply enumerating our dataset in order for every epoch, instead what we normally do is randomly shuffle it on every epoch, before we create mini-batches. PyTorch and fastai provide a class that will do the shuffling and mini-batch collation for you, called DataLoader.\nds = L(enumerate(string.ascii_lowercase))\nds\n&gt;&gt; (#26) [(0, 'a'),(1, 'b'),(2, 'c'),(3, 'd'),(4, 'e'),(5, 'f'),(6, 'g'),(7, 'h'),(8, 'i'),(9, 'j')...]\n\ndl = DataLoader(ds, batch_size=6, shuffle=True)\nlist(dl)\n&gt;&gt; [(tensor([17, 18, 10, 22,  8, 14]), ('r', 's', 'k', 'w', 'i', 'o')),\n (tensor([20, 15,  9, 13, 21, 12]), ('u', 'p', 'j', 'n', 'v', 'm')),\n (tensor([ 7, 25,  6,  5, 11, 23]), ('h', 'z', 'g', 'f', 'l', 'x')),\n (tensor([ 1,  3,  0, 24, 19, 16]), ('b', 'd', 'a', 'y', 't', 'q')),\n (tensor([2, 4]), ('c', 'e'))]\n\n\n\n\n\n\n\nTerm\nMeaning\n\n\n\n\nReLU\nFunction that returns 0 for negative numbers and doesn’t change positive numbers.\n\n\nMini-batch\nA small group of inputs and labels gathered together in two arrays. A gradient descent step is updated on this batch (rather than a whole epoch).\n\n\nForward pass\nApplying the model to some input and computing the predictions.\n\n\nLoss\nA value that represents how well (or badly) our model is doing.\n\n\nGradient\nThe derivative of the loss with respect to some parameter of the model.\n\n\nBackward pass\nComputing the gradients of the loss with respect to all model parameters.\n\n\nGradient descent\nTaking a step in the directions opposite to the gradients to make the model parameters a little bit better.\n\n\nLearning rate\nThe size of the step we take when applying SGD to update the parameters of the model."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html",
-    "href": "notes/FastAI/FastAI Lecture 01.html",
-    "title": "FastAI Lecture 01",
-    "section": "",
-    "text": "Useful Resources Alliance MAP JH’s jupyter NB 101 Kaggle: Comprehensive data exploration with Python”\nLesson1 Notes : 07/12/2023 - learn about functional programming - What is fine tuning?"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#history-of-neural-network",
-    "href": "notes/FastAI/FastAI Lecture 01.html#history-of-neural-network",
-    "title": "FastAI Lecture 01",
-    "section": "History of Neural Network",
-    "text": "History of Neural Network\n\nWarren McCulloch, Walter Pitts: Developed mathematical model of artificial neuron. Logical Calculus of the ideas immanent in Nervous Activity ;Defined “all-or-none” characteristic of neuron; can be represented using simple addition and thresholding.\nRosenblatt Built artificial neuron - ‘Mark I Perceptron’ using above principles; Machine capable of recognizing and identifying its surrounding (Simple features) without human training and supervision.\n\n\nAI Winter #1\n\nMarvin Minsky wrote a book ‘Perceptron’ and conveyed that single layer of these devices were unable to learn simple mathematical function like XOR. But also proposed that use of multiple layers would remove this limitation.\nWorld looked at the first of his outcome and research depleted for 2 decades.\nParallel Distribution Processing’s idea of using computational framework for modeling cognitive processing similar to brain.\n\n\nPDP’s approach still being used today in creating modern neural networks\nA set of processing units state of activation output function for each unit/node pattern of connectivity, rule for propagating patterns of activity in the network activation rule for combining the inputs at a node with current state to produce output for that node learning rule where connection patterns are modified with experience environment where system can operate\n\n\n\nAI Winter #2\n\nWith PDP’s approach, researchers started adding another layer in network but due to being complex, large and slow in nature; the field got deserted.\n\n\n\nToday\n\nMultiple layers of networks are being built due to technological advancements, data availability and better algorithm. The performance has increased drastically.\n\n\nPaper ^50k citations written by Alec Radford “Unsupervised Representation Learning with Deep Convolutional Generative Adversarial Networks” [READ PENDING]\nMusk - “https://twitter.com/elonmusk/status/1224089444963311616”\n\n\nGPU (Graphics Card) - Special kind of processors that handles thousands of single task at the same time. These tasks are similar to neural networks do, such that GPU’’s run neural network much faster than CPU"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#what-is-machine-learning",
-    "href": "notes/FastAI/FastAI Lecture 01.html#what-is-machine-learning",
-    "title": "FastAI Lecture 01",
-    "section": "What is machine learning?",
-    "text": "What is machine learning?\nDiscipline where we define program not by writing it ourself but by allowing it to learn from data and experience. ### What is deep learning? - A general & modern discipline of ML Deep learning is a computer technique to extract and transform data. It is based on multiple layer of neural network and these network are trained to minimize error and maximize accuracy."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#arthur-samuel-ibms-research",
-    "href": "notes/FastAI/FastAI Lecture 01.html#arthur-samuel-ibms-research",
-    "title": "FastAI Lecture 01",
-    "section": "Arthur Samuel, IBM’s research",
-    "text": "Arthur Samuel, IBM’s research\n\n“Artificial Intelligence: A frontier of Automation”\nProgramming a computer for complex computation like recognition is difficult task not because of complexity in the computer but because of the need specify every minute step of the process in detail.\nIdea: Instead of telling computer each step require to solve; we show examples f problems to solve and let it figure out how to solve it.\nThis was effective in his checker playing program which learned to play by learning from experience.\n\n\n[!idea] Breaking down his idea Suppose we arrange for some automatic means of testing the effectiveness of any current weight assignment in terms of actual performance and provide a mechanism for altering the weight assignment so as to maximize the performance. We need not go into the details of such a procedure to see that it could be made entirely automatic and to see that a machine so programmed would ‘learn’ from it’s experience."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#getting-into-details-about-samuels-idea-for-ml",
-    "href": "notes/FastAI/FastAI Lecture 01.html#getting-into-details-about-samuels-idea-for-ml",
-    "title": "FastAI Lecture 01",
-    "section": "Getting into details about Samuel’s Idea for ML",
-    "text": "Getting into details about Samuel’s Idea for ML\n\nWeights / Model Parameters\n\nWeights are variables and weights assignment is a particular values in those variables.\nWeights are additional values which define how the program will operate.\nAltering the weights can change the model’s behavior.\n\n\n\n\n\nflowchart LR\n    I[Inputs] --&gt;M{Model} \n    W(Weights) --&gt; M\n    M --&gt;F[Resut]\n\n\n\n\n\nContextual Example: different weights in checker program would result in different checkers playing strategies\n\n\nActual Performance\n\nActual performance in checker playing program would be how well does the program plays\n\n\n\nAutomatic means of testing\n\nSet two checker playing models to play against each other and see which one is winning\n\n\n\nMechanism for altering the weight assignment so as to maximize the performance\n\nDifference in the weights of the winning model and losing model; and adjusting the weights little further in the winning direction\n\n\n\n\n\n\n  Machine programmed to learn from experience  \n\nmodel\n\n    architecture   \n\npredictions\n\n predictions   \n\nmodel-&gt;predictions\n\n    \n\ninputs\n\n inputs   \n\ninputs-&gt;model\n\n    \n\nloss\n\n loss   \n\npredictions-&gt;loss\n\n    \n\nparameters\n\n parameters   \n\nparameters-&gt;model\n\n    \n\nlabels\n\n labels   \n\nlabels-&gt;loss\n\n    \n\nloss-&gt;parameters\n\n  update  \n\n\n\n\n\n\n\nOnce Model has been trained\nWe pack the parameters/weights as being part of the model as we won’t be changing that. The model used for prediction is know as Inferenece\n\n\n\n\n\n  Inference (Trained Model + Fixed Weight)  \n\nInference\n\n    Inference   \n\npredictions\n\n predictions   \n\nInference-&gt;predictions\n\n    \n\ninputs\n\n inputs   \n\ninputs-&gt;Inference"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#neural-networks",
-    "href": "notes/FastAI/FastAI Lecture 01.html#neural-networks",
-    "title": "FastAI Lecture 01",
-    "section": "Neural Networks",
-    "text": "Neural Networks\n\nThese are Universal Function which can solve any problem just by varying its weights.\nIf you regard Neural network as a mathematical function, it turns out to be a extremely variable function depending on its weights. &gt; A mathematical proof called the universal approximation theorem shows that this function can solve any problem to any level of accuracy in theory.\n\nThe fact that neural networks are so flexible means that, in practice, they are often a suitable kind of model, and you can focus your effort on the process of training them—that is, of finding good weight assignments.\n\nSearch for mechanism which can automatically update the weights according to problem\nStochastic gradient descent(SGD)\nNeural networks are special because they are highly flexible, which means they can solve an unusually wide range of problems just by finding the right weights. And SGD provides us a way to find those values automatically!\n\n\n\n\n\n\n\nCase : Cat vs Dog Classifier\nSamuel’s Machine Learning Model\n\n\n\n\nInput Images\nInputs\n\n\nWeights in neural network\nWeights\n\n\nResult (‘Dog’/‘Cat’)\nResult\n\n\nActual Performance at predicting the correct answer\nAutomatic means of testing effectiveness of current weights\n\n\nUpdating weights\nSGD mechanism of updating weights"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#feedback-lop",
-    "href": "notes/FastAI/FastAI Lecture 01.html#feedback-lop",
-    "title": "FastAI Lecture 01",
-    "section": "Feedback lop",
-    "text": "Feedback lop\n\nFeedback loop is the process and outcomes which tends to make model bias towards particular label. Once model starts using it’s initial outcome for training purpose it tends to make prediction which are aligned to new data which in turns creates more prediction for that label This loop is know as positive feedback loop and predictive policing, conspiracy theorist are good example for it."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#overfitting",
-    "href": "notes/FastAI/FastAI Lecture 01.html#overfitting",
-    "title": "FastAI Lecture 01",
-    "section": "Overfitting",
-    "text": "Overfitting\n\nEven when model has not fully memorized all data, while training it may have memorized certain parts of it.\nAs a result, the longer you train for, the better your accuracy will get on training set and for a while the accuracy will improve in validation set.\nEventually accuracy of validation set will start to get worse as model will set to memorize the training set, rather than finding generalizable underlying patterns in the data.\nThis process is know as overfitting."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#metric",
-    "href": "notes/FastAI/FastAI Lecture 01.html#metric",
-    "title": "FastAI Lecture 01",
-    "section": "Metric",
-    "text": "Metric\n metric is a function that measures the quality of the model’s predictions using the validation set, and will be printed at the end of each epoch. In this case, we’re using error_rate, which is a function provided by fastai that does just what it says: tells you what percentage of images in the validation set are being classified incorrectly.\n\nWhy Loss isn’t a metric?\nThe concept of a metric may remind you of loss, but there is an important distinction. The entire purpose of loss is to define a “measure of performance” that the training system can use to update weights automatically. In other words, a good choice for loss is a choice that is easy for stochastic gradient descent to use. But a metric is defined for human consumption, so a good metric is one that is easy for you to understand"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#transfer-learning",
-    "href": "notes/FastAI/FastAI Lecture 01.html#transfer-learning",
-    "title": "FastAI Lecture 01",
-    "section": "Transfer Learning",
-    "text": "Transfer Learning\nWhen using a pretrained model, the last layer, specific to the original task, is replaced with a new head for the target dataset. Pretrained models are crucial for training accurate models quickly and efficiently with limited data and resources. However, transfer learning, using pretrained models for different tasks, is under-studied, limiting its application in some domains like medicine. Despite its potential, the importance of pretrained models is often overlooked in academic deep learning."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#fit-vs-fine-tune",
-    "href": "notes/FastAI/FastAI Lecture 01.html#fit-vs-fine-tune",
-    "title": "FastAI Lecture 01",
-    "section": "Fit vs Fine Tune",
-    "text": "Fit vs Fine Tune\nThe architecture only describes a template for a mathematical function; it doesn’t actually do anything until we provide values for the millions of parameters it contains.\nThis is the key to deep learning—determining how to fit the parameters of a model to get it to solve your problem. In order to fit a model, we have to provide at least one piece of information: how many times to look at each image (known as number of epochs). The number of epochs you select will largely depend on how much time you have available, and how long you find it takes in practice to fit your model. If you select a number that is too small, you can always train for more epochs later.\nBut why is the method called fine_tune, and not fit? fastai actually does have a method called fit, which does indeed fit a model (i.e. look at images in the training set multiple times, each time updating the parameters to make the predictions closer and closer to the target labels). But in this case, we’ve started with a pretrained model, and we don’t want to throw away all those capabilities that it already has. As you’ll learn in this book, there are some important tricks to adapt a pretrained model for a new dataset—a process called fine-tuning.\n\nDeep learning architecture is a template for a function, requiring parameter values to be effective.\nThe key in deep learning is fitting the model parameters to solve a specific problem.\nThe number of epochs (how many times to look at each image) is crucial for model fitting.\nfine_tune is used instead of fit when starting with a pretrained model to retain its capabilities.\nFine-tuning involves adapting a pretrained model for a new dataset, preserving its learned features.\n\nCNN: Current state of the art approach to creating computer vision models."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 01.html#fine-tune-process",
-    "href": "notes/FastAI/FastAI Lecture 01.html#fine-tune-process",
-    "title": "FastAI Lecture 01",
-    "section": "Fine Tune Process",
-    "text": "Fine Tune Process\nWhen you use the fine_tune method, fastai will use these tricks for you. There are a few parameters you can set (which we’ll discuss later), but in the default form shown here, it does two steps:\n\nUse one epoch to fit just those parts of the model necessary to get the new random head to work correctly with your dataset.\nUse the number of epochs requested when calling the method to fit the entire model, updating the weights of the later layers (especially the head) faster than the earlier layers (which, as we’ll see, generally don’t require many changes from the pretrained weights).\n\nThe head of a model is the part that is newly added to be specific to the new dataset. An epoch is one complete pass through the dataset. After calling fit, the results after each epoch are printed, showing the epoch number, the training and validation set losses (the “measure of performance” used for training the model), and any metrics you’ve requested (error rate, in this case).\n\nGo over Jargon recap in fastbook lesson 1\n\nReduce batch size if you are hitting cuda out of memry"
-  },
-  {
-    "objectID": "bob.html",
-    "href": "bob.html",
-    "title": "Back of book index",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 27, 2023\n\n\nFastAI Journey\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Lecture 01\n\n\nAgastya Patel\n\n\n\n\nJan 11, 2024\n\n\nFastAI Lecture 02\n\n\nAgastya Patel\n\n\n\n\nJan 13, 2024\n\n\nFastAI Lecture 03\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Notes\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup; Understanding Tools\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nJan 24, 2024\n\n\nHugging Face Utility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nInternet\n\n\n\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nNotes\n\n\n\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "blogs/FastAI/index.html",
-    "href": "blogs/FastAI/index.html",
-    "title": "FastAI Projects",
-    "section": "",
-    "text": "Here’s my current journey of Fast AI learning. I’ll be keeping tab of the projects and the current status of journey here!.\nMy FastAI/Course Journey: Repository\nThread/Progress: I have created issues for each project so that I can keep the tabs on changes which are being made for the project. It has been tagged has label Model-Training-Progrss on github repository.\n\nSelf - ProjectsLessonLive Coding:\n\n\n\n\n\nProjects\nLink\nDescription\nLesson Relation\n\n\n\n\nPokemon Classifier\nThread, HF-Spaces\nCreated pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it’s usage.\n1,2\n\n\nMNIST Classifier\n\n\n\n\n\n\n\n\n\n✅ Done\n🌀 Current Sprint\n💤 Pending\n\n\n\n\nLesson\nWatched\nRead\nQuestionnaire\nRe-Implementation\n\n\n\n\n\n1\n✅\nCh 01✅\n✅\n✅\n✅\n\n\n2\n✅\nCh 02✅\n🌀\n✅\n✅\n\n\n3\n✅\nCh 04✅\n\n\n\n\n\n4\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\n\n\nCompleted : 1,2,3,6,7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About",
-    "section": "",
-    "text": "Hi, I’m Agastya. Welcome to my second brain which I share over internet.\nI’m currently working as Technical Artist and Developer. My responsibility involves developing custom in house solutions also whilst leveraging power of open source models for the creative team. I’m currently working on shot tracking product with the cloud team.\nMy interst in deep learning has been growing over me since I started using open source models which have lead into learning about it. I believe in constant learning and hence this is a good platform for sharing what I’m currently working/learning about.\nTech Stack\n- Python, Javascript, C++, SQL, HTML -\n- Framework/libs FastAI, PyQT, Flask, DCC Based APIs -\n- DCC: Blender, Unreal, Houdini, Maya -"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blogs",
-    "section": "",
-    "text": "FastAI Journey\n\n\n\n\n\n\n\nDeepLearning\n\n\nFastAI\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nAgastya Patel\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 02.html",
-    "href": "notes/FastAI/FastAI Lecture 02.html",
-    "title": "FastAI Lecture 02",
-    "section": "",
-    "text": "DataLoaders - Dataloaders is a container which contains the data (train and validation) we want to use to for our machine learning model; it organises the data. - DataLoaders class is the class that passes the data to the fastai model. It is essentially a class that required Dataloader objects (usually for train and validation subset)\nitem_tfms: Our images are all different sizes, and this is a problem for deep learning: we don’t feed the model one image at a time but several of them (what we call a mini-batch). To group them in a big array (usually called a tensor) that is going to go through our model, they all need to be of the same size. So, we need to add a transform which will resize these images to the same size. Item transforms are pieces of code that run on each individual item, whether it be an image, category, or so forth. fastai includes many predefined transforms; we use the Resize transform here:\nDataBlock: This command has given us a DataBlock object. This is like a template for creating a DataLoaders. We still need to tell fastai the actual source of our data—in this case, the path where the images can be found\nA DataLoaders includes validation and training DataLoaders. DataLoader is a class that provides batches of a few items at a time to the GPU. We’ll be learning a lot more about this class in the next chapter. When you loop through a DataLoader fastai will give you 64 (by default) items at a time, all stacked up into a single tensor. We can take a look at a few of those items by calling the show_batch method on a DataLoader: dls.valid.show_batch(max_n=4, nrows=1) dls is a dataloaders dls.valid and dls.train is dataloader"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 02.html#cropping",
-    "href": "notes/FastAI/FastAI Lecture 02.html#cropping",
-    "title": "FastAI Lecture 02",
-    "section": "Cropping",
-    "text": "Cropping\n\nResize(size): crops the image to fit a square of the size requested, using the full width or height.\nResizeMethod.Squish: can result in loosing of some detail as images gets squished or stretched.\nResizeMethod.Pad, pad_mode=‘zero’: Fits the image in square with black padding. These approaches are unoptimized and result in lower accurate models. We can train our model on random parts of image during each training round (EPOCH), making it adaptable to different features, similar to how photos can have different perspective. It helps the model to generalize the feature and learn the basic concept of object\nRandomResizedCrop(size, min_scale=0.3): Creates random zoom images during epoch in vram dls.train.show_batch(max_n=4, nrows=1, unique=True) We used unique=True to have the same image repeated with different versions of this RandomResizedCrop transform. This is a specific example of a more general technique, called data augmentation."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Lecture 02.html#data-augmentation",
-    "href": "notes/FastAI/FastAI Lecture 02.html#data-augmentation",
-    "title": "FastAI Lecture 02",
-    "section": "Data Augmentation",
-    "text": "Data Augmentation\nWith resize our images are now all the same size, we can apply these augmentations to an entire batch of them using the GPU, which will save a lot of time."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Setup.html",
-    "href": "notes/FastAI/FastAI Setup.html",
-    "title": "FastAI Setup; Understanding Tools",
-    "section": "",
-    "text": "We’ll be taking a look at package managers like conda, mamba; peek on some important tools like bash, tmux etc."
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Setup.html#setting-up-windows-subsystem",
-    "href": "notes/FastAI/FastAI Setup.html#setting-up-windows-subsystem",
-    "title": "FastAI Setup; Understanding Tools",
-    "section": "Setting up Windows Subsystem",
-    "text": "Setting up Windows Subsystem\n\nSet wsl\nget the miniforge/mambaforge(deprected)\nrun the miniforge.sh\nmamba install ipython\nmamba install jupyter lab\nmamba install pytorch\nconda install fastai"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Setup.html#nvidia-smi",
-    "href": "notes/FastAI/FastAI Setup.html#nvidia-smi",
-    "title": "FastAI Setup; Understanding Tools",
-    "section": "nvidia-smi",
-    "text": "nvidia-smi\nnvidia-smi dmon: Chec for sm and mem column ## Jupter %%debug : Used for non-graphical debugging from pdb import set_trace : set_trace() sets a breakpoint and automatically enables debugger mode ## Symblinks ### Linux ln -s target-path : Creates a symblink of the target directory in current directory ln -la : Displays the folders who are made up of symblink\n\nWindows\nYoutube Tutorial"
-  },
-  {
-    "objectID": "notes/FastAI/FastAI Setup.html#cloud-environments",
-    "href": "notes/FastAI/FastAI Setup.html#cloud-environments",
-    "title": "FastAI Setup; Understanding Tools",
-    "section": "Cloud Environments",
-    "text": "Cloud Environments\n\nPaperspace\nQ. How to set common library? 1. pip install --user with this flag so that the lib is installed in .local 2. move the .local to /storage/.local 3. create symblink from /storage/.local as target and it would create .bash.local in storage which would fire up time new instance has been called"
-  },
-  {
-    "objectID": "notes/FastAI/index.html",
-    "href": "notes/FastAI/index.html",
-    "title": "FastAI Notes",
-    "section": "",
-    "text": "FastAI chapter notes summarised and good overview\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nFastAI Lecture 01\n\n\n\n\n\n\n\nFastAI Lecture 02\n\n\n\n\n\n\n\nFastAI Lecture 03\n\n\n\n\n\n\n\nFastAI Setup; Understanding Tools\n\n\n\n\n\n\n\nFastAI Snippets 01\n\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "notes/Matplotlib.html",
-    "href": "notes/Matplotlib.html",
-    "title": "Matplotlib",
-    "section": "",
-    "text": "import matplotlib.pyplot as plt\n\nplt.figure(figsize = (10,6)) //Aspect ratio of the plot\nplt.suptitle('Super Title)\nplt.set_tile('Title', loc='left)\nplt.xlabel('X Label')\nplt.ylabel('Y Label')\n\n# Create scatter points\nplt.scatter(y_test, predictions, label='Predictions', alpha=0.5, color='blue')\n# Plot a line\nplt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], linestyle='--', color='gray', linewidth=2, label=\"Actual Observations\")\n\nplt.legend()  # Places legend on the plot\nplt.show()"
-  },
-  {
-    "objectID": "notes/PyTorch.html",
-    "href": "notes/PyTorch.html",
-    "title": "PyTorch Reference",
-    "section": "",
-    "text": "Creating tensor: tns = torch.tensor(2500, dtype = torch.int) ## torch.float is another dtype BaseClass for all neural networks : nn.Module nn.Linear and nn.Sequential are objects/derived class of nn.Module class/Parent Class.\nnn.Linear(2,3)  // Initializes with random paramters\n\n# Building sequential network\nmodel = nn.Sequential(  \n    nn.Linear(2,3),  \n    nn.ReLU(),  \n    nn.Linear(3,1))\nmodel(input)   //FeedForward\n\n# buildinv custom network\nclass NN_Regression(nn.Module):\n    super(NN_regression, self).__init():\n    #initialize components\n        self.layer1 = nn.Linear(3,6)\n        self.layer2 = nn.Linear(4,1)\n        self.relu = nn.ReLU()\n    def forward(self, x):\n        x = self.layer1(x)\n        x = self.relu(x)\n        x = self.layer2(x)\n        return x\n        \noptimizer = optim.Adam(model.parameters(), lr=0.01)\nloss = nn.MSELoss()\n\nMSE = loss(model(input), y)\nMSE.backward()   #Backward propogation or gradient calculation\noptimizer.step() #Stepping\noptimizer.zero_grad()  #reset the gradients\n\n# Model Evaluation\nmodel.eval()\nwith torch.no_grad():\n    test_MSE = loss(model(X_test), y_test)\ntorch.save(model, 'model.pth')\ntorch.load('model.pth')\nTo split dataset into validation and testing; use sklearn.model_selection.train_test_split"
-  },
-  {
-    "objectID": "notes/PyTorch.html#pytorch-references-and-functions",
-    "href": "notes/PyTorch.html#pytorch-references-and-functions",
-    "title": "PyTorch Reference",
-    "section": "PyTorch references and functions",
-    "text": "PyTorch references and functions\n\nNon Linear Functions\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nReLU\nnn.ReLU()\n\n\n\nSigmoid\nnn.Sigmoid()\n\n\n\n\n\n\nLoss Functions\n\n\n\n\n\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nAbsolute Mean Error or L1 norm\ntorch.nn.functional.l1_loss(a,b)\n\n\n\nRoot Mean Square Error or L2 norm\ntorch.nn.functional.mse_loss(a,b)\n\n\n\n\n\n\nOptimizers\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nSGD\ntorch.optim.SGD(model_paramets, lr)\n\n\n\nAdam\ntorch.optim.ADAM(model_paramets, lr)\n\n\n\n\n\n\nLinear Regressions\n\n\n\n\n\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nLinear Regression\nnn.Linear(n_weights/n_inputs, n_bias/n_outputs)\nwx + b"
+    "text": "Books\n\nFastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries\n\n\n\nGuides\n\nhttps://www.interviewbit.com/system-design-interview-questions/amp/\nhttps://www.promptingguide.ai/ Prompt Engineering\nhttps://medium.com/marvelous-mlops/mlops-roadmap-2024-ff4216b8bc62 Mooc\nThe Missing Semester of Your CS Education (mit.edu) MIT Missing CS Semester + Lectures: Teaches how to use system utility tools like git, vim, other useful untaught methods for Machine Learning.\nhttps://hepsoftwarefoundation.org/training/center.html Multiple Advance Tutorial/Guide Series. Recommended\n\n\n\nLectures\n\nCornell Machine Learning for Intelligent Systems 2018 36 Lectures and different Assignments https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS\n\n\n\nReferences\n\nCommands : List of Command Line Commands | Codecademy\nBash vs Windows : Learn the Command Line | Codecademy\nVirtual Environment : Python: Modules | Codecademy\nStatistics Cheat Sheet : https://terenceshin.medium.com/week-2-52-stats-cheat-sheet-ae38a2e5cdc6\nStatistics in Maths: Definition, Types, Formulas, and Applications (geeksforgeeks.org)\nAPIs : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md\nHow web works : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md\n\n\n\nRepositories\n\nGood for Beginners\n\nMatlab + Python | Guided GitHub - radekosmulski/10_neural_nets\nhttps://www.instagram.com/p/C1W4QlzLBER/?igsh=MWFma29oM21qandnYg==\nhttps://diegoinacio.github.io/machine-learning-notebooks-page/\n\n\n\n\nTutorials/Videos\n\n\nPapers"
   },
   {
     "objectID": "notes/Utility/index.html",
     "href": "notes/Utility/index.html",
     "title": "Utility",
     "section": "",
-    "text": "This folder contains all the small utility snippets which you’d be using in daily operations.\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\nHugging Face Utility\n\n\n\n\n\nJan 24, 2024\n\n\n\n\nKaggle\n\n\n\n\n\nJan 20, 2024\n\n\n\n\n\n\nNo matching items"
+    "text": "This folder contains all the small utility snippets which you’d be using in daily operations.\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\nHugging Face Utility\n\n\n\n\n\nJan 24, 2024\n\n\n\n\nJupyter Notebook\n\n\n\n\n\nFeb 1, 2026\n\n\n\n\nKaggle\n\n\n\n\n\nJan 20, 2024\n\n\n\n\nvenv\n\n\n\n\n\nundefined\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "notes/Utility/Kaggle.html",
+    "href": "notes/Utility/Kaggle.html",
+    "title": "Kaggle",
+    "section": "",
+    "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset"
+  },
+  {
+    "objectID": "notes/Utility/Kaggle.html#access-kaggle-on-your-machine",
+    "href": "notes/Utility/Kaggle.html#access-kaggle-on-your-machine",
+    "title": "Kaggle",
+    "section": "",
+    "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset"
   },
   {
     "objectID": "projects.html",

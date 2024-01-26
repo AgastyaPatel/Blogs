@@ -220,18 +220,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Lecture 01</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/FastAI/FastAI Lecture 02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Lecture 02</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../notes/FastAI/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Lecture 03</span></a>
   </div>
@@ -239,7 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Setup; Understanding Tools</span></a>
+ <span class="menu-text">FastAI Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,8 +255,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../notes/Utility/JupyterNotebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../notes/Utility/Kaggle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Kaggle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/Utility/Package Manager and Virtual Environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">venv</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/Resources/Deep Learning Resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
   </div>
 </li>
       </ul>
@@ -357,7 +374,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h2 class="anchored" data-anchor-id="add-recent-models">Add recent models</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="op">!</span>pip install timm</span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> timm</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>timm.list_models(<span class="st">'convnext*) # Prints available model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>timm.list_models(<span class="st">'convnext*'</span>) <span class="co"># Prints available model</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
 <section id="fine_tune" class="level2">
 <h2 class="anchored" data-anchor-id="fine_tune">Fine_Tune:</h2>
@@ -725,7 +742,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
       <a href="../../notes/FastAI/FastAI Setup.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FastAI Setup; Understanding Tools</span>
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FastAI Setup</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">

@@ -67,7 +67,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
 <link href="../../notes/FastAI/FastAI Setup.html" rel="next">
-<link href="../../notes/FastAI/FastAI Lecture 02.html" rel="prev">
+<link href="../../notes/FastAI/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -220,18 +220,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/FastAI/FastAI Lecture 01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Lecture 01</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/FastAI/FastAI Lecture 02.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Lecture 02</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../notes/FastAI/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">FastAI Lecture 03</span></a>
   </div>
@@ -239,7 +227,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/FastAI/FastAI Setup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">FastAI Setup; Understanding Tools</span></a>
+ <span class="menu-text">FastAI Setup</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -267,8 +255,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
+  <a href="../../notes/Utility/JupyterNotebook.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Jupyter Notebook</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
   <a href="../../notes/Utility/Kaggle.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Kaggle</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/Utility/Package Manager and Virtual Environments.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">venv</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true">
+ <span class="menu-text">Resources</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" aria-expanded="true" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/Resources/Deep Learning Resources.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Resources</span></a>
   </div>
 </li>
       </ul>
@@ -285,13 +302,15 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#goal" id="toc-goal" class="nav-link active" data-scroll-target="#goal">Goal</a>
+  <li><a href="#calculating-loss" id="toc-calculating-loss" class="nav-link active" data-scroll-target="#calculating-loss">Calculating Loss</a>
   <ul class="collapse">
+  <li><a href="#what-are-derivatives" id="toc-what-are-derivatives" class="nav-link" data-scroll-target="#what-are-derivatives">What are derivatives?</a></li>
   <li><a href="#calculating-derivatives-for-weights-in-nn" id="toc-calculating-derivatives-for-weights-in-nn" class="nav-link" data-scroll-target="#calculating-derivatives-for-weights-in-nn">Calculating derivatives for weights in NN</a></li>
   </ul></li>
   <li><a href="#loss-vs-metric" id="toc-loss-vs-metric" class="nav-link" data-scroll-target="#loss-vs-metric">Loss vs Metric</a></li>
   <li><a href="#why-batches" id="toc-why-batches" class="nav-link" data-scroll-target="#why-batches">Why Batches?</a>
   <ul class="collapse">
+  <li><a href="#mini-batch" id="toc-mini-batch" class="nav-link" data-scroll-target="#mini-batch">Mini Batch</a></li>
   <li><a href="#randomization-with-mini-batches" id="toc-randomization-with-mini-batches" class="nav-link" data-scroll-target="#randomization-with-mini-batches">Randomization with mini batches</a></li>
   </ul></li>
   </ul>
@@ -342,22 +361,17 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 </header>
 
-<section id="goal" class="level2">
-<h2 class="anchored" data-anchor-id="goal">Goal</h2>
-<ul>
-<li>Arrays/Tensor</li>
-<li>Broadcasting (Understand it better)</li>
-<li>SGD</li>
-<li>Loss function</li>
-<li>Role of mini batches</li>
-<li>describe the math that a basic neural network is actually doing</li>
-</ul>
-<p>Rectified linear Unit : y = mx + b ## Calculating Loss ### What are derivatives? Derivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function</p>
+<p><img src="media/pixelSimilarity.png" class="img-fluid"></p>
+<p>Rectified linear Unit : y = mx + b</p>
+<section id="calculating-loss" class="level2">
+<h2 class="anchored" data-anchor-id="calculating-loss">Calculating Loss</h2>
+<section id="what-are-derivatives" class="level3">
+<h3 class="anchored" data-anchor-id="what-are-derivatives">What are derivatives?</h3>
+<p>Derivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function - fastbook</p>
+</section>
 <section id="calculating-derivatives-for-weights-in-nn" class="level3">
 <h3 class="anchored" data-anchor-id="calculating-derivatives-for-weights-in-nn">Calculating derivatives for weights in NN</h3>
-<p>Our function has large number of weights. We calculate the derivative for one weight while we consider rest as constant and repeat the same process.</p>
-<p>&nbsp;&gt; in deep learning, “gradients” usually means the&nbsp;<em>value</em>&nbsp;of a function’s derivative at a particular argument value whereas in math the derivative gives us another function(rate)</p>
-<p>pytorch provides <code>requires_grad_()</code> which tags the variable and keeps track to calculate derivative when passed in a function</p>
+<p>For neural networks with lots of weights, we find derivatives for each weight, treating others as constants. In deep learning, “gradients” mean values of a function’s derivatives. PyTorch’s requires_grad_() helps track and calculate these derivatives automatically.</p>
 <div class="sourceCode" id="cb1"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> f(x): <span class="cf">return</span> x<span class="op">**</span><span class="dv">2</span></span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>xt <span class="op">=</span> tensor(<span class="fl">3.</span>).requires_grad_()</span>
@@ -375,9 +389,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> tensor(<span class="fl">6.</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <p>derivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)</p>
 <blockquote class="blockquote">
-<p>The gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value.</p>
+<p>The gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value. - fastbook</p>
 </blockquote>
-<p>The key difference is that the metric is to drive human understanding and the loss is to drive automated learning. To drive automated learning, the loss must be a function that has a <strong>meaningful derivative</strong>. It can’t have big flat sections and large jumps, but instead must be reasonably smooth. This is why we designed a loss function that would respond to small changes in confidence level. This requirement means that sometimes it does not really reflect exactly what we are trying to achieve, but is rather a compromise between our real goal and a function that can be optimized using its gradient. The loss function is calculated for each item in our dataset, and then at the end of an epoch the loss values are all averaged and the overall mean is reported for the epoch. Metrics, on the other hand, are the numbers that we really care about. These are the values that are printed at the end of each epoch that tell us how our model is really doing. It is important that we learn to focus on these metrics, rather than the loss, when judging the performance of a model.</p>
 </section>
 </section>
 <section id="loss-vs-metric" class="level2">
@@ -424,9 +437,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </tbody>
 </table>
 </section>
-<section id="why-batches" class="level2">
-<h2 class="anchored" data-anchor-id="why-batches">Why Batches?</h2>
-<p><em>After loss function calculation; When should the system update weights?</em> if loss is calculated for one item it would not be much informational as it would result in imprecise and unstable gradient if loss is calculated for entire dataset it would take very long ### Mini Batch So, we count the average loss for few data items at a time (<strong>Mini Batch</strong>) BatchSize = Number of items</p>
+<section id="why-batches" class="level1">
+<h1>Why Batches?</h1>
+<p><em>After loss function calculation; When should the system update weights?</em> if loss is calculated for one item it would not be much informational as it would result in imprecise and unstable gradient if loss is calculated for entire dataset it would take very long</p>
+<section id="mini-batch" class="level3">
+<h3 class="anchored" data-anchor-id="mini-batch">Mini Batch</h3>
+<p>So, we count the average loss for few data items at a time (<strong>Mini Batch</strong>) BatchSize = Number of items</p>
 <table class="table">
 <colgroup>
 <col style="width: 25%">
@@ -454,9 +470,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <blockquote class="blockquote">
 <p>NOTE: We can’t use large batch size due to limitation of GPU memory</p>
 </blockquote>
+</section>
 <section id="randomization-with-mini-batches" class="level3">
 <h3 class="anchored" data-anchor-id="randomization-with-mini-batches">Randomization with mini batches</h3>
-<p>Rather than simply enumerating our dataset in order for every epoch, instead what we normally do is randomly shuffle it on every epoch, before we create mini-batches. PyTorch and fastai provide a class that will do the shuffling and mini-batch collation for you, called&nbsp;<code>DataLoader</code>.</p>
+<p>Dataset creates list of input-label tuples which is passed into DataLoaders both in PyTorch and FastAI so that random mini batches can be created</p>
 <div class="sourceCode" id="cb2"><pre class="sourceCode py code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>ds <span class="op">=</span> L(<span class="bu">enumerate</span>(string.ascii_lowercase))</span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>ds</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="op">&gt;&gt;</span> (<span class="co">#26) [(0, 'a'),(1, 'b'),(2, 'c'),(3, 'd'),(4, 'e'),(5, 'f'),(6, 'g'),(7, 'h'),(8, 'i'),(9, 'j')...]</span></span>
@@ -511,10 +528,6 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <tr class="even">
 <td>Learning&nbsp;rate</td>
 <td>The&nbsp;size&nbsp;of&nbsp;the&nbsp;step&nbsp;we&nbsp;take&nbsp;when&nbsp;applying&nbsp;SGD&nbsp;to&nbsp;update&nbsp;the&nbsp;parameters&nbsp;of&nbsp;the&nbsp;model.</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
 </tr>
 </tbody>
 </table>
@@ -874,13 +887,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/FastAI/FastAI Lecture 02.html" class="pagination-link">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FastAI Lecture 02</span>
+      <a href="../../notes/FastAI/index.html" class="pagination-link">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FastAI Notes</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
       <a href="../../notes/FastAI/FastAI Setup.html" class="pagination-link">
-        <span class="nav-page-text">FastAI Setup; Understanding Tools</span> <i class="bi bi-arrow-right-short"></i>
+        <span class="nav-page-text">FastAI Setup</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
