@@ -10,6 +10,7 @@ In this section we'll be going through the setting up the wsl for FastAI.
 > Read more about mamba, conda and all package managers in [Package Manager and Environment](../Utility/Package Manager and Virtual Environments.md)
 
 ## Setting up Windows Subsystem
+
 - Set wsl 
 - get the miniforge/mambaforge(deprected)
 - run the miniforge.sh
