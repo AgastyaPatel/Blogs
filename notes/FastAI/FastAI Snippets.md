@@ -52,3 +52,5 @@ Fit for number of epoch specified
 > .to_fp16() (method for learnerer)
 
 > [!info] Learning rate and lr_find() : Is used to find good learning rate
+
+`!pip list | grep "^fast`

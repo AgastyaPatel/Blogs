@@ -1,11 +1,17 @@
->[!info]- Common used python packages
->- numPy for working with custom data types
->- [pandas](https://pandas.pydata.org/) for working with DataFrames.
->- [scikit-learn](https://scikit-learn.org/stable/) for machine learning. 
->- [Matplotlib](https://matplotlib.org/) for visualizations.
->- [seaborn](https://seaborn.pydata.org/) for statistical visualizations.
->- [NLTK](https://www.nltk.org/) for text analysis.
->- [spaCy](https://spacy.io/) for more text analysis.
+---
+title: "Package Manager and Environments"
+author: "Agastya Patel"
+date: "2024-01-24"
+date-modified: "2023-12-30"
+---
+>[!info]- Common used python packages\
+>- numPy for working with custom data types\
+>- [pandas](https://pandas.pydata.org/) for working with DataFrames.\
+>- [scikit-learn](https://scikit-learn.org/stable/) for machine learning.\ 
+>- [Matplotlib](https://matplotlib.org/) for visualizations.\
+>- [seaborn](https://seaborn.pydata.org/) for statistical visualizations.\
+>- [NLTK](https://www.nltk.org/) for text analysis.\
+>- [spaCy](https://spacy.io/) for more text analysis.\
 
 There are several virtual environments handler. Here's a nice thread giving brief about those manageres 
 https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe
