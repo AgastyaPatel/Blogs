@@ -9,14 +9,14 @@
   {
     "objectID": "notes/Utility/Package Manager and Virtual Environments.html",
     "href": "notes/Utility/Package Manager and Virtual Environments.html",
-    "title": "Agastya Patel",
+    "title": "Package Manager and Environments",
     "section": "",
-    "text": "[!info]- Common used python packages - numPy for working with custom data types - pandas for working with DataFrames. - scikit-learn for machine learning. - Matplotlib for visualizations. - seaborn for statistical visualizations. - NLTK for text analysis. - spaCy for more text analysis.\nThere are several virtual environments handler. Here’s a nice thread giving brief about those manageres https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe # venv I like to use the shipped manager venv because it’s simple to manage and doesn’t require install it additionally"
+    "text": "[!info]- Common used python packages\n- numPy for working with custom data types\n- pandas for working with DataFrames.\n- scikit-learn for machine learning.  - Matplotlib for visualizations.\n- seaborn for statistical visualizations.\n- NLTK for text analysis.\n- spaCy for more text analysis.\nThere are several virtual environments handler. Here’s a nice thread giving brief about those manageres https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe # venv I like to use the shipped manager venv because it’s simple to manage and doesn’t require install it additionally"
   },
   {
     "objectID": "notes/Utility/Package Manager and Virtual Environments.html#q.-what-is-conda-mamba-mambaforge-miniforge",
     "href": "notes/Utility/Package Manager and Virtual Environments.html#q.-what-is-conda-mamba-mambaforge-miniforge",
-    "title": "Agastya Patel",
+    "title": "Package Manager and Environments",
     "section": "Q. What is conda, mamba, mambaforge, miniforge?",
     "text": "Q. What is conda, mamba, mambaforge, miniforge?\nConda is a package and environment manager similar to pip for python. Mamba is C++ based implementation of conda offering faster package installation MambaForge is mamba based distribution which contains a preset collection of set packages for quicker setup and ready to go operation feasibility. Miniforge is conda based distribution\n\npip does not manage the installation of any code other than python. Eg: PyTorch relies on CUDA so, PIP isn’t the preferable way of installing it instead use conda/mamba Any python library can be installed using PIP\n\n\nconda - Annaconda\nhttps://www.dataquest.io/blog/python-vs-anaconda/\nconda --version\nconda install jupyter\njupyter notebook"
   },
@@ -81,7 +81,14 @@
     "href": "notes/FastAI/FastAI Setup.html",
     "title": "FastAI Setup",
     "section": "",
-    "text": "In this section we’ll be going through the setting up the wsl for FastAI. ## Setting up Windows Subsystem - Set wsl - get the miniforge/mambaforge(deprected) - run the miniforge.sh - mamba install ipython - mamba install jupyter lab - mamba install pytorch - conda install fastai"
+    "text": "In this section we’ll be going through the setting up the wsl for FastAI."
+  },
+  {
+    "objectID": "notes/FastAI/FastAI Setup.html#setting-up-windows-subsystem",
+    "href": "notes/FastAI/FastAI Setup.html#setting-up-windows-subsystem",
+    "title": "FastAI Setup",
+    "section": "Setting up Windows Subsystem",
+    "text": "Setting up Windows Subsystem\n\nSet wsl\nget the miniforge/mambaforge(deprected)\nrun the miniforge.sh\nmamba install ipython\nmamba install jupyter lab\nmamba install pytorch\nconda install fastai"
   },
   {
     "objectID": "notes/FastAI/FastAI Setup.html#nvidia-smi",
@@ -130,7 +137,7 @@
     "href": "bob.html",
     "title": "Back of book index",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 27, 2023\n\n\nFastAI Journey\n\n\nAgastya Patel\n\n\n\n\nJan 13, 2024\n\n\nFastAI Lecture 03\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Notes\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nJan 24, 2024\n\n\nHugging Face Utility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nInternet\n\n\n\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nNotes\n\n\n\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nResources\n\n\n\n\n\n\n\nDec 29, 2023\n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nvenv\n\n\n\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nDec 27, 2023\n\n\nFastAI Journey\n\n\nAgastya Patel\n\n\n\n\nJan 13, 2024\n\n\nFastAI Lecture 03\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Notes\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nJan 24, 2024\n\n\nHugging Face Utility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nInternet\n\n\n\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nNotes\n\n\n\n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nResources\n\n\n\n\n\n\n\nDec 29, 2023\n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/FastAI/FastAI Lecture 03.html",
@@ -179,7 +186,7 @@
     "href": "notes/FastAI/FastAI Snippets.html#fine_tune",
     "title": "FastAI Snippets 01",
     "section": "Fine_Tune:",
-    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate"
+    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate\n\n!pip list | grep \"^fast"
   },
   {
     "objectID": "notes/index.html",
@@ -242,7 +249,7 @@
     "href": "notes/Utility/index.html",
     "title": "Utility",
     "section": "",
-    "text": "This folder contains all the small utility snippets which you’d be using in daily operations.\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\nHugging Face Utility\n\n\n\n\n\nJan 24, 2024\n\n\n\n\nJupyter Notebook\n\n\n\n\n\nFeb 1, 2026\n\n\n\n\nKaggle\n\n\n\n\n\nJan 20, 2024\n\n\n\n\nvenv\n\n\n\n\n\nundefined\n\n\n\n\n\n\nNo matching items"
+    "text": "This folder contains all the small utility snippets which you’d be using in daily operations.\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\nHugging Face Utility\n\n\n\n\n\nJan 24, 2024\n\n\n\n\nJupyter Notebook\n\n\n\n\n\nFeb 1, 2026\n\n\n\n\nKaggle\n\n\n\n\n\nJan 20, 2024\n\n\n\n\nPackage Manager and Environments\n\n\n\n\n\nJan 24, 2024\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "notes/Utility/Kaggle.html",
