@@ -1,5 +1,229 @@
 [
   {
+    "objectID": "notes/Utility/Kaggle.html",
+    "href": "notes/Utility/Kaggle.html",
+    "title": "Kaggle",
+    "section": "",
+    "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "Kaggle"
+    ]
+  },
+  {
+    "objectID": "notes/Utility/Kaggle.html#access-kaggle-on-your-machine",
+    "href": "notes/Utility/Kaggle.html#access-kaggle-on-your-machine",
+    "title": "Kaggle",
+    "section": "",
+    "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "Kaggle"
+    ]
+  },
+  {
+    "objectID": "notes/Utility/Matplotlib.html",
+    "href": "notes/Utility/Matplotlib.html",
+    "title": "Matplotlib",
+    "section": "",
+    "text": "import matplotlib.pyplot as plt\n\nplt.figure(figsize = (10,6)) //Aspect ratio of the plot\nplt.suptitle('Super Title)\nplt.set_tile('Title', loc='left)\nplt.xlabel('X Label')\nplt.ylabel('Y Label')\n\n# Create scatter points\nplt.scatter(y_test, predictions, label='Predictions', alpha=0.5, color='blue')\n# Plot a line\nplt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], linestyle='--', color='gray', linewidth=2, label=\"Actual Observations\")\n\nplt.legend()  # Places legend on the plot\nplt.show()",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "Matplotlib"
+    ]
+  },
+  {
+    "objectID": "notes/Utility/JupyterNotebook.html",
+    "href": "notes/Utility/JupyterNotebook.html",
+    "title": "Jupyter Notebook",
+    "section": "",
+    "text": "%%debug : Used for non-graphical debugging from pdb import set_trace : set_trace() sets a breakpoint and automatically enables debugger mode",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    "objectID": "notes/Utility/JupyterNotebook.html#debug",
+    "href": "notes/Utility/JupyterNotebook.html#debug",
+    "title": "Jupyter Notebook",
+    "section": "",
+    "text": "%%debug : Used for non-graphical debugging from pdb import set_trace : set_trace() sets a breakpoint and automatically enables debugger mode",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "Jupyter Notebook"
+    ]
+  },
+  {
+    "objectID": "notes/Engineering/index.html",
+    "href": "notes/Engineering/index.html",
+    "title": "Engineering",
+    "section": "",
+    "text": "General notes on engineering topics\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "Engineering"
+    ]
+  },
+  {
+    "objectID": "notes/AI/index.html",
+    "href": "notes/AI/index.html",
+    "title": "Artificial Intelligence",
+    "section": "",
+    "text": "Notes about latest ai developments, llms, agents & visual models.\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence"
+    ]
+  },
+  {
+    "objectID": "notes/CS/index.html",
+    "href": "notes/CS/index.html",
+    "title": "CS",
+    "section": "",
+    "text": "General notes on CS topics\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nNetworking\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "CS"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html",
+    "href": "notes/Resources/Deep Learning Resources.html",
+    "title": "Deep Learning Resources",
+    "section": "",
+    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#books",
+    "href": "notes/Resources/Deep Learning Resources.html#books",
+    "title": "Deep Learning Resources",
+    "section": "",
+    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#guides",
+    "href": "notes/Resources/Deep Learning Resources.html#guides",
+    "title": "Deep Learning Resources",
+    "section": "Guides",
+    "text": "Guides\n\nhttps://www.interviewbit.com/system-design-interview-questions/amp/\nhttps://www.promptingguide.ai/ Prompt Engineering\nhttps://medium.com/marvelous-mlops/mlops-roadmap-2024-ff4216b8bc62 Mooc\nThe Missing Semester of Your CS Education (mit.edu) MIT Missing CS Semester + Lectures: Teaches how to use system utility tools like git, vim, other useful untaught methods for Machine Learning.\nhttps://hepsoftwarefoundation.org/training/center.html Multiple Advance Tutorial/Guide Series. Recommended",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#lectures",
+    "href": "notes/Resources/Deep Learning Resources.html#lectures",
+    "title": "Deep Learning Resources",
+    "section": "Lectures",
+    "text": "Lectures\n\nCornell Machine Learning for Intelligent Systems 2018 36 Lectures and different Assignments https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#references",
+    "href": "notes/Resources/Deep Learning Resources.html#references",
+    "title": "Deep Learning Resources",
+    "section": "References",
+    "text": "References\n\nCommands : List of Command Line Commands | Codecademy\nBash vs Windows : Learn the Command Line | Codecademy\nVirtual Environment : Python: Modules | Codecademy\nStatistics Cheat Sheet : https://terenceshin.medium.com/week-2-52-stats-cheat-sheet-ae38a2e5cdc6\nStatistics in Maths: Definition, Types, Formulas, and Applications (geeksforgeeks.org)\nAPIs : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md\nHow web works : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/index.html",
+    "href": "notes/DeepLearning/index.html",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "Notes from fast ai course, kaparthy, and other resources\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nFastAI Lecture 03\n\n\n\n\n\n\n\nFastAI Setup\n\n\n\n\n\n\n\nFastAI Snippets 01\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "Deep Learning"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup.html",
+    "href": "notes/DeepLearning/FastAI Setup.html",
+    "title": "FastAI Setup",
+    "section": "",
+    "text": "In this section we’ll be going through the setting up the wsl for FastAI.",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup.html#setting-up-windows-subsystem",
+    "href": "notes/DeepLearning/FastAI Setup.html#setting-up-windows-subsystem",
+    "title": "FastAI Setup",
+    "section": "Setting up Windows Subsystem",
+    "text": "Setting up Windows Subsystem\n\nSet wsl\nget the miniforge/mambaforge(deprected)\nrun the miniforge.sh\nmamba install ipython\nmamba install jupyter lab\nmamba install pytorch\nconda install fastai",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup.html#nvidia-smi",
+    "href": "notes/DeepLearning/FastAI Setup.html#nvidia-smi",
+    "title": "FastAI Setup",
+    "section": "nvidia-smi",
+    "text": "nvidia-smi\nnvidia-smi dmon: Chec for sm and mem column",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup.html#symblinks",
+    "href": "notes/DeepLearning/FastAI Setup.html#symblinks",
+    "title": "FastAI Setup",
+    "section": "Symblinks",
+    "text": "Symblinks\n\nLinux\nln -s target-path : Creates a symblink of the target directory in current directory ln -la : Displays the folders who are made up of symblink\n\n\nWindows\nYoutube Tutorial",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup.html#cloud-environments",
+    "href": "notes/DeepLearning/FastAI Setup.html#cloud-environments",
+    "title": "FastAI Setup",
+    "section": "Cloud Environments",
+    "text": "Cloud Environments\n\nPaperspace\nQ. How to set common library?\n\npip install --user with this flag so that the lib is installed in .local\nmove the .local to /storage/.local\ncreate symblink from /storage/.local as target and it would create .bash.local in storage which would fire up time new instance has been called",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup"
+    ]
+  },
+  {
     "objectID": "readme.html",
     "href": "readme.html",
     "title": "Agastya Patel",
@@ -7,151 +231,25 @@
     "text": "ghpages: quarto publish preview: quarto preview render: quarto render"
   },
   {
-    "objectID": "notes/Utility/PyTorch.html",
-    "href": "notes/Utility/PyTorch.html",
-    "title": "PyTorch Reference",
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
     "section": "",
-    "text": "Creating tensor: tns = torch.tensor(2500, dtype = torch.int) ## torch.float is another dtype BaseClass for all neural networks : nn.Module nn.Linear and nn.Sequential are objects/derived class of nn.Module class/Parent Class.\nnn.Linear(2,3)  // Initializes with random paramters\n\n# Building sequential network\nmodel = nn.Sequential(  \n    nn.Linear(2,3),  \n    nn.ReLU(),  \n    nn.Linear(3,1))\nmodel(input)   //FeedForward\n\n# buildinv custom network\nclass NN_Regression(nn.Module):\n    super(NN_regression, self).__init():\n    #initialize components\n        self.layer1 = nn.Linear(3,6)\n        self.layer2 = nn.Linear(4,1)\n        self.relu = nn.ReLU()\n    def forward(self, x):\n        x = self.layer1(x)\n        x = self.relu(x)\n        x = self.layer2(x)\n        return x\n        \noptimizer = optim.Adam(model.parameters(), lr=0.01)\nloss = nn.MSELoss()\n\nMSE = loss(model(input), y)\nMSE.backward()   #Backward propogation or gradient calculation\noptimizer.step() #Stepping\noptimizer.zero_grad()  #reset the gradients\n\n# Model Evaluation\nmodel.eval()\nwith torch.no_grad():\n    test_MSE = loss(model(X_test), y_test)\ntorch.save(model, 'model.pth')\ntorch.load('model.pth')\nTo split dataset into validation and testing; use sklearn.model_selection.train_test_split"
-  },
-  {
-    "objectID": "notes/Utility/PyTorch.html#pytorch-references-and-functions",
-    "href": "notes/Utility/PyTorch.html#pytorch-references-and-functions",
-    "title": "PyTorch Reference",
-    "section": "PyTorch references and functions",
-    "text": "PyTorch references and functions\n\nNon Linear Functions\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nReLU\nnn.ReLU()\n\n\n\nSigmoid\nnn.Sigmoid()\n\n\n\n\n\n\nLoss Functions\n\n\n\n\n\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nAbsolute Mean Error or L1 norm\ntorch.nn.functional.l1_loss(a,b)\n\n\n\nRoot Mean Square Error or L2 norm\ntorch.nn.functional.mse_loss(a,b)\n\n\n\n\n\n\nOptimizers\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nSGD\ntorch.optim.SGD(model_paramets, lr)\n\n\n\nAdam\ntorch.optim.ADAM(model_paramets, lr)\n\n\n\n\n\n\nLinear Regressions\n\n\n\n\n\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nLinear Regression\nnn.Linear(n_weights/n_inputs, n_bias/n_outputs)\nwx + b"
-  },
-  {
-    "objectID": "notes/Utility/Matplotlib.html",
-    "href": "notes/Utility/Matplotlib.html",
-    "title": "Matplotlib",
-    "section": "",
-    "text": "import matplotlib.pyplot as plt\n\nplt.figure(figsize = (10,6)) //Aspect ratio of the plot\nplt.suptitle('Super Title)\nplt.set_tile('Title', loc='left)\nplt.xlabel('X Label')\nplt.ylabel('Y Label')\n\n# Create scatter points\nplt.scatter(y_test, predictions, label='Predictions', alpha=0.5, color='blue')\n# Plot a line\nplt.plot([min(y_test), max(y_test)], [min(y_test), max(y_test)], linestyle='--', color='gray', linewidth=2, label=\"Actual Observations\")\n\nplt.legend()  # Places legend on the plot\nplt.show()"
-  },
-  {
-    "objectID": "notes/Utility/JupyterNotebook.html",
-    "href": "notes/Utility/JupyterNotebook.html",
-    "title": "Jupyter Notebook",
-    "section": "",
-    "text": "%%debug : Used for non-graphical debugging from pdb import set_trace : set_trace() sets a breakpoint and automatically enables debugger mode"
-  },
-  {
-    "objectID": "notes/Utility/JupyterNotebook.html#debug",
-    "href": "notes/Utility/JupyterNotebook.html#debug",
-    "title": "Jupyter Notebook",
-    "section": "",
-    "text": "%%debug : Used for non-graphical debugging from pdb import set_trace : set_trace() sets a breakpoint and automatically enables debugger mode"
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html",
-    "href": "notes/Resources/Deep Learning Resources.html",
-    "title": "Deep Learning Resources",
-    "section": "",
-    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries"
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#books",
-    "href": "notes/Resources/Deep Learning Resources.html#books",
-    "title": "Deep Learning Resources",
-    "section": "",
-    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries"
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#guides",
-    "href": "notes/Resources/Deep Learning Resources.html#guides",
-    "title": "Deep Learning Resources",
-    "section": "Guides",
-    "text": "Guides\n\nhttps://www.interviewbit.com/system-design-interview-questions/amp/\nhttps://www.promptingguide.ai/ Prompt Engineering\nhttps://medium.com/marvelous-mlops/mlops-roadmap-2024-ff4216b8bc62 Mooc\nThe Missing Semester of Your CS Education (mit.edu) MIT Missing CS Semester + Lectures: Teaches how to use system utility tools like git, vim, other useful untaught methods for Machine Learning.\nhttps://hepsoftwarefoundation.org/training/center.html Multiple Advance Tutorial/Guide Series. Recommended"
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#lectures",
-    "href": "notes/Resources/Deep Learning Resources.html#lectures",
-    "title": "Deep Learning Resources",
-    "section": "Lectures",
-    "text": "Lectures\n\nCornell Machine Learning for Intelligent Systems 2018 36 Lectures and different Assignments https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS"
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#references",
-    "href": "notes/Resources/Deep Learning Resources.html#references",
-    "title": "Deep Learning Resources",
-    "section": "References",
-    "text": "References\n\nCommands : List of Command Line Commands | Codecademy\nBash vs Windows : Learn the Command Line | Codecademy\nVirtual Environment : Python: Modules | Codecademy\nStatistics Cheat Sheet : https://terenceshin.medium.com/week-2-52-stats-cheat-sheet-ae38a2e5cdc6\nStatistics in Maths: Definition, Types, Formulas, and Applications (geeksforgeeks.org)\nAPIs : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md\nHow web works : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md"
-  },
-  {
-    "objectID": "notes/Engineering/index.html",
-    "href": "notes/Engineering/index.html",
-    "title": "Engineering",
-    "section": "",
-    "text": "General notes on engineering topics\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html",
-    "href": "notes/DeepLearning/FastAI Snippets.html",
-    "title": "FastAI Snippets 01",
-    "section": "",
-    "text": "Page contains some of the common and usefull snippets. Pathlib, parallel processing."
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#path",
-    "href": "notes/DeepLearning/FastAI Snippets.html#path",
-    "title": "FastAI Snippets 01",
-    "section": "Path",
-    "text": "Path\nfrom pathlib import path\npath = Path() #Current Dir\n#path = Path('Content') #Relative Dir\n#path = Path('NB/content') #Absolute Dir"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
-    "href": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
-    "title": "FastAI Snippets 01",
-    "section": "Add recent models",
-    "text": "Add recent models\n!pip install timm\nimport timm\ntimm.list_models('convnext*') # Prints available model"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
-    "href": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
-    "title": "FastAI Snippets 01",
-    "section": "Fine_Tune:",
-    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate\n\n!pip list | grep \"^fast"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Lecture 03.html",
-    "href": "notes/DeepLearning/FastAI Lecture 03.html",
-    "title": "FastAI Lecture 03",
-    "section": "",
-    "text": "Rectified linear Unit : y = mx + b"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Lecture 03.html#calculating-loss",
-    "href": "notes/DeepLearning/FastAI Lecture 03.html#calculating-loss",
-    "title": "FastAI Lecture 03",
-    "section": "Calculating Loss",
-    "text": "Calculating Loss\n\nWhat are derivatives?\nDerivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function - fastbook\n\n\nCalculating derivatives for weights in NN\nFor neural networks with lots of weights, we find derivatives for each weight, treating others as constants. In deep learning, “gradients” mean values of a function’s derivatives. PyTorch’s requires_grad_() helps track and calculate these derivatives automatically.\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value. - fastbook"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Lecture 03.html#loss-vs-metric",
-    "href": "notes/DeepLearning/FastAI Lecture 03.html#loss-vs-metric",
-    "title": "FastAI Lecture 03",
-    "section": "Loss vs Metric",
-    "text": "Loss vs Metric\n\n\n\n\n\n\n\n\nAspect\nMetric\nLoss\n\n\n\n\nPurpose Difference\nDrives human understanding of performance\nDrives automated learning by optimization\n\n\nSmoothness Requirement\nNot constrained by smoothness\nRequires smoothness for meaningful derivative\n\n\nOptimization vs. Real Goal\nReflects actual goals\nCompromise between real goals and optimization\n\n\nCalculation Process\nProvides overall model evaluation\nCalculated per item, averaged at epoch end\n\n\nFocus Consideration\nPrimary focus for judging performance\nImportant for automated learning, may not directly represent end goal"
-  },
-  {
-    "objectID": "notes/CS/index.html",
-    "href": "notes/CS/index.html",
-    "title": "CS",
-    "section": "",
-    "text": "General notes on CS topics\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nNetworking\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "FastAI Projects\nHere’s a list of projects I’ve worked on during my FastAI journey. Projects include recomendations systems, image classification, and more. View FastAI Projects\n\n\nWeb Projects\nThese are the projects which I created in my web dev learning."
   },
   {
     "objectID": "bob.html",
     "href": "bob.html",
     "title": "Back of book index",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nundefined\n\n\nCS\n\n\n\n\n\n\n\nundefined\n\n\nDeep Learning\n\n\n\n\n\n\n\nundefined\n\n\nDeep Learning Resources\n\n\n\n\n\n\n\nundefined\n\n\nEngineering\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nFastAI Journey\n\n\nAgastya Patel\n\n\n\n\nJan 13, 2024\n\n\nFastAI Lecture 03\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nNetworking\n\n\n\n\n\n\n\nundefined\n\n\nNotes\n\n\n\n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\nundefined\n\n\nundefined\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nArtificial Intelligence\n\n\n \n\n\n\n\n \n\n\nCS\n\n\n \n\n\n\n\n \n\n\nDeep Learning\n\n\n \n\n\n\n\n \n\n\nDeep Learning Resources\n\n\n \n\n\n\n\n \n\n\nEngineering\n\n\n \n\n\n\n\nJan 13, 2024\n\n\nFastAI Lecture 03\n\n\nAgastya Patel\n\n\n\n\nDec 27, 2023\n\n\nFastAI Projects\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\n \n\n\nNetworking\n\n\n \n\n\n\n\n \n\n\nNotes\n\n\n \n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\n \n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blogs/FastAI/fastai_journey_v0.html",
-    "href": "blogs/FastAI/fastai_journey_v0.html",
-    "title": "FastAI Projects",
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blogs",
     "section": "",
-    "text": "Here’s my current journey of Fast AI learning. I’ll be keeping tab of the projects and the current status of journey here!.\nMy FastAI/Course Journey: Repository\nThread/Progress: I have created issues for each project so that I can keep the tabs on changes which are being made for the project. It has been tagged has label Model-Training-Progrss on github repository.\n\nSelf - ProjectsLessonLive Coding:\n\n\n\n\n\nProjects\nLink\nDescription\nLesson Relation\n\n\n\n\nPokemon Classifier\nThread, HF-Spaces\nCreated pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it’s usage.\n1,2\n\n\nMNIST Classifier\n\n\n\n\n\n\n\n\n\n✅ Done\n🌀 Current Sprint\n💤 Pending\n\n\n\n\nLesson\nWatched\nRead\nQuestionnaire\nRe-Implementation\n\n\n\n\n\n1\n✅\nCh 01✅\n✅\n✅\n✅\n\n\n2\n✅\nCh 02✅\n🌀\n✅\n✅\n\n\n3\n✅\nCh 04✅\n\n\n\n\n\n4\n\n\n\n\n\n\n\n5\n\n\n\n\n\n\n\n\n\n\nCompleted : 1,2,3,6,7\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "&lt;p&gt;&lt;img loading=\"lazy\" src=\"/blogs/FastAI/image.png\" class=\"thumbnail-image\"&gt;&lt;/p&gt;\n\n\n\n\nFastAI Projects\n\n\n\n\n\n\nDeepLearning\n\n\nFastAI\n\n\n\n&lt;!-- desc(5A0113B34292)[max=175]:blogs/FastAI/fastai_journey_v0.html --&gt;\n\n\n\n\n&lt;div class=\"listing-date\"&gt;\nDec 27, 2023\n&lt;/div&gt;\n&lt;div class=\"listing-author\"&gt;\nAgastya Patel\n&lt;/div&gt;\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "about.html",
@@ -189,150 +287,240 @@
     "text": "Journey\nStarting as a self-taught “organic engineer,” I’ve always believed in learning by doing & I started my tech journey by automating 3D workflows which led to a lots of interesting projects. This hands-on approach has helped me develop a deep understanding of software development and AI technologies. I’m constantly exploring new technologies and sharing my insights with the community.\n\nEducation\n\nMasters in IT with AI specialization at the University of Western Australia Class of 2027\nBachelors in Science (Media, Graphics, Animation) at YCMOU, India Class of 2023\n\n\nI’m always excited to connect with fellow developers and collaborate on interesting projects. Feel free to reach out through any of the social links above!"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blogs",
+    "objectID": "notes/DeepLearning/FastAI Snippets.html",
+    "href": "notes/DeepLearning/FastAI Snippets.html",
+    "title": "FastAI Snippets 01",
     "section": "",
-    "text": "FastAI Journey\n\n\n\n\n\n\n\nDeepLearning\n\n\nFastAI\n\n\n\n\n\n\n\n\n\n\n\nDec 27, 2023\n\n\nAgastya Patel\n\n\n\n\n\n\nNo matching items"
+    "text": "Page contains some of the common and usefull snippets. Pathlib, parallel processing.",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#path",
+    "href": "notes/DeepLearning/FastAI Snippets.html#path",
+    "title": "FastAI Snippets 01",
+    "section": "Path",
+    "text": "Path\nfrom pathlib import path\npath = Path() #Current Dir\n#path = Path('Content') #Relative Dir\n#path = Path('NB/content') #Absolute Dir",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
+    "href": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
+    "title": "FastAI Snippets 01",
+    "section": "Add recent models",
+    "text": "Add recent models\n!pip install timm\nimport timm\ntimm.list_models('convnext*') # Prints available model",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
+    "href": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
+    "title": "FastAI Snippets 01",
+    "section": "Fine_Tune:",
+    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate\n\n!pip list | grep \"^fast",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Lecture 03.html",
+    "href": "notes/DeepLearning/FastAI Lecture 03.html",
+    "title": "FastAI Lecture 03",
+    "section": "",
+    "text": "Rectified linear Unit : y = mx + b",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Lecture 03"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Lecture 03.html#calculating-loss",
+    "href": "notes/DeepLearning/FastAI Lecture 03.html#calculating-loss",
+    "title": "FastAI Lecture 03",
+    "section": "Calculating Loss",
+    "text": "Calculating Loss\n\nWhat are derivatives?\nDerivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function - fastbook\n\n\nCalculating derivatives for weights in NN\nFor neural networks with lots of weights, we find derivatives for each weight, treating others as constants. In deep learning, “gradients” mean values of a function’s derivatives. PyTorch’s requires_grad_() helps track and calculate these derivatives automatically.\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value. - fastbook",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Lecture 03"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Lecture 03.html#loss-vs-metric",
+    "href": "notes/DeepLearning/FastAI Lecture 03.html#loss-vs-metric",
+    "title": "FastAI Lecture 03",
+    "section": "Loss vs Metric",
+    "text": "Loss vs Metric\n\n\n\n\n\n\n\n\nAspect\nMetric\nLoss\n\n\n\n\nPurpose Difference\nDrives human understanding of performance\nDrives automated learning by optimization\n\n\nSmoothness Requirement\nNot constrained by smoothness\nRequires smoothness for meaningful derivative\n\n\nOptimization vs. Real Goal\nReflects actual goals\nCompromise between real goals and optimization\n\n\nCalculation Process\nProvides overall model evaluation\nCalculated per item, averaged at epoch end\n\n\nFocus Consideration\nPrimary focus for judging performance\nImportant for automated learning, may not directly represent end goal",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Lecture 03"
+    ]
   },
   {
     "objectID": "notes/CS/Networking.html",
     "href": "notes/CS/Networking.html",
     "title": "Networking",
     "section": "",
-    "text": "Global network of billions of electronic devices which acts as servers or clients.\nServers are machines which provide services to other machines.\nClients are machines used to connect to those services.\n\nQ. How do we distinguish each machines? Q. How do we transmit data\n\n\n\n\n\n\n\nWAN (Wide Area Network):\nLAN (Local Area Network)\n\n\n\n\nGroup of computers that span large geographic area.\nGroup of computers connected in limited geographic area.\n\n\nEg: Internet\nEg. Home Network, School Network\n\n\n\n\n\n\n\nAn IP address is a unique address that is used to identify computers or nodes on the internet.\nAddresses are in this form: #.#.#.#\n\n\n[!info] Your router is the only device on the internet with this public IP Address - Inside your home, your devices have most likely received a local IP Address from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)\n\n\nIPv4: Numbers range from 0 to 255. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.\nIPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? 255.255.255.0 Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.\n\ngraph TB\n  A[\"Your friend. In another house! 192.168.1.5\"] --&gt; B[[\"Router 192.168.1.1 (Local IP)\\n Router 77.45.82.17 (PUBLIC IP)\"]]\n  K[\"Your friend... In another house! 192.168.1.4\"] --&gt; B \n  B &lt;--&gt; D[\"The Internet\"]\n  D &lt;--&gt; E[[\"Router 77..45..19..6 (PUBLIC IP)\\nRouter 192..168..1..1 (LOCAL IP)\"]]\n  E --&gt; G[\"Computer 1 192.168.1.4\\n Our machine running our server on port 12345!\"]\n  E --&gt; I[\"Computer 2 192.168.1.7\"]\n  E --&gt; J[\"Computer 3 192.168.14\"]\n  E --&gt; L[\"Computer S 192.168.4.1\"]\n  E --&gt; M[\"Computer A 192.168.2.1\"]\n\n\n\nPort Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure\n\nnetstat -na gives entire list of open ports on Windows\n\n\n[!Warning] Port Address conflicts [todo]\n\n\n\n\n\n\n\n\nTCP is a connection based protocol.\nConnection must be made before any data is sent.\nUsed to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.\nFor Example HTTP and HTTPS service is based on TCP Protocol\n\n\n\n\n\nUDP is a connectionless protocol.\nNo connection has to be made before sending data\nUDP tends to be faster but you may not receive the data in order and you could have missing data."
+    "text": "Global network of billions of electronic devices which acts as servers or clients.\nServers are machines which provide services to other machines.\nClients are machines used to connect to those services.\n\nQ. How do we distinguish each machines? Q. How do we transmit data\n\n\n\n\n\n\n\nWAN (Wide Area Network):\nLAN (Local Area Network)\n\n\n\n\nGroup of computers that span large geographic area.\nGroup of computers connected in limited geographic area.\n\n\nEg: Internet\nEg. Home Network, School Network\n\n\n\n\n\n\n\nAn IP address is a unique address that is used to identify computers or nodes on the internet.\nAddresses are in this form: #.#.#.#\n\n\n[!info] Your router is the only device on the internet with this public IP Address - Inside your home, your devices have most likely received a local IP Address from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)\n\n\nIPv4: Numbers range from 0 to 255. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.\nIPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? 255.255.255.0 Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.\n\ngraph TB\n  A[\"Your friend. In another house! 192.168.1.5\"] --&gt; B[[\"Router 192.168.1.1 (Local IP)\\n Router 77.45.82.17 (PUBLIC IP)\"]]\n  K[\"Your friend... In another house! 192.168.1.4\"] --&gt; B \n  B &lt;--&gt; D[\"The Internet\"]\n  D &lt;--&gt; E[[\"Router 77..45..19..6 (PUBLIC IP)\\nRouter 192..168..1..1 (LOCAL IP)\"]]\n  E --&gt; G[\"Computer 1 192.168.1.4\\n Our machine running our server on port 12345!\"]\n  E --&gt; I[\"Computer 2 192.168.1.7\"]\n  E --&gt; J[\"Computer 3 192.168.14\"]\n  E --&gt; L[\"Computer S 192.168.4.1\"]\n  E --&gt; M[\"Computer A 192.168.2.1\"]\n\n\n\nPort Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure\n\nnetstat -na gives entire list of open ports on Windows\n\n\n[!Warning] Port Address conflicts [todo]\n\n\n\n\n\n\n\n\nTCP is a connection based protocol.\nConnection must be made before any data is sent.\nUsed to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.\nFor Example HTTP and HTTPS service is based on TCP Protocol\n\n\n\n\n\nUDP is a connectionless protocol.\nNo connection has to be made before sending data\nUDP tends to be faster but you may not receive the data in order and you could have missing data.",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
   },
   {
     "objectID": "notes/CS/Networking.html#internet",
     "href": "notes/CS/Networking.html#internet",
     "title": "Networking",
     "section": "",
-    "text": "Global network of billions of electronic devices which acts as servers or clients.\nServers are machines which provide services to other machines.\nClients are machines used to connect to those services.\n\nQ. How do we distinguish each machines? Q. How do we transmit data\n\n\n\n\n\n\n\nWAN (Wide Area Network):\nLAN (Local Area Network)\n\n\n\n\nGroup of computers that span large geographic area.\nGroup of computers connected in limited geographic area.\n\n\nEg: Internet\nEg. Home Network, School Network"
+    "text": "Global network of billions of electronic devices which acts as servers or clients.\nServers are machines which provide services to other machines.\nClients are machines used to connect to those services.\n\nQ. How do we distinguish each machines? Q. How do we transmit data\n\n\n\n\n\n\n\nWAN (Wide Area Network):\nLAN (Local Area Network)\n\n\n\n\nGroup of computers that span large geographic area.\nGroup of computers connected in limited geographic area.\n\n\nEg: Internet\nEg. Home Network, School Network",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
   },
   {
     "objectID": "notes/CS/Networking.html#what-is-ip-address",
     "href": "notes/CS/Networking.html#what-is-ip-address",
     "title": "Networking",
     "section": "",
-    "text": "An IP address is a unique address that is used to identify computers or nodes on the internet.\nAddresses are in this form: #.#.#.#\n\n\n[!info] Your router is the only device on the internet with this public IP Address - Inside your home, your devices have most likely received a local IP Address from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)\n\n\nIPv4: Numbers range from 0 to 255. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.\nIPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? 255.255.255.0 Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.\n\ngraph TB\n  A[\"Your friend. In another house! 192.168.1.5\"] --&gt; B[[\"Router 192.168.1.1 (Local IP)\\n Router 77.45.82.17 (PUBLIC IP)\"]]\n  K[\"Your friend... In another house! 192.168.1.4\"] --&gt; B \n  B &lt;--&gt; D[\"The Internet\"]\n  D &lt;--&gt; E[[\"Router 77..45..19..6 (PUBLIC IP)\\nRouter 192..168..1..1 (LOCAL IP)\"]]\n  E --&gt; G[\"Computer 1 192.168.1.4\\n Our machine running our server on port 12345!\"]\n  E --&gt; I[\"Computer 2 192.168.1.7\"]\n  E --&gt; J[\"Computer 3 192.168.14\"]\n  E --&gt; L[\"Computer S 192.168.4.1\"]\n  E --&gt; M[\"Computer A 192.168.2.1\"]\n\n\n\nPort Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure\n\nnetstat -na gives entire list of open ports on Windows\n\n\n[!Warning] Port Address conflicts [todo]"
+    "text": "An IP address is a unique address that is used to identify computers or nodes on the internet.\nAddresses are in this form: #.#.#.#\n\n\n[!info] Your router is the only device on the internet with this public IP Address - Inside your home, your devices have most likely received a local IP Address from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)\n\n\nIPv4: Numbers range from 0 to 255. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.\nIPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? 255.255.255.0 Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.\n\ngraph TB\n  A[\"Your friend. In another house! 192.168.1.5\"] --&gt; B[[\"Router 192.168.1.1 (Local IP)\\n Router 77.45.82.17 (PUBLIC IP)\"]]\n  K[\"Your friend... In another house! 192.168.1.4\"] --&gt; B \n  B &lt;--&gt; D[\"The Internet\"]\n  D &lt;--&gt; E[[\"Router 77..45..19..6 (PUBLIC IP)\\nRouter 192..168..1..1 (LOCAL IP)\"]]\n  E --&gt; G[\"Computer 1 192.168.1.4\\n Our machine running our server on port 12345!\"]\n  E --&gt; I[\"Computer 2 192.168.1.7\"]\n  E --&gt; J[\"Computer 3 192.168.14\"]\n  E --&gt; L[\"Computer S 192.168.4.1\"]\n  E --&gt; M[\"Computer A 192.168.2.1\"]\n\n\n\nPort Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure\n\nnetstat -na gives entire list of open ports on Windows\n\n\n[!Warning] Port Address conflicts [todo]",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
   },
   {
     "objectID": "notes/CS/Networking.html#internet-protocols",
     "href": "notes/CS/Networking.html#internet-protocols",
     "title": "Networking",
     "section": "",
-    "text": "TCP is a connection based protocol.\nConnection must be made before any data is sent.\nUsed to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.\nFor Example HTTP and HTTPS service is based on TCP Protocol\n\n\n\n\n\nUDP is a connectionless protocol.\nNo connection has to be made before sending data\nUDP tends to be faster but you may not receive the data in order and you could have missing data."
+    "text": "TCP is a connection based protocol.\nConnection must be made before any data is sent.\nUsed to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.\nFor Example HTTP and HTTPS service is based on TCP Protocol\n\n\n\n\n\nUDP is a connectionless protocol.\nNo connection has to be made before sending data\nUDP tends to be faster but you may not receive the data in order and you could have missing data.",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
   },
   {
     "objectID": "notes/CS/Networking.html#section",
     "href": "notes/CS/Networking.html#section",
     "title": "Networking",
     "section": "—",
-    "text": "—"
+    "text": "—",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
   },
   {
     "objectID": "notes/CS/Networking.html#in-depth-working-get-request",
     "href": "notes/CS/Networking.html#in-depth-working-get-request",
     "title": "Networking",
     "section": "In Depth Working GET Request",
-    "text": "In Depth Working GET Request\n\nURL Requested\nBrowser extracts the protocol http or https and uses the specified.\nIdentifies the domain name from the URL and queries the Internet Domain Name Server (DNS/Domain Name System) to return Internet Protocol Address.\nBrowser, the client opens the opens a connection using the http protocol to the server at the IP Address resolved above.\nClient initiates a GET Request\n\n-- CLIENT GET REQUEST --\nGET / HTTP/1.1\nHost: www.codecademy.com"
+    "text": "In Depth Working GET Request\n\nURL Requested\nBrowser extracts the protocol http or https and uses the specified.\nIdentifies the domain name from the URL and queries the Internet Domain Name Server (DNS/Domain Name System) to return Internet Protocol Address.\nBrowser, the client opens the opens a connection using the http protocol to the server at the IP Address resolved above.\nClient initiates a GET Request\n\n-- CLIENT GET REQUEST --\nGET / HTTP/1.1\nHost: www.codecademy.com",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
   },
   {
     "objectID": "notes/CS/Networking.html#http-vs-rest-related-but-distinct-concepts",
     "href": "notes/CS/Networking.html#http-vs-rest-related-but-distinct-concepts",
     "title": "Networking",
     "section": "HTTP vs REST (related but distinct concepts)",
-    "text": "HTTP vs REST (related but distinct concepts)\nHTTP (Hypertext Transfer Protocol): - HTTP is the foundation of any data exchange on the Web. - It’s a protocol used for transferring hypertext (text that includes links to other texts, like web pages) over the internet. - It defines how messages are formatted and transmitted and what actions web servers and browsers should take in response to various commands. - In simpler terms, it’s the set of rules that allows your web browser to request a webpage from a server, and the server to send that webpage back to your browser as response.\nREST (Representational State Transfer): #Guidelines https://www.codecademy.com/article/what-is-rest - REST is an architectural style, a set of principles that are often applied when building web services. - It’s not a protocol like HTTP; instead, it’s a set of guidelines for creating scalable and stateless web services. - RESTful services use standard HTTP methods (like GET, POST, PUT, DELETE) for operations on resources (like data entities), and they represent these resources as URIs (Uniform Resource Identifiers). - RESTful services typically use JSON or XML for data exchange. - In simpler terms, REST is an approach to designing networked applications in a way that is scalable, stateless, and relies on standard HTTP methods.\n\n[!Info] Stateless Web Service: Each request from client is independent & carries all information. So, the server doesn’t store the client’s state between requests and treats each requests as isolated transaction."
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup.html",
-    "href": "notes/DeepLearning/FastAI Setup.html",
-    "title": "FastAI Setup",
-    "section": "",
-    "text": "In this section we’ll be going through the setting up the wsl for FastAI."
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup.html#setting-up-windows-subsystem",
-    "href": "notes/DeepLearning/FastAI Setup.html#setting-up-windows-subsystem",
-    "title": "FastAI Setup",
-    "section": "Setting up Windows Subsystem",
-    "text": "Setting up Windows Subsystem\n\nSet wsl\nget the miniforge/mambaforge(deprected)\nrun the miniforge.sh\nmamba install ipython\nmamba install jupyter lab\nmamba install pytorch\nconda install fastai"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup.html#nvidia-smi",
-    "href": "notes/DeepLearning/FastAI Setup.html#nvidia-smi",
-    "title": "FastAI Setup",
-    "section": "nvidia-smi",
-    "text": "nvidia-smi\nnvidia-smi dmon: Chec for sm and mem column"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup.html#symblinks",
-    "href": "notes/DeepLearning/FastAI Setup.html#symblinks",
-    "title": "FastAI Setup",
-    "section": "Symblinks",
-    "text": "Symblinks\n\nLinux\nln -s target-path : Creates a symblink of the target directory in current directory ln -la : Displays the folders who are made up of symblink\n\n\nWindows\nYoutube Tutorial"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup.html#cloud-environments",
-    "href": "notes/DeepLearning/FastAI Setup.html#cloud-environments",
-    "title": "FastAI Setup",
-    "section": "Cloud Environments",
-    "text": "Cloud Environments\n\nPaperspace\nQ. How to set common library?\n\npip install --user with this flag so that the lib is installed in .local\nmove the .local to /storage/.local\ncreate symblink from /storage/.local as target and it would create .bash.local in storage which would fire up time new instance has been called"
-  },
-  {
-    "objectID": "notes/DeepLearning/index.html",
-    "href": "notes/DeepLearning/index.html",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "Notes from fast ai course, kaparthy, and other resources\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nFastAI Lecture 03\n\n\n\n\n\n\n\nFastAI Setup\n\n\n\n\n\n\n\nFastAI Snippets 01\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "HTTP vs REST (related but distinct concepts)\nHTTP (Hypertext Transfer Protocol): - HTTP is the foundation of any data exchange on the Web. - It’s a protocol used for transferring hypertext (text that includes links to other texts, like web pages) over the internet. - It defines how messages are formatted and transmitted and what actions web servers and browsers should take in response to various commands. - In simpler terms, it’s the set of rules that allows your web browser to request a webpage from a server, and the server to send that webpage back to your browser as response.\nREST (Representational State Transfer): #Guidelines https://www.codecademy.com/article/what-is-rest - REST is an architectural style, a set of principles that are often applied when building web services. - It’s not a protocol like HTTP; instead, it’s a set of guidelines for creating scalable and stateless web services. - RESTful services use standard HTTP methods (like GET, POST, PUT, DELETE) for operations on resources (like data entities), and they represent these resources as URIs (Uniform Resource Identifiers). - RESTful services typically use JSON or XML for data exchange. - In simpler terms, REST is an approach to designing networked applications in a way that is scalable, stateless, and relies on standard HTTP methods.\n\n[!Info] Stateless Web Service: Each request from client is independent & carries all information. So, the server doesn’t store the client’s state between requests and treats each requests as isolated transaction.",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
   },
   {
     "objectID": "notes/index.html",
     "href": "notes/index.html",
     "title": "Notes",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nCS\n\n\n\n\n\n\n\nDeep Learning\n\n\n\n\n\n\n\nEngineering\n\n\n\n\n\n\n\nUtility\n\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nArtificial Intelligence\n\n\n\n\n\n\n\nCS\n\n\n\n\n\n\n\nDeep Learning\n\n\n\n\n\n\n\nEngineering\n\n\n\n\n\n\n\nUtility\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes"
+    ]
+  },
+  {
+    "objectID": "notes/Utility/PyTorch.html",
+    "href": "notes/Utility/PyTorch.html",
+    "title": "PyTorch Reference",
+    "section": "",
+    "text": "Creating tensor: tns = torch.tensor(2500, dtype = torch.int) ## torch.float is another dtype BaseClass for all neural networks : nn.Module nn.Linear and nn.Sequential are objects/derived class of nn.Module class/Parent Class.\nnn.Linear(2,3)  // Initializes with random paramters\n\n# Building sequential network\nmodel = nn.Sequential(  \n    nn.Linear(2,3),  \n    nn.ReLU(),  \n    nn.Linear(3,1))\nmodel(input)   //FeedForward\n\n# buildinv custom network\nclass NN_Regression(nn.Module):\n    super(NN_regression, self).__init():\n    #initialize components\n        self.layer1 = nn.Linear(3,6)\n        self.layer2 = nn.Linear(4,1)\n        self.relu = nn.ReLU()\n    def forward(self, x):\n        x = self.layer1(x)\n        x = self.relu(x)\n        x = self.layer2(x)\n        return x\n        \noptimizer = optim.Adam(model.parameters(), lr=0.01)\nloss = nn.MSELoss()\n\nMSE = loss(model(input), y)\nMSE.backward()   #Backward propogation or gradient calculation\noptimizer.step() #Stepping\noptimizer.zero_grad()  #reset the gradients\n\n# Model Evaluation\nmodel.eval()\nwith torch.no_grad():\n    test_MSE = loss(model(X_test), y_test)\ntorch.save(model, 'model.pth')\ntorch.load('model.pth')\nTo split dataset into validation and testing; use sklearn.model_selection.train_test_split",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "PyTorch Reference"
+    ]
+  },
+  {
+    "objectID": "notes/Utility/PyTorch.html#pytorch-references-and-functions",
+    "href": "notes/Utility/PyTorch.html#pytorch-references-and-functions",
+    "title": "PyTorch Reference",
+    "section": "PyTorch references and functions",
+    "text": "PyTorch references and functions\n\nNon Linear Functions\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nReLU\nnn.ReLU()\n\n\n\nSigmoid\nnn.Sigmoid()\n\n\n\n\n\n\nLoss Functions\n\n\n\n\n\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nAbsolute Mean Error or L1 norm\ntorch.nn.functional.l1_loss(a,b)\n\n\n\nRoot Mean Square Error or L2 norm\ntorch.nn.functional.mse_loss(a,b)\n\n\n\n\n\n\nOptimizers\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nSGD\ntorch.optim.SGD(model_paramets, lr)\n\n\n\nAdam\ntorch.optim.ADAM(model_paramets, lr)\n\n\n\n\n\n\nLinear Regressions\n\n\n\n\n\n\n\n\nName\nFunctions\nNotes\n\n\n\n\nLinear Regression\nnn.Linear(n_weights/n_inputs, n_bias/n_outputs)\nwx + b",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "PyTorch Reference"
+    ]
   },
   {
     "objectID": "notes/Utility/index.html",
     "href": "notes/Utility/index.html",
     "title": "Utility",
     "section": "",
-    "text": "This folder contains all the libs, frameworks, and utility snippets which you’d be using in daily operations.\n\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\nJupyter Notebook\n\n\n\n\n\nFeb 1, 2026\n\n\n\n\nKaggle\n\n\n\n\n\nJan 20, 2024\n\n\n\n\nMatplotlib\n\n\n\n\n\nJan 20, 2024\n\n\n\n\nPackage Manager and Environments\n\n\n\n\n\nJan 24, 2024\n\n\n\n\nPyTorch Reference\n\n\n\n\n\nJan 16, 2024\n\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "notes/Utility/Kaggle.html",
-    "href": "notes/Utility/Kaggle.html",
-    "title": "Kaggle",
-    "section": "",
-    "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset"
-  },
-  {
-    "objectID": "notes/Utility/Kaggle.html#access-kaggle-on-your-machine",
-    "href": "notes/Utility/Kaggle.html#access-kaggle-on-your-machine",
-    "title": "Kaggle",
-    "section": "",
-    "text": "pip install kaggle\nSetup the JSON: User have to set their email and key in this json file. Linux: ~/.kaggle/kaggle.json Windows: C:&lt;Windows-username&gt;.kaggle.json\n\n\n\n\nInitialize : kaggle kernels init -p /path/to/folder In your nb folder a metadata file will be generated Set title and id; prefer to keep them same and just strip spaces, caps and symbols in id; Add your nb name and any dataset used.\n\nMore on metadata key values: https://github.com/Kaggle/kaggle-api/wiki/Kernel-Metadata\n\nPush Command kaggle kernels push -p /path/to/folder (remove path flag if in cwd is dir with nb)\n\n\n\nkaggle datasets list -s [KEYWORD]      //Search\nkaggle datasets download -d [DATASET]  //download\n\n\n\nInitialize: kaggle datasets init -p /path/to/dataset Add metadata in datapackage.json Push: kaggle datasets create -p /path/to/dataset"
+    "text": "This folder contains all the libs, frameworks, and utility snippets which you’d be using in daily operations.\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\nDate\n\n\n\n\n\n\nJupyter Notebook\n\n\n\n\n\nFeb 1, 2026\n\n\n\n\nKaggle\n\n\n\n\n\nJan 20, 2024\n\n\n\n\nMatplotlib\n\n\n\n\n\nJan 20, 2024\n\n\n\n\nPackage Manager and Environments\n\n\n\n\n\nJan 24, 2024\n\n\n\n\nPyTorch Reference\n\n\n\n\n\nJan 16, 2024\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "Utility"
+    ]
   },
   {
     "objectID": "notes/Utility/Package Manager and Virtual Environments.html",
     "href": "notes/Utility/Package Manager and Virtual Environments.html",
     "title": "Package Manager and Environments",
     "section": "",
-    "text": "[!info]- Common used python packages\n- numPy for working with custom data types\n- pandas for working with DataFrames.\n- scikit-learn for machine learning.  - Matplotlib for visualizations.\n- seaborn for statistical visualizations.\n- NLTK for text analysis.\n- spaCy for more text analysis.\nThere are several virtual environments handler. Here’s a nice thread giving brief about those manageres https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe # venv I like to use the shipped manager venv because it’s simple to manage and doesn’t require install it additionally"
+    "text": "[!info]- Common used python packages\n- numPy for working with custom data types\n- pandas for working with DataFrames.\n- scikit-learn for machine learning.  - Matplotlib for visualizations.\n- seaborn for statistical visualizations.\n- NLTK for text analysis.\n- spaCy for more text analysis.\nThere are several virtual environments handler. Here’s a nice thread giving brief about those manageres https://stackoverflow.com/questions/41573587/what-is-the-difference-between-venv-pyvenv-pyenv-virtualenv-virtualenvwrappe # venv I like to use the shipped manager venv because it’s simple to manage and doesn’t require install it additionally",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "Package Manager and Environments"
+    ]
   },
   {
     "objectID": "notes/Utility/Package Manager and Virtual Environments.html#q.-what-is-conda-mamba-mambaforge-miniforge",
     "href": "notes/Utility/Package Manager and Virtual Environments.html#q.-what-is-conda-mamba-mambaforge-miniforge",
     "title": "Package Manager and Environments",
     "section": "Q. What is conda, mamba, mambaforge, miniforge?",
-    "text": "Q. What is conda, mamba, mambaforge, miniforge?\nConda is a package and environment manager similar to pip for python. Mamba is C++ based implementation of conda offering faster package installation MambaForge is mamba based distribution which contains a preset collection of set packages for quicker setup and ready to go operation feasibility. Miniforge is conda based distribution\n\npip does not manage the installation of any code other than python. Eg: PyTorch relies on CUDA so, PIP isn’t the preferable way of installing it instead use conda/mamba Any python library can be installed using PIP\n\n\nconda - Annaconda\nhttps://www.dataquest.io/blog/python-vs-anaconda/\nconda --version\nconda install jupyter\njupyter notebook"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "FastAI Projects\nHere’s a list of projects I’ve worked on during my FastAI journey. Projects include recomendations systems, image classification, and more. View FastAI Projects\n\n\nWeb Projects\nThese are the projects which I created in my web dev learning."
+    "text": "Q. What is conda, mamba, mambaforge, miniforge?\nConda is a package and environment manager similar to pip for python. Mamba is C++ based implementation of conda offering faster package installation MambaForge is mamba based distribution which contains a preset collection of set packages for quicker setup and ready to go operation feasibility. Miniforge is conda based distribution\n\npip does not manage the installation of any code other than python. Eg: PyTorch relies on CUDA so, PIP isn’t the preferable way of installing it instead use conda/mamba Any python library can be installed using PIP\n\n\nconda - Annaconda\nhttps://www.dataquest.io/blog/python-vs-anaconda/\nconda --version\nconda install jupyter\njupyter notebook",
+    "crumbs": [
+      "Notes",
+      "Utility",
+      "Package Manager and Environments"
+    ]
   }
 ]

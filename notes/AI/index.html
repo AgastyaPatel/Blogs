@@ -6,10 +6,8 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Agastya Patel">
-<meta name="dcterms.date" content="2023-12-29">
 
-<title>FastAI Setup – Agastya Patel</title>
+<title>Artificial Intelligence – Agastya Patel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -32,8 +30,10 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/DeepLearning/FastAI Snippets.html" rel="next">
-<link href="../../notes/DeepLearning/FastAI Lecture 03.html" rel="prev">
+<link href="../../notes/AI/model_context_protocol.html" rel="next">
+<link href="../../notes/CS/Networking.html" rel="prev">
+<script src="../../site_libs/quarto-listing/list.min.js"></script>
+<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,7 +70,65 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
+<script>
 
+  window.document.addEventListener("DOMContentLoaded", function (_event) {
+    const listingTargetEl = window.document.querySelector('#listing-listing .list');
+    if (!listingTargetEl) {
+      // No listing discovered, do not attach.
+      return; 
+    }
+
+    const options = {
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      
+      searchColumns: [],
+    };
+
+    window['quarto-listings'] = window['quarto-listings'] || {};
+    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
+
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  });
+
+  window.addEventListener('hashchange',() => {
+    if (window['quarto-listing-loaded']) {
+      window['quarto-listing-loaded']();
+    }
+  })
+  </script>
+
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -135,7 +193,7 @@ ul.task-list li input[type="checkbox"] {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/FastAI Setup.html">FastAI Setup</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/AI/index.html">Artificial Intelligence</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -174,11 +232,11 @@ ul.task-list li input[type="checkbox"] {
       <div class="sidebar-item-container"> 
             <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Deep Learning</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/DeepLearning/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link">
@@ -187,7 +245,7 @@ ul.task-list li input[type="checkbox"] {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/DeepLearning/FastAI Setup.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../notes/DeepLearning/FastAI Setup.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">FastAI Setup</span></a>
   </div>
 </li>
@@ -218,13 +276,13 @@ ul.task-list li input[type="checkbox"] {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/AI/index.html" class="sidebar-item-text sidebar-link">
+            <a href="../../notes/AI/index.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Artificial Intelligence</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
       </ul>
   </li>
           <li class="sidebar-item sidebar-item-section">
@@ -314,42 +372,19 @@ ul.task-list li input[type="checkbox"] {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        <nav id="TOC" role="doc-toc" class="toc-active">
-    <h2 id="toc-title">On this page</h2>
-   
-  <ul>
-  <li><a href="#setting-up-windows-subsystem" id="toc-setting-up-windows-subsystem" class="nav-link active" data-scroll-target="#setting-up-windows-subsystem">Setting up Windows Subsystem</a></li>
-  <li><a href="#useful-bash-commands-tables" id="toc-useful-bash-commands-tables" class="nav-link" data-scroll-target="#useful-bash-commands-tables">Useful Bash Commands Tables</a></li>
-  <li><a href="#mamba-commands" id="toc-mamba-commands" class="nav-link" data-scroll-target="#mamba-commands">Mamba Commands</a></li>
-  <li><a href="#pip-commands" id="toc-pip-commands" class="nav-link" data-scroll-target="#pip-commands">PIP Commands</a></li>
-  <li><a href="#miscellaneous" id="toc-miscellaneous" class="nav-link" data-scroll-target="#miscellaneous">Miscellaneous</a>
-  <ul class="collapse">
-  <li><a href="#tmux" id="toc-tmux" class="nav-link" data-scroll-target="#tmux">tmux</a></li>
-  <li><a href="#nvidia-smi" id="toc-nvidia-smi" class="nav-link" data-scroll-target="#nvidia-smi">nvidia-smi</a></li>
-  <li><a href="#symblinks" id="toc-symblinks" class="nav-link" data-scroll-target="#symblinks">Symblinks</a>
-  <ul class="collapse">
-  <li><a href="#linux" id="toc-linux" class="nav-link" data-scroll-target="#linux">Linux</a></li>
-  <li><a href="#windows" id="toc-windows" class="nav-link" data-scroll-target="#windows">Windows</a></li>
-  </ul></li>
-  <li><a href="#cloud-environments" id="toc-cloud-environments" class="nav-link" data-scroll-target="#cloud-environments">Cloud Environments</a>
-  <ul class="collapse">
-  <li><a href="#paperspace" id="toc-paperspace" class="nav-link" data-scroll-target="#paperspace">Paperspace</a></li>
-  </ul></li>
-  </ul></li>
-  </ul>
-</nav>
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
+        
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/FastAI Setup.html">FastAI Setup</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/AI/index.html">Artificial Intelligence</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">FastAI Setup</h1>
+<h1 class="title">Artificial Intelligence</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Notes</div>
-    <div class="quarto-category">FastAI</div>
-    <div class="quarto-category">Tools</div>
+    <div class="quarto-category">notes</div>
+    <div class="quarto-category">Artificial Intelligence</div>
+    <div class="quarto-category">AI models</div>
   </div>
   </div>
 
@@ -357,26 +392,8 @@ ul.task-list li input[type="checkbox"] {
 
 <div class="quarto-title-meta">
 
-    <div>
-    <div class="quarto-title-meta-heading">Author</div>
-    <div class="quarto-title-meta-contents">
-             <p>Agastya Patel </p>
-          </div>
-  </div>
     
-    <div>
-    <div class="quarto-title-meta-heading">Published</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date">December 29, 2023</p>
-    </div>
-  </div>
   
-    <div>
-    <div class="quarto-title-meta-heading">Modified</div>
-    <div class="quarto-title-meta-contents">
-      <p class="date-modified">December 30, 2023</p>
-    </div>
-  </div>
     
   </div>
   
@@ -385,194 +402,30 @@ ul.task-list li input[type="checkbox"] {
 </header>
 
 
-<p>In this section we’ll be going through the setting up the wsl for FastAI.</p>
-<blockquote class="blockquote">
-<p>Read more about mamba, conda and all package managers in <a href="../../notes/Utility/Package Manager and Virtual Environments.html">Package Manager and Environment</a></p>
-</blockquote>
-<section id="setting-up-windows-subsystem" class="level2">
-<h2 class="anchored" data-anchor-id="setting-up-windows-subsystem">Setting up Windows Subsystem</h2>
-<ul>
-<li>Set wsl</li>
-<li>get the miniforge/mambaforge(deprected)</li>
-<li>run the miniforge.sh</li>
-<li><code>mamba install ipython</code></li>
-<li><code>mamba install jupyter lab</code></li>
-<li><code>mamba install pytorch</code></li>
-<li><code>conda install fastai</code></li>
-</ul>
-</section>
-<section id="useful-bash-commands-tables" class="level1">
-<h1>Useful Bash Commands Tables</h1>
-<table class="caption-top table">
-<colgroup>
-<col style="width: 50%">
-<col style="width: 50%">
-</colgroup>
+<p>Notes about latest ai developments, llms, agents &amp; visual models.</p>
+
+
+
+
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
+<table class="quarto-listing-table table">
 <thead>
-<tr class="header">
-<th>Command</th>
-<th>Action</th>
+<tr>
+<th>
+Title
+</th>
+<th>
+Description
+</th>
 </tr>
 </thead>
-<tbody>
-<tr class="odd">
-<td><code>ls -l</code></td>
-<td>get long form (file, data, size-bytes)</td>
-</tr>
-<tr class="even">
-<td><code>ls -l -h</code></td>
-<td>human readable data like the size of the file in MB</td>
-</tr>
-<tr class="odd">
-<td><code>less &lt;filename&gt;</code></td>
-<td>Open the file</td>
-</tr>
-<tr class="even">
-<td><code>wget &lt;url&gt;</code></td>
-<td>Download file</td>
-</tr>
-<tr class="odd">
-<td><code>sudo -u &lt;user&gt; -i</code></td>
-<td>Change user</td>
-</tr>
-<tr class="even">
-<td>ctrl+d</td>
-<td>Exit any application running in shell</td>
-</tr>
-<tr class="odd">
-<td><code>! &lt;some_letter&gt;</code></td>
-<td>Opens similar letter recent application Eg; <code>!ju</code> # Might open jupyterLab</td>
-</tr>
-<tr class="even">
-<td><code>!!</code></td>
-<td>Opens last command</td>
-</tr>
-<tr class="odd">
-<td><code>cd --</code></td>
-<td>Most recent Directory</td>
-</tr>
-<tr class="even">
-<td><code>pushd ~</code></td>
-<td>Stash Dir</td>
-</tr>
-<tr class="odd">
-<td><code>popd</code></td>
-<td>Unstash Dir (Pop Dir)</td>
-</tr>
-<tr class="even">
-<td>echo $ENV_VAR<br><code>echo $PATH</code></td>
-<td>Returns value of environment variables like Path Variable</td>
-</tr>
-<tr class="odd">
-<td><code>df -h</code></td>
-<td>disk usage</td>
-</tr>
-<tr class="even">
-<td><code>logout</code></td>
-<td>exit</td>
-</tr>
-<tr class="odd">
-<td>ls . | Head</td>
-<td>Show first 10</td>
-</tr>
-<tr class="even">
-<td>ls . | Tail</td>
-<td>Show last 10</td>
-</tr>
-<tr class="odd">
-<td>ls . | wc -l</td>
-<td>Gives number of lines (items)</td>
-</tr>
-<tr class="even">
-<td>ls . | grep 33</td>
-<td>Search 33</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
+<tbody class="list">
 </tbody>
 </table>
-</section>
-<section id="mamba-commands" class="level1">
-<h1>Mamba Commands</h1>
-<ol type="1">
-<li>Create new environment ==<code>mamba create -n &lt;env_name&gt; &lt;dependency&gt;</code>== <code>mamba create -n tmp 'python&lt;3.10' fastcore</code></li>
-<li>Activate/deactivate <code>mamba activate &lt;env_name&gt;</code> <code>mamba deactivate</code></li>
-</ol>
-</section>
-<section id="pip-commands" class="level1">
-<h1>PIP Commands</h1>
-<p><code>pip -U &lt;library&gt;</code> : Upgrade library <code>pip -U --user &lt;library&gt;</code> : Installs library in User Directory in <code>.local</code> folder</p>
-</section>
-<section id="miscellaneous" class="level1">
-<h1>Miscellaneous</h1>
-<section id="tmux" class="level3">
-<h3 class="anchored" data-anchor-id="tmux">tmux</h3>
-<p><code>sudo apt install tmux</code></p>
-<table class="caption-top table">
-<thead>
-<tr class="header">
-<th>Command</th>
-<th>Action</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td><code>ctrl + b %</code><br><code>ctrl + b "</code></td>
-<td>Split Pane horizontal and vertical</td>
-</tr>
-<tr class="even">
-<td><code>ctrl + b Arrow</code></td>
-<td>Focus around Panes</td>
-</tr>
-<tr class="odd">
-<td><code>ctrl + b d</code></td>
-<td>Delete Pane</td>
-</tr>
-<tr class="even">
-<td><code>ctrl + b z</code></td>
-<td>Zoom into/out-of pane</td>
-</tr>
-<tr class="odd">
-<td></td>
-<td></td>
-</tr>
-</tbody>
-</table>
-</section>
-<section id="nvidia-smi" class="level2">
-<h2 class="anchored" data-anchor-id="nvidia-smi">nvidia-smi</h2>
-<p><code>nvidia-smi dmon</code>: Chec for sm and mem column</p>
-</section>
-<section id="symblinks" class="level2">
-<h2 class="anchored" data-anchor-id="symblinks">Symblinks</h2>
-<section id="linux" class="level3">
-<h3 class="anchored" data-anchor-id="linux">Linux</h3>
-<p><code>ln -s target-path</code> : Creates a symblink of the target directory in current directory <code>ln -la</code> : Displays the folders who are made up of symblink</p>
-</section>
-<section id="windows" class="level3">
-<h3 class="anchored" data-anchor-id="windows">Windows</h3>
-<p><a href="https://www.youtube.com/watch?v=2uy4mR3q_jM">Youtube Tutorial</a></p>
-</section>
-</section>
-<section id="cloud-environments" class="level2">
-<h2 class="anchored" data-anchor-id="cloud-environments">Cloud Environments</h2>
-<section id="paperspace" class="level3">
-<h3 class="anchored" data-anchor-id="paperspace">Paperspace</h3>
-<p>Q. How to set common library?</p>
-<ol type="1">
-<li>pip install <code>--user</code> with this flag so that the lib is installed in <code>.local</code></li>
-<li>move the <code>.local</code> to <code>/storage/.local</code></li>
-<li>create symblink from <code>/storage/.local</code> as target and it would create <code>.bash.local</code> in <code>storage</code> which would fire up time new instance has been called</li>
-</ol>
-
-
-</section>
-</section>
-</section>
-
-</main> <!-- /main -->
+<div class="listing-no-matching d-none">
+No matching items
+</div>
+</div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -992,13 +845,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/DeepLearning/FastAI Lecture 03.html" class="pagination-link" aria-label="FastAI Lecture 03">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">FastAI Lecture 03</span>
+      <a href="../../notes/CS/Networking.html" class="pagination-link" aria-label="Networking">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Networking</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/DeepLearning/FastAI Snippets.html" class="pagination-link" aria-label="FastAI Snippets 01">
-        <span class="nav-page-text">FastAI Snippets 01</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/AI/model_context_protocol.html" class="pagination-link" aria-label="MCP Model Context Protocol">
+        <span class="nav-page-text">MCP Model Context Protocol</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

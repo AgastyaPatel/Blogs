@@ -4,20 +4,37 @@
     "items": []
   },
   {
+    "listing": "/notes/AI/index.html",
+    "items": []
+  },
+  {
     "listing": "/notes/CS/index.html",
     "items": [
       "/notes/CS/Networking.html"
     ]
   },
   {
+    "listing": "/notes/DeepLearning/index.html",
+    "items": [
+      "/notes/DeepLearning/FastAI Lecture 03.html",
+      "/notes/DeepLearning/FastAI Setup.html",
+      "/notes/DeepLearning/FastAI Snippets.html"
+    ]
+  },
+  {
+    "listing": "/blogs/FastAI/fastai_journey_v0.html",
+    "items": []
+  },
+  {
     "listing": "/bob.html",
     "items": [
+      "/notes/AI/index.html",
       "/notes/CS/index.html",
       "/notes/DeepLearning/index.html",
       "/notes/Resources/Deep Learning Resources.html",
       "/notes/Engineering/index.html",
-      "/blogs/FastAI/fastai_journey_v0.html",
       "/notes/DeepLearning/FastAI Lecture 03.html",
+      "/blogs/FastAI/fastai_journey_v0.html",
       "/notes/DeepLearning/FastAI Setup.html",
       "/notes/DeepLearning/FastAI Snippets.html",
       "/notes/Utility/JupyterNotebook.html",
@@ -32,26 +49,15 @@
     ]
   },
   {
-    "listing": "/blogs/FastAI/fastai_journey_v0.html",
-    "items": []
-  },
-  {
     "listing": "/index.html",
     "items": [
       "/blogs/FastAI/fastai_journey_v0.html"
     ]
   },
   {
-    "listing": "/notes/DeepLearning/index.html",
-    "items": [
-      "/notes/DeepLearning/FastAI Lecture 03.html",
-      "/notes/DeepLearning/FastAI Setup.html",
-      "/notes/DeepLearning/FastAI Snippets.html"
-    ]
-  },
-  {
     "listing": "/notes/index.html",
     "items": [
+      "/notes/AI/index.html",
       "/notes/CS/index.html",
       "/notes/DeepLearning/index.html",
       "/notes/Engineering/index.html",
