@@ -16,10 +16,6 @@ em{
     color: #2aa553;
 }
 
-code{
-    background-color: rgb(180, 180, 180);
-}
-
 body{
     background-color: rgb(220, 218, 205);
     font-weight: 400;
@@ -48,5 +44,26 @@ body{
 
 #quarto-sidebar {
     background-color: rgb(190, 188, 175);
+}
+
+/* Code block styling */
+pre {
+    background-color: #1f1f1f;
+    color: #f9f6ee;
+    padding: 1em;
+    border-radius: 4px;
+}
+
+pre code {
+    background-color: transparent;
+    color: inherit;
+}
+
+/* Inline code styling */
+code {
+    background-color: #2b2b2b;
+    color: #141005;
+    padding: 2px 4px;
+    border-radius: 3px;
 }
 

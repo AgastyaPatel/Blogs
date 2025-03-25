@@ -9,7 +9,7 @@
 <meta name="author" content="Agastya Patel">
 <meta name="dcterms.date" content="2024-01-13">
 
-<title>FastAI Lecture 03 – Agastya Patel</title>
+<title>Derivatives, Batch, Loss &amp; Metric – Agastya Patel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -66,7 +66,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/DeepLearning/FastAI Setup.html" rel="next">
+<link href="../../notes/DeepLearning/FastAI MacOS setup.html" rel="next">
 <link href="../../notes/DeepLearning/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
@@ -169,7 +169,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/FastAI Lecture 03.html">FastAI Lecture 03</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/FastAI Lecture 03.html">Derivatives, Batch, Loss &amp; Metric</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -216,7 +216,13 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/DeepLearning/FastAI Lecture 03.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">FastAI Lecture 03</span></a>
+ <span class="menu-text">Derivatives, Batch, Loss &amp; Metric</span></a>
+  </div>
+</li>
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/DeepLearning/FastAI MacOS setup.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">FastAI MacOS Setup [2025]</span></a>
   </div>
 </li>
           <li class="sidebar-item">
@@ -370,9 +376,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/FastAI Lecture 03.html">FastAI Lecture 03</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/FastAI Lecture 03.html">Derivatives, Batch, Loss &amp; Metric</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">FastAI Lecture 03</h1>
+<h1 class="title">Derivatives, Batch, Loss &amp; Metric</h1>
   <div class="quarto-categories">
     <div class="quarto-category">Notes</div>
     <div class="quarto-category">FastAI</div>
@@ -414,6 +420,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
+<blockquote class="blockquote">
+<p>This notes were prepared from the lecture 3 of the fastai course.</p>
+</blockquote>
 <p><img src="media/pixelSimilarity.png" class="img-fluid"></p>
 <p>Rectified linear Unit : y = mx + b</p>
 <section id="calculating-loss" class="level2">
@@ -680,7 +689,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/AgastyaPatel\.github\.io\/Blogs\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -1014,8 +1023,8 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/DeepLearning/FastAI Setup.html" class="pagination-link" aria-label="FastAI Setup">
-        <span class="nav-page-text">FastAI Setup</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/DeepLearning/FastAI MacOS setup.html" class="pagination-link" aria-label="FastAI MacOS Setup [2025]">
+        <span class="nav-page-text">FastAI MacOS Setup [2025]</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
