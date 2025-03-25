@@ -1,5 +1,5 @@
 ---
-title: FastAI Lecture 03
+title: Derivatives, Batch, Loss & Metric
 author: Agastya Patel
 date: 2024-01-13
 date-modified: 2024-01-13
@@ -10,6 +10,8 @@ categories:
   - Neural Network
   - Theory
 ---
+> This notes were prepared from the lecture 3 of the fastai course.
+
 ![](media/pixelSimilarity.png)
 
 Rectified linear Unit : y = mx + b
