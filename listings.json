@@ -1,0 +1,79 @@
+[
+  {
+    "listing": "/notes/Engineering/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/AI/index.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/CS/index.html",
+    "items": [
+      "/notes/CS/Networking.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blogs/FastAI/fastai_journey_v0.html"
+    ]
+  },
+  {
+    "listing": "/bob.html",
+    "items": [
+      "/notes/AI/index.html",
+      "/notes/CS/index.html",
+      "/notes/DeepLearning/index.html",
+      "/notes/Resources/Deep Learning Resources.html",
+      "/notes/DeepLearning/derivs_batchs_loss.html",
+      "/notes/Engineering/index.html",
+      "/blogs/FastAI/fastai_journey_v0.html",
+      "/notes/DeepLearning/FastAI macos setup.html",
+      "/notes/DeepLearning/FastAI Setup_deprecated.html",
+      "/notes/DeepLearning/FastAI Snippets.html",
+      "/notes/Utility/JupyterNotebook.html",
+      "/notes/Utility/Kaggle.html",
+      "/notes/Utility/Matplotlib.html",
+      "/notes/CS/Networking.html",
+      "/notes/index.html",
+      "/notes/Utility/Package Manager and Virtual Environments.html",
+      "/notes/Utility/PyTorch.html",
+      "/notes/Utility/index.html",
+      "/readme.html"
+    ]
+  },
+  {
+    "listing": "/blogs/FastAI/fastai_journey_v0.html",
+    "items": []
+  },
+  {
+    "listing": "/notes/DeepLearning/index.html",
+    "items": [
+      "/notes/DeepLearning/derivs_batchs_loss.html",
+      "/notes/DeepLearning/FastAI macos setup.html",
+      "/notes/DeepLearning/FastAI Setup_deprecated.html",
+      "/notes/DeepLearning/FastAI Snippets.html"
+    ]
+  },
+  {
+    "listing": "/notes/index.html",
+    "items": [
+      "/notes/AI/index.html",
+      "/notes/CS/index.html",
+      "/notes/DeepLearning/index.html",
+      "/notes/Engineering/index.html",
+      "/notes/Utility/index.html"
+    ]
+  },
+  {
+    "listing": "/notes/Utility/index.html",
+    "items": [
+      "/notes/Utility/JupyterNotebook.html",
+      "/notes/Utility/Kaggle.html",
+      "/notes/Utility/Matplotlib.html",
+      "/notes/Utility/Package Manager and Virtual Environments.html",
+      "/notes/Utility/PyTorch.html"
+    ]
+  }
+]
