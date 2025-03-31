@@ -25,6 +25,14 @@ body{
     background-color: #1f1f1f !important;
 }
 
+.nav-link {
+    color: #f9f6eee7;
+}
+
+.navbar-title{
+    color: #f9f6eee7;
+}
+
 .navbar-dark {
     color: #f9f6eee7;
 }
