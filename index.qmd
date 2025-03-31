@@ -8,6 +8,9 @@ listing:
   categories: true
   sort-ui: false
   filter-ui: true
+  fields: [date, title, description, image, reading-time, categories]
+  date-format: "YYYY-MM-DD"
+  image-placeholder: "path/to/default-thumbnail.png"  # Optional: default image if no thumbnail
 page-layout: full
 title-block-banner: false
 ---
