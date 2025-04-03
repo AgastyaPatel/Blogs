@@ -1,0 +1,9 @@
+---
+draft: true
+title: 'Blog Post'
+description: 'Placeholder blog post'
+image: 'placeholder.png'
+categories: [DeepLearning, FastAI]
+---
+
+This is a placeholder blog post. Content will be added later here.

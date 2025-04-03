@@ -1,9 +1,0 @@
----
-title: "What I did wrong while learning FastAI?"
-author: "Agastya Patel"
-date: "2024-01-07"
-categories: [DeepLearning, FastAI]
-image: "image.png"
-sidebar: false
-draft: true
----

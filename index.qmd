@@ -10,7 +10,6 @@ listing:
   filter-ui: true
   fields: [date, title, description, image, reading-time, categories]
   date-format: "YYYY-MM-DD"
-  image-placeholder: "blogs/FastAI/image.png"  # Optional: default image if no thumbnail
-page-layout: full
+  image-placeholder: "placeholder.png"  # Optional: default image if no thumbnail
 title-block-banner: false
 ---
