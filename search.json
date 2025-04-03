@@ -276,14 +276,39 @@
     "href": "index.html",
     "title": "Blogs",
     "section": "",
-    "text": "No matching items"
+    "text": "FastAI Projects\n\n\n\n\n\nProjects done using FastAI\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nBlog Post\n\n\n\n\n\n\nDeepLearning\n\n\nFastAI\n\n\n\nPlaceholder blog post\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n&lt;p&gt;&lt;img loading=\"lazy\" src=\"/blogs/placeholder.png\" class=\"thumbnail-image\"&gt;&lt;/p&gt;\n\n\n\n\nMCP Model Context Protocol\n\n\n\n\n\n\nDeepLearning\n\n\nAI\n\n\nAgents\n\n\nLLMs\n\n\n\nA blog post about the Model Context Protocol\n\n\n\n\n&lt;div class=\"listing-date\"&gt;\n2023-04-03\n&lt;/div&gt;\n&lt;div class=\"listing-reading-time\"&gt;\n1 min\n&lt;/div&gt;\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "bob.html",
     "href": "bob.html",
     "title": "Back of book index",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nArtificial Intelligence\n\n\n \n\n\n\n\n \n\n\nCS\n\n\n \n\n\n\n\n \n\n\nDeep Learning\n\n\n \n\n\n\n\n \n\n\nDeep Learning Resources\n\n\n \n\n\n\n\nJan 13, 2024\n\n\nDerivatives, Batch, Loss & Metric\n\n\nAgastya Patel\n\n\n\n\n \n\n\nEngineering\n\n\n \n\n\n\n\n \n\n\nFastAI Setup [2025]\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup [Deprecated]\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\n \n\n\nNetworking\n\n\n \n\n\n\n\n \n\n\nNotes\n\n\n \n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\n \n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nArtificial Intelligence\n\n\n \n\n\n\n\n \n\n\nBlog Post\n\n\n \n\n\n\n\n \n\n\nCS\n\n\n \n\n\n\n\n \n\n\nDeep Learning\n\n\n \n\n\n\n\n \n\n\nDeep Learning Resources\n\n\n \n\n\n\n\nJan 13, 2024\n\n\nDerivatives, Batch, Loss & Metric\n\n\nAgastya Patel\n\n\n\n\n \n\n\nEngineering\n\n\n \n\n\n\n\n \n\n\nFastAI Projects\n\n\n \n\n\n\n\n \n\n\nFastAI Setup [2025]\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup [Deprecated]\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nApr 3, 2023\n\n\nMCP Model Context Protocol\n\n\n \n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\n \n\n\nNetworking\n\n\n \n\n\n\n\n \n\n\nNotes\n\n\n \n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\n \n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blogs/FastAI/FastAI-projects.html",
+    "href": "blogs/FastAI/FastAI-projects.html",
+    "title": "FastAI Projects",
+    "section": "",
+    "text": "Projects\nLink\nDescription\nLesson Relation\n\n\n\n\nPokemon Classifier\nThread, HF-Spaces\nCreated pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it’s usage.\n1,2\n\n\nMNIST Classifier",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "FastAI",
+      "FastAI Projects"
+    ]
+  },
+  {
+    "objectID": "blogs/blog_01.html",
+    "href": "blogs/blog_01.html",
+    "title": "Blog Post",
+    "section": "",
+    "text": "This is a placeholder blog post. Content will be added later here.",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "Blog Post"
+    ]
   },
   {
     "objectID": "projects.html",

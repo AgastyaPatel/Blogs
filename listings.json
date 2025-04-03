@@ -15,22 +15,29 @@
   },
   {
     "listing": "/index.html",
-    "items": []
+    "items": [
+      "/blogs/FastAI/FastAI-projects.html",
+      "/blogs/blog_01.html",
+      "/blogs/what_is_model_context_protocol.html"
+    ]
   },
   {
     "listing": "/bob.html",
     "items": [
       "/notes/AI/index.html",
+      "/blogs/blog_01.html",
       "/notes/CS/index.html",
       "/notes/DeepLearning/index.html",
       "/notes/Resources/Deep Learning Resources.html",
       "/notes/DeepLearning/derivs_batchs_loss.html",
       "/notes/Engineering/index.html",
+      "/blogs/FastAI/FastAI-projects.html",
       "/notes/DeepLearning/FastAI macos setup.html",
       "/notes/DeepLearning/FastAI Setup_deprecated.html",
       "/notes/DeepLearning/FastAI Snippets.html",
       "/notes/Utility/JupyterNotebook.html",
       "/notes/Utility/Kaggle.html",
+      "/blogs/what_is_model_context_protocol.html",
       "/notes/Utility/Matplotlib.html",
       "/notes/CS/Networking.html",
       "/notes/index.html",
