@@ -1,8 +1,7 @@
 ---
-draft: true
 title: 'FastAI Projects'
 description: 'Projects done using FastAI'
-image: 'blogs/FastAI/image.png'
+image: '/blogs/FastAI/image.png'
 ---
 
 | Projects | Link | Description | Lesson Relation |  

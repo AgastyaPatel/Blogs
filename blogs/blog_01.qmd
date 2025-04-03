@@ -1,5 +1,4 @@
 ---
-draft: true
 title: 'Blog Post'
 description: 'Placeholder blog post'
 image: 'placeholder.png'
