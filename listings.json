@@ -15,9 +15,7 @@
   },
   {
     "listing": "/index.html",
-    "items": [
-      "/blogs/FastAI/fastai_journey_v0.html"
-    ]
+    "items": []
   },
   {
     "listing": "/bob.html",
@@ -28,7 +26,6 @@
       "/notes/Resources/Deep Learning Resources.html",
       "/notes/DeepLearning/derivs_batchs_loss.html",
       "/notes/Engineering/index.html",
-      "/blogs/FastAI/fastai_journey_v0.html",
       "/notes/DeepLearning/FastAI macos setup.html",
       "/notes/DeepLearning/FastAI Setup_deprecated.html",
       "/notes/DeepLearning/FastAI Snippets.html",
@@ -42,10 +39,6 @@
       "/notes/Utility/index.html",
       "/readme.html"
     ]
-  },
-  {
-    "listing": "/blogs/FastAI/fastai_journey_v0.html",
-    "items": []
   },
   {
     "listing": "/notes/DeepLearning/index.html",
