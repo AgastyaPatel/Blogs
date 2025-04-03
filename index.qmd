@@ -11,5 +11,4 @@ listing:
   fields: [date, title, description, image, reading-time, categories]
   date-format: "YYYY-MM-DD"
   image-placeholder: "placeholder.png"  # Optional: default image if no thumbnail
-title-block-banner: false
 ---

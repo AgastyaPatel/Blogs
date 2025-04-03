@@ -6,6 +6,7 @@ date: 2023-04-03
 categories: [DeepLearning, AI, Agents, LLMs]
 ---
 # Model Context Protocol
+Start of the blog post.
 
 {{< include "../notes/AI/model_context_protocol.md" >}}
 
