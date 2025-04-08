@@ -4,21 +4,22 @@
     "items": []
   },
   {
-    "listing": "/notes/AI/index.html",
-    "items": []
-  },
-  {
-    "listing": "/notes/CS/index.html",
+    "listing": "/notes/index.html",
     "items": [
-      "/notes/CS/Networking.html"
+      "/notes/AI/index.html",
+      "/notes/CS/index.html",
+      "/notes/DeepLearning/index.html",
+      "/notes/Engineering/index.html",
+      "/notes/Utility/index.html"
     ]
   },
   {
-    "listing": "/index.html",
+    "listing": "/notes/DeepLearning/index.html",
     "items": [
-      "/blogs/FastAI/FastAI-projects.html",
-      "/blogs/blog_01.html",
-      "/blogs/what_is_model_context_protocol.html"
+      "/notes/DeepLearning/derivs_batchs_loss.html",
+      "/notes/DeepLearning/FastAI macos setup.html",
+      "/notes/DeepLearning/FastAI Setup_deprecated.html",
+      "/notes/DeepLearning/FastAI Snippets.html"
     ]
   },
   {
@@ -48,23 +49,22 @@
     ]
   },
   {
-    "listing": "/notes/DeepLearning/index.html",
+    "listing": "/index.html",
     "items": [
-      "/notes/DeepLearning/derivs_batchs_loss.html",
-      "/notes/DeepLearning/FastAI macos setup.html",
-      "/notes/DeepLearning/FastAI Setup_deprecated.html",
-      "/notes/DeepLearning/FastAI Snippets.html"
+      "/blogs/FastAI/FastAI-projects.html",
+      "/blogs/blog_01.html",
+      "/blogs/what_is_model_context_protocol.html"
     ]
   },
   {
-    "listing": "/notes/index.html",
+    "listing": "/notes/CS/index.html",
     "items": [
-      "/notes/AI/index.html",
-      "/notes/CS/index.html",
-      "/notes/DeepLearning/index.html",
-      "/notes/Engineering/index.html",
-      "/notes/Utility/index.html"
+      "/notes/CS/Networking.html"
     ]
+  },
+  {
+    "listing": "/notes/AI/index.html",
+    "items": []
   },
   {
     "listing": "/notes/Utility/index.html",
