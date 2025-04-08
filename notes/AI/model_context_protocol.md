@@ -4,7 +4,7 @@ author: "Agastya Patel"
 date: "2025-03-12"
 date-modified: "2025-03-12"
 categories: [Notes, AI, MCP]
-draft: true
+draft: false
 ---
 
 Notes about the MCP Model Context Protocol.

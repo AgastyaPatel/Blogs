@@ -1,13 +1,42 @@
 ---
 title: 'What is Model Context Protocol?'
 description: 'A blog post about the Model Context Protocol'
-image: 'placeholder.png'
+image: 'https://avatars.githubusercontent.com/u/182288589?s=200&v=4'
 date: 2023-04-03
 categories: [DeepLearning, AI, Agents, LLMs]
 ---
 # Model Context Protocol
-Start of the blog post.
 
-{{< include "../notes/AI/model_context_protocol.md" >}}
+Everybody is talking about the Model Context Protocol (MCP) these days. But what is it?  
+Model context protocol is a standardized way of formatting prompts and responses between humans and AI language models. It was developed by Anthropic and is now supported and used by many other LLM providers.
+The protocol helps establish clear boundaries and roles in human-AI interactions by using specific markers like "Human:" and "Assistant:" to indicate who is speaking. This structured format makes it easier for language models to understand the conversation flow and maintain consistent behavior.
 
-End of the blog post.
+## What is MCP?
+Model Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.
+
+https://www.anthropic.com/news/model-context-protocol
+
+## API vs MCP
+Generally external services are connected using API which differs from providers to providers.
+It's a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.
+
+MCP is open standard which is being quickly adopted by many product developers, companies and organizations.
+
+# MCP Features
+- Single Protocol: Universal connector to integrate any service or tool.
+- Dynamic Discovery: Automatically discover and connect to new tools. (similar to package managers)
+- Two-way Communication: Agents can send (trigger events) and receive messages to and from external tools at the same time.
+
+# MCP Components
+MCP Host: Claude desktop or AI driven IDE which requires external tools to be connected to it.
+MCP Client: External tool or service which is connected to MCP server.
+MCP Servers: Lightweight servers which are used to connect MCP clients to MCP host.
+Local Data Source: Local files, databases, etc.
+Tool/Services: APIs of external tools and services.
+
+> Just checkout the list of MCP servers and integrations below.
+https://github.com/modelcontextprotocol/servers?tab=readme-ov-file
+
+
+_To use MCP in your projects, can follow the notes link below._
+[Model Context Protocol Example](../notes/AI/model_context_protocol.html)

@@ -7,11 +7,15 @@ sidebar: false
 title-block-banner: false
 page-layout: full
 ---
+# Current Running Projects
+### [Chatleads.pro](https://chatleads.pro)
+Chatleads is a platform tailored to small and medium businesses to help them address customer queries and generate more leads from their website.
+I'm working on this project solo, currently in stealth mode.
+
+
+# Academic/Learning Projects
+
 ### FastAI Projects
 Here's a list of projects I've worked on during my FastAI journey.
 Projects include recomendations systems, image classification, and more.
 [View FastAI Projects](blogs/FastAI/FastAI-projects.qmd)
-
-
-### Web Projects
-These are the projects which I created in my web dev learning.
