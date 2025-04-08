@@ -30,8 +30,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/Engineering/index.html" rel="next">
-<link href="../../notes/index.html" rel="prev">
+<link href="../../notes/AI/model_context_protocol.html" rel="next">
+<link href="../../notes/CS/Networking.html" rel="prev">
 <script src="../../site_libs/quarto-listing/list.min.js"></script>
 <script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
 <script src="../../site_libs/quarto-html/quarto.js"></script>
@@ -80,9 +80,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] }],
+      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: [],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -224,12 +224,6 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/AI/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Artificial Intelligence</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
   <a href="../../notes/Engineering/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Engineering</span></a>
   </div>
@@ -288,13 +282,30 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/Utility/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Utility</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <a href="../../notes/AI/index.html" class="sidebar-item-text sidebar-link active">
+ <span class="menu-text">Artificial Intelligence</span></a>
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/AI/model_context_protocol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">MCP Model Context Protocol</span></a>
+  </div>
+</li>
+      </ul>
+  </li>
+          <li class="sidebar-item sidebar-item-section">
+      <div class="sidebar-item-container"> 
+            <a href="../../notes/Utility/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Utility</span></a>
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+            <i class="bi bi-chevron-right ms-2"></i>
+          </a> 
+      </div>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/Utility/JupyterNotebook.html" class="sidebar-item-text sidebar-link">
@@ -329,13 +340,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/Resources/Deep Learning Resources.html" class="sidebar-item-text sidebar-link">
@@ -348,28 +359,28 @@ window.Quarto = {
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Blogs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../blogs/blog_01.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Blog Post</span></a>
+  <a href="../../blogs/what_is_model_context_protocol.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">What is Model Context Protocol?</span></a>
   </div>
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
  <span class="menu-text">FastAI</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../blogs/FastAI/FastAI-projects.html" class="sidebar-item-text sidebar-link">
@@ -433,6 +444,14 @@ Description
 </tr>
 </thead>
 <tbody class="list">
+<tr data-index="0" data-categories="Tm90ZXMlMkNBSSUyQ01DUA==" data-listing-date-sort="1741708800000" data-listing-file-modified-sort="1744083534049" data-listing-date-modified-sort="1741708800000" data-listing-reading-time-sort="1" data-listing-word-count-sort="178" data-listing-title-sort="MCP Model Context Protocol" data-listing-filename-sort="model_context_protocol.md">
+<td>
+<a href="../../notes/AI/model_context_protocol.html" class="title listing-title">MCP Model Context Protocol</a>
+</td>
+<td>
+<span class="listing-description">Notes about the MCP Model Context Protocol.</span>
+</td>
+</tr>
 </tbody>
 </table>
 <div class="listing-no-matching d-none">
@@ -858,13 +877,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/index.html" class="pagination-link" aria-label="Notes">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Notes</span>
+      <a href="../../notes/CS/Networking.html" class="pagination-link" aria-label="Networking">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Networking</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/Engineering/index.html" class="pagination-link" aria-label="Engineering">
-        <span class="nav-page-text">Engineering</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/AI/model_context_protocol.html" class="pagination-link" aria-label="MCP Model Context Protocol">
+        <span class="nav-page-text">MCP Model Context Protocol</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

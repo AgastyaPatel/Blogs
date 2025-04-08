@@ -71,13 +71,364 @@
     ]
   },
   {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Notes",
+    "objectID": "notes/AI/index.html",
+    "href": "notes/AI/index.html",
+    "title": "Artificial Intelligence",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nArtificial Intelligence\n\n\n\n\n\n\n\nCS\n\n\n\n\n\n\n\nDeep Learning\n\n\n\n\n\n\n\nEngineering\n\n\n\n\n\n\n\nUtility\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "Notes about latest ai developments, llms, agents & visual models.\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nMCP Model Context Protocol\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Notes"
+      "Notes",
+      "Artificial Intelligence"
+    ]
+  },
+  {
+    "objectID": "notes/CS/index.html",
+    "href": "notes/CS/index.html",
+    "title": "CS",
+    "section": "",
+    "text": "General notes on CS topics\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nNetworking\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "CS"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html",
+    "href": "notes/Resources/Deep Learning Resources.html",
+    "title": "Deep Learning Resources",
+    "section": "",
+    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#books",
+    "href": "notes/Resources/Deep Learning Resources.html#books",
+    "title": "Deep Learning Resources",
+    "section": "",
+    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#guides",
+    "href": "notes/Resources/Deep Learning Resources.html#guides",
+    "title": "Deep Learning Resources",
+    "section": "Guides",
+    "text": "Guides\n\nhttps://www.interviewbit.com/system-design-interview-questions/amp/\nhttps://www.promptingguide.ai/ Prompt Engineering\nhttps://medium.com/marvelous-mlops/mlops-roadmap-2024-ff4216b8bc62 Mooc\nThe Missing Semester of Your CS Education (mit.edu) MIT Missing CS Semester + Lectures: Teaches how to use system utility tools like git, vim, other useful untaught methods for Machine Learning.\nhttps://hepsoftwarefoundation.org/training/center.html Multiple Advance Tutorial/Guide Series. Recommended",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#lectures",
+    "href": "notes/Resources/Deep Learning Resources.html#lectures",
+    "title": "Deep Learning Resources",
+    "section": "Lectures",
+    "text": "Lectures\n\nCornell Machine Learning for Intelligent Systems 2018 36 Lectures and different Assignments https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#references",
+    "href": "notes/Resources/Deep Learning Resources.html#references",
+    "title": "Deep Learning Resources",
+    "section": "References",
+    "text": "References\n\nCommands : List of Command Line Commands | Codecademy\nBash vs Windows : Learn the Command Line | Codecademy\nVirtual Environment : Python: Modules | Codecademy\nStatistics Cheat Sheet : https://terenceshin.medium.com/week-2-52-stats-cheat-sheet-ae38a2e5cdc6\nStatistics in Maths: Definition, Types, Formulas, and Applications (geeksforgeeks.org)\nAPIs : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md\nHow web works : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/derivs_batchs_loss.html",
+    "href": "notes/DeepLearning/derivs_batchs_loss.html",
+    "title": "Derivatives, Batch, Loss & Metric",
+    "section": "",
+    "text": "This notes were prepared from the lecture 3 of the fastai course.\nRectified linear Unit : y = mx + b",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "Derivatives, Batch, Loss & Metric"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/derivs_batchs_loss.html#calculating-loss",
+    "href": "notes/DeepLearning/derivs_batchs_loss.html#calculating-loss",
+    "title": "Derivatives, Batch, Loss & Metric",
+    "section": "Calculating Loss",
+    "text": "Calculating Loss\n\nWhat are derivatives?\nDerivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function - fastbook\n\n\nCalculating derivatives for weights in NN\nFor neural networks with lots of weights, we find derivatives for each weight, treating others as constants. In deep learning, “gradients” mean values of a function’s derivatives. PyTorch’s requires_grad_() helps track and calculate these derivatives automatically.\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value. - fastbook",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "Derivatives, Batch, Loss & Metric"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/derivs_batchs_loss.html#loss-vs-metric",
+    "href": "notes/DeepLearning/derivs_batchs_loss.html#loss-vs-metric",
+    "title": "Derivatives, Batch, Loss & Metric",
+    "section": "Loss vs Metric",
+    "text": "Loss vs Metric\n\n\n\n\n\n\n\n\nAspect\nMetric\nLoss\n\n\n\n\nPurpose Difference\nDrives human understanding of performance\nDrives automated learning by optimization\n\n\nSmoothness Requirement\nNot constrained by smoothness\nRequires smoothness for meaningful derivative\n\n\nOptimization vs. Real Goal\nReflects actual goals\nCompromise between real goals and optimization\n\n\nCalculation Process\nProvides overall model evaluation\nCalculated per item, averaged at epoch end\n\n\nFocus Consideration\nPrimary focus for judging performance\nImportant for automated learning, may not directly represent end goal",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "Derivatives, Batch, Loss & Metric"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html",
+    "href": "notes/DeepLearning/FastAI Snippets.html",
+    "title": "FastAI Snippets 01",
+    "section": "",
+    "text": "Page contains some of the common and usefull snippets. Pathlib, parallel processing.",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#path",
+    "href": "notes/DeepLearning/FastAI Snippets.html#path",
+    "title": "FastAI Snippets 01",
+    "section": "Path",
+    "text": "Path\nfrom pathlib import path\npath = Path() #Current Dir\n#path = Path('Content') #Relative Dir\n#path = Path('NB/content') #Absolute Dir",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
+    "href": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
+    "title": "FastAI Snippets 01",
+    "section": "Add recent models",
+    "text": "Add recent models\n!pip install timm\nimport timm\ntimm.list_models('convnext*') # Prints available model",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
+    "href": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
+    "title": "FastAI Snippets 01",
+    "section": "Fine_Tune:",
+    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate\n\n!pip list | grep \"^fast",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "X/twitter: @4gastyaPatel Github: AgastyaPatel LinkedIn: 4gastyaPatel"
+  },
+  {
+    "objectID": "about.html#im-agastya-patel",
+    "href": "about.html#im-agastya-patel",
+    "title": "About Me",
+    "section": "I’m Agastya Patel!",
+    "text": "I’m Agastya Patel!\nPassionate developer and AI enthusiast who loves building practical solutions to real-world problems. You can find me actively sharing my learning journey and progress on Twitter/X @4gastyaPatel.\n\nI’m currently building Chatleads.pro - a tool that helps businesses train and deploy custom customer service chatbots quickly by integrating with google docs, notion, and various other knowledge base sources.\nCurrently pursuing Masters in IT with AI specialization at the University of Western Australia\nOpen to exciting work opportunities in the AI/ML space"
+  },
+  {
+    "objectID": "about.html#stack",
+    "href": "about.html#stack",
+    "title": "About Me",
+    "section": "Stack",
+    "text": "Stack\n\nLanguages/Tools\nPython • C++ • SQL • PostgreSQL • Google Cloud Platform\n\n\nFrameworks & Libraries\nPyTorch • Django • FastAPI • NumPy • PyQt • FastAI"
+  },
+  {
+    "objectID": "about.html#professional-experience",
+    "href": "about.html#professional-experience",
+    "title": "About Me",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\nPython Developer @ Viga Entertainment Technology\nApril 2024 - Present\n\nAI Workflow Management: Handle deployments for AI workflow containers\nCloud Integration: Integrate and manage cloud services for AI operations\nDesktop Application Development: Develop and maintain desktop applications\nBuild Cycle Management: Maintain and manage build cycles for products\nEnsure continuous integration of desktop products with backend systems\nDesign and develop new features for our products\n\n\n\nTechnical Artist/Developer @ Viga Entertainment Technology\nSeptember 2023 - March 2024\n\nCreated custom IP to improve efficiency of 3D workflows\nDeveloped innovative solutions to complex problems and conducted team training\nIntegrated AI services into 3D workflows, enabling new creative possibilities\nImplemented custom solutions for workflow optimization\n\n\n\nTechnical Artist/Developer Intern @ Viga Entertainment Technology\nJune 2023 - August 2023\n\nDeveloped Text-to-Animation Pipeline streaming in Omniverse\nGained hands-on experience with automation of 3D animation workflows\nCollaborated with creative teams to implement technical solutions"
+  },
+  {
+    "objectID": "about.html#journey",
+    "href": "about.html#journey",
+    "title": "About Me",
+    "section": "Journey",
+    "text": "Journey\nStarting as a self-taught “organic engineer,” I’ve always believed in learning by doing & I started my tech journey by automating 3D workflows which led to a lots of interesting projects. This hands-on approach has helped me develop a deep understanding of software development and AI technologies. I’m constantly exploring new technologies and sharing my insights with the community.\n\nEducation\n\nMasters in IT with AI specialization at the University of Western Australia Class of 2027\nBachelors in Science (Media, Graphics, Animation) at YCMOU, India Class of 2023\n\n\nI’m always excited to connect with fellow developers and collaborate on interesting projects. Feel free to reach out through any of the social links above!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "FastAI Projects\n\n\n\n\n\nProjects done using FastAI\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nWhat is Model Context Protocol?\n\n\n\n\n\n\nDeepLearning\n\n\nAI\n\n\nAgents\n\n\nLLMs\n\n\n\nA blog post about the Model Context Protocol\n\n\n\n\n\n2023-04-03\n\n\n2 min\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "bob.html",
+    "href": "bob.html",
+    "title": "Back of book index",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nArtificial Intelligence\n\n\n \n\n\n\n\n \n\n\nCS\n\n\n \n\n\n\n\n \n\n\nDeep Learning\n\n\n \n\n\n\n\n \n\n\nDeep Learning Resources\n\n\n \n\n\n\n\nJan 13, 2024\n\n\nDerivatives, Batch, Loss & Metric\n\n\nAgastya Patel\n\n\n\n\n \n\n\nEngineering\n\n\n \n\n\n\n\n \n\n\nFastAI Projects\n\n\n \n\n\n\n\n \n\n\nFastAI Setup [2025]\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup [Deprecated]\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nMar 12, 2025\n\n\nMCP Model Context Protocol\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\n \n\n\nNetworking\n\n\n \n\n\n\n\n \n\n\nNotes\n\n\n \n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\n \n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\nApr 3, 2023\n\n\nWhat is Model Context Protocol?\n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blogs/what_is_model_context_protocol.html",
+    "href": "blogs/what_is_model_context_protocol.html",
+    "title": "What is Model Context Protocol?",
+    "section": "",
+    "text": "Everybody is talking about the Model Context Protocol (MCP) these days. But what is it?\nModel context protocol is a standardized way of formatting prompts and responses between humans and AI language models. It was developed by Anthropic and is now supported and used by many other LLM providers. The protocol helps establish clear boundaries and roles in human-AI interactions by using specific markers like “Human:” and “Assistant:” to indicate who is speaking. This structured format makes it easier for language models to understand the conversation flow and maintain consistent behavior.\n\n\nModel Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol\n\n\n\nGenerally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "What is Model Context Protocol?"
+    ]
+  },
+  {
+    "objectID": "blogs/what_is_model_context_protocol.html#what-is-mcp",
+    "href": "blogs/what_is_model_context_protocol.html#what-is-mcp",
+    "title": "What is Model Context Protocol?",
+    "section": "",
+    "text": "Model Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "What is Model Context Protocol?"
+    ]
+  },
+  {
+    "objectID": "blogs/what_is_model_context_protocol.html#api-vs-mcp",
+    "href": "blogs/what_is_model_context_protocol.html#api-vs-mcp",
+    "title": "What is Model Context Protocol?",
+    "section": "",
+    "text": "Generally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "What is Model Context Protocol?"
+    ]
+  },
+  {
+    "objectID": "blogs/FastAI/FastAI-projects.html",
+    "href": "blogs/FastAI/FastAI-projects.html",
+    "title": "FastAI Projects",
+    "section": "",
+    "text": "Projects\nLink\nDescription\nLesson Relation\n\n\n\n\nPokemon Classifier\nThread, HF-Spaces\nCreated pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it’s usage.\n1,2\n\n\nMNIST Classifier",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "FastAI",
+      "FastAI Projects"
+    ]
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Current Running Projects\n\nChatleads.pro\nChatleads is a platform tailored to small and medium businesses to help them address customer queries and generate more leads from their website. I’m working on this project solo, currently in stealth mode.\n\n\n\nAcademic/Learning Projects\n\nFastAI Projects\nHere’s a list of projects I’ve worked on during my FastAI journey. Projects include recomendations systems, image classification, and more. View FastAI Projects"
+  },
+  {
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "Agastya Patel",
+    "section": "",
+    "text": "ghpages: quarto publish preview: quarto preview render: quarto render"
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "",
+    "text": "In this section we’ll be going through the setting up the wsl for FastAI.",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#setting-up-windows-subsystem",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#setting-up-windows-subsystem",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "Setting up Windows Subsystem",
+    "text": "Setting up Windows Subsystem\n\nSet wsl\nget the miniforge/mambaforge(deprected)\nrun the miniforge.sh\nmamba install ipython\nmamba install jupyter lab\nmamba install pytorch\nconda install fastai",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#nvidia-smi",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#nvidia-smi",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "nvidia-smi",
+    "text": "nvidia-smi\nnvidia-smi dmon: Chec for sm and mem column",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#symblinks",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#symblinks",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "Symblinks",
+    "text": "Symblinks\n\nLinux\nln -s target-path : Creates a symblink of the target directory in current directory ln -la : Displays the folders who are made up of symblink\n\n\nWindows\nYoutube Tutorial",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#cloud-environments",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#cloud-environments",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "Cloud Environments",
+    "text": "Cloud Environments\n\nPaperspace\nQ. How to set common library?\n\npip install --user with this flag so that the lib is installed in .local\nmove the .local to /storage/.local\ncreate symblink from /storage/.local as target and it would create .bash.local in storage which would fire up time new instance has been called",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/index.html",
+    "href": "notes/DeepLearning/index.html",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "Notes from fast ai course, kaparthy, and other resources\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nDerivatives, Batch, Loss & Metric\n\n\n\n\n\n\n\nFastAI Setup [2025]\n\n\n\n\n\n\n\nFastAI Setup [Deprecated]\n\n\n\n\n\n\n\nFastAI Snippets 01\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "Deep Learning"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI macos setup.html",
+    "href": "notes/DeepLearning/FastAI macos setup.html",
+    "title": "FastAI Setup [2025]",
+    "section": "",
+    "text": "In this section we’ll be going through the setting up the wsl for FastAI.\nThis guide will help you out with setting up the fastai on your mac quickly.\nPrerequistes: - Conda Command Line Tool\n\nCreate conda environment\n\nconda create -n fastai-311 python=3.11\n\nInstall pytorch &gt; Recently pytorch dropped support for distribution over conda channels so pip3 is the only way to get it done\n\npip3 install torch torchvision torchaudio\n\nInstall ipython and jupyterlab\n\nconda install ipython jupyterlab\n\nInstall fastai & fastbook &gt; fastchan has been deprecated. Use fastai as the channel to download the package from.\n\nconda install -c fastai \n\nInstall sentencepiece (tokenizer by google)\n\nconda install sentencepiece",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [2025]"
     ]
   },
   {
@@ -165,340 +516,49 @@
     ]
   },
   {
-    "objectID": "notes/DeepLearning/FastAI macos setup.html",
-    "href": "notes/DeepLearning/FastAI macos setup.html",
-    "title": "FastAI Setup [2025]",
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
     "section": "",
-    "text": "In this section we’ll be going through the setting up the wsl for FastAI.\nThis guide will help you out with setting up the fastai on your mac quickly.\nPrerequistes: - Conda Command Line Tool\n\nCreate conda environment\n\nconda create -n fastai-311 python=3.11\n\nInstall pytorch &gt; Recently pytorch dropped support for distribution over conda channels so pip3 is the only way to get it done\n\npip3 install torch torchvision torchaudio\n\nInstall ipython and jupyterlab\n\nconda install ipython jupyterlab\n\nInstall fastai & fastbook &gt; fastchan has been deprecated. Use fastai as the channel to download the package from.\n\nconda install -c fastai \n\nInstall sentencepiece (tokenizer by google)\n\nconda install sentencepiece",
+    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nArtificial Intelligence\n\n\n\n\n\n\n\nCS\n\n\n\n\n\n\n\nDeep Learning\n\n\n\n\n\n\n\nEngineering\n\n\n\n\n\n\n\nUtility\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [2025]"
+      "Notes"
     ]
   },
   {
-    "objectID": "notes/DeepLearning/index.html",
-    "href": "notes/DeepLearning/index.html",
-    "title": "Deep Learning",
+    "objectID": "notes/AI/model_context_protocol.html",
+    "href": "notes/AI/model_context_protocol.html",
+    "title": "MCP Model Context Protocol",
     "section": "",
-    "text": "Notes from fast ai course, kaparthy, and other resources\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nDerivatives, Batch, Loss & Metric\n\n\n\n\n\n\n\nFastAI Setup [2025]\n\n\n\n\n\n\n\nFastAI Setup [Deprecated]\n\n\n\n\n\n\n\nFastAI Snippets 01\n\n\n\n\n\n\n\n\nNo matching items",
+    "text": "Notes about the MCP Model Context Protocol.",
     "crumbs": [
       "Notes",
-      "Deep Learning"
+      "Artificial Intelligence",
+      "MCP Model Context Protocol"
     ]
   },
   {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "",
-    "text": "In this section we’ll be going through the setting up the wsl for FastAI.",
+    "objectID": "notes/AI/model_context_protocol.html#what-is-mcp",
+    "href": "notes/AI/model_context_protocol.html#what-is-mcp",
+    "title": "MCP Model Context Protocol",
+    "section": "What is MCP?",
+    "text": "What is MCP?\nModel Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol",
     "crumbs": [
       "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
+      "Artificial Intelligence",
+      "MCP Model Context Protocol"
     ]
   },
   {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#setting-up-windows-subsystem",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#setting-up-windows-subsystem",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "Setting up Windows Subsystem",
-    "text": "Setting up Windows Subsystem\n\nSet wsl\nget the miniforge/mambaforge(deprected)\nrun the miniforge.sh\nmamba install ipython\nmamba install jupyter lab\nmamba install pytorch\nconda install fastai",
+    "objectID": "notes/AI/model_context_protocol.html#api-vs-mcp",
+    "href": "notes/AI/model_context_protocol.html#api-vs-mcp",
+    "title": "MCP Model Context Protocol",
+    "section": "API vs MCP",
+    "text": "API vs MCP\nGenerally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
     "crumbs": [
       "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#nvidia-smi",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#nvidia-smi",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "nvidia-smi",
-    "text": "nvidia-smi\nnvidia-smi dmon: Chec for sm and mem column",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#symblinks",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#symblinks",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "Symblinks",
-    "text": "Symblinks\n\nLinux\nln -s target-path : Creates a symblink of the target directory in current directory ln -la : Displays the folders who are made up of symblink\n\n\nWindows\nYoutube Tutorial",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#cloud-environments",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#cloud-environments",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "Cloud Environments",
-    "text": "Cloud Environments\n\nPaperspace\nQ. How to set common library?\n\npip install --user with this flag so that the lib is installed in .local\nmove the .local to /storage/.local\ncreate symblink from /storage/.local as target and it would create .bash.local in storage which would fire up time new instance has been called",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "readme.html",
-    "href": "readme.html",
-    "title": "Agastya Patel",
-    "section": "",
-    "text": "ghpages: quarto publish preview: quarto preview render: quarto render"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "FastAI Projects\nHere’s a list of projects I’ve worked on during my FastAI journey. Projects include recomendations systems, image classification, and more. View FastAI Projects\n\n\nWeb Projects\nThese are the projects which I created in my web dev learning."
-  },
-  {
-    "objectID": "blogs/blog_01.html",
-    "href": "blogs/blog_01.html",
-    "title": "Blog Post",
-    "section": "",
-    "text": "This is a placeholder blog post. Content will be added later here.",
-    "crumbs": [
-      "Notes",
-      "Blogs",
-      "Blog Post"
-    ]
-  },
-  {
-    "objectID": "blogs/FastAI/FastAI-projects.html",
-    "href": "blogs/FastAI/FastAI-projects.html",
-    "title": "FastAI Projects",
-    "section": "",
-    "text": "Projects\nLink\nDescription\nLesson Relation\n\n\n\n\nPokemon Classifier\nThread, HF-Spaces\nCreated pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it’s usage.\n1,2\n\n\nMNIST Classifier",
-    "crumbs": [
-      "Notes",
-      "Blogs",
-      "FastAI",
-      "FastAI Projects"
-    ]
-  },
-  {
-    "objectID": "bob.html",
-    "href": "bob.html",
-    "title": "Back of book index",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nArtificial Intelligence\n\n\n \n\n\n\n\n \n\n\nBlog Post\n\n\n \n\n\n\n\n \n\n\nCS\n\n\n \n\n\n\n\n \n\n\nDeep Learning\n\n\n \n\n\n\n\n \n\n\nDeep Learning Resources\n\n\n \n\n\n\n\nJan 13, 2024\n\n\nDerivatives, Batch, Loss & Metric\n\n\nAgastya Patel\n\n\n\n\n \n\n\nEngineering\n\n\n \n\n\n\n\n \n\n\nFastAI Projects\n\n\n \n\n\n\n\n \n\n\nFastAI Setup [2025]\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup [Deprecated]\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nApr 3, 2023\n\n\nMCP Model Context Protocol\n\n\n \n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\n \n\n\nNetworking\n\n\n \n\n\n\n\n \n\n\nNotes\n\n\n \n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\n \n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blogs",
-    "section": "",
-    "text": "FastAI Projects\n\n\n\n\n\nProjects done using FastAI\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n\n\n\n\n\nBlog Post\n\n\n\n\n\n\nDeepLearning\n\n\nFastAI\n\n\n\nPlaceholder blog post\n\n\n\n\n\n1 min\n\n\n\n\n\n\n\n&lt;p&gt;&lt;img loading=\"lazy\" src=\"/blogs/placeholder.png\" class=\"thumbnail-image\"&gt;&lt;/p&gt;\n\n\n\n\nMCP Model Context Protocol\n\n\n\n\n\n\nDeepLearning\n\n\nAI\n\n\nAgents\n\n\nLLMs\n\n\n\nA blog post about the Model Context Protocol\n\n\n\n\n&lt;div class=\"listing-date\"&gt;\n2023-04-03\n&lt;/div&gt;\n&lt;div class=\"listing-reading-time\"&gt;\n1 min\n&lt;/div&gt;\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "X/twitter: @4gastyaPatel Github: AgastyaPatel LinkedIn: 4gastyaPatel"
-  },
-  {
-    "objectID": "about.html#im-agastya-patel",
-    "href": "about.html#im-agastya-patel",
-    "title": "About Me",
-    "section": "I’m Agastya Patel!",
-    "text": "I’m Agastya Patel!\nPassionate developer and AI enthusiast who loves building practical solutions to real-world problems. You can find me actively sharing my learning journey and progress on Twitter/X @4gastyaPatel.\n\nI’m currently building Chatleads.pro - a tool that helps businesses train and deploy custom customer service chatbots quickly by integrating with google docs, notion, and various other knowledge base sources.\nCurrently pursuing Masters in IT with AI specialization at the University of Western Australia\nOpen to exciting work opportunities in the AI/ML space"
-  },
-  {
-    "objectID": "about.html#stack",
-    "href": "about.html#stack",
-    "title": "About Me",
-    "section": "Stack",
-    "text": "Stack\n\nLanguages/Tools\nPython • C++ • SQL • PostgreSQL • Google Cloud Platform\n\n\nFrameworks & Libraries\nPyTorch • Django • FastAPI • NumPy • PyQt • FastAI"
-  },
-  {
-    "objectID": "about.html#professional-experience",
-    "href": "about.html#professional-experience",
-    "title": "About Me",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\nPython Developer @ Viga Entertainment Technology\nApril 2024 - Present\n\nAI Workflow Management: Handle deployments for AI workflow containers\nCloud Integration: Integrate and manage cloud services for AI operations\nDesktop Application Development: Develop and maintain desktop applications\nBuild Cycle Management: Maintain and manage build cycles for products\nEnsure continuous integration of desktop products with backend systems\nDesign and develop new features for our products\n\n\n\nTechnical Artist/Developer @ Viga Entertainment Technology\nSeptember 2023 - March 2024\n\nCreated custom IP to improve efficiency of 3D workflows\nDeveloped innovative solutions to complex problems and conducted team training\nIntegrated AI services into 3D workflows, enabling new creative possibilities\nImplemented custom solutions for workflow optimization\n\n\n\nTechnical Artist/Developer Intern @ Viga Entertainment Technology\nJune 2023 - August 2023\n\nDeveloped Text-to-Animation Pipeline streaming in Omniverse\nGained hands-on experience with automation of 3D animation workflows\nCollaborated with creative teams to implement technical solutions"
-  },
-  {
-    "objectID": "about.html#journey",
-    "href": "about.html#journey",
-    "title": "About Me",
-    "section": "Journey",
-    "text": "Journey\nStarting as a self-taught “organic engineer,” I’ve always believed in learning by doing & I started my tech journey by automating 3D workflows which led to a lots of interesting projects. This hands-on approach has helped me develop a deep understanding of software development and AI technologies. I’m constantly exploring new technologies and sharing my insights with the community.\n\nEducation\n\nMasters in IT with AI specialization at the University of Western Australia Class of 2027\nBachelors in Science (Media, Graphics, Animation) at YCMOU, India Class of 2023\n\n\nI’m always excited to connect with fellow developers and collaborate on interesting projects. Feel free to reach out through any of the social links above!"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html",
-    "href": "notes/DeepLearning/FastAI Snippets.html",
-    "title": "FastAI Snippets 01",
-    "section": "",
-    "text": "Page contains some of the common and usefull snippets. Pathlib, parallel processing.",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Snippets 01"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#path",
-    "href": "notes/DeepLearning/FastAI Snippets.html#path",
-    "title": "FastAI Snippets 01",
-    "section": "Path",
-    "text": "Path\nfrom pathlib import path\npath = Path() #Current Dir\n#path = Path('Content') #Relative Dir\n#path = Path('NB/content') #Absolute Dir",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Snippets 01"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
-    "href": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
-    "title": "FastAI Snippets 01",
-    "section": "Add recent models",
-    "text": "Add recent models\n!pip install timm\nimport timm\ntimm.list_models('convnext*') # Prints available model",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Snippets 01"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
-    "href": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
-    "title": "FastAI Snippets 01",
-    "section": "Fine_Tune:",
-    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate\n\n!pip list | grep \"^fast",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Snippets 01"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/derivs_batchs_loss.html",
-    "href": "notes/DeepLearning/derivs_batchs_loss.html",
-    "title": "Derivatives, Batch, Loss & Metric",
-    "section": "",
-    "text": "This notes were prepared from the lecture 3 of the fastai course.\nRectified linear Unit : y = mx + b",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "Derivatives, Batch, Loss & Metric"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/derivs_batchs_loss.html#calculating-loss",
-    "href": "notes/DeepLearning/derivs_batchs_loss.html#calculating-loss",
-    "title": "Derivatives, Batch, Loss & Metric",
-    "section": "Calculating Loss",
-    "text": "Calculating Loss\n\nWhat are derivatives?\nDerivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function - fastbook\n\n\nCalculating derivatives for weights in NN\nFor neural networks with lots of weights, we find derivatives for each weight, treating others as constants. In deep learning, “gradients” mean values of a function’s derivatives. PyTorch’s requires_grad_() helps track and calculate these derivatives automatically.\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value. - fastbook",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "Derivatives, Batch, Loss & Metric"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/derivs_batchs_loss.html#loss-vs-metric",
-    "href": "notes/DeepLearning/derivs_batchs_loss.html#loss-vs-metric",
-    "title": "Derivatives, Batch, Loss & Metric",
-    "section": "Loss vs Metric",
-    "text": "Loss vs Metric\n\n\n\n\n\n\n\n\nAspect\nMetric\nLoss\n\n\n\n\nPurpose Difference\nDrives human understanding of performance\nDrives automated learning by optimization\n\n\nSmoothness Requirement\nNot constrained by smoothness\nRequires smoothness for meaningful derivative\n\n\nOptimization vs. Real Goal\nReflects actual goals\nCompromise between real goals and optimization\n\n\nCalculation Process\nProvides overall model evaluation\nCalculated per item, averaged at epoch end\n\n\nFocus Consideration\nPrimary focus for judging performance\nImportant for automated learning, may not directly represent end goal",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "Derivatives, Batch, Loss & Metric"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html",
-    "href": "notes/Resources/Deep Learning Resources.html",
-    "title": "Deep Learning Resources",
-    "section": "",
-    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#books",
-    "href": "notes/Resources/Deep Learning Resources.html#books",
-    "title": "Deep Learning Resources",
-    "section": "",
-    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#guides",
-    "href": "notes/Resources/Deep Learning Resources.html#guides",
-    "title": "Deep Learning Resources",
-    "section": "Guides",
-    "text": "Guides\n\nhttps://www.interviewbit.com/system-design-interview-questions/amp/\nhttps://www.promptingguide.ai/ Prompt Engineering\nhttps://medium.com/marvelous-mlops/mlops-roadmap-2024-ff4216b8bc62 Mooc\nThe Missing Semester of Your CS Education (mit.edu) MIT Missing CS Semester + Lectures: Teaches how to use system utility tools like git, vim, other useful untaught methods for Machine Learning.\nhttps://hepsoftwarefoundation.org/training/center.html Multiple Advance Tutorial/Guide Series. Recommended",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#lectures",
-    "href": "notes/Resources/Deep Learning Resources.html#lectures",
-    "title": "Deep Learning Resources",
-    "section": "Lectures",
-    "text": "Lectures\n\nCornell Machine Learning for Intelligent Systems 2018 36 Lectures and different Assignments https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#references",
-    "href": "notes/Resources/Deep Learning Resources.html#references",
-    "title": "Deep Learning Resources",
-    "section": "References",
-    "text": "References\n\nCommands : List of Command Line Commands | Codecademy\nBash vs Windows : Learn the Command Line | Codecademy\nVirtual Environment : Python: Modules | Codecademy\nStatistics Cheat Sheet : https://terenceshin.medium.com/week-2-52-stats-cheat-sheet-ae38a2e5cdc6\nStatistics in Maths: Definition, Types, Formulas, and Applications (geeksforgeeks.org)\nAPIs : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md\nHow web works : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/CS/index.html",
-    "href": "notes/CS/index.html",
-    "title": "CS",
-    "section": "",
-    "text": "General notes on CS topics\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nNetworking\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Notes",
-      "CS"
-    ]
-  },
-  {
-    "objectID": "notes/AI/index.html",
-    "href": "notes/AI/index.html",
-    "title": "Artificial Intelligence",
-    "section": "",
-    "text": "Notes about latest ai developments, llms, agents & visual models.\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence"
+      "Artificial Intelligence",
+      "MCP Model Context Protocol"
     ]
   },
   {
