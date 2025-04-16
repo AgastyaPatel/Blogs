@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Agastya Patel">
 
-<title>Deep Learning – Agastya Patel</title>
+<title>Startup Validation framework – Agastya Patel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,10 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/DeepLearning/derivs_batchs_loss.html" rel="next">
-<link href="../../notes/Computer Graphics/OpenGL.html" rel="prev">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<link href="../../blogs/blog_01.html" rel="next">
+<link href="../../notes/Resources/Deep Learning Resources.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,65 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -193,7 +134,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/Startups/Startup.html">Startups</a></li><li class="breadcrumb-item"><a href="../../notes/Startups/Startup.html">Startup Validation framework</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -253,13 +194,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Deep Learning</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="sidebar-item-text sidebar-link">
@@ -415,16 +356,16 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true">
  <span class="menu-text">Startups</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/Startups/Startup.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/Startups/Startup.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">Startup Validation framework</span></a>
   </div>
 </li>
@@ -471,19 +412,26 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#framework" id="toc-framework" class="nav-link active" data-scroll-target="#framework">Framework?</a></li>
+  <li><a href="#reciepe" id="toc-reciepe" class="nav-link" data-scroll-target="#reciepe">Reciepe</a></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/Startups/Startup.html">Startups</a></li><li class="breadcrumb-item"><a href="../../notes/Startups/Startup.html">Startup Validation framework</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Deep Learning</h1>
+<h1 class="title">Startup Validation framework</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">notes</div>
-    <div class="quarto-category">DeepLearning</div>
-    <div class="quarto-category">FastAI</div>
+    <div class="quarto-category">Notes</div>
+    <div class="quarto-category">AI</div>
+    <div class="quarto-category">Brief</div>
   </div>
   </div>
 
@@ -491,6 +439,12 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Agastya Patel </p>
+          </div>
+  </div>
     
   
     
@@ -501,62 +455,36 @@ window.Quarto = {
 </header>
 
 
-<p>Notes from fast ai course, kaparthy, and other resources</p>
+<p>YC Combinator’s Approach for Startup Validation</p>
+<section id="framework" class="level2">
+<h2 class="anchored" data-anchor-id="framework">Framework?</h2>
+<ul>
+<li>Do you have founder/market fit?</li>
+<li>How acute is the problem?</li>
+<li>Do you have competition?</li>
+<li>Do you want this personally?</li>
+<li>Did this only become necessary or possible?</li>
+<li>Are there proxies? (Indirect competitors)</li>
+<li>Is this an idea you want to work for years?</li>
+<li>Is this a scalable business?</li>
+<li>Is this a good idea space?</li>
+</ul>
+</section>
+<section id="reciepe" class="level1">
+<h1>Reciepe</h1>
+<ul>
+<li>Start with what your team is really good at?</li>
+<li>Thinks of things that you wished existed</li>
+<li>Look for things in the world that have changed recently</li>
+<li>Look for companies which have become successfully and become a variant of it</li>
+<li>Talk to people and ask them what problems they have?</li>
+<li>Look for</li>
+</ul>
 
 
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Tm90ZXMlMkNGYXN0QUklMkNIaXN0b3J5JTJDTmV1cmFsJTIwTmV0d29yayUyQ1RoZW9yeQ==" data-listing-date-sort="1705075200000" data-listing-file-modified-sort="1742974573882" data-listing-date-modified-sort="1705075200000" data-listing-reading-time-sort="3" data-listing-word-count-sort="582" data-listing-title-sort="Derivatives, Batch, Loss &amp; Metric" data-listing-filename-sort="derivs_batchs_loss.qmd">
-<td>
-<a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="title listing-title">Derivatives, Batch, Loss &amp; Metric</a>
-</td>
-<td>
-<span class="listing-description">This notes were prepared from the lecture 3 of…</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Tm90ZXMlMkNGYXN0QUklMkNUb29scw==" data-listing-file-modified-sort="1742974573881" data-listing-reading-time-sort="1" data-listing-word-count-sort="104" data-listing-title-sort="FastAI Setup [2025]" data-listing-filename-sort="FastAI macos setup.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI macos setup.html" class="title listing-title">FastAI Setup [2025]</a>
-</td>
-<td>
-<span class="listing-description">In this section we’ll be going through the…</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="Tm90ZXMlMkNGYXN0QUklMkNUb29scw==" data-listing-date-sort="1703779200000" data-listing-file-modified-sort="1742974573881" data-listing-date-modified-sort="1703865600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="422" data-listing-title-sort="FastAI Setup [Deprecated]" data-listing-filename-sort="FastAI Setup_deprecated.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI Setup_deprecated.html" class="title listing-title">FastAI Setup [Deprecated]</a>
-</td>
-<td>
-<span class="listing-description">In this section we’ll be going through the…</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="Tm90ZXMlMkNGYXN0QUklMkNVdGlscw==" data-listing-date-sort="1703952000000" data-listing-file-modified-sort="1742974573881" data-listing-date-modified-sort="1703952000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="172" data-listing-title-sort="FastAI Snippets 01" data-listing-filename-sort="FastAI Snippets.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI Snippets.html" class="title listing-title">FastAI Snippets 01</a>
-</td>
-<td>
-<span class="listing-description">Page contains some of the common and usefull…</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -976,13 +904,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/Computer Graphics/OpenGL.html" class="pagination-link" aria-label="What is OpenGL ?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is OpenGL ?</span>
+      <a href="../../notes/Resources/Deep Learning Resources.html" class="pagination-link" aria-label="Deep Learning Resources">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Deep Learning Resources</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="pagination-link" aria-label="Derivatives, Batch, Loss &amp; Metric">
-        <span class="nav-page-text">Derivatives, Batch, Loss &amp; Metric</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../blogs/blog_01.html" class="pagination-link" aria-label="Blog Post">
+        <span class="nav-page-text">Blog Post</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

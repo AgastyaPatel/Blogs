@@ -78,9 +78,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-image','listing-reading-time','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-date','listing-title','listing-description','listing-image','listing-reading-time','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
       
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
+      searchColumns: ["listing-date","listing-title","listing-author"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -216,86 +216,99 @@ window.Quarto = {
 </header>
 
 
+<p>Welcome to my blog! Here you’ll find my thoughts and writings on various topics. You can find also find my notes which might be short but useful.</p>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
+<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
 <div class="listing-actions-group">
+   <div class="input-group input-group-sm quarto-listing-sort">
+     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
+     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
+       <option value="" disabled="" selected="" hidden="">Order By</option>
+       <option value="index" data-direction="asc">Default</option>
+         <option value="listing-date-sort" data-direction="asc">
+          Date - Oldest
+        </option>
+         <option value="listing-date-sort" data-direction="desc">
+          Date - Newest
+        </option>
+         <option value="listing-title-sort" data-direction="asc">
+          Title
+        </option>
+     </select>
+  </div>
     <div class="input-group input-group-sm quarto-listing-filter">
       <span class="input-group-text"><i class="bi bi-search"></i></span>
       <input type="text" class="search form-control" placeholder="Filter">
     </div>
 </div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-listing-file-modified-sort="1743671247812" data-listing-reading-time-sort="1" data-listing-word-count-sort="54">
-<div class="thumbnail">
-<p><a href="./blogs/FastAI/FastAI-projects.html" class="no-external"></a></p><a href="./blogs/FastAI/FastAI-projects.html" class="no-external">
-<p><img loading="lazy" src="./blogs/FastAI/image.png" class="thumbnail-image"></p>
-</a><p><a href="./blogs/FastAI/FastAI-projects.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blogs/FastAI/FastAI-projects.html" class="no-external">FastAI Projects</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blogs/FastAI/FastAI-projects.html" class="no-external"></a>
-</div>
-<div class="listing-description">
-<a href="./blogs/FastAI/FastAI-projects.html" class="no-external">Projects done using FastAI</a>
-</div>
-</div>
-<div class="metadata">
-<p><a href="./blogs/FastAI/FastAI-projects.html" class="no-external"></a></p><a href="./blogs/FastAI/FastAI-projects.html" class="no-external">
-<div class="listing-reading-time">
-1 min
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="RGVlcExlYXJuaW5nJTJDQUklMkNBZ2VudHMlMkNMTE1z" data-listing-date-sort="1680451200000" data-listing-file-modified-sort="1744083662003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="280">
-<div class="thumbnail">
-<p><a href="./blogs/what_is_model_context_protocol.html" class="no-external"></a></p><a href="./blogs/what_is_model_context_protocol.html" class="no-external">
-<p><img loading="lazy" src="https://avatars.githubusercontent.com/u/182288589?s=200&amp;v=4" class="thumbnail-image"></p>
-</a><p><a href="./blogs/what_is_model_context_protocol.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./blogs/what_is_model_context_protocol.html" class="no-external">What is Model Context Protocol?</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./blogs/what_is_model_context_protocol.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RGVlcExlYXJuaW5n'); return false;">
-DeepLearning
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('QUk='); return false;">
-AI
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('QWdlbnRz'); return false;">
-Agents
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TExNcw=='); return false;">
-LLMs
-</div>
-</div>
-<div class="listing-description">
-<a href="./blogs/what_is_model_context_protocol.html" class="no-external">A blog post about the Model Context Protocol</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./blogs/what_is_model_context_protocol.html" class="no-external">
-<div class="listing-date">
-2023-04-03
-</div>
-<div class="listing-reading-time">
-2 min
-</div>
-</a>
-</div>
-</div>
-</div>
+<table class="quarto-listing-table table">
+<thead>
+<tr>
+<th>
+<a class="sort" data-sort="listing-date-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Date</a>
+</th>
+<th>
+<a class="sort" data-sort="listing-title-sort" onclick="if (this.classList.contains('sort-asc')) { this.classList.add('sort-desc'); this.classList.remove('sort-asc') } else { this.classList.add('sort-asc'); this.classList.remove('sort-desc')} return false;">Title</a>
+</th>
+<th>
+Description
+</th>
+<th>
+</th>
+<th>
+Reading Time
+</th>
+<th>
+Categories
+</th>
+</tr>
+</thead>
+<tbody class="list">
+<tr data-index="0" data-listing-file-modified-sort="1743671247812" data-listing-reading-time-sort="1" data-listing-word-count-sort="54" data-listing-title-sort="FastAI Projects" data-listing-filename-sort="FastAI-projects.qmd">
+<td>
+<span class="listing-date">&nbsp;</span>
+</td>
+<td>
+<a href="./blogs/FastAI/FastAI-projects.html" class="title listing-title">FastAI Projects</a>
+</td>
+<td>
+<span class="listing-description">Projects done using…</span>
+</td>
+<td>
+<span class="listing-image"><img loading="lazy" src="./blogs/FastAI/image.png" style="height: 40px;"></span>
+</td>
+<td>
+<span class="listing-reading-time">1 min</span>
+</td>
+<td>
+<span class="listing-categories">&nbsp;</span>
+</td>
+</tr>
+<tr data-index="1" data-categories="RGVlcExlYXJuaW5nJTJDQUklMkNBZ2VudHMlMkNMTE1z" data-listing-date-sort="1680451200000" data-listing-file-modified-sort="1744083662003" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="280" data-listing-title-sort="What is Model Context Protocol?" data-listing-filename-sort="what_is_model_context_protocol.qmd">
+<td>
+<span class="listing-date">2023-04-03</span>
+</td>
+<td>
+<a href="./blogs/what_is_model_context_protocol.html" class="title listing-title">What is Model Context Protocol?</a>
+</td>
+<td>
+<span class="listing-description">A blog post about the…</span>
+</td>
+<td>
+<span class="listing-image"><img loading="lazy" src="https://avatars.githubusercontent.com/u/182288589?s=200&amp;v=4" style="height: 40px;"></span>
+</td>
+<td>
+<span class="listing-reading-time">2 min</span>
+</td>
+<td>
+<span class="listing-categories">DeepLearning, AI, Agents, LLMs</span>
+</td>
+</tr>
+</tbody>
+</table>
 <div class="listing-no-matching d-none">
 No matching items
 </div>

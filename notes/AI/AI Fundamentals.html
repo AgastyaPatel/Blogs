@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Agastya Patel">
 
-<title>Deep Learning – Agastya Patel</title>
+<title>AI Fundamentals – Agastya Patel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -30,10 +31,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/DeepLearning/derivs_batchs_loss.html" rel="next">
-<link href="../../notes/Computer Graphics/OpenGL.html" rel="prev">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<link href="../../notes/AI/ml terminologies.html" rel="next">
+<link href="../../notes/AI/index.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,65 +69,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -193,7 +134,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/AI/index.html">Artificial Intelligence</a></li><li class="breadcrumb-item"><a href="../../notes/AI/AI Fundamentals.html">AI Fundamentals</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -253,13 +194,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Deep Learning</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="sidebar-item-text sidebar-link">
@@ -307,14 +248,14 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../notes/AI/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Artificial Intelligence</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/AI/AI Fundamentals.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/AI/AI Fundamentals.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">AI Fundamentals</span></a>
   </div>
 </li>
@@ -471,19 +412,53 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#machine-learning" id="toc-machine-learning" class="nav-link active" data-scroll-target="#machine-learning">Machine learning</a></li>
+  <li><a href="#deep-learning" id="toc-deep-learning" class="nav-link" data-scroll-target="#deep-learning">Deep learning</a></li>
+  <li><a href="#robotics" id="toc-robotics" class="nav-link" data-scroll-target="#robotics">Robotics</a>
+  <ul class="collapse">
+  <li><a href="#john-mccarthys-key-statement-about-ai" id="toc-john-mccarthys-key-statement-about-ai" class="nav-link" data-scroll-target="#john-mccarthys-key-statement-about-ai">John McCarthy’s key statement about AI</a></li>
+  </ul></li>
+  <li><a href="#minmax-problem" id="toc-minmax-problem" class="nav-link" data-scroll-target="#minmax-problem">MinMax Problem</a></li>
+  <li><a href="#odds-and-probability" id="toc-odds-and-probability" class="nav-link" data-scroll-target="#odds-and-probability">Odds and probability</a>
+  <ul class="collapse">
+  <li><a href="#the-bayes-ruleformula" id="toc-the-bayes-ruleformula" class="nav-link" data-scroll-target="#the-bayes-ruleformula">The Bayes rule/Formula</a></li>
+  <li><a href="#bayes-classifier" id="toc-bayes-classifier" class="nav-link" data-scroll-target="#bayes-classifier">Bayes classifier</a></li>
+  </ul></li>
+  <li><a href="#machine-learning-1" id="toc-machine-learning-1" class="nav-link" data-scroll-target="#machine-learning-1">Machine Learning</a>
+  <ul class="collapse">
+  <li><a href="#what-is-overfitting" id="toc-what-is-overfitting" class="nav-link" data-scroll-target="#what-is-overfitting">What is overfitting?</a></li>
+  <li><a href="#types-of-supervised-learning" id="toc-types-of-supervised-learning" class="nav-link" data-scroll-target="#types-of-supervised-learning">Types of Supervised Learning</a>
+  <ul class="collapse">
+  <li><a href="#linear-regression-subset-of-supervised-learning" id="toc-linear-regression-subset-of-supervised-learning" class="nav-link" data-scroll-target="#linear-regression-subset-of-supervised-learning">Linear Regression (Subset of Supervised Learning)</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#neural-network" id="toc-neural-network" class="nav-link" data-scroll-target="#neural-network">Neural Network</a>
+  <ul class="collapse">
+  <li><a href="#perceptron" id="toc-perceptron" class="nav-link" data-scroll-target="#perceptron">Perceptron</a></li>
+  <li><a href="#convolutional-neural-network" id="toc-convolutional-neural-network" class="nav-link" data-scroll-target="#convolutional-neural-network">Convolutional Neural Network</a>
+  <ul class="collapse">
+  <li><a href="#cnn-structure" id="toc-cnn-structure" class="nav-link" data-scroll-target="#cnn-structure">CNN Structure</a></li>
+  <li><a href="#generative-adversarial-networks-gans" id="toc-generative-adversarial-networks-gans" class="nav-link" data-scroll-target="#generative-adversarial-networks-gans">Generative adversarial networks (GANs)</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/AI/index.html">Artificial Intelligence</a></li><li class="breadcrumb-item"><a href="../../notes/AI/AI Fundamentals.html">AI Fundamentals</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Deep Learning</h1>
+<h1 class="title">AI Fundamentals</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">notes</div>
-    <div class="quarto-category">DeepLearning</div>
-    <div class="quarto-category">FastAI</div>
+    <div class="quarto-category">Notes</div>
+    <div class="quarto-category">AI</div>
+    <div class="quarto-category">Brief</div>
   </div>
   </div>
 
@@ -491,6 +466,12 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Agastya Patel </p>
+          </div>
+  </div>
     
   
     
@@ -501,62 +482,208 @@ window.Quarto = {
 </header>
 
 
-<p>Notes from fast ai course, kaparthy, and other resources</p>
+<p>[Resource] Elements of ai : https://course.elementsofai.com/ <a href="https://learndigital.withgoogle.com/digitalgarage/course/elements-artificial-intelligence">LearnWithGoogle</a> Assistance : ChatGPT, Bard AI By - Agastya</p>
+<blockquote class="blockquote">
+<p>[!Example]- Different AI Techniques - Computer vision - Search and planning for finding optimal routes<br>
+- Decision Making under complex/dynamic enviroment - Content recommendation</p>
+</blockquote>
+<p>[Additional Resource] AI Terminologies : https://atozofai.withgoogle.com</p>
+<blockquote class="blockquote">
+<p>[!check] Key Terminology #Key-Terminology ### Autonomy The ability to perform tasks in complex environments without constant guidance by a user. ### Adaptivity The ability to improve performance by learning from experience.</p>
+</blockquote>
+<p>When defining and talking about AI we have to be cautious as many of the words that we use can be quite misleading. Common examples are learning, understanding, and intelligence.</p>
+<p><a href="https://en.wikipedia.org/wiki/Marvin_Minsky">Marvin Minsky</a>, a cognitive scientist and one of the greatest pioneers in AI, coined the term&nbsp;<strong>suitcase word</strong>&nbsp;for terms that carry a whole bunch of different meanings that come along even if we intend only one of them. Using such terms increases the risk of misinterpretations such as the ones above.</p>
+<p>in the context of AI, it is obvious that different AI systems cannot be compared on a single axis or dimension in terms of their intelligence. Is a chess-playing algorithm more intelligent than a spam filter, or is a music recommendation system more intelligent than a self-driving car? These questions make no sense. This is because artificial intelligence is narrow; being able to solve one problem tells us nothing about the ability to solve another, different problem.</p>
+<blockquote class="blockquote">
+<p>When discussing AI, we would like to discourage the use of AI as a countable noun: one AI, two AIs, and so on. AI is a scientific discipline, like mathematics or biology. This means that AI is a collection of concepts, problems, and methods for solving them.</p>
+<p>The use of AI as a countable noun is of course not a big deal if what is being said otherwise makes sense, but if you’d like to talk like a pro, avoid saying “an AI”, and instead say “an AI method”.</p>
+</blockquote>
+<p><img src="../_MediaSource/AI/AI Fundamentals/IMG-1.png" class="img-fluid"></p>
+<p>Fields related to AI</p>
+<hr>
+<section id="machine-learning" class="level2">
+<h2 class="anchored" data-anchor-id="machine-learning">Machine learning</h2>
+<p>Systems that improve their performance in a given task with more and more experience or data.</p>
+</section>
+<section id="deep-learning" class="level2">
+<h2 class="anchored" data-anchor-id="deep-learning">Deep learning</h2>
+<p>Complexity of mathematical model.</p>
+</section>
+<section id="robotics" class="level2">
+<h2 class="anchored" data-anchor-id="robotics">Robotics</h2>
+<p>Robotics is the ultimate challenge of AI since it requires a combination of all areas of AI. programming robots to navigate complex real-world situations, integrating AI components like computer vision, speech recognition, natural language processing, reasoning, and machine learning to enable interaction and collaboration with humans. # Defining AI &gt;[!Info] Turing Test #CaseStudy &gt;- Alan Turing 1912 - 1954 - English mathematician and Logician &gt;- contribution to AI is his imitation game, which later became known as the&nbsp;<a href="https://en.wikipedia.org/wiki/Turing_test">Turing test</a> &gt;- If the interrogator cannot determine which player, A or B, is a computer and which is a human, the computer is said to pass the test. The argument is that if a computer is indistinguishable from a human in a general natural language conversation, then it must have reached human-level intelligence.</p>
+<blockquote class="blockquote">
+<p>[!example] Counter Argument - Chinese Room argument The best known counter-argument is John Searle’s&nbsp;<a href="http://www.iep.utm.edu/chineser/">Chinese Room</a>&nbsp;thought experiment. Searle argued that even if the person outside the room gets the impression that he is in a conversation with another Chinese-speaking person, the person inside the room does not understand Chinese.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[!Check] Key Terminology ## General AI VS Narrow AI General AI refers to a machine capable of handling any intellectual task, while narrow AI refers to AI that focuses on a specific task. Narrow AI is what we currently use, while general AI remains mostly a concept in science fiction. ## Weak AI Vs Strong AI Weak AI refers to systems that exhibit intelligent behavior despite being computers, whereas strong AI would represent a genuinely intelligent and self-conscious mind. # Search and Problem Solving</p>
+</blockquote>
+<p>First stage of problem solving is defining the choices and their consequences, which is often far from trivial and can require careful thinking</p>
+<p>two kinds of problems: - Search and planning in static environments with only one “agent” - Games with two-players (“agents”) competing against each other</p>
+<blockquote class="blockquote">
+<p>[!Check] Key terminology #Key-Terminology ### The state space State space refers to the set of possible situations or locations in a problem. ### Transition Transitions are the direct moves between states. ### Cost Costs are associated with transitions, indicating differences in preference or expense. Costs can represent factors like distance or time. If transitions are equal, costs can be ignored.</p>
+</blockquote>
+<section id="john-mccarthys-key-statement-about-ai" class="level3">
+<h3 class="anchored" data-anchor-id="john-mccarthys-key-statement-about-ai">John McCarthy’s key statement about AI</h3>
+<p>“The study is to proceed on the basis of the conjecture that every aspect of learning or any other feature of intelligence can in principle be so precisely described that a machine can be made to simulate it.”</p>
+</section>
+</section>
+<section id="minmax-problem" class="level2">
+<h2 class="anchored" data-anchor-id="minmax-problem">MinMax Problem</h2>
+<p>#Algorithm https://course.elementsofai.com/2/3 Actual Algorithm : https://en.wikipedia.org/wiki/Minimax#Minimax_algorithm_with_alternate_moves</p>
+<blockquote class="blockquote">
+<p>[!example] Game Tree In AI, game trees are used to solve games. Nodes in the game tree represent different states of the game, arranged in levels corresponding to each player’s turn. The root node is the starting position, and its children are the possible states resulting from the first player’s moves. Each child node further has children representing states resulting from the opposing player’s moves. This continues until reaching end states, such as a win or a tie in tic-tac-toe.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[!info] Finding the optimal moves Having determined the values of all the nodes in the game tree, the optimal moves can be deduced: - at any Min node (where it is Min’s turn), the optimal choice is given by the child node whose value is minimal, and conversely, - at any Max node (where it is Max’s turn), the optimal choice is given by the child node whose value is maximal. - Sometimes there are many equally good choices that are, well, equally good, and the outcome will be the same no matter which one of them is picked.</p>
+</blockquote>
+<p>Player whose chance is next is mentioned on the side <img src="../_MediaSource/AI/AI Fundamentals/IMG-2.png" class="img-fluid"></p>
+<p>When applying AI to real-world problems, plain search methods become limited. The number of states in complex scenarios grows exponentially, making exhaustive search or clever heuristics impractical. Additionally, transitions between states are often non-deterministic, meaning the outcome of an action is not completely determined due to factors beyond our control. To handle these challenges, we need to introduce concepts of uncertainty and probability, moving towards real-world AI applications.</p>
+</section>
+<section id="odds-and-probability" class="level1">
+<h1>Odds and probability</h1>
+<blockquote class="blockquote">
+<p>[!quote] History of Dealing with uncertainty In the history of AI, different approaches emerged for handling uncertain and imprecise information. One contender was fuzzy logic, which dealt with degrees of uncertainty and found applications in areas like washing machines. However, probability has proven to be the most effective approach for reasoning under uncertainty. Currently, the majority of AI applications rely on probability to some extent.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[!example] How probability is used to deal with uncertainty The main lesson about probability is to view uncertainty as something that can be quantified, even if it’s challenging. This means we can compare and measure uncertainty using numbers. By collecting data and evaluating probabilistic statements, we can rationally discuss and think about uncertainty. Probability provides a systematic approach to address uncertainty.</p>
+</blockquote>
+<section id="the-bayes-ruleformula" class="level2">
+<h2 class="anchored" data-anchor-id="the-bayes-ruleformula">The Bayes rule/Formula</h2>
+<p>Bayes’ rule can be expressed in terms of odds, specifically the <em>prior odds and posterior odds</em>. Prior odds represent our assessment of the likelihood before obtaining new information. The formula allows us to update the prior odds based on new information, resulting in the posterior odds. Posterior odds reflect the updated odds after incorporating the new information.</p>
+<blockquote class="blockquote">
+<p>[!check] Key Terminology #Key-Terminology ## Likelihood Ratio The likelihood ratio is a ratio that compares the probability of an observation given the event of interest (e.g., rain) to the probability of the observation given the absence of the event (e.g., no rain). It helps quantify the relative chances of the event occurring.</p>
+</blockquote>
+</section>
+<section id="bayes-classifier" class="level2">
+<h2 class="anchored" data-anchor-id="bayes-classifier">Bayes classifier</h2>
+<p>The Bayes classifier is a machine learning technique that can be used to classify objects such as text documents into two or more classes. The classifier is trained by analyzing a set of training data, for which the correct classes are given.</p>
+</section>
+</section>
+<section id="machine-learning-1" class="level1">
+<h1>Machine Learning</h1>
+<p>#MachineLearning Art of extracting knowledge from data. Computer programs that uses algorithms to <u>analyze data</u> and <u>make intelligent predictions</u> based on the data without being explicitly programmed. - In most common ML problems, exactly one class value is correct at a time. ## Division of Machine Learning 1. <strong>Supervised Learning</strong>: ==(Classification task)== We feed the data to algorithms, in which that data are labeled and we know what our output should like having the relationship between the input values “X” and Output values “Y” Where the correct answers are available, and the task of the machine learning algorithm is to find a model that predicts them based on the input data.<br>
+&gt; [!Tip]- Supervised Learning / Regression &gt; In supervised machine learning, instead of manually creating rules for classification, we use examples with correct labels to train an AI model. The AI learns from these labeled examples and can then recognize labels for new, unseen data. This process is supervised because a supervisor provides the correct labels for the training data, guiding the learning algorithm to produce accurate answers independently. &gt; In supervised learning, we can use it not only for classification (predicting labels), but also for regression tasks where the goal is to predict numerical outcomes. For example, predicting the number of ad clicks, traffic accidents, or real estate prices based on relevant data.</p>
+<ol start="2" type="1">
+<li><strong>Unsupervised Learning</strong>: In this data is not labelled instead pattern recognition is being relied on to generate algorithms. Patterns like grouping similar items ie. clusters or reducing the data to small number of important “dimensions” &gt;[!Tip]- Unsupervised Learning &gt;In unsupervised learning, the correct answers are not provided. This makes the situation quite different since we can’t build the model by making it fit the correct answers on training data. It also makes the evaluation of performance more complicated since we can’t check whether the learned model is doing well or not. &gt; &gt;Typical unsupervised learning methods attempt to learn some kind of “structure” underlying the data. This can mean, for example, visualization where similar items are placed near each other and dissimilar items further away from each other. It can also mean clustering where we use the data to identify groups or “clusters” of items that are similar to each other but dissimilar from data in other clusters. <br></li>
+<li><strong>Reinforcement Learning</strong>: Type of machine learning where an agent learns how to make decisions by interacting with its environment. Agent receives feedback in the form of reward and punishments. The goal of agent is to learn the best action to take in different situations to maximize its rewards. It does this by trying out different actions, observing the results, and adjusting its strategy based on the feedback it receives.</li>
+</ol>
+<section id="what-is-overfitting" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-overfitting">What is overfitting?</h2>
+<blockquote class="blockquote">
+<p>[!Danger] Overfitting Overfitting is a problem that can occur in machine learning when a model learns the training data too well. This means that the model becomes too specific to the training data and does not generalize well to new data. As a result, the model may perform poorly on new data that it has not seen before.</p>
+</blockquote>
+<p>There are a few things that can cause overfitting, including:</p>
+<ul>
+<li>Using a model that is too complex for the data.</li>
+<li>Training the model for too long.</li>
+<li>Having too little training data.</li>
+</ul>
+<p>There are a few things that can be done to prevent overfitting, including:</p>
+<ul>
+<li>Using a regularization technique.</li>
+<li>Cross-validation.</li>
+<li>Data augmentation.</li>
+</ul>
+<blockquote class="blockquote">
+<p>[!example] :<em>Cross-Validation method</em> : Used to avoid overfitting Training Data / Test Data/ Model<br>
+The first thing to keep in mind in order to avoid big mistakes, is to split your data set into two parts: the&nbsp;<strong>training data</strong>&nbsp;and the&nbsp;<strong>test data</strong>. We first train the algorithm using only the training data. This gives us a model or a rule that predicts the output based on the input variables. <em>Regularisation</em> and <em>Data Augmentation</em> methods are also used to avoid overfitting</p>
+</blockquote>
+</section>
+<section id="types-of-supervised-learning" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-supervised-learning">Types of Supervised Learning</h2>
+<blockquote class="blockquote">
+<p>[!quote] Nearest Neighbour</p>
+</blockquote>
+<section id="linear-regression-subset-of-supervised-learning" class="level3">
+<h3 class="anchored" data-anchor-id="linear-regression-subset-of-supervised-learning">Linear Regression (Subset of Supervised Learning)</h3>
+<blockquote class="blockquote">
+<p>[!Info] Linear Regression: Linear regression is a statistical method that is used to model the relationship between two variables. One variable is called the dependent variable, and the other variable is called the independent variable. The goal of linear regression is to find the best-fitting line that describes the relationship between the two variables.</p>
+<pre><code>y = a + bx where:
+y is the dependent variable
+x is the independent variable
+a is the y-intercept
+b is the slope of the line</code></pre>
+</blockquote>
+<blockquote class="blockquote">
+<p>[!Check] Key Terminology - Intercept : “The starting figure through which model begins” - Weight or coefficient : The constant through which the value changes in one unit</p>
+</blockquote>
+<p>Here are some of the advantages of linear regression:</p>
+<ul>
+<li>It is a simple and easy-to-understand algorithm.</li>
+<li>It is relatively easy to implement and interpret.</li>
+<li>It can be used to solve a wide variety of problems.</li>
+</ul>
+<p>Here are some of the disadvantages of linear regression:</p>
+<ul>
+<li>It assumes that the relationship between the variables is linear.</li>
+<li>It can be sensitive to outliers.</li>
+<li>It is not always possible to find a good-fitting line.</li>
+</ul>
+<blockquote class="blockquote">
+<p>[!quote] Logistic regression</p>
+</blockquote>
+</section>
+</section>
+</section>
+<section id="neural-network" class="level1">
+<h1>Neural Network</h1>
+<p>Neural network can mean either a “real” biological neural network such as the one in your brain, or an artificial neural network simulated in a computer.</p>
+<blockquote class="blockquote">
+<p>[!Check] Key Terminology - <strong>Deep learning</strong> is a machine learning technique that uses multiple layers of simple processing units to learn more complex structures. - <strong>Neural networks</strong>, both biological and artificial, consist of simple units called <strong>neurons</strong> that receive and transmit signals to each other. - The wires that provide the input to neurons are called <strong>dendrites</strong>, and the wires that transmit the outgoing signal are called <strong>axons</strong>.</p>
+</blockquote>
+<blockquote class="blockquote">
+<p>[!quote] Neural networks are different from traditional computers in two key ways: - <strong>Data storage and processing are not separated.</strong>&nbsp;In neural networks, the neurons both store and process information, so there is no need to retrieve data from memory for processing. - <strong>Neural networks can process vast amounts of information simultaneously.</strong>&nbsp;This is because they consist of a large number of neurons, each of which can process information on its own. &gt;[!Example] Usage &gt; - Because of these two differences, neural networks are suited for different tasks than traditional computers. Neural networks are particularly well-suited for tasks that require parallel processing, such as image recognition and natural language processing. &gt; - Graphics processing units (GPUs) are a type of hardware that is well-suited for parallel processing. This is why GPUs have become a cost-effective solution for running massive deep learning methods.</p>
+</blockquote>
+<p><strong>Linear Combination</strong> : The sum of the weights times the inputs is called the linear combination of the inputs.</p>
+<section id="perceptron" class="level2">
+<h2 class="anchored" data-anchor-id="perceptron">Perceptron</h2>
+<ul>
+<li>Simple neuron model with step activation function</li>
+<li>fundamental role in the history of neural network</li>
+<li>perceptron algorithm</li>
+</ul>
+<blockquote class="blockquote">
+<p>[!Check] Key Terminology Layers Neural networks are composed of layers. The input layer receives data directly, like pixel values in image recognition. Hidden layers process outputs from previous layers and pass their results to subsequent layers. The output layer produces the final network output. Neurons in each layer receive inputs from the previous layer and feed their output to the next layer. This layer-by-layer structure enables the network to learn and make predictions effectively.</p>
+</blockquote>
+</section>
+<section id="convolutional-neural-network" class="level2">
+<h2 class="anchored" data-anchor-id="convolutional-neural-network">Convolutional Neural Network</h2>
+<ul>
+<li>Convolutional neural networks (CNNs) are a type of neural network that are specifically designed for image processing.</li>
+<li>CNNs can detect image features such as bright or dark spots, edges, and patterns.</li>
+<li>This makes CNNs well-suited for tasks such as object detection and classification.</li>
+<li>CNNs can recognize objects in different positions, orientations, and sizes in an image.</li>
+<li>This is because CNNs learn to detect features, not specific pixel values.</li>
+<li>As a result, CNNs can be trained on relatively small datasets and still achieve high accuracy.</li>
+</ul>
+<section id="cnn-structure" class="level3">
+<h3 class="anchored" data-anchor-id="cnn-structure">CNN Structure</h3>
+<ul>
+<li>Convolutional neural networks (CNNs) are typically composed of two parts: a bottom layer of convolutional neurons and a top layer of basic neurons.</li>
+<li>The bottom layer of convolutional neurons is responsible for detecting features in the input image.</li>
+<li>The top layer of basic neurons is responsible for classifying the image based on the features detected by the bottom layer.</li>
+<li>The bottom layer of convolutional neurons can be trained using unsupervised learning, while the top layer of basic neurons is always trained using supervised learning.</li>
+<li>This means that pre-trained convolutional layers can be reused in many different image processing tasks, as long as the top layer is trained on a dataset specific to the task.</li>
+</ul>
+<p>Here are some additional points that are mentioned in the text but not explicitly summarized above:</p>
+<ul>
+<li>The bottom layer of convolutional neurons is typically trained on a large dataset of unlabeled images.</li>
+<li>The top layer of basic neurons is typically trained on a smaller dataset of labeled images.</li>
+<li>The features detected by the bottom layer of convolutional neurons are typically low-level features, such as edges and corners.</li>
+<li>The features detected by the top layer of basic neurons are typically high-level features, such as objects and scenes.</li>
+</ul>
+</section>
+<section id="generative-adversarial-networks-gans" class="level3">
+<h3 class="anchored" data-anchor-id="generative-adversarial-networks-gans">Generative adversarial networks (GANs)</h3>
+<p>To write</p>
 
 
+</section>
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Tm90ZXMlMkNGYXN0QUklMkNIaXN0b3J5JTJDTmV1cmFsJTIwTmV0d29yayUyQ1RoZW9yeQ==" data-listing-date-sort="1705075200000" data-listing-file-modified-sort="1742974573882" data-listing-date-modified-sort="1705075200000" data-listing-reading-time-sort="3" data-listing-word-count-sort="582" data-listing-title-sort="Derivatives, Batch, Loss &amp; Metric" data-listing-filename-sort="derivs_batchs_loss.qmd">
-<td>
-<a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="title listing-title">Derivatives, Batch, Loss &amp; Metric</a>
-</td>
-<td>
-<span class="listing-description">This notes were prepared from the lecture 3 of…</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Tm90ZXMlMkNGYXN0QUklMkNUb29scw==" data-listing-file-modified-sort="1742974573881" data-listing-reading-time-sort="1" data-listing-word-count-sort="104" data-listing-title-sort="FastAI Setup [2025]" data-listing-filename-sort="FastAI macos setup.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI macos setup.html" class="title listing-title">FastAI Setup [2025]</a>
-</td>
-<td>
-<span class="listing-description">In this section we’ll be going through the…</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="Tm90ZXMlMkNGYXN0QUklMkNUb29scw==" data-listing-date-sort="1703779200000" data-listing-file-modified-sort="1742974573881" data-listing-date-modified-sort="1703865600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="422" data-listing-title-sort="FastAI Setup [Deprecated]" data-listing-filename-sort="FastAI Setup_deprecated.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI Setup_deprecated.html" class="title listing-title">FastAI Setup [Deprecated]</a>
-</td>
-<td>
-<span class="listing-description">In this section we’ll be going through the…</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="Tm90ZXMlMkNGYXN0QUklMkNVdGlscw==" data-listing-date-sort="1703952000000" data-listing-file-modified-sort="1742974573881" data-listing-date-modified-sort="1703952000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="172" data-listing-title-sort="FastAI Snippets 01" data-listing-filename-sort="FastAI Snippets.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI Snippets.html" class="title listing-title">FastAI Snippets 01</a>
-</td>
-<td>
-<span class="listing-description">Page contains some of the common and usefull…</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -976,13 +1103,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/Computer Graphics/OpenGL.html" class="pagination-link" aria-label="What is OpenGL ?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is OpenGL ?</span>
+      <a href="../../notes/AI/index.html" class="pagination-link" aria-label="Artificial Intelligence">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Artificial Intelligence</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="pagination-link" aria-label="Derivatives, Batch, Loss &amp; Metric">
-        <span class="nav-page-text">Derivatives, Batch, Loss &amp; Metric</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/AI/ml terminologies.html" class="pagination-link" aria-label="ML Terminologies">
+        <span class="nav-page-text">ML Terminologies</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

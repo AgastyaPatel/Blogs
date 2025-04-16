@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Deep Learning – Agastya Patel</title>
+<title>opengl – Agastya Patel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +20,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,10 +64,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/DeepLearning/derivs_batchs_loss.html" rel="next">
-<link href="../../notes/Computer Graphics/OpenGL.html" rel="prev">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<link href="../../notes/DeepLearning/index.html" rel="next">
+<link href="../../notes/Computer Graphics/Graphics Learning Resources.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,65 +102,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -193,7 +167,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/Computer Graphics/Advance Computing with GPUs.html">Computer Graphics</a></li><li class="breadcrumb-item"><a href="../../notes/Computer Graphics/OpenGL.html">What is OpenGL ?</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -224,13 +198,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true">
  <span class="menu-text">Computer Graphics</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/Computer Graphics/Advance Computing with GPUs.html" class="sidebar-item-text sidebar-link">
@@ -245,7 +219,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/Computer Graphics/OpenGL.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/Computer Graphics/OpenGL.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">What is OpenGL ?</span></a>
   </div>
 </li>
@@ -253,13 +227,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link active">
+            <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Deep Learning</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="sidebar-item-text sidebar-link">
@@ -471,92 +445,281 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#what-is-opengl" id="toc-what-is-opengl" class="nav-link active" data-scroll-target="#what-is-opengl">What is OpenGL ?</a></li>
+  <li><a href="#where-to-download-opengl" id="toc-where-to-download-opengl" class="nav-link" data-scroll-target="#where-to-download-opengl">Where to download OpenGL?</a></li>
+  <li><a href="#different-parts-of-opengl" id="toc-different-parts-of-opengl" class="nav-link" data-scroll-target="#different-parts-of-opengl">Different parts of openGL</a></li>
+  <li><a href="#contextwindow-toolkits" id="toc-contextwindow-toolkits" class="nav-link" data-scroll-target="#contextwindow-toolkits">Context/Window Toolkits</a>
+  <ul class="collapse">
+  <li><a href="#glfw-library-aka-window_gui_creator" id="toc-glfw-library-aka-window_gui_creator" class="nav-link" data-scroll-target="#glfw-library-aka-window_gui_creator">GLFW Library aka Window_GUI_Creator</a></li>
+  </ul></li>
+  <li><a href="#opengl-function-extractor" id="toc-opengl-function-extractor" class="nav-link" data-scroll-target="#opengl-function-extractor">OpenGL Function Extractor</a>
+  <ul class="collapse">
+  <li><a href="#glewglad-libraries-aka-extractor" id="toc-glewglad-libraries-aka-extractor" class="nav-link" data-scroll-target="#glewglad-libraries-aka-extractor">GLEW/GLAD Libraries aka Extractor</a></li>
+  </ul></li>
+  <li><a href="#chernos-opengl-glew" id="toc-chernos-opengl-glew" class="nav-link" data-scroll-target="#chernos-opengl-glew">Cherno’s OpenGL (GLEW)</a></li>
+  <li><a href="#victorgordan_learnopengl-glad" id="toc-victorgordan_learnopengl-glad" class="nav-link" data-scroll-target="#victorgordan_learnopengl-glad">VictorGordan_LearnOpenGL (GLAD)</a>
+  <ul class="collapse">
+  <li><a href="#glfw-template" id="toc-glfw-template" class="nav-link" data-scroll-target="#glfw-template">GLFW Template</a></li>
+  <li><a href="#what-is-buffer" id="toc-what-is-buffer" class="nav-link" data-scroll-target="#what-is-buffer">What is Buffer?</a></li>
+  <li><a href="#graphics-a-pipeline" id="toc-graphics-a-pipeline" class="nav-link" data-scroll-target="#graphics-a-pipeline">Graphics a pipeline</a></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
-<main class="content" id="quarto-document-content">
-
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li></ol></nav>
-<div class="quarto-title">
-<h1 class="title">Deep Learning</h1>
-  <div class="quarto-categories">
-    <div class="quarto-category">notes</div>
-    <div class="quarto-category">DeepLearning</div>
-    <div class="quarto-category">FastAI</div>
-  </div>
-  </div>
-
-
-
-<div class="quarto-title-meta">
-
-    
-  
-    
-  </div>
-  
-
-
-</header>
-
-
-<p>Notes from fast ai course, kaparthy, and other resources</p>
+<main class="content" id="quarto-document-content"><header id="title-block-header" class="quarto-title-block"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/Computer Graphics/Advance Computing with GPUs.html">Computer Graphics</a></li><li class="breadcrumb-item"><a href="../../notes/Computer Graphics/OpenGL.html">What is OpenGL ?</a></li></ol></nav></header>
 
 
 
 
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Tm90ZXMlMkNGYXN0QUklMkNIaXN0b3J5JTJDTmV1cmFsJTIwTmV0d29yayUyQ1RoZW9yeQ==" data-listing-date-sort="1705075200000" data-listing-file-modified-sort="1742974573882" data-listing-date-modified-sort="1705075200000" data-listing-reading-time-sort="3" data-listing-word-count-sort="582" data-listing-title-sort="Derivatives, Batch, Loss &amp; Metric" data-listing-filename-sort="derivs_batchs_loss.qmd">
-<td>
-<a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="title listing-title">Derivatives, Batch, Loss &amp; Metric</a>
-</td>
-<td>
-<span class="listing-description">This notes were prepared from the lecture 3 of…</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Tm90ZXMlMkNGYXN0QUklMkNUb29scw==" data-listing-file-modified-sort="1742974573881" data-listing-reading-time-sort="1" data-listing-word-count-sort="104" data-listing-title-sort="FastAI Setup [2025]" data-listing-filename-sort="FastAI macos setup.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI macos setup.html" class="title listing-title">FastAI Setup [2025]</a>
-</td>
-<td>
-<span class="listing-description">In this section we’ll be going through the…</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="Tm90ZXMlMkNGYXN0QUklMkNUb29scw==" data-listing-date-sort="1703779200000" data-listing-file-modified-sort="1742974573881" data-listing-date-modified-sort="1703865600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="422" data-listing-title-sort="FastAI Setup [Deprecated]" data-listing-filename-sort="FastAI Setup_deprecated.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI Setup_deprecated.html" class="title listing-title">FastAI Setup [Deprecated]</a>
-</td>
-<td>
-<span class="listing-description">In this section we’ll be going through the…</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="Tm90ZXMlMkNGYXN0QUklMkNVdGlscw==" data-listing-date-sort="1703952000000" data-listing-file-modified-sort="1742974573881" data-listing-date-modified-sort="1703952000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="172" data-listing-title-sort="FastAI Snippets 01" data-listing-filename-sort="FastAI Snippets.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI Snippets.html" class="title listing-title">FastAI Snippets 01</a>
-</td>
-<td>
-<span class="listing-description">Page contains some of the common and usefull…</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+<section id="what-is-opengl" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-opengl">What is OpenGL ?</h3>
+<p>OpenGL is specification just like C++ standard specification</p>
+</section>
+<section id="where-to-download-opengl" class="level3">
+<h3 class="anchored" data-anchor-id="where-to-download-opengl">Where to download OpenGL?</h3>
+<p>There’s no code/library as it is specification. The code is being written by the GPU manufactures by suppling the drivers which contains the code. - It’s not open-source. - Cross-Platform compatibility</p>
+</section>
+<section id="different-parts-of-opengl" class="level2">
+<h2 class="anchored" data-anchor-id="different-parts-of-opengl">Different parts of openGL</h2>
+<ol type="1">
+<li><p>Setting Up OpenGL:</p>
+<ul>
+<li>Install the necessary OpenGL libraries and drivers for your platform.</li>
+<li>Choose a programming language that supports OpenGL, such as C++, Python (with libraries like PyOpenGL), or Java (with libraries like LWJGL or JOGL).</li>
+</ul></li>
+<li><p>Creating a Window:</p>
+<ul>
+<li>Use a windowing system library (e.g., GLFW, SDL, or FreeGLUT) to create a window where you can render OpenGL graphics.</li>
+</ul></li>
+<li><p>Context and Initialization:</p>
+<ul>
+<li>Create an OpenGL context within the window to initialize the OpenGL state.</li>
+<li>Retrieve function pointers for the OpenGL functions using a library like GLEW or GLAD.</li>
+</ul></li>
+<li><p>Rendering Loop:</p>
+<ul>
+<li>Set up a loop that will execute continuously to update and redraw the graphics.</li>
+<li>Within the loop, clear the frame buffer using <code>glClear()</code> to prepare for drawing new content.</li>
+</ul></li>
+<li><p>Coordinate Systems:</p>
+<ul>
+<li>Understand the coordinate system used in OpenGL: the viewport, which is a 2D or 3D space where your graphics will be displayed.</li>
+<li>Define your objects’ positions and sizes in this coordinate system.</li>
+</ul></li>
+<li><p>Creating and Binding Buffers:</p>
+<ul>
+<li>Use buffer objects (<code>glGenBuffers()</code>, <code>glBindBuffer()</code>) to store vertex data, such as positions, colors, and texture coordinates.</li>
+<li>Buffer objects are typically used with vertex arrays (<code>glVertexAttribPointer()</code>) to describe the format and layout of the vertex data.</li>
+</ul></li>
+<li><p>Shaders and Shader Programs:</p>
+<ul>
+<li>Use shaders (vertex and fragment shaders) to define the behavior and appearance of your objects.</li>
+<li>Compile and link shaders into a shader program (<code>glCreateShader()</code>, <code>glCreateProgram()</code>, <code>glAttachShader()</code>, <code>glLinkProgram()</code>) to be used during rendering.</li>
+</ul></li>
+<li><p>Drawing:</p>
+<ul>
+<li>Use <code>glDrawArrays()</code> or <code>glDrawElements()</code> to issue draw calls, specifying the primitive type (points, lines, triangles), vertex count, and indices (if using indices).</li>
+</ul></li>
+<li><p>Transformation and Projection Matrices:</p>
+<ul>
+<li>Apply transformations (translations, rotations, scaling) to your objects using transformation matrices (<code>glTranslate()</code>, <code>glRotate()</code>, <code>glScale()</code>).</li>
+<li>Use projection matrices (<code>gluPerspective()</code>, <code>glOrtho()</code>) to define the perspective or orthographic projection of your scene.</li>
+</ul></li>
+<li><p>Handling User Input:</p>
+<ul>
+<li>Use libraries or system functions to handle user input, such as keyboard and mouse events, to interact with your OpenGL application.</li>
+</ul></li>
+<li><ul>
+<li>Clean up resources: Properly release any allocated resources, such as shaders, buffers, and the OpenGL context, when your application exits.</li>
+</ul></li>
+</ol>
+</section>
+<section id="contextwindow-toolkits" class="level2">
+<h2 class="anchored" data-anchor-id="contextwindow-toolkits">Context/Window Toolkits</h2>
+<p>Creating window in windows in Window’s OS uses win32 api…similarly creating window is very much platform specific and uses its own api.</p>
+<section id="glfw-library-aka-window_gui_creator" class="level3">
+<h3 class="anchored" data-anchor-id="glfw-library-aka-window_gui_creator">GLFW Library aka Window_GUI_Creator</h3>
+<p>GLFW is a lightweight library which helps us to create windows with cross compatibility by supplying - appropriate platform layout - open source in nature</p>
+</section>
+</section>
+<section id="opengl-function-extractor" class="level2">
+<h2 class="anchored" data-anchor-id="opengl-function-extractor">OpenGL Function Extractor</h2>
+<section id="glewglad-libraries-aka-extractor" class="level3">
+<h3 class="anchored" data-anchor-id="glewglad-libraries-aka-extractor">GLEW/GLAD Libraries aka Extractor</h3>
+<p>GLEW/GLAD libraries is used to retrieve the openGL functions which are present in binary form in Graphics driver. The retrieving these function is platform specific. - access driver dll files - access function pointers (function definition) - provides header files (function declaration)</p>
+<blockquote class="blockquote">
+<p>glew.h provides opengl function declaration .cpp file is used to extract the function definition from drivers</p>
+</blockquote>
+<p>What is shader? A program which is running on GPU which gives output.</p>
+<hr>
+</section>
+</section>
+<section id="chernos-opengl-glew" class="level1">
+<h1>Cherno’s OpenGL (GLEW)</h1>
+<div class="sourceCode" id="cb1"><pre class="sourceCode c code-with-copy"><code class="sourceCode c"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;GL/glew.h&gt;</span></span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;GLFW/glfw3.h&gt;</span></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a>    GLFWwindow<span class="op">*</span> window<span class="op">;</span></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>glfwInit<span class="op">())</span></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>    window <span class="op">=</span> glfwCreateWindow<span class="op">(</span><span class="dv">800</span><span class="op">,</span> <span class="dv">800</span><span class="op">,</span> <span class="st">"Modern OpenGL using glew"</span><span class="op">,</span> NULL<span class="op">,</span> NULL<span class="op">);</span></span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>    <span class="co">// window creation failcheck </span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(!</span>window<span class="op">)</span></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>        glfwTerminate<span class="op">();</span></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-24"><a href="#cb1-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Make the window's context current</span></span>
+<span id="cb1-25"><a href="#cb1-25" aria-hidden="true" tabindex="-1"></a>    glfwMakeContextCurrent<span class="op">(</span>window<span class="op">);</span></span>
+<span id="cb1-26"><a href="#cb1-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-27"><a href="#cb1-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Initializing glew (Modern OpenGL)</span></span>
+<span id="cb1-28"><a href="#cb1-28" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>glewInit<span class="op">()</span> <span class="op">!=</span> GLEW_OK<span class="op">)</span></span>
+<span id="cb1-29"><a href="#cb1-29" aria-hidden="true" tabindex="-1"></a>        std<span class="op">::</span>cout <span class="op">&lt;&lt;</span> <span class="st">"Error!"</span> <span class="op">&lt;&lt;</span> std<span class="op">::</span>endl<span class="op">;</span></span>
+<span id="cb1-30"><a href="#cb1-30" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-31"><a href="#cb1-31" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Printing out OpenGL Version</span></span>
+<span id="cb1-32"><a href="#cb1-32" aria-hidden="true" tabindex="-1"></a>    std<span class="op">::</span>cout <span class="op">&lt;&lt;</span> glGetString<span class="op">(</span>GL_VERSION<span class="op">)</span> <span class="op">&lt;&lt;</span> std<span class="op">::</span>endl<span class="op">;</span></span>
+<span id="cb1-33"><a href="#cb1-33" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-34"><a href="#cb1-34" aria-hidden="true" tabindex="-1"></a>    <span class="co">// Run loop untill window is open</span></span>
+<span id="cb1-35"><a href="#cb1-35" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(!</span>glfwWindowShouldClose<span class="op">(</span>window<span class="op">))</span></span>
+<span id="cb1-36"><a href="#cb1-36" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb1-37"><a href="#cb1-37" aria-hidden="true" tabindex="-1"></a>        glClear<span class="op">(</span>GL_COLOR_BUFFER_BIT<span class="op">);</span></span>
+<span id="cb1-38"><a href="#cb1-38" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-39"><a href="#cb1-39" aria-hidden="true" tabindex="-1"></a>        <span class="co">// define GL triangle</span></span>
+<span id="cb1-40"><a href="#cb1-40" aria-hidden="true" tabindex="-1"></a>        glBegin<span class="op">(</span>GL_TRIANGLES<span class="op">);</span></span>
+<span id="cb1-41"><a href="#cb1-41" aria-hidden="true" tabindex="-1"></a>        glVertex2f<span class="op">(-</span><span class="fl">0.05</span><span class="bu">f</span><span class="op">,</span> <span class="fl">0.0</span><span class="bu">f</span><span class="op">);</span></span>
+<span id="cb1-42"><a href="#cb1-42" aria-hidden="true" tabindex="-1"></a>        glVertex2f<span class="op">(</span><span class="fl">0.0</span><span class="bu">f</span><span class="op">,</span> <span class="fl">0.05</span><span class="bu">f</span><span class="op">);</span></span>
+<span id="cb1-43"><a href="#cb1-43" aria-hidden="true" tabindex="-1"></a>        glVertex2f<span class="op">(</span><span class="fl">0.05</span><span class="bu">f</span><span class="op">,</span> <span class="fl">0.0</span><span class="bu">f</span><span class="op">);</span></span>
+<span id="cb1-44"><a href="#cb1-44" aria-hidden="true" tabindex="-1"></a>        glEnd<span class="op">();</span></span>
+<span id="cb1-45"><a href="#cb1-45" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-46"><a href="#cb1-46" aria-hidden="true" tabindex="-1"></a>        glfwSwapBuffers<span class="op">(</span>window<span class="op">);</span></span>
+<span id="cb1-47"><a href="#cb1-47" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-48"><a href="#cb1-48" aria-hidden="true" tabindex="-1"></a>        <span class="co">// Process poll events</span></span>
+<span id="cb1-49"><a href="#cb1-49" aria-hidden="true" tabindex="-1"></a>        glfwPollEvents<span class="op">();</span></span>
+<span id="cb1-50"><a href="#cb1-50" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb1-51"><a href="#cb1-51" aria-hidden="true" tabindex="-1"></a>    glfwTerminate<span class="op">();</span></span>
+<span id="cb1-52"><a href="#cb1-52" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb1-53"><a href="#cb1-53" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<p>What is Buffer? - Memory buffer or array in openGL aka memory in VRAM (GPU) - Rasterizing that vram data or buffer to draw the data on screen. This program is shader. - Shader is a program which runs on the GPU</p>
+<p>OpenGL is state machine - it needs to select the buffer like GL_TRIANGLE - it needs to select the shader - it uses</p>
+<hr>
+</section>
+<section id="victorgordan_learnopengl-glad" class="level1">
+<h1>VictorGordan_LearnOpenGL (GLAD)</h1>
+<ul>
+<li>GLFW for Windows Context Creation</li>
+<li>GLAD to retrieve openGL function</li>
+</ul>
+<p>GLFW building using CMAKE and VS. 1. CMAKE is used to build sln/workplace files which is required for the VS project 2. Using .sln file open GLFW solution and build the glfw.lib file. 3. Import/copy the library file to OpenGL project directory.</p>
+<section id="glfw-template" class="level3">
+<h3 class="anchored" data-anchor-id="glfw-template">GLFW Template</h3>
+<div class="sourceCode" id="cb2"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;glad/glad.h&gt;</span></span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;GLFW/glfw3.h&gt;</span></span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span></span>
+<span id="cb2-6"><a href="#cb2-6" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb2-7"><a href="#cb2-7" aria-hidden="true" tabindex="-1"></a>    glfwInit<span class="op">();</span>                 <span class="co">//Intialising GLFW (OpenGL extractor)</span></span>
+<span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Hinting the version</span></span>
+<span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    glfwWindowHint<span class="op">(</span>GLFW_CONTEXT_VERSION_MAJOR<span class="op">,</span> <span class="dv">3</span><span class="op">);</span>  </span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>    glfwWindowHint<span class="op">(</span>GLFW_CONTEXT_VERSION_MINOR<span class="op">,</span> <span class="dv">3</span><span class="op">);</span></span>
+<span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>    glfwWindowHint<span class="op">(</span>GLFW_OPENGL_PROFILE<span class="op">,</span> GLFW_OPENGL_CORE_PROFILE<span class="op">);</span>  <span class="co">//Hinting the profile(CORE(modern)/COMPACTability(legacy)</span></span>
+<span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>    GLFWwindow<span class="op">*</span> window <span class="op">=</span> glfwCreateWindow<span class="op">(</span><span class="dv">800</span><span class="op">,</span> <span class="dv">800</span><span class="op">,</span> <span class="st">"VictorGordan_Opengl"</span><span class="op">,</span> NULL<span class="op">,</span> NULL<span class="op">);</span></span>
+<span id="cb2-15"><a href="#cb2-15" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-16"><a href="#cb2-16" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>window <span class="op">==</span> NULL<span class="op">)</span>         <span class="co">//Terminating GLFW if fails to create window</span></span>
+<span id="cb2-17"><a href="#cb2-17" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb2-18"><a href="#cb2-18" aria-hidden="true" tabindex="-1"></a>        <span class="bu">std::</span>cout <span class="op">&lt;&lt;</span> <span class="st">"Failed to create GLFW window"</span> <span class="op">&lt;&lt;</span> <span class="bu">std::</span>endl<span class="op">;</span></span>
+<span id="cb2-19"><a href="#cb2-19" aria-hidden="true" tabindex="-1"></a>        glfwTerminate<span class="op">();</span></span>
+<span id="cb2-20"><a href="#cb2-20" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb2-21"><a href="#cb2-21" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-22"><a href="#cb2-22" aria-hidden="true" tabindex="-1"></a>    glfwMakeContextCurrent<span class="op">(</span>window<span class="op">);</span></span>
+<span id="cb2-23"><a href="#cb2-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-24"><a href="#cb2-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Closing Window only on userCloseEvent</span></span>
+<span id="cb2-25"><a href="#cb2-25" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(!</span>glfwWindowShouldClose<span class="op">(</span>window<span class="op">))</span></span>
+<span id="cb2-26"><a href="#cb2-26" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb2-27"><a href="#cb2-27" aria-hidden="true" tabindex="-1"></a>        glfwPollEvents<span class="op">();</span>       <span class="co">//Process Poll Events</span></span>
+<span id="cb2-28"><a href="#cb2-28" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb2-29"><a href="#cb2-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb2-30"><a href="#cb2-30" aria-hidden="true" tabindex="-1"></a>    glfwDestroyWindow<span class="op">(</span>window<span class="op">);</span>  <span class="co">//destroying GLFW window</span></span>
+<span id="cb2-31"><a href="#cb2-31" aria-hidden="true" tabindex="-1"></a>    glfwTerminate<span class="op">();</span>            <span class="co">//Terminating GLFW</span></span>
+<span id="cb2-32"><a href="#cb2-32" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb2-33"><a href="#cb2-33" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="what-is-buffer" class="level2">
+<h2 class="anchored" data-anchor-id="what-is-buffer">What is Buffer?</h2>
+<p>Changing of pixel from top of the screen to bottom. New image data is know as Front Buffer whereas the screen image on which the current data is being overwritten with Front Buffer is known as Back Buffer</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode cpp code-with-copy"><code class="sourceCode cpp"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="co">//Adding background with the help of GLAD and buffer</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;iostream&gt;</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;glad/glad.h&gt;</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a><span class="pp">#include </span><span class="im">&lt;GLFW/glfw3.h&gt;</span></span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a><span class="dt">int</span> main<span class="op">()</span></span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a><span class="op">{</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    glfwInit<span class="op">();</span>                 <span class="co">//Intialising GLFW (OpenGL extractor)</span></span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Hinting the version of OPENGL to glfw</span></span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>    glfwWindowHint<span class="op">(</span>GLFW_CONTEXT_VERSION_MAJOR<span class="op">,</span> <span class="dv">3</span><span class="op">);</span>  </span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>    glfwWindowHint<span class="op">(</span>GLFW_CONTEXT_VERSION_MINOR<span class="op">,</span> <span class="dv">3</span><span class="op">);</span></span>
+<span id="cb3-13"><a href="#cb3-13" aria-hidden="true" tabindex="-1"></a>    glfwWindowHint<span class="op">(</span>GLFW_OPENGL_PROFILE<span class="op">,</span> GLFW_OPENGL_CORE_PROFILE<span class="op">);</span>  <span class="co">//Hinting the profile(CORE(modern)/COMPACTability(legacy)</span></span>
+<span id="cb3-14"><a href="#cb3-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-15"><a href="#cb3-15" aria-hidden="true" tabindex="-1"></a>    GLFWwindow<span class="op">*</span> window <span class="op">=</span> glfwCreateWindow<span class="op">(</span><span class="dv">800</span><span class="op">,</span> <span class="dv">800</span><span class="op">,</span> <span class="st">"VictorGordan_Opengl"</span><span class="op">,</span> NULL<span class="op">,</span> NULL<span class="op">);</span></span>
+<span id="cb3-16"><a href="#cb3-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-17"><a href="#cb3-17" aria-hidden="true" tabindex="-1"></a>    <span class="cf">if</span> <span class="op">(</span>window <span class="op">==</span> NULL<span class="op">)</span>         <span class="co">//Error check if window fails to create then terminating GLFW </span></span>
+<span id="cb3-18"><a href="#cb3-18" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb3-19"><a href="#cb3-19" aria-hidden="true" tabindex="-1"></a>        <span class="bu">std::</span>cout <span class="op">&lt;&lt;</span> <span class="st">"Failed to create GLFW window"</span> <span class="op">&lt;&lt;</span> <span class="bu">std::</span>endl<span class="op">;</span></span>
+<span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>        glfwTerminate<span class="op">();</span></span>
+<span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a>        <span class="cf">return</span> <span class="op">-</span><span class="dv">1</span><span class="op">;</span></span>
+<span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>    <span class="co">//introduce the window to current context</span></span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>    glfwMakeContextCurrent<span class="op">(</span>window<span class="op">);</span></span>
+<span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Load GLAD (OpenGL extractor)</span></span>
+<span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>    gladLoadGL<span class="op">();</span></span>
+<span id="cb3-29"><a href="#cb3-29" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-30"><a href="#cb3-30" aria-hidden="true" tabindex="-1"></a>    glViewport<span class="op">(</span><span class="dv">0</span><span class="op">,</span> <span class="dv">0</span><span class="op">,</span> <span class="dv">800</span><span class="op">,</span> <span class="dv">800</span><span class="op">);</span></span>
+<span id="cb3-31"><a href="#cb3-31" aria-hidden="true" tabindex="-1"></a>    </span>
+<span id="cb3-32"><a href="#cb3-32" aria-hidden="true" tabindex="-1"></a>    glClearColor<span class="op">(</span><span class="fl">0.07</span><span class="bu">f</span><span class="op">,</span> <span class="fl">0.13</span><span class="bu">f</span><span class="op">,</span> <span class="fl">0.17</span><span class="bu">f</span><span class="op">,</span> <span class="fl">1.0</span><span class="bu">f</span><span class="op">);</span>    <span class="co">//specify the color of background</span></span>
+<span id="cb3-33"><a href="#cb3-33" aria-hidden="true" tabindex="-1"></a>    glClear<span class="op">(</span>GL_COLOR_BUFFER_BIT<span class="op">);</span>               <span class="co">//clean the back buffer and assign the new color to it</span></span>
+<span id="cb3-34"><a href="#cb3-34" aria-hidden="true" tabindex="-1"></a>    glfwSwapBuffers<span class="op">(</span>window<span class="op">);</span>                    <span class="co">//swap the back buffer with the front buffer</span></span>
+<span id="cb3-35"><a href="#cb3-35" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-36"><a href="#cb3-36" aria-hidden="true" tabindex="-1"></a>    <span class="co">//Closing Window only on userCloseEvent</span></span>
+<span id="cb3-37"><a href="#cb3-37" aria-hidden="true" tabindex="-1"></a>    <span class="cf">while</span> <span class="op">(!</span>glfwWindowShouldClose<span class="op">(</span>window<span class="op">))</span></span>
+<span id="cb3-38"><a href="#cb3-38" aria-hidden="true" tabindex="-1"></a>    <span class="op">{</span></span>
+<span id="cb3-39"><a href="#cb3-39" aria-hidden="true" tabindex="-1"></a>        glfwPollEvents<span class="op">();</span>       <span class="co">//Process Poll Events</span></span>
+<span id="cb3-40"><a href="#cb3-40" aria-hidden="true" tabindex="-1"></a>    <span class="op">}</span></span>
+<span id="cb3-41"><a href="#cb3-41" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb3-42"><a href="#cb3-42" aria-hidden="true" tabindex="-1"></a>    glfwDestroyWindow<span class="op">(</span>window<span class="op">);</span>  <span class="co">//destroying GLFW window</span></span>
+<span id="cb3-43"><a href="#cb3-43" aria-hidden="true" tabindex="-1"></a>    glfwTerminate<span class="op">();</span>            <span class="co">//Terminating GLFW</span></span>
+<span id="cb3-44"><a href="#cb3-44" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> <span class="dv">0</span><span class="op">;</span></span>
+<span id="cb3-45"><a href="#cb3-45" aria-hidden="true" tabindex="-1"></a><span class="op">}</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+<section id="graphics-a-pipeline" class="level2">
+<h2 class="anchored" data-anchor-id="graphics-a-pipeline">Graphics a pipeline</h2>
+<p>Graphics pipeline is made up of series of functions which takes input like vertex data and sends the output. 1. Vertex Shader 2. Shape Assembly 3. Geometry Shader</p>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -976,13 +1139,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/Computer Graphics/OpenGL.html" class="pagination-link" aria-label="What is OpenGL ?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is OpenGL ?</span>
+      <a href="../../notes/Computer Graphics/Graphics Learning Resources.html" class="pagination-link" aria-label="Graphics Learning Resources">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">Graphics Learning Resources</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="pagination-link" aria-label="Derivatives, Batch, Loss &amp; Metric">
-        <span class="nav-page-text">Derivatives, Batch, Loss &amp; Metric</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/DeepLearning/index.html" class="pagination-link" aria-label="Deep Learning">
+        <span class="nav-page-text">Deep Learning</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>

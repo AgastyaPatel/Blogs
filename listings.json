@@ -4,29 +4,22 @@
     "items": []
   },
   {
-    "listing": "/notes/AI/index.html",
+    "listing": "/notes/index.html",
     "items": [
-      "/notes/AI/model_context_protocol.html"
-    ]
-  },
-  {
-    "listing": "/notes/CS/index.html",
-    "items": [
-      "/notes/CS/Networking.html"
-    ]
-  },
-  {
-    "listing": "/index.html",
-    "items": [
-      "/blogs/FastAI/FastAI-projects.html",
-      "/blogs/what_is_model_context_protocol.html"
+      "/notes/AI/index.html",
+      "/notes/CS/index.html",
+      "/notes/DeepLearning/index.html",
+      "/notes/Engineering/index.html",
+      "/notes/Utility/index.html"
     ]
   },
   {
     "listing": "/bob.html",
     "items": [
+      "/notes/AI/AI Fundamentals.html",
       "/notes/AI/index.html",
       "/notes/CS/index.html",
+      "/notes/Computer Graphics/Advance Computing with GPUs.html",
       "/notes/DeepLearning/index.html",
       "/notes/Resources/Deep Learning Resources.html",
       "/notes/DeepLearning/derivs_batchs_loss.html",
@@ -35,17 +28,30 @@
       "/notes/DeepLearning/FastAI macos setup.html",
       "/notes/DeepLearning/FastAI Setup_deprecated.html",
       "/notes/DeepLearning/FastAI Snippets.html",
+      "/notes/Utility/Git.html",
+      "/notes/Utility/Github Actions.html",
       "/notes/Utility/JupyterNotebook.html",
       "/notes/Utility/Kaggle.html",
       "/notes/AI/model_context_protocol.html",
+      "/notes/AI/ml terminologies.html",
       "/notes/Utility/Matplotlib.html",
       "/notes/CS/Networking.html",
       "/notes/index.html",
       "/notes/Utility/Package Manager and Virtual Environments.html",
       "/notes/Utility/PyTorch.html",
+      "/notes/Startups/Startup.html",
       "/notes/Utility/index.html",
       "/blogs/what_is_model_context_protocol.html",
-      "/readme.html"
+      "/notes/Computer Graphics/OpenGL.html",
+      "/readme.html",
+      "/notes/Computer Graphics/Graphics Learning Resources.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/blogs/FastAI/FastAI-projects.html",
+      "/blogs/what_is_model_context_protocol.html"
     ]
   },
   {
@@ -58,18 +64,24 @@
     ]
   },
   {
-    "listing": "/notes/index.html",
+    "listing": "/notes/CS/index.html",
     "items": [
-      "/notes/AI/index.html",
-      "/notes/CS/index.html",
-      "/notes/DeepLearning/index.html",
-      "/notes/Engineering/index.html",
-      "/notes/Utility/index.html"
+      "/notes/CS/Networking.html"
+    ]
+  },
+  {
+    "listing": "/notes/AI/index.html",
+    "items": [
+      "/notes/AI/AI Fundamentals.html",
+      "/notes/AI/model_context_protocol.html",
+      "/notes/AI/ml terminologies.html"
     ]
   },
   {
     "listing": "/notes/Utility/index.html",
     "items": [
+      "/notes/Utility/Git.html",
+      "/notes/Utility/Github Actions.html",
       "/notes/Utility/JupyterNotebook.html",
       "/notes/Utility/Kaggle.html",
       "/notes/Utility/Matplotlib.html",

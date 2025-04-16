@@ -5,6 +5,10 @@
     <lastmod>2025-03-26T07:36:13.903Z</lastmod>
   </url>
   <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/Package Manager and Virtual Environments.html</loc>
+    <lastmod>2025-04-16T06:44:07.779Z</lastmod>
+  </url>
+  <url>
     <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/Matplotlib.html</loc>
     <lastmod>2025-03-26T07:36:13.903Z</lastmod>
   </url>
@@ -17,16 +21,28 @@
     <lastmod>2025-03-26T07:36:13.902Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/AI/index.html</loc>
-    <lastmod>2025-04-08T03:37:43.838Z</lastmod>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/AI/model_context_protocol.html</loc>
+    <lastmod>2025-04-08T03:38:54.049Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/CS/index.html</loc>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/AI/AI Fundamentals.html</loc>
+    <lastmod>2025-04-16T06:26:03.240Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/index.html</loc>
+    <lastmod>2025-04-16T06:53:05.378Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/CS/Networking.html</loc>
     <lastmod>2025-03-26T07:36:13.881Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/Resources/Deep Learning Resources.html</loc>
-    <lastmod>2025-03-26T07:36:13.902Z</lastmod>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Computer Graphics/Advance Computing with GPUs.html</loc>
+    <lastmod>2025-04-16T06:36:04.779Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Computer Graphics/OpenGL.html</loc>
+    <lastmod>2025-04-15T22:11:00.000Z</lastmod>
   </url>
   <url>
     <loc>https://AgastyaPatel.github.io/Blogs/notes/DeepLearning/derivs_batchs_loss.html</loc>
@@ -37,32 +53,36 @@
     <lastmod>2025-03-26T07:36:13.881Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/about.html</loc>
-    <lastmod>2025-03-26T07:36:13.879Z</lastmod>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Startups/Startup.html</loc>
+    <lastmod>2025-04-16T06:47:57.297Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/index.html</loc>
-    <lastmod>2025-04-08T03:31:33.973Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/bob.html</loc>
-    <lastmod>2025-03-26T07:36:13.880Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/blogs/what_is_model_context_protocol.html</loc>
-    <lastmod>2025-04-08T03:41:02.003Z</lastmod>
-  </url>
-  <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/blogs/FastAI/FastAI-projects.html</loc>
-    <lastmod>2025-04-03T09:07:27.812Z</lastmod>
+    <loc>https://AgastyaPatel.github.io/Blogs/readme.html</loc>
+    <lastmod>2025-03-26T07:36:13.903Z</lastmod>
   </url>
   <url>
     <loc>https://AgastyaPatel.github.io/Blogs/projects.html</loc>
     <lastmod>2025-04-08T03:43:57.639Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/readme.html</loc>
-    <lastmod>2025-03-26T07:36:13.903Z</lastmod>
+    <loc>https://AgastyaPatel.github.io/Blogs/blogs/FastAI/FastAI-projects.html</loc>
+    <lastmod>2025-04-03T09:07:27.812Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/blogs/what_is_model_context_protocol.html</loc>
+    <lastmod>2025-04-08T03:41:02.003Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/bob.html</loc>
+    <lastmod>2025-03-26T07:36:13.880Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/index.html</loc>
+    <lastmod>2025-04-16T06:52:13.804Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/about.html</loc>
+    <lastmod>2025-03-26T07:36:13.879Z</lastmod>
   </url>
   <url>
     <loc>https://AgastyaPatel.github.io/Blogs/notes/DeepLearning/FastAI Setup_deprecated.html</loc>
@@ -77,27 +97,39 @@
     <lastmod>2025-03-26T07:36:13.881Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/CS/Networking.html</loc>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Computer Graphics/Graphics Learning Resources.html</loc>
+    <lastmod>2025-04-16T06:49:07.449Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Resources/Deep Learning Resources.html</loc>
+    <lastmod>2025-03-26T07:36:13.902Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/CS/index.html</loc>
     <lastmod>2025-03-26T07:36:13.881Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/index.html</loc>
-    <lastmod>2025-03-26T07:36:13.903Z</lastmod>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/AI/ml terminologies.html</loc>
+    <lastmod>2025-04-16T06:31:44.613Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/AI/model_context_protocol.html</loc>
-    <lastmod>2025-04-08T03:38:54.049Z</lastmod>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/AI/index.html</loc>
+    <lastmod>2025-04-08T03:37:43.838Z</lastmod>
   </url>
   <url>
     <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/PyTorch.html</loc>
-    <lastmod>2025-03-26T07:36:13.903Z</lastmod>
+    <lastmod>2025-04-16T06:43:32.973Z</lastmod>
   </url>
   <url>
     <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/index.html</loc>
     <lastmod>2025-03-26T07:36:13.903Z</lastmod>
   </url>
   <url>
-    <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/Package Manager and Virtual Environments.html</loc>
-    <lastmod>2025-03-26T07:36:13.903Z</lastmod>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/Git.html</loc>
+    <lastmod>2025-04-16T06:42:54.387Z</lastmod>
+  </url>
+  <url>
+    <loc>https://AgastyaPatel.github.io/Blogs/notes/Utility/Github Actions.html</loc>
+    <lastmod>2025-04-16T06:42:30.785Z</lastmod>
   </url>
 </urlset>

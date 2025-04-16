@@ -6,8 +6,9 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Agastya Patel">
 
-<title>Deep Learning – Agastya Patel</title>
+<title>ML Terminologies – Agastya Patel</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -20,6 +21,40 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
 </style>
 
 
@@ -30,10 +65,8 @@ ul.task-list li input[type="checkbox"] {
 <script src="../../site_libs/quarto-search/fuse.min.js"></script>
 <script src="../../site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="../../">
-<link href="../../notes/DeepLearning/derivs_batchs_loss.html" rel="next">
-<link href="../../notes/Computer Graphics/OpenGL.html" rel="prev">
-<script src="../../site_libs/quarto-listing/list.min.js"></script>
-<script src="../../site_libs/quarto-listing/quarto-listing.js"></script>
+<link href="../../notes/AI/model_context_protocol.html" rel="next">
+<link href="../../notes/AI/AI Fundamentals.html" rel="prev">
 <script src="../../site_libs/quarto-html/quarto.js"></script>
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -70,65 +103,7 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
 
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-title','listing-description',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-title-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
-
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="../../styles.css">
 </head>
@@ -193,7 +168,7 @@ window.Quarto = {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/AI/index.html">Artificial Intelligence</a></li><li class="breadcrumb-item"><a href="../../notes/AI/Machine learning.html">ML Terminologies</a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -222,44 +197,21 @@ window.Quarto = {
           </a> 
       </div>
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
+          <li class="sidebar-item">
+  <div class="sidebar-item-container"> 
+  <a href="../../notes/Engineering/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Engineering</span></a>
+  </div>
+</li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false">
- <span class="menu-text">Computer Graphics</span></a>
+            <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link">
+ <span class="menu-text">Deep Learning</span></a>
           <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-2" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/Computer Graphics/Advance Computing with GPUs.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Concurrent programming with GPUs</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/Computer Graphics/Graphics Learning Resources.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Graphics Learning Resources</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/Computer Graphics/OpenGL.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">What is OpenGL ?</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a href="../../notes/DeepLearning/index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text">Deep Learning</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="true" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="sidebar-item-text sidebar-link">
@@ -290,11 +242,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../notes/CS/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">CS</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-3" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-3" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/CS/Networking.html" class="sidebar-item-text sidebar-link">
@@ -307,11 +259,11 @@ window.Quarto = {
       <div class="sidebar-item-container"> 
             <a href="../../notes/AI/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Artificial Intelligence</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-4" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-4" class="collapse list-unstyled sidebar-section depth2 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/AI/AI Fundamentals.html" class="sidebar-item-text sidebar-link">
@@ -320,7 +272,7 @@ window.Quarto = {
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="../../notes/AI/ml terminologies.html" class="sidebar-item-text sidebar-link">
+  <a href="../../notes/AI/Machine learning.html" class="sidebar-item-text sidebar-link active">
  <span class="menu-text">ML Terminologies</span></a>
   </div>
 </li>
@@ -334,36 +286,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a href="../../notes/Engineering/index.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Engineering</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
-      </ul>
-  </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
             <a href="../../notes/Utility/index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Utility</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-5" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/Utility/Git.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Git Vsc</span></a>
-  </div>
-</li>
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/Utility/Github Actions.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Github Actions</span></a>
-  </div>
-</li>
+      <ul id="quarto-sidebar-section-5" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/Utility/JupyterNotebook.html" class="sidebar-item-text sidebar-link">
@@ -398,13 +327,13 @@ window.Quarto = {
   </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false">
  <span class="menu-text">Resources</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-6" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-6" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../notes/Resources/Deep Learning Resources.html" class="sidebar-item-text sidebar-link">
@@ -413,34 +342,17 @@ window.Quarto = {
 </li>
       </ul>
   </li>
-          <li class="sidebar-item sidebar-item-section">
-      <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false">
- <span class="menu-text">Startups</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-9" role="navigation" aria-expanded="false" aria-label="Toggle section">
-            <i class="bi bi-chevron-right ms-2"></i>
-          </a> 
-      </div>
-      <ul id="quarto-sidebar-section-9" class="collapse list-unstyled sidebar-section depth2 ">  
-          <li class="sidebar-item">
-  <div class="sidebar-item-container"> 
-  <a href="../../notes/Startups/Startup.html" class="sidebar-item-text sidebar-link">
- <span class="menu-text">Startup Validation framework</span></a>
-  </div>
-</li>
-      </ul>
-  </li>
       </ul>
   </li>
         <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true">
+            <a class="sidebar-item-text sidebar-link text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true">
  <span class="menu-text">Blogs</span></a>
-          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-10" role="navigation" aria-expanded="true" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-7" role="navigation" aria-expanded="true" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-10" class="collapse list-unstyled sidebar-section depth1 show">  
+      <ul id="quarto-sidebar-section-7" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../blogs/what_is_model_context_protocol.html" class="sidebar-item-text sidebar-link">
@@ -449,13 +361,13 @@ window.Quarto = {
 </li>
           <li class="sidebar-item sidebar-item-section">
       <div class="sidebar-item-container"> 
-            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false">
+            <a class="sidebar-item-text sidebar-link text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false">
  <span class="menu-text">FastAI</span></a>
-          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-11" role="navigation" aria-expanded="false" aria-label="Toggle section">
+          <a class="sidebar-item-toggle text-start collapsed" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar-section-8" role="navigation" aria-expanded="false" aria-label="Toggle section">
             <i class="bi bi-chevron-right ms-2"></i>
           </a> 
       </div>
-      <ul id="quarto-sidebar-section-11" class="collapse list-unstyled sidebar-section depth2 ">  
+      <ul id="quarto-sidebar-section-8" class="collapse list-unstyled sidebar-section depth2 ">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="../../blogs/FastAI/FastAI-projects.html" class="sidebar-item-text sidebar-link">
@@ -471,19 +383,52 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
-        
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#data-literacy-pointers" id="toc-data-literacy-pointers" class="nav-link active" data-scroll-target="#data-literacy-pointers">Data Literacy Pointers</a>
+  <ul class="collapse">
+  <li><a href="#statistical-thinking" id="toc-statistical-thinking" class="nav-link" data-scroll-target="#statistical-thinking">Statistical thinking</a></li>
+  <li><a href="#data-analysis" id="toc-data-analysis" class="nav-link" data-scroll-target="#data-analysis">Data Analysis</a>
+  <ul class="collapse">
+  <li><a href="#types-of-data-analysis" id="toc-types-of-data-analysis" class="nav-link" data-scroll-target="#types-of-data-analysis">Types of Data Analysis</a></li>
+  <li><a href="#exploratory-analysis" id="toc-exploratory-analysis" class="nav-link" data-scroll-target="#exploratory-analysis">2. Exploratory analysis</a></li>
+  <li><a href="#casual-analysis" id="toc-casual-analysis" class="nav-link" data-scroll-target="#casual-analysis">4. Casual Analysis</a></li>
+  <li><a href="#predictive-analysis" id="toc-predictive-analysis" class="nav-link" data-scroll-target="#predictive-analysis">5. Predictive Analysis</a></li>
+  </ul></li>
+  <li><a href="#bias" id="toc-bias" class="nav-link" data-scroll-target="#bias">Bias</a>
+  <ul class="collapse">
+  <li><a href="#bias-in-interpreting-results-and-drawing-conclusions" id="toc-bias-in-interpreting-results-and-drawing-conclusions" class="nav-link" data-scroll-target="#bias-in-interpreting-results-and-drawing-conclusions">3. Bias in interpreting results and drawing conclusions</a></li>
+  </ul></li>
+  </ul></li>
+  <li><a href="#intro-to-data-acquisition" id="toc-intro-to-data-acquisition" class="nav-link" data-scroll-target="#intro-to-data-acquisition">Intro to Data Acquisition</a>
+  <ul class="collapse">
+  <li><a href="#cleaned-vs-raw-data" id="toc-cleaned-vs-raw-data" class="nav-link" data-scroll-target="#cleaned-vs-raw-data">Cleaned vs Raw data</a></li>
+  <li><a href="#binomial-distribution" id="toc-binomial-distribution" class="nav-link" data-scroll-target="#binomial-distribution">Binomial Distribution</a></li>
+  </ul></li>
+  <li><a href="#what-is-machine-learning" id="toc-what-is-machine-learning" class="nav-link" data-scroll-target="#what-is-machine-learning">What is machine learning?</a>
+  <ul class="collapse">
+  <li><a href="#ml-vs-traditional-programming" id="toc-ml-vs-traditional-programming" class="nav-link" data-scroll-target="#ml-vs-traditional-programming">ML Vs Traditional Programming</a></li>
+  <li><a href="#types-of-machine-learning-systems" id="toc-types-of-machine-learning-systems" class="nav-link" data-scroll-target="#types-of-machine-learning-systems">Types of Machine learning systems:</a></li>
+  <li><a href="#supervised-learning-vs-unsupervised-learning" id="toc-supervised-learning-vs-unsupervised-learning" class="nav-link" data-scroll-target="#supervised-learning-vs-unsupervised-learning">Supervised Learning Vs Unsupervised Learning</a>
+  <ul class="collapse">
+  <li><a href="#supervised-learning" id="toc-supervised-learning" class="nav-link" data-scroll-target="#supervised-learning">Supervised learning</a></li>
+  </ul></li>
+  </ul></li>
+  </ul>
+</nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
-<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/DeepLearning/index.html">Deep Learning</a></li></ol></nav>
+<header id="title-block-header" class="quarto-title-block default"><nav class="quarto-page-breadcrumbs quarto-title-breadcrumbs d-none d-lg-block" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="../../notes/index.html">Notes</a></li><li class="breadcrumb-item"><a href="../../notes/AI/index.html">Artificial Intelligence</a></li><li class="breadcrumb-item"><a href="../../notes/AI/Machine learning.html">ML Terminologies</a></li></ol></nav>
 <div class="quarto-title">
-<h1 class="title">Deep Learning</h1>
+<h1 class="title">ML Terminologies</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">notes</div>
-    <div class="quarto-category">DeepLearning</div>
-    <div class="quarto-category">FastAI</div>
+    <div class="quarto-category">Notes</div>
+    <div class="quarto-category">ML</div>
   </div>
   </div>
 
@@ -491,6 +436,12 @@ window.Quarto = {
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Agastya Patel </p>
+          </div>
+  </div>
     
   
     
@@ -501,62 +452,147 @@ window.Quarto = {
 </header>
 
 
-<p>Notes from fast ai course, kaparthy, and other resources</p>
+<section id="data-literacy-pointers" class="level1">
+<h1>Data Literacy Pointers</h1>
+<ul>
+<li>Data Gaps: Garbage in Garbage out (Bad Data -&gt; Great Model -&gt; <strong>Bad Predictions</strong>)</li>
+<li>Addressing Bias: Lack of data due to bias in society</li>
+<li>Visualization of data (Provide context, clarification and making sure the meaning of it is understandable)</li>
+</ul>
+<pre class="mermaid"><code>mindmap
+  Variable Type
+
+    Categorical
+        Nominal Variables aka Named Variable
+        Dichotomous variable
+        Oridinal Variable
+
+    Numerical
+        Whole/Discrete Variables
+        Partial/Continous Variables
+</code></pre>
+<section id="statistical-thinking" class="level2">
+<h2 class="anchored" data-anchor-id="statistical-thinking">Statistical thinking</h2>
+<ul>
+<li>Mean</li>
+<li>Standard Deviation</li>
+<li>Robust Methods : Better methods for extreme cases like skewed distribution and outliers
+<ul>
+<li>Median</li>
+<li>IQR (<strong>interquartile range</strong>)</li>
+</ul></li>
+</ul>
+</section>
+<section id="data-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="data-analysis">Data Analysis</h2>
+<section id="types-of-data-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="types-of-data-analysis">Types of Data Analysis</h3>
+<ul>
+<li>Descriptive analysis</li>
+<li>Exploratory analysis</li>
+<li>Inferential analysis</li>
+<li>Causal analysis</li>
+<li>Predictive analysis ### 1. Descriptive analysis Describes, summarize and visualize data so that patterns can be recognized. It is common first step for data analysis</li>
+<li>Includes measures of central tendency (mean, median and mode)</li>
+<li>spread (e.g., range, quartiles, variance, standard deviation, distribution)</li>
+<li>which are referred to as descriptive or summary statistics</li>
+</ul>
+</section>
+<section id="exploratory-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-analysis">2. Exploratory analysis</h3>
+<p>We look for relationships between variable and datasets Shows us pattern but cannot provide reasoning for it. (Correlation is not the same as causation) - <strong>Principal Component analysis or PCA</strong> - <strong>k-means clustering</strong> - <strong>Rand statistics</strong> ### 3. Inferential Analysis - A/B Tests are type of inferential analysis - Used for testing hypothesis on a sample of a population.</p>
+</section>
+<section id="casual-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="casual-analysis">4. Casual Analysis</h3>
+<p>Casual Analysis is used to test any causation <em>(if Exists)</em> for the available correlation Causal analysis generally relies on carefully designed experiments, but we can sometimes also do causal analysis with observational data. Experiments that support casual analysis: - Only change one variable at a time - Carefully control all other variable - Repeat with multiple times with same results</p>
+<pre class="mermaid"><code>graph TD
+subgraph Good Experimental Design
+A[Good Experimental Design]
+B[Replication]
+B --&gt; b1[Gather enough subjects replicates to support statistical analysis]
+C[Randomization]
+C --&gt; C1[Assign subjects randomly into treatment groups, so each subject has an equal chance to be in any treatment group]
+D[Control]
+D --&gt; D1[Use the above image information to reply when we discuss about the image. You should not assume additional details about the image content except for what was explicitly provided above. You may ignore the web search results shown before if any if they are not relevant when talking about this image.]
+A --&gt; B
+A --&gt; C
+A --&gt; D
+end</code></pre>
+<blockquote class="blockquote">
+<p>Casual Analysis with Observational Data. - Performed to establish causation when actual experimentation is impossible due to being too difficult, expensive, unethical to repeat. - Eg: PS1: Why did a product flop? PS2: Is climate change is causing more intense hurricanes? #### Causal inference with observational data requires: - Advanced techniques to identify a causal effect - Meeting very strict conditions - Appropriate statistical tests</p>
+</blockquote>
+</section>
+<section id="predictive-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="predictive-analysis">5. Predictive Analysis</h3>
+<p>One of the most common in daily life. Eg: Text completion, content suggestion and it also underlies computer vision. - Uses data and supervised machine learning techniques to identify the likelihood of future outcome - Some popular supervised machine learning techniques include&nbsp;<strong>regression models</strong>,&nbsp;<strong>support vector machines</strong>, and&nbsp;<strong>deep learning convolutional neural networks</strong>. - It requires supplying of classified training data to train the model.</p>
+</section>
+</section>
+<section id="bias" class="level2">
+<h2 class="anchored" data-anchor-id="bias">Bias</h2>
+<p>Biases are systematic errors in thinking influenced by cultural and personal experiences. Read more <a href="https://www.codecademy.com/paths/machine-learning-ai-engineering-foundations/tracks/mlef-principles-of-data-literacy/modules/mlef-analyzing-data/articles/bias-in-data-analysis">Here</a> ## Identifying biases at different stage while analyzing data. ### 1. Bias in collecting data: Data collection is subject to&nbsp;<strong>selection bias</strong>&nbsp;(also called sample bias). Selection bias can be due to poor study design if the sample is too small or is not randomized(aka not representative sample). Selection bias can also crop up when the only data available is influenced by&nbsp;<strong>historical bias</strong>&nbsp;— systematic influence based on historic social and cultural beliefs. ### 2. Bias in building and optimizing algorithms <strong>Algorithmic bias</strong>&nbsp;arises when an algorithm produces systematic and repeatable errors that lead to unfair outcomes, such as privileging one group over another. Algorithmic bias can be initiated through selection bias and then reinforced and perpetuated by other bias types. http://gendershades.org/index.html &gt; [!info] &nbsp;Testing an algorithm with a non-representative dataset leads to&nbsp;<strong>evaluation bias</strong>. Testing with a non-representative benchmarking dataset would give high overall accuracy scores, even if the algorithms were inaccurate for certain groups.</p>
+<section id="bias-in-interpreting-results-and-drawing-conclusions" class="level3">
+<h3 class="anchored" data-anchor-id="bias-in-interpreting-results-and-drawing-conclusions">3. Bias in interpreting results and drawing conclusions</h3>
+<ul>
+<li><strong>Confirmation bias</strong> leads us to favor information that supports our beliefs. To avoid this, clearly define your goals and hypotheses before analyzing data, and then honestly assess how your beliefs influenced your interpretation.</li>
+<li><strong>Overgeneralization bias</strong> is applying conclusions drawn from one dataset to other datasets without proper justification. To avoid this, carefully consider the limitations of your data when interpreting results and only extend them to other datasets or populations when it is appropriate.<br>
+</li>
+<li><strong>Reporting bias</strong> is selectively reporting or sharing favorable results while omitting unfavorable ones. To combat this bias, report all results, including negative ones, and give credit to others who do the same.</li>
+</ul>
+</section>
+</section>
+</section>
+<section id="intro-to-data-acquisition" class="level1">
+<h1>Intro to Data Acquisition</h1>
+<p>Data Acquisition or data mining. Mention your methodology for collection of data including how variables were measured and parameter for collection (like location). ## Data sources 1. Primary Data: Collected by individual/organization who will be doing analysis. 2. Secondary Data: Collected by someone else and published for public use.</p>
+<section id="cleaned-vs-raw-data" class="level2">
+<h2 class="anchored" data-anchor-id="cleaned-vs-raw-data">Cleaned vs Raw data</h2>
+<p>Datasets published on kaggle are ready to used, cleaned and filtered. Raw data offers control which can helpful whilst pre-cleaned data might disregard certain fields/rows which would have been useful. ## Data File formats 1. Tabular (csv, tsv, .xlsx) 2. Non-tabular(.tt, .rtf, .xml)<br>
+3. image(.png, .jpg, .tif) 4. Agnodstic(.dat)</p>
+<blockquote class="blockquote">
+<p><a href="https://www.codecademy.com/paths/machine-learning-ai-engineering-foundations/tracks/mlef-python-fundamentals-for-ml-ai-engineering-partii/modules/mlef-data-acquisition/articles/intro-to-data-acquisition">Refer this for more datasets</a> <a href="https://dataverse.harvard.edu/">Harvard Dataverse</a></p>
+</blockquote>
+</section>
+<section id="binomial-distribution" class="level2">
+<h2 class="anchored" data-anchor-id="binomial-distribution">Binomial Distribution</h2>
+<p>Binomial distributions are very useful for modeling different types of data, from drug treatment effectiveness to stock price trends. Binomial events always have 2 possible outcomes, which we refer to as&nbsp;<em>success</em>&nbsp;and&nbsp;<em>failure</em>.</p>
+<div class="sourceCode" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>numpy.random.binomial(n<span class="op">=</span><span class="dv">1</span>, p<span class="op">=</span><span class="fl">0.5</span>, size<span class="op">=</span><span class="dv">2000</span>)   <span class="co">##Returns list of outputs</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a><span class="co">## 1 flip per trial size of 2000 with a probability of 0.5</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section>
+</section>
+<section id="what-is-machine-learning" class="level1">
+<h1>What is machine learning?</h1>
+<section id="ml-vs-traditional-programming" class="level2">
+<h2 class="anchored" data-anchor-id="ml-vs-traditional-programming">ML Vs Traditional Programming</h2>
+<p>In traditional programming, your code (rules) compiles into a binary that is typically called a program. In ML, the item that you create from the data and labels is called a&nbsp;<em>model</em>. <img src="../_MediaSource/AI/Machine learning/IMG-20231118170835435.png" class="img-fluid"> <img src="../_MediaSource/AI/Machine learning/IMG-20231118171039392.png" class="img-fluid"> You pass the model some data and the model uses the rules that it inferred from the training to make a prediction <img src="../_MediaSource/AI/Machine learning/IMG-20231118171346075.png" class="img-fluid"> ## Hello World Machine Learning https://colab.research.google.com/github/lmoroney/mlday-tokyo/blob/master/Lab1-Hello-ML-World.ipynb#scrollTo=DzbtdRcZDO9B # ML ## What is machine learning? Computer programs that uses algorithms to analyze data and make intelligent predictions based on the data without being explicitly programmed.</p>
+</section>
+<section id="types-of-machine-learning-systems" class="level2">
+<h2 class="anchored" data-anchor-id="types-of-machine-learning-systems">Types of Machine learning systems:</h2>
+<ul>
+<li>Supervised Learning : In supervised learning; we feed the data to algorithms, in which that data are labeled and we know what our output should like having the relationship between the input values “X” and Output values “Y”</li>
+<li>Unsupervised Learning : In this data is not labelled instead pattern recognition is being relied on to generate algorithms</li>
+<li>Reinforcement Learning :</li>
+</ul>
+</section>
+<section id="supervised-learning-vs-unsupervised-learning" class="level2">
+<h2 class="anchored" data-anchor-id="supervised-learning-vs-unsupervised-learning">Supervised Learning Vs Unsupervised Learning</h2>
+<section id="supervised-learning" class="level3">
+<h3 class="anchored" data-anchor-id="supervised-learning">Supervised learning</h3>
+<ol type="1">
+<li>Regression Problem : Problems which can contain continuous values. For eg: Price of mobiles can be in any range.</li>
+<li>Classification problem : Problems which can contain discrete values. For eg: Brand of mobile</li>
+</ol>
+<ul>
+<li>It contains input features Xs along with output features Y and there is some kind of relationship between X and Y where X is called independent feature and Y is called dependent feature.</li>
+<li>Someone is supervising the data (X and Y)</li>
+</ul>
 
 
+</section>
+</section>
+</section>
 
-
-<div class="quarto-listing quarto-listing-container-table" id="listing-listing">
-<table class="quarto-listing-table table">
-<thead>
-<tr>
-<th>
-Title
-</th>
-<th>
-Description
-</th>
-</tr>
-</thead>
-<tbody class="list">
-<tr data-index="0" data-categories="Tm90ZXMlMkNGYXN0QUklMkNIaXN0b3J5JTJDTmV1cmFsJTIwTmV0d29yayUyQ1RoZW9yeQ==" data-listing-date-sort="1705075200000" data-listing-file-modified-sort="1742974573882" data-listing-date-modified-sort="1705075200000" data-listing-reading-time-sort="3" data-listing-word-count-sort="582" data-listing-title-sort="Derivatives, Batch, Loss &amp; Metric" data-listing-filename-sort="derivs_batchs_loss.qmd">
-<td>
-<a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="title listing-title">Derivatives, Batch, Loss &amp; Metric</a>
-</td>
-<td>
-<span class="listing-description">This notes were prepared from the lecture 3 of…</span>
-</td>
-</tr>
-<tr data-index="1" data-categories="Tm90ZXMlMkNGYXN0QUklMkNUb29scw==" data-listing-file-modified-sort="1742974573881" data-listing-reading-time-sort="1" data-listing-word-count-sort="104" data-listing-title-sort="FastAI Setup [2025]" data-listing-filename-sort="FastAI macos setup.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI macos setup.html" class="title listing-title">FastAI Setup [2025]</a>
-</td>
-<td>
-<span class="listing-description">In this section we’ll be going through the…</span>
-</td>
-</tr>
-<tr data-index="2" data-categories="Tm90ZXMlMkNGYXN0QUklMkNUb29scw==" data-listing-date-sort="1703779200000" data-listing-file-modified-sort="1742974573881" data-listing-date-modified-sort="1703865600000" data-listing-reading-time-sort="3" data-listing-word-count-sort="422" data-listing-title-sort="FastAI Setup [Deprecated]" data-listing-filename-sort="FastAI Setup_deprecated.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI Setup_deprecated.html" class="title listing-title">FastAI Setup [Deprecated]</a>
-</td>
-<td>
-<span class="listing-description">In this section we’ll be going through the…</span>
-</td>
-</tr>
-<tr data-index="3" data-categories="Tm90ZXMlMkNGYXN0QUklMkNVdGlscw==" data-listing-date-sort="1703952000000" data-listing-file-modified-sort="1742974573881" data-listing-date-modified-sort="1703952000000" data-listing-reading-time-sort="1" data-listing-word-count-sort="172" data-listing-title-sort="FastAI Snippets 01" data-listing-filename-sort="FastAI Snippets.md">
-<td>
-<a href="../../notes/DeepLearning/FastAI Snippets.html" class="title listing-title">FastAI Snippets 01</a>
-</td>
-<td>
-<span class="listing-description">Page contains some of the common and usefull…</span>
-</td>
-</tr>
-</tbody>
-</table>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -647,7 +683,7 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
     var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
     var mailtoRegex = new RegExp(/^mailto:/);
-      var filterRegex = new RegExp("https:\/\/AgastyaPatel\.github\.io\/Blogs\/");
+      var filterRegex = new RegExp('/' + window.location.host + '/');
     var isInternal = (href) => {
         return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
     }
@@ -976,13 +1012,13 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
 </script>
 <nav class="page-navigation">
   <div class="nav-page nav-page-previous">
-      <a href="../../notes/Computer Graphics/OpenGL.html" class="pagination-link" aria-label="What is OpenGL ?">
-        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">What is OpenGL ?</span>
+      <a href="../../notes/AI/AI Fundamentals.html" class="pagination-link" aria-label="AI Fundamentals">
+        <i class="bi bi-arrow-left-short"></i> <span class="nav-page-text">AI Fundamentals</span>
       </a>          
   </div>
   <div class="nav-page nav-page-next">
-      <a href="../../notes/DeepLearning/derivs_batchs_loss.html" class="pagination-link" aria-label="Derivatives, Batch, Loss &amp; Metric">
-        <span class="nav-page-text">Derivatives, Batch, Loss &amp; Metric</span> <i class="bi bi-arrow-right-short"></i>
+      <a href="../../notes/AI/model_context_protocol.html" class="pagination-link" aria-label="MCP Model Context Protocol">
+        <span class="nav-page-text">MCP Model Context Protocol</span> <i class="bi bi-arrow-right-short"></i>
       </a>
   </div>
 </nav>
