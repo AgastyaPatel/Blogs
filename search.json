@@ -84,50 +84,686 @@
     ]
   },
   {
-    "objectID": "notes/Engineering/index.html",
-    "href": "notes/Engineering/index.html",
-    "title": "Engineering",
+    "objectID": "notes/AI/index.html",
+    "href": "notes/AI/index.html",
+    "title": "Artificial Intelligence",
     "section": "",
-    "text": "General notes on engineering topics\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items",
+    "text": "Notes about latest ai developments, llms, agents & visual models.\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nAI Fundamentals\n\n\n\n\n\n\n\nMCP Model Context Protocol\n\n\n\n\n\n\n\nML Terminologies\n\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Notes",
-      "Engineering"
+      "Artificial Intelligence"
     ]
   },
   {
-    "objectID": "notes/AI/model_context_protocol.html",
-    "href": "notes/AI/model_context_protocol.html",
-    "title": "MCP Model Context Protocol",
+    "objectID": "notes/AI/ml terminologies.html",
+    "href": "notes/AI/ml terminologies.html",
+    "title": "ML Terminologies",
     "section": "",
-    "text": "Notes about the MCP Model Context Protocol.",
+    "text": "Data Gaps: Garbage in Garbage out (Bad Data -&gt; Great Model -&gt; Bad Predictions)\nAddressing Bias: Lack of data due to bias in society\nVisualization of data (Provide context, clarification and making sure the meaning of it is understandable)\n\nmindmap\n  Variable Type\n\n    Categorical\n        Nominal Variables aka Named Variable\n        Dichotomous variable\n        Oridinal Variable\n\n    Numerical\n        Whole/Discrete Variables\n        Partial/Continous Variables\n\n\n\n\nMean\nStandard Deviation\nRobust Methods : Better methods for extreme cases like skewed distribution and outliers\n\nMedian\nIQR (interquartile range)\n\n\n\n\n\n\n\n\nDescriptive analysis\nExploratory analysis\nInferential analysis\nCausal analysis\nPredictive analysis ### 1. Descriptive analysis Describes, summarize and visualize data so that patterns can be recognized. It is common first step for data analysis\nIncludes measures of central tendency (mean, median and mode)\nspread (e.g., range, quartiles, variance, standard deviation, distribution)\nwhich are referred to as descriptive or summary statistics\n\n\n\n\nWe look for relationships between variable and datasets Shows us pattern but cannot provide reasoning for it. (Correlation is not the same as causation) - Principal Component analysis or PCA - k-means clustering - Rand statistics ### 3. Inferential Analysis - A/B Tests are type of inferential analysis - Used for testing hypothesis on a sample of a population.\n\n\n\nCasual Analysis is used to test any causation (if Exists) for the available correlation Causal analysis generally relies on carefully designed experiments, but we can sometimes also do causal analysis with observational data. Experiments that support casual analysis: - Only change one variable at a time - Carefully control all other variable - Repeat with multiple times with same results\ngraph TD\nsubgraph Good Experimental Design\nA[Good Experimental Design]\nB[Replication]\nB --&gt; b1[Gather enough subjects replicates to support statistical analysis]\nC[Randomization]\nC --&gt; C1[Assign subjects randomly into treatment groups, so each subject has an equal chance to be in any treatment group]\nD[Control]\nD --&gt; D1[Use the above image information to reply when we discuss about the image. You should not assume additional details about the image content except for what was explicitly provided above. You may ignore the web search results shown before if any if they are not relevant when talking about this image.]\nA --&gt; B\nA --&gt; C\nA --&gt; D\nend\n\nCasual Analysis with Observational Data. - Performed to establish causation when actual experimentation is impossible due to being too difficult, expensive, unethical to repeat. - Eg: PS1: Why did a product flop? PS2: Is climate change is causing more intense hurricanes? #### Causal inference with observational data requires: - Advanced techniques to identify a causal effect - Meeting very strict conditions - Appropriate statistical tests\n\n\n\n\nOne of the most common in daily life. Eg: Text completion, content suggestion and it also underlies computer vision. - Uses data and supervised machine learning techniques to identify the likelihood of future outcome - Some popular supervised machine learning techniques include regression models, support vector machines, and deep learning convolutional neural networks. - It requires supplying of classified training data to train the model.\n\n\n\n\nBiases are systematic errors in thinking influenced by cultural and personal experiences. Read more Here ## Identifying biases at different stage while analyzing data. ### 1. Bias in collecting data: Data collection is subject to selection bias (also called sample bias). Selection bias can be due to poor study design if the sample is too small or is not randomized(aka not representative sample). Selection bias can also crop up when the only data available is influenced by historical bias — systematic influence based on historic social and cultural beliefs. ### 2. Bias in building and optimizing algorithms Algorithmic bias arises when an algorithm produces systematic and repeatable errors that lead to unfair outcomes, such as privileging one group over another. Algorithmic bias can be initiated through selection bias and then reinforced and perpetuated by other bias types. http://gendershades.org/index.html &gt; [!info]  Testing an algorithm with a non-representative dataset leads to evaluation bias. Testing with a non-representative benchmarking dataset would give high overall accuracy scores, even if the algorithms were inaccurate for certain groups.\n\n\n\nConfirmation bias leads us to favor information that supports our beliefs. To avoid this, clearly define your goals and hypotheses before analyzing data, and then honestly assess how your beliefs influenced your interpretation.\nOvergeneralization bias is applying conclusions drawn from one dataset to other datasets without proper justification. To avoid this, carefully consider the limitations of your data when interpreting results and only extend them to other datasets or populations when it is appropriate.\n\nReporting bias is selectively reporting or sharing favorable results while omitting unfavorable ones. To combat this bias, report all results, including negative ones, and give credit to others who do the same.",
     "crumbs": [
       "Notes",
       "Artificial Intelligence",
-      "MCP Model Context Protocol"
+      "ML Terminologies"
     ]
   },
   {
-    "objectID": "notes/AI/model_context_protocol.html#what-is-mcp",
-    "href": "notes/AI/model_context_protocol.html#what-is-mcp",
-    "title": "MCP Model Context Protocol",
-    "section": "What is MCP?",
-    "text": "What is MCP?\nModel Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol",
+    "objectID": "notes/AI/ml terminologies.html#statistical-thinking",
+    "href": "notes/AI/ml terminologies.html#statistical-thinking",
+    "title": "ML Terminologies",
+    "section": "",
+    "text": "Mean\nStandard Deviation\nRobust Methods : Better methods for extreme cases like skewed distribution and outliers\n\nMedian\nIQR (interquartile range)",
     "crumbs": [
       "Notes",
       "Artificial Intelligence",
-      "MCP Model Context Protocol"
+      "ML Terminologies"
     ]
   },
   {
-    "objectID": "notes/AI/model_context_protocol.html#api-vs-mcp",
-    "href": "notes/AI/model_context_protocol.html#api-vs-mcp",
-    "title": "MCP Model Context Protocol",
-    "section": "API vs MCP",
-    "text": "API vs MCP\nGenerally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
+    "objectID": "notes/AI/ml terminologies.html#data-analysis",
+    "href": "notes/AI/ml terminologies.html#data-analysis",
+    "title": "ML Terminologies",
+    "section": "",
+    "text": "Descriptive analysis\nExploratory analysis\nInferential analysis\nCausal analysis\nPredictive analysis ### 1. Descriptive analysis Describes, summarize and visualize data so that patterns can be recognized. It is common first step for data analysis\nIncludes measures of central tendency (mean, median and mode)\nspread (e.g., range, quartiles, variance, standard deviation, distribution)\nwhich are referred to as descriptive or summary statistics\n\n\n\n\nWe look for relationships between variable and datasets Shows us pattern but cannot provide reasoning for it. (Correlation is not the same as causation) - Principal Component analysis or PCA - k-means clustering - Rand statistics ### 3. Inferential Analysis - A/B Tests are type of inferential analysis - Used for testing hypothesis on a sample of a population.\n\n\n\nCasual Analysis is used to test any causation (if Exists) for the available correlation Causal analysis generally relies on carefully designed experiments, but we can sometimes also do causal analysis with observational data. Experiments that support casual analysis: - Only change one variable at a time - Carefully control all other variable - Repeat with multiple times with same results\ngraph TD\nsubgraph Good Experimental Design\nA[Good Experimental Design]\nB[Replication]\nB --&gt; b1[Gather enough subjects replicates to support statistical analysis]\nC[Randomization]\nC --&gt; C1[Assign subjects randomly into treatment groups, so each subject has an equal chance to be in any treatment group]\nD[Control]\nD --&gt; D1[Use the above image information to reply when we discuss about the image. You should not assume additional details about the image content except for what was explicitly provided above. You may ignore the web search results shown before if any if they are not relevant when talking about this image.]\nA --&gt; B\nA --&gt; C\nA --&gt; D\nend\n\nCasual Analysis with Observational Data. - Performed to establish causation when actual experimentation is impossible due to being too difficult, expensive, unethical to repeat. - Eg: PS1: Why did a product flop? PS2: Is climate change is causing more intense hurricanes? #### Causal inference with observational data requires: - Advanced techniques to identify a causal effect - Meeting very strict conditions - Appropriate statistical tests\n\n\n\n\nOne of the most common in daily life. Eg: Text completion, content suggestion and it also underlies computer vision. - Uses data and supervised machine learning techniques to identify the likelihood of future outcome - Some popular supervised machine learning techniques include regression models, support vector machines, and deep learning convolutional neural networks. - It requires supplying of classified training data to train the model.",
     "crumbs": [
       "Notes",
       "Artificial Intelligence",
-      "MCP Model Context Protocol"
+      "ML Terminologies"
+    ]
+  },
+  {
+    "objectID": "notes/AI/ml terminologies.html#bias",
+    "href": "notes/AI/ml terminologies.html#bias",
+    "title": "ML Terminologies",
+    "section": "",
+    "text": "Biases are systematic errors in thinking influenced by cultural and personal experiences. Read more Here ## Identifying biases at different stage while analyzing data. ### 1. Bias in collecting data: Data collection is subject to selection bias (also called sample bias). Selection bias can be due to poor study design if the sample is too small or is not randomized(aka not representative sample). Selection bias can also crop up when the only data available is influenced by historical bias — systematic influence based on historic social and cultural beliefs. ### 2. Bias in building and optimizing algorithms Algorithmic bias arises when an algorithm produces systematic and repeatable errors that lead to unfair outcomes, such as privileging one group over another. Algorithmic bias can be initiated through selection bias and then reinforced and perpetuated by other bias types. http://gendershades.org/index.html &gt; [!info]  Testing an algorithm with a non-representative dataset leads to evaluation bias. Testing with a non-representative benchmarking dataset would give high overall accuracy scores, even if the algorithms were inaccurate for certain groups.\n\n\n\nConfirmation bias leads us to favor information that supports our beliefs. To avoid this, clearly define your goals and hypotheses before analyzing data, and then honestly assess how your beliefs influenced your interpretation.\nOvergeneralization bias is applying conclusions drawn from one dataset to other datasets without proper justification. To avoid this, carefully consider the limitations of your data when interpreting results and only extend them to other datasets or populations when it is appropriate.\n\nReporting bias is selectively reporting or sharing favorable results while omitting unfavorable ones. To combat this bias, report all results, including negative ones, and give credit to others who do the same.",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence",
+      "ML Terminologies"
+    ]
+  },
+  {
+    "objectID": "notes/AI/ml terminologies.html#cleaned-vs-raw-data",
+    "href": "notes/AI/ml terminologies.html#cleaned-vs-raw-data",
+    "title": "ML Terminologies",
+    "section": "Cleaned vs Raw data",
+    "text": "Cleaned vs Raw data\nDatasets published on kaggle are ready to used, cleaned and filtered. Raw data offers control which can helpful whilst pre-cleaned data might disregard certain fields/rows which would have been useful. ## Data File formats 1. Tabular (csv, tsv, .xlsx) 2. Non-tabular(.tt, .rtf, .xml)\n3. image(.png, .jpg, .tif) 4. Agnodstic(.dat)\n\nRefer this for more datasets Harvard Dataverse",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence",
+      "ML Terminologies"
+    ]
+  },
+  {
+    "objectID": "notes/AI/ml terminologies.html#binomial-distribution",
+    "href": "notes/AI/ml terminologies.html#binomial-distribution",
+    "title": "ML Terminologies",
+    "section": "Binomial Distribution",
+    "text": "Binomial Distribution\nBinomial distributions are very useful for modeling different types of data, from drug treatment effectiveness to stock price trends. Binomial events always have 2 possible outcomes, which we refer to as success and failure.\nimport numpy\nnumpy.random.binomial(n=1, p=0.5, size=2000)   ##Returns list of outputs\n## 1 flip per trial size of 2000 with a probability of 0.5",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence",
+      "ML Terminologies"
+    ]
+  },
+  {
+    "objectID": "notes/AI/ml terminologies.html#ml-vs-traditional-programming",
+    "href": "notes/AI/ml terminologies.html#ml-vs-traditional-programming",
+    "title": "ML Terminologies",
+    "section": "ML Vs Traditional Programming",
+    "text": "ML Vs Traditional Programming\nIn traditional programming, your code (rules) compiles into a binary that is typically called a program. In ML, the item that you create from the data and labels is called a model.   You pass the model some data and the model uses the rules that it inferred from the training to make a prediction  ## Hello World Machine Learning https://colab.research.google.com/github/lmoroney/mlday-tokyo/blob/master/Lab1-Hello-ML-World.ipynb#scrollTo=DzbtdRcZDO9B # ML ## What is machine learning? Computer programs that uses algorithms to analyze data and make intelligent predictions based on the data without being explicitly programmed.",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence",
+      "ML Terminologies"
+    ]
+  },
+  {
+    "objectID": "notes/AI/ml terminologies.html#types-of-machine-learning-systems",
+    "href": "notes/AI/ml terminologies.html#types-of-machine-learning-systems",
+    "title": "ML Terminologies",
+    "section": "Types of Machine learning systems:",
+    "text": "Types of Machine learning systems:\n\nSupervised Learning : In supervised learning; we feed the data to algorithms, in which that data are labeled and we know what our output should like having the relationship between the input values “X” and Output values “Y”\nUnsupervised Learning : In this data is not labelled instead pattern recognition is being relied on to generate algorithms\nReinforcement Learning :",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence",
+      "ML Terminologies"
+    ]
+  },
+  {
+    "objectID": "notes/AI/ml terminologies.html#supervised-learning-vs-unsupervised-learning",
+    "href": "notes/AI/ml terminologies.html#supervised-learning-vs-unsupervised-learning",
+    "title": "ML Terminologies",
+    "section": "Supervised Learning Vs Unsupervised Learning",
+    "text": "Supervised Learning Vs Unsupervised Learning\n\nSupervised learning\n\nRegression Problem : Problems which can contain continuous values. For eg: Price of mobiles can be in any range.\nClassification problem : Problems which can contain discrete values. For eg: Brand of mobile\n\n\nIt contains input features Xs along with output features Y and there is some kind of relationship between X and Y where X is called independent feature and Y is called dependent feature.\nSomeone is supervising the data (X and Y)",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence",
+      "ML Terminologies"
+    ]
+  },
+  {
+    "objectID": "notes/CS/index.html",
+    "href": "notes/CS/index.html",
+    "title": "CS",
+    "section": "",
+    "text": "General notes on CS topics\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nNetworking\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "CS"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html",
+    "href": "notes/Resources/Deep Learning Resources.html",
+    "title": "Deep Learning Resources",
+    "section": "",
+    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#books",
+    "href": "notes/Resources/Deep Learning Resources.html#books",
+    "title": "Deep Learning Resources",
+    "section": "",
+    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#guides",
+    "href": "notes/Resources/Deep Learning Resources.html#guides",
+    "title": "Deep Learning Resources",
+    "section": "Guides",
+    "text": "Guides\n\nhttps://www.interviewbit.com/system-design-interview-questions/amp/\nhttps://www.promptingguide.ai/ Prompt Engineering\nhttps://medium.com/marvelous-mlops/mlops-roadmap-2024-ff4216b8bc62 Mooc\nThe Missing Semester of Your CS Education (mit.edu) MIT Missing CS Semester + Lectures: Teaches how to use system utility tools like git, vim, other useful untaught methods for Machine Learning.\nhttps://hepsoftwarefoundation.org/training/center.html Multiple Advance Tutorial/Guide Series. Recommended",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#lectures",
+    "href": "notes/Resources/Deep Learning Resources.html#lectures",
+    "title": "Deep Learning Resources",
+    "section": "Lectures",
+    "text": "Lectures\n\nCornell Machine Learning for Intelligent Systems 2018 36 Lectures and different Assignments https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Resources/Deep Learning Resources.html#references",
+    "href": "notes/Resources/Deep Learning Resources.html#references",
+    "title": "Deep Learning Resources",
+    "section": "References",
+    "text": "References\n\nCommands : List of Command Line Commands | Codecademy\nBash vs Windows : Learn the Command Line | Codecademy\nVirtual Environment : Python: Modules | Codecademy\nStatistics Cheat Sheet : https://terenceshin.medium.com/week-2-52-stats-cheat-sheet-ae38a2e5cdc6\nStatistics in Maths: Definition, Types, Formulas, and Applications (geeksforgeeks.org)\nAPIs : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md\nHow web works : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md",
+    "crumbs": [
+      "Notes",
+      "Resources",
+      "Deep Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/Computer Graphics/Graphics Learning Resources.html",
+    "href": "notes/Computer Graphics/Graphics Learning Resources.html",
+    "title": "Agastya Patel",
+    "section": "",
+    "text": "#LearningResource\n\n\n\nTags\nType\nName\nAuthor/URL\nExtras\n\n\n\n\n#CPP\n#Blog\nBlog for C++\nhttps://www.freecodecamp.org/news/how-to-learn-the-c-programming-language/\n\n\n\n#CPP\n#ReferenceSheet\nReference\nhttps://www.learncpp.com/\n\n\n\n#C\n#TutorialSeries\nC\nhttps://www.freecodecamp.org/news/learn-c-programming-classic-book-dr-chuck/\n\n\n\n#C\n#TutorialSeries\nInteractive C tutorial\nhttps://www.learn-c.org\n\n\n\n#Python #QT\n#Blog #TutorialSeries\nMultiple Blogs Based on PyQT\nhttps://pythonpyqt.com https://pythonbasics.org/pyqt/ https://www.pythonguis.com/tutorials/pyside-creating-your-first-window/ https://realpython.com/python-pyqt-layout/\nChanging StyleSheet\n\n\n#Shaders #Math\n#Blog #ReferenceSheet\nBlog - ShaderToy\nhttps://iquilezles.org/articles\n\n\n\n#Cg\n#Blog\nOld School CG blog\nhttps://developer.download.nvidia.com/CgTutorial/cg_tutorial_chapter01.html\n\n\n\n#Cg\n#Blog\nScratchapixel\nhttps://scratchapixel.com\n\n\n\n#Cg\n#Blog #TutorialSeries\nRaytracing in one weekend series\nhttps://raytracing.github.io\n\n\n\n#Cg #Math\n#Blog #ReferenceSheet\nEntire CG Math\nhttps://nicolbolas.github.io/oldtut/index.html?utm_source=pocket_saves\n\n\n\n#OpenGL\n#Blog\nGetting Started\nhttps://www.khronos.org/opengl/wiki/Getting_Started\n\n\n\n#OpenGL\n#Blog\nWritten Tutorial\nhttps://learnopengl.com/\n\n\n\n#OpenGL\n#TutorialSeries\nOpenGL - Cherno\nhttps://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2\n\n\n\n#OpenGL\n#TutorialSeries\nOpenGL - Victor Gordan\nhttps://www.youtube.com/c/VictorGordan\n\n\n\n#OpenGL\n#TutorialSeries\nInteractive Tutorial\nhttps://in.coursera.org/projects/opengl-triangle\n\n\n\n#Vulkan\n#TutorialSeries\nVulkan - Brendan Galea\nhttps://www.youtube.com/c/BrendanGalea/videos\n\n\n\n#Cg\n#Lecture\nComputer Graphics - UCB 2013\nhttps://www.youtube.com/playlist?list=PLchkeZ4DkEwcUwOmNZiVh4nfxGaEcQ6Im\n\n\n\n#Cg\n#Lecture\nComputer Graphics (CMU 15-462/662) 2020\nhttps://www.youtube.com/playlist?list=PL9_jI1bdZmz2emSh0UQ5iOdT2xRHFHL7E\n\n\n\n#Cg\n#Lecture\nComputer Graphics 6.873 2019\nhttps://www.youtube.com/watch?v=t7g2oaNs-c8&list=PLQ3UicqQtfNuKZjdA3fY1_X9gXn13JLlW&index=2\n\n\n\n#CaseStudy\n#Blog\nGraphic studies for different games\nhttps://www.adriancourreges.com/blog/\n\n\n\n#Shaders\n#Blog\nBook of Shaders\nhttps://thebookofshaders.com https://maximalexpression.notion.site/SHADER-PROTOTYPING-146da33982c54746a0589ebcbdbf717a\n\n\n\n#Shaders\n#Blog\nShaders - Wikipedia\nhttps://en.wikipedia.org/wiki/Shader\n\n\n\n#Shaders\n#TutorialSeries\nShader Writing/Lens Shader Renderman\nhttps://en.wikipedia.org/wiki/Shader https://renderman.pixar.com/creating-a-multiflash-lens\n\n\n\n#Shaders\n#TutorialSeries\nCreative Coding - P5JS\nhttps://www.youtube.com/playlist?list=PLUG_f-krxzVrRCOjGFwOuYj3QarVfPWXK https://openprocessing.org/discover/#/trending\n\n\n\n#Scripting #DCCs #Shaders\n#Blog #TutorialSeries\nOded Maoz - Technical Journal\nhttps://odederell3d.blog/\n\n\n\n#Scripting #DCCs\n#Blog #ReferenceSheet\nMyCgDoc - Technical Journal\nhttps://mycgdoc.com/\n\n\n\n#Math\n#Utility\nLatex\nhttps://www.quicklatex.com",
+    "crumbs": [
+      "Notes",
+      "Computer Graphics",
+      "Graphics Learning Resources"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI macos setup.html",
+    "href": "notes/DeepLearning/FastAI macos setup.html",
+    "title": "FastAI Setup [2025]",
+    "section": "",
+    "text": "In this section we’ll be going through the setting up the wsl for FastAI.\nThis guide will help you out with setting up the fastai on your mac quickly.\nPrerequistes: - Conda Command Line Tool\n\nCreate conda environment\n\nconda create -n fastai-311 python=3.11\n\nInstall pytorch &gt; Recently pytorch dropped support for distribution over conda channels so pip3 is the only way to get it done\n\npip3 install torch torchvision torchaudio\n\nInstall ipython and jupyterlab\n\nconda install ipython jupyterlab\n\nInstall fastai & fastbook &gt; fastchan has been deprecated. Use fastai as the channel to download the package from.\n\nconda install -c fastai \n\nInstall sentencepiece (tokenizer by google)\n\nconda install sentencepiece",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [2025]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/index.html",
+    "href": "notes/DeepLearning/index.html",
+    "title": "Deep Learning",
+    "section": "",
+    "text": "Notes from fast ai course, kaparthy, and other resources\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nDerivatives, Batch, Loss & Metric\n\n\n\n\n\n\n\nFastAI Setup [2025]\n\n\n\n\n\n\n\nFastAI Setup [Deprecated]\n\n\n\n\n\n\n\nFastAI Snippets 01\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes",
+      "Deep Learning"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "",
+    "text": "In this section we’ll be going through the setting up the wsl for FastAI.",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#setting-up-windows-subsystem",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#setting-up-windows-subsystem",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "Setting up Windows Subsystem",
+    "text": "Setting up Windows Subsystem\n\nSet wsl\nget the miniforge/mambaforge(deprected)\nrun the miniforge.sh\nmamba install ipython\nmamba install jupyter lab\nmamba install pytorch\nconda install fastai",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#nvidia-smi",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#nvidia-smi",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "nvidia-smi",
+    "text": "nvidia-smi\nnvidia-smi dmon: Chec for sm and mem column",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#symblinks",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#symblinks",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "Symblinks",
+    "text": "Symblinks\n\nLinux\nln -s target-path : Creates a symblink of the target directory in current directory ln -la : Displays the folders who are made up of symblink\n\n\nWindows\nYoutube Tutorial",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#cloud-environments",
+    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#cloud-environments",
+    "title": "FastAI Setup [Deprecated]",
+    "section": "Cloud Environments",
+    "text": "Cloud Environments\n\nPaperspace\nQ. How to set common library?\n\npip install --user with this flag so that the lib is installed in .local\nmove the .local to /storage/.local\ncreate symblink from /storage/.local as target and it would create .bash.local in storage which would fire up time new instance has been called",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Setup [Deprecated]"
+    ]
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "X/twitter: @4gastyaPatel Github: AgastyaPatel LinkedIn: 4gastyaPatel"
+  },
+  {
+    "objectID": "about.html#im-agastya-patel",
+    "href": "about.html#im-agastya-patel",
+    "title": "About Me",
+    "section": "I’m Agastya Patel!",
+    "text": "I’m Agastya Patel!\nPassionate developer and AI enthusiast who loves building practical solutions to real-world problems. You can find me actively sharing my learning journey and progress on Twitter/X @4gastyaPatel.\n\nI’m currently building Chatleads.pro - a tool that helps businesses train and deploy custom customer service chatbots quickly by integrating with google docs, notion, and various other knowledge base sources.\nCurrently pursuing Masters in IT with AI specialization at the University of Western Australia\nOpen to exciting work opportunities in the AI/ML space"
+  },
+  {
+    "objectID": "about.html#stack",
+    "href": "about.html#stack",
+    "title": "About Me",
+    "section": "Stack",
+    "text": "Stack\n\nLanguages/Tools\nPython • C++ • SQL • PostgreSQL • Google Cloud Platform\n\n\nFrameworks & Libraries\nPyTorch • Django • FastAPI • NumPy • PyQt • FastAI"
+  },
+  {
+    "objectID": "about.html#professional-experience",
+    "href": "about.html#professional-experience",
+    "title": "About Me",
+    "section": "Professional Experience",
+    "text": "Professional Experience\n\nPython Developer @ Viga Entertainment Technology\nApril 2024 - Present\n\nAI Workflow Management: Handle deployments for AI workflow containers\nCloud Integration: Integrate and manage cloud services for AI operations\nDesktop Application Development: Develop and maintain desktop applications\nBuild Cycle Management: Maintain and manage build cycles for products\nEnsure continuous integration of desktop products with backend systems\nDesign and develop new features for our products\n\n\n\nTechnical Artist/Developer @ Viga Entertainment Technology\nSeptember 2023 - March 2024\n\nCreated custom IP to improve efficiency of 3D workflows\nDeveloped innovative solutions to complex problems and conducted team training\nIntegrated AI services into 3D workflows, enabling new creative possibilities\nImplemented custom solutions for workflow optimization\n\n\n\nTechnical Artist/Developer Intern @ Viga Entertainment Technology\nJune 2023 - August 2023\n\nDeveloped Text-to-Animation Pipeline streaming in Omniverse\nGained hands-on experience with automation of 3D animation workflows\nCollaborated with creative teams to implement technical solutions"
+  },
+  {
+    "objectID": "about.html#journey",
+    "href": "about.html#journey",
+    "title": "About Me",
+    "section": "Journey",
+    "text": "Journey\nStarting as a self-taught “organic engineer,” I’ve always believed in learning by doing & I started my tech journey by automating 3D workflows which led to a lots of interesting projects. This hands-on approach has helped me develop a deep understanding of software development and AI technologies. I’m constantly exploring new technologies and sharing my insights with the community.\n\nEducation\n\nMasters in IT with AI specialization at the University of Western Australia Class of 2027\nBachelors in Science (Media, Graphics, Animation) at YCMOU, India Class of 2023\n\n\nI’m always excited to connect with fellow developers and collaborate on interesting projects. Feel free to reach out through any of the social links above!"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Blogs",
+    "section": "",
+    "text": "Welcome to my blog! Here you’ll find my thoughts and writings on various topics. You can find also find my notes which might be short but useful.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\nReading Time\n\n\nCategories\n\n\n\n\n\n\n \n\n\nFastAI Projects\n\n\nProjects done using…\n\n\n\n\n\n1 min\n\n\n \n\n\n\n\n2023-04-03\n\n\nWhat is Model Context Protocol?\n\n\nA blog post about the…\n\n\n\n\n\n2 min\n\n\nDeepLearning, AI, Agents, LLMs\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "bob.html",
+    "href": "bob.html",
+    "title": "Back of book index",
+    "section": "",
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nAI Fundamentals\n\n\nAgastya Patel\n\n\n\n\n \n\n\nArtificial Intelligence\n\n\n \n\n\n\n\n \n\n\nCS\n\n\n \n\n\n\n\n \n\n\nConcurrent programming with GPUs\n\n\n \n\n\n\n\n \n\n\nDeep Learning\n\n\n \n\n\n\n\n \n\n\nDeep Learning Resources\n\n\n \n\n\n\n\nJan 13, 2024\n\n\nDerivatives, Batch, Loss & Metric\n\n\nAgastya Patel\n\n\n\n\n \n\n\nEngineering\n\n\n \n\n\n\n\n \n\n\nFastAI Projects\n\n\n \n\n\n\n\n \n\n\nFastAI Setup [2025]\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup [Deprecated]\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\n \n\n\nGit Vsc\n\n\nAgastya Patel\n\n\n\n\n \n\n\nGithub Actions\n\n\nAgastya Patel\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nMar 12, 2025\n\n\nMCP Model Context Protocol\n\n\nAgastya Patel\n\n\n\n\n \n\n\nML Terminologies\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\n \n\n\nNetworking\n\n\n \n\n\n\n\n \n\n\nNotes\n\n\n \n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\n \n\n\nStartup Validation framework\n\n\nAgastya Patel\n\n\n\n\n \n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\nApr 3, 2023\n\n\nWhat is Model Context Protocol?\n\n\n \n\n\n\n\n \n\n\nWhat is OpenGL ?\n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blogs/what_is_model_context_protocol.html",
+    "href": "blogs/what_is_model_context_protocol.html",
+    "title": "What is Model Context Protocol?",
+    "section": "",
+    "text": "Everybody is talking about the Model Context Protocol (MCP) these days. But what is it?\nModel context protocol is a standardized way of formatting prompts and responses between humans and AI language models. It was developed by Anthropic and is now supported and used by many other LLM providers. The protocol helps establish clear boundaries and roles in human-AI interactions by using specific markers like “Human:” and “Assistant:” to indicate who is speaking. This structured format makes it easier for language models to understand the conversation flow and maintain consistent behavior.\n\n\nModel Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol\n\n\n\nGenerally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "What is Model Context Protocol?"
+    ]
+  },
+  {
+    "objectID": "blogs/what_is_model_context_protocol.html#what-is-mcp",
+    "href": "blogs/what_is_model_context_protocol.html#what-is-mcp",
+    "title": "What is Model Context Protocol?",
+    "section": "",
+    "text": "Model Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "What is Model Context Protocol?"
+    ]
+  },
+  {
+    "objectID": "blogs/what_is_model_context_protocol.html#api-vs-mcp",
+    "href": "blogs/what_is_model_context_protocol.html#api-vs-mcp",
+    "title": "What is Model Context Protocol?",
+    "section": "",
+    "text": "Generally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "What is Model Context Protocol?"
+    ]
+  },
+  {
+    "objectID": "blogs/FastAI/FastAI-projects.html",
+    "href": "blogs/FastAI/FastAI-projects.html",
+    "title": "FastAI Projects",
+    "section": "",
+    "text": "Projects\nLink\nDescription\nLesson Relation\n\n\n\n\nPokemon Classifier\nThread, HF-Spaces\nCreated pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it’s usage.\n1,2\n\n\nMNIST Classifier",
+    "crumbs": [
+      "Notes",
+      "Blogs",
+      "FastAI",
+      "FastAI Projects"
+    ]
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Current Running Projects\n\nChatleads.pro\nChatleads is a platform tailored to small and medium businesses to help them address customer queries and generate more leads from their website. I’m working on this project solo, currently in stealth mode.\n\n\n\nAcademic/Learning Projects\n\nFastAI Projects\nHere’s a list of projects I’ve worked on during my FastAI journey. Projects include recomendations systems, image classification, and more. View FastAI Projects"
+  },
+  {
+    "objectID": "readme.html",
+    "href": "readme.html",
+    "title": "Agastya Patel",
+    "section": "",
+    "text": "ghpages: quarto publish preview: quarto preview render: quarto render"
+  },
+  {
+    "objectID": "notes/Startups/Startup.html",
+    "href": "notes/Startups/Startup.html",
+    "title": "Startup Validation framework",
+    "section": "",
+    "text": "YC Combinator’s Approach for Startup Validation",
+    "crumbs": [
+      "Notes",
+      "Startups",
+      "Startup Validation framework"
+    ]
+  },
+  {
+    "objectID": "notes/Startups/Startup.html#framework",
+    "href": "notes/Startups/Startup.html#framework",
+    "title": "Startup Validation framework",
+    "section": "Framework?",
+    "text": "Framework?\n\nDo you have founder/market fit?\nHow acute is the problem?\nDo you have competition?\nDo you want this personally?\nDid this only become necessary or possible?\nAre there proxies? (Indirect competitors)\nIs this an idea you want to work for years?\nIs this a scalable business?\nIs this a good idea space?",
+    "crumbs": [
+      "Notes",
+      "Startups",
+      "Startup Validation framework"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html",
+    "href": "notes/DeepLearning/FastAI Snippets.html",
+    "title": "FastAI Snippets 01",
+    "section": "",
+    "text": "Page contains some of the common and usefull snippets. Pathlib, parallel processing.",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#path",
+    "href": "notes/DeepLearning/FastAI Snippets.html#path",
+    "title": "FastAI Snippets 01",
+    "section": "Path",
+    "text": "Path\nfrom pathlib import path\npath = Path() #Current Dir\n#path = Path('Content') #Relative Dir\n#path = Path('NB/content') #Absolute Dir",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
+    "href": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
+    "title": "FastAI Snippets 01",
+    "section": "Add recent models",
+    "text": "Add recent models\n!pip install timm\nimport timm\ntimm.list_models('convnext*') # Prints available model",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
+    "href": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
+    "title": "FastAI Snippets 01",
+    "section": "Fine_Tune:",
+    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate\n\n!pip list | grep \"^fast",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "FastAI Snippets 01"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/derivs_batchs_loss.html",
+    "href": "notes/DeepLearning/derivs_batchs_loss.html",
+    "title": "Derivatives, Batch, Loss & Metric",
+    "section": "",
+    "text": "This notes were prepared from the lecture 3 of the fastai course.\nRectified linear Unit : y = mx + b",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "Derivatives, Batch, Loss & Metric"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/derivs_batchs_loss.html#calculating-loss",
+    "href": "notes/DeepLearning/derivs_batchs_loss.html#calculating-loss",
+    "title": "Derivatives, Batch, Loss & Metric",
+    "section": "Calculating Loss",
+    "text": "Calculating Loss\n\nWhat are derivatives?\nDerivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function - fastbook\n\n\nCalculating derivatives for weights in NN\nFor neural networks with lots of weights, we find derivatives for each weight, treating others as constants. In deep learning, “gradients” mean values of a function’s derivatives. PyTorch’s requires_grad_() helps track and calculate these derivatives automatically.\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value. - fastbook",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "Derivatives, Batch, Loss & Metric"
+    ]
+  },
+  {
+    "objectID": "notes/DeepLearning/derivs_batchs_loss.html#loss-vs-metric",
+    "href": "notes/DeepLearning/derivs_batchs_loss.html#loss-vs-metric",
+    "title": "Derivatives, Batch, Loss & Metric",
+    "section": "Loss vs Metric",
+    "text": "Loss vs Metric\n\n\n\n\n\n\n\n\nAspect\nMetric\nLoss\n\n\n\n\nPurpose Difference\nDrives human understanding of performance\nDrives automated learning by optimization\n\n\nSmoothness Requirement\nNot constrained by smoothness\nRequires smoothness for meaningful derivative\n\n\nOptimization vs. Real Goal\nReflects actual goals\nCompromise between real goals and optimization\n\n\nCalculation Process\nProvides overall model evaluation\nCalculated per item, averaged at epoch end\n\n\nFocus Consideration\nPrimary focus for judging performance\nImportant for automated learning, may not directly represent end goal",
+    "crumbs": [
+      "Notes",
+      "Deep Learning",
+      "Derivatives, Batch, Loss & Metric"
+    ]
+  },
+  {
+    "objectID": "notes/Computer Graphics/OpenGL.html",
+    "href": "notes/Computer Graphics/OpenGL.html",
+    "title": "Cherno’s OpenGL (GLEW)",
+    "section": "",
+    "text": "OpenGL is specification just like C++ standard specification",
+    "crumbs": [
+      "Notes",
+      "Computer Graphics",
+      "What is OpenGL ?"
+    ]
+  },
+  {
+    "objectID": "notes/Computer Graphics/OpenGL.html#different-parts-of-opengl",
+    "href": "notes/Computer Graphics/OpenGL.html#different-parts-of-opengl",
+    "title": "Cherno’s OpenGL (GLEW)",
+    "section": "Different parts of openGL",
+    "text": "Different parts of openGL\n\nSetting Up OpenGL:\n\nInstall the necessary OpenGL libraries and drivers for your platform.\nChoose a programming language that supports OpenGL, such as C++, Python (with libraries like PyOpenGL), or Java (with libraries like LWJGL or JOGL).\n\nCreating a Window:\n\nUse a windowing system library (e.g., GLFW, SDL, or FreeGLUT) to create a window where you can render OpenGL graphics.\n\nContext and Initialization:\n\nCreate an OpenGL context within the window to initialize the OpenGL state.\nRetrieve function pointers for the OpenGL functions using a library like GLEW or GLAD.\n\nRendering Loop:\n\nSet up a loop that will execute continuously to update and redraw the graphics.\nWithin the loop, clear the frame buffer using glClear() to prepare for drawing new content.\n\nCoordinate Systems:\n\nUnderstand the coordinate system used in OpenGL: the viewport, which is a 2D or 3D space where your graphics will be displayed.\nDefine your objects’ positions and sizes in this coordinate system.\n\nCreating and Binding Buffers:\n\nUse buffer objects (glGenBuffers(), glBindBuffer()) to store vertex data, such as positions, colors, and texture coordinates.\nBuffer objects are typically used with vertex arrays (glVertexAttribPointer()) to describe the format and layout of the vertex data.\n\nShaders and Shader Programs:\n\nUse shaders (vertex and fragment shaders) to define the behavior and appearance of your objects.\nCompile and link shaders into a shader program (glCreateShader(), glCreateProgram(), glAttachShader(), glLinkProgram()) to be used during rendering.\n\nDrawing:\n\nUse glDrawArrays() or glDrawElements() to issue draw calls, specifying the primitive type (points, lines, triangles), vertex count, and indices (if using indices).\n\nTransformation and Projection Matrices:\n\nApply transformations (translations, rotations, scaling) to your objects using transformation matrices (glTranslate(), glRotate(), glScale()).\nUse projection matrices (gluPerspective(), glOrtho()) to define the perspective or orthographic projection of your scene.\n\nHandling User Input:\n\nUse libraries or system functions to handle user input, such as keyboard and mouse events, to interact with your OpenGL application.\n\n\nClean up resources: Properly release any allocated resources, such as shaders, buffers, and the OpenGL context, when your application exits.",
+    "crumbs": [
+      "Notes",
+      "Computer Graphics",
+      "What is OpenGL ?"
+    ]
+  },
+  {
+    "objectID": "notes/Computer Graphics/OpenGL.html#contextwindow-toolkits",
+    "href": "notes/Computer Graphics/OpenGL.html#contextwindow-toolkits",
+    "title": "Cherno’s OpenGL (GLEW)",
+    "section": "Context/Window Toolkits",
+    "text": "Context/Window Toolkits\nCreating window in windows in Window’s OS uses win32 api…similarly creating window is very much platform specific and uses its own api.\n\nGLFW Library aka Window_GUI_Creator\nGLFW is a lightweight library which helps us to create windows with cross compatibility by supplying - appropriate platform layout - open source in nature",
+    "crumbs": [
+      "Notes",
+      "Computer Graphics",
+      "What is OpenGL ?"
+    ]
+  },
+  {
+    "objectID": "notes/Computer Graphics/OpenGL.html#opengl-function-extractor",
+    "href": "notes/Computer Graphics/OpenGL.html#opengl-function-extractor",
+    "title": "Cherno’s OpenGL (GLEW)",
+    "section": "OpenGL Function Extractor",
+    "text": "OpenGL Function Extractor\n\nGLEW/GLAD Libraries aka Extractor\nGLEW/GLAD libraries is used to retrieve the openGL functions which are present in binary form in Graphics driver. The retrieving these function is platform specific. - access driver dll files - access function pointers (function definition) - provides header files (function declaration)\n\nglew.h provides opengl function declaration .cpp file is used to extract the function definition from drivers\n\nWhat is shader? A program which is running on GPU which gives output.",
+    "crumbs": [
+      "Notes",
+      "Computer Graphics",
+      "What is OpenGL ?"
+    ]
+  },
+  {
+    "objectID": "notes/Computer Graphics/OpenGL.html#what-is-buffer",
+    "href": "notes/Computer Graphics/OpenGL.html#what-is-buffer",
+    "title": "Cherno’s OpenGL (GLEW)",
+    "section": "What is Buffer?",
+    "text": "What is Buffer?\nChanging of pixel from top of the screen to bottom. New image data is know as Front Buffer whereas the screen image on which the current data is being overwritten with Front Buffer is known as Back Buffer\n//Adding background with the help of GLAD and buffer\n#include &lt;iostream&gt;\n#include &lt;glad/glad.h&gt;\n#include &lt;GLFW/glfw3.h&gt;\n\nint main()\n{\n    glfwInit();                 //Intialising GLFW (OpenGL extractor)\n    \n    //Hinting the version of OPENGL to glfw\n    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);  \n    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);\n    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);  //Hinting the profile(CORE(modern)/COMPACTability(legacy)\n\n    GLFWwindow* window = glfwCreateWindow(800, 800, \"VictorGordan_Opengl\", NULL, NULL);\n\n    if (window == NULL)         //Error check if window fails to create then terminating GLFW \n    {\n        std::cout &lt;&lt; \"Failed to create GLFW window\" &lt;&lt; std::endl;\n        glfwTerminate();\n        return -1;\n    }\n\n    //introduce the window to current context\n    glfwMakeContextCurrent(window);\n\n    //Load GLAD (OpenGL extractor)\n    gladLoadGL();\n\n    glViewport(0, 0, 800, 800);\n    \n    glClearColor(0.07f, 0.13f, 0.17f, 1.0f);    //specify the color of background\n    glClear(GL_COLOR_BUFFER_BIT);               //clean the back buffer and assign the new color to it\n    glfwSwapBuffers(window);                    //swap the back buffer with the front buffer\n\n    //Closing Window only on userCloseEvent\n    while (!glfwWindowShouldClose(window))\n    {\n        glfwPollEvents();       //Process Poll Events\n    }\n\n    glfwDestroyWindow(window);  //destroying GLFW window\n    glfwTerminate();            //Terminating GLFW\n    return 0;\n}",
+    "crumbs": [
+      "Notes",
+      "Computer Graphics",
+      "What is OpenGL ?"
+    ]
+  },
+  {
+    "objectID": "notes/Computer Graphics/OpenGL.html#graphics-a-pipeline",
+    "href": "notes/Computer Graphics/OpenGL.html#graphics-a-pipeline",
+    "title": "Cherno’s OpenGL (GLEW)",
+    "section": "Graphics a pipeline",
+    "text": "Graphics a pipeline\nGraphics pipeline is made up of series of functions which takes input like vertex data and sends the output. 1. Vertex Shader 2. Shape Assembly 3. Geometry Shader",
+    "crumbs": [
+      "Notes",
+      "Computer Graphics",
+      "What is OpenGL ?"
+    ]
+  },
+  {
+    "objectID": "notes/Computer Graphics/Advance Computing with GPUs.html",
+    "href": "notes/Computer Graphics/Advance Computing with GPUs.html",
+    "title": "Concurrent programming with GPUs",
+    "section": "",
+    "text": "What is CUDA? General purpose computing on graphical processing units.\nWhat is OpenGL OpenGL (Open Graphics Library[3]) is a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering.\n\nConcurrent programming with GPUs\nMultiprocessing/Parallel/Concurrent programming are synonymous\nWhat are cores?\nWhat are threads? https://www.guru99.com/cpu-core-multicore-thread.html\nDifference between Core vs. Threads\n\n\n\n\n\n\n\n\nParameters\nCore\nThreads\n\n\n\n\nDefinition\nCPU cores mean the actual hardware component.\nThreads refer to the virtual component which manages the tasks.\n\n\nProcess\nThe CPU is fed tasks from a thread. Therefore, it only accesses the second thread when the information sent by the first thread is not reliable.\nThere are many different variations of how CPU can interacts with multiple threads.\n\n\nImplementation\nAchieved through interleaving operation\nPerformed through suing multiple CPU’S\n\n\nBenefit\nIncrease the amount of work accomplished at a time.\nImprove throughput, computational speed-up.\n\n\nMake use of\nCore uses content switching\nUses multiple CPUs for operating numerous processes.\n\n\nProcessing units required\nRequires only signal process unit.\nRequires multiple processing units.\n\n\nExample\nRunning multiple application at the same time.\nRunning web crawler on a cluster.\n\n\n\nCommon Pitfall in Concurrent Programming - Race Conditions - Resource contention - dead Lock - live lock - non-optimal resource utilization\nConcurrent Programming Problems and Algorithms",
+    "crumbs": [
+      "Notes",
+      "Computer Graphics",
+      "Concurrent programming with GPUs"
+    ]
+  },
+  {
+    "objectID": "notes/CS/Networking.html",
+    "href": "notes/CS/Networking.html",
+    "title": "Networking",
+    "section": "",
+    "text": "Global network of billions of electronic devices which acts as servers or clients.\nServers are machines which provide services to other machines.\nClients are machines used to connect to those services.\n\nQ. How do we distinguish each machines? Q. How do we transmit data\n\n\n\n\n\n\n\nWAN (Wide Area Network):\nLAN (Local Area Network)\n\n\n\n\nGroup of computers that span large geographic area.\nGroup of computers connected in limited geographic area.\n\n\nEg: Internet\nEg. Home Network, School Network\n\n\n\n\n\n\n\nAn IP address is a unique address that is used to identify computers or nodes on the internet.\nAddresses are in this form: #.#.#.#\n\n\n[!info] Your router is the only device on the internet with this public IP Address - Inside your home, your devices have most likely received a local IP Address from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)\n\n\nIPv4: Numbers range from 0 to 255. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.\nIPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? 255.255.255.0 Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.\n\ngraph TB\n  A[\"Your friend. In another house! 192.168.1.5\"] --&gt; B[[\"Router 192.168.1.1 (Local IP)\\n Router 77.45.82.17 (PUBLIC IP)\"]]\n  K[\"Your friend... In another house! 192.168.1.4\"] --&gt; B \n  B &lt;--&gt; D[\"The Internet\"]\n  D &lt;--&gt; E[[\"Router 77..45..19..6 (PUBLIC IP)\\nRouter 192..168..1..1 (LOCAL IP)\"]]\n  E --&gt; G[\"Computer 1 192.168.1.4\\n Our machine running our server on port 12345!\"]\n  E --&gt; I[\"Computer 2 192.168.1.7\"]\n  E --&gt; J[\"Computer 3 192.168.14\"]\n  E --&gt; L[\"Computer S 192.168.4.1\"]\n  E --&gt; M[\"Computer A 192.168.2.1\"]\n\n\n\nPort Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure\n\nnetstat -na gives entire list of open ports on Windows\n\n\n[!Warning] Port Address conflicts [todo]\n\n\n\n\n\n\n\n\nTCP is a connection based protocol.\nConnection must be made before any data is sent.\nUsed to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.\nFor Example HTTP and HTTPS service is based on TCP Protocol\n\n\n\n\n\nUDP is a connectionless protocol.\nNo connection has to be made before sending data\nUDP tends to be faster but you may not receive the data in order and you could have missing data.",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
+  },
+  {
+    "objectID": "notes/CS/Networking.html#internet",
+    "href": "notes/CS/Networking.html#internet",
+    "title": "Networking",
+    "section": "",
+    "text": "Global network of billions of electronic devices which acts as servers or clients.\nServers are machines which provide services to other machines.\nClients are machines used to connect to those services.\n\nQ. How do we distinguish each machines? Q. How do we transmit data\n\n\n\n\n\n\n\nWAN (Wide Area Network):\nLAN (Local Area Network)\n\n\n\n\nGroup of computers that span large geographic area.\nGroup of computers connected in limited geographic area.\n\n\nEg: Internet\nEg. Home Network, School Network",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
+  },
+  {
+    "objectID": "notes/CS/Networking.html#what-is-ip-address",
+    "href": "notes/CS/Networking.html#what-is-ip-address",
+    "title": "Networking",
+    "section": "",
+    "text": "An IP address is a unique address that is used to identify computers or nodes on the internet.\nAddresses are in this form: #.#.#.#\n\n\n[!info] Your router is the only device on the internet with this public IP Address - Inside your home, your devices have most likely received a local IP Address from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)\n\n\nIPv4: Numbers range from 0 to 255. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.\nIPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? 255.255.255.0 Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.\n\ngraph TB\n  A[\"Your friend. In another house! 192.168.1.5\"] --&gt; B[[\"Router 192.168.1.1 (Local IP)\\n Router 77.45.82.17 (PUBLIC IP)\"]]\n  K[\"Your friend... In another house! 192.168.1.4\"] --&gt; B \n  B &lt;--&gt; D[\"The Internet\"]\n  D &lt;--&gt; E[[\"Router 77..45..19..6 (PUBLIC IP)\\nRouter 192..168..1..1 (LOCAL IP)\"]]\n  E --&gt; G[\"Computer 1 192.168.1.4\\n Our machine running our server on port 12345!\"]\n  E --&gt; I[\"Computer 2 192.168.1.7\"]\n  E --&gt; J[\"Computer 3 192.168.14\"]\n  E --&gt; L[\"Computer S 192.168.4.1\"]\n  E --&gt; M[\"Computer A 192.168.2.1\"]\n\n\n\nPort Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure\n\nnetstat -na gives entire list of open ports on Windows\n\n\n[!Warning] Port Address conflicts [todo]",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
+  },
+  {
+    "objectID": "notes/CS/Networking.html#internet-protocols",
+    "href": "notes/CS/Networking.html#internet-protocols",
+    "title": "Networking",
+    "section": "",
+    "text": "TCP is a connection based protocol.\nConnection must be made before any data is sent.\nUsed to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.\nFor Example HTTP and HTTPS service is based on TCP Protocol\n\n\n\n\n\nUDP is a connectionless protocol.\nNo connection has to be made before sending data\nUDP tends to be faster but you may not receive the data in order and you could have missing data.",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
+  },
+  {
+    "objectID": "notes/CS/Networking.html#section",
+    "href": "notes/CS/Networking.html#section",
+    "title": "Networking",
+    "section": "—",
+    "text": "—",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
+  },
+  {
+    "objectID": "notes/CS/Networking.html#in-depth-working-get-request",
+    "href": "notes/CS/Networking.html#in-depth-working-get-request",
+    "title": "Networking",
+    "section": "In Depth Working GET Request",
+    "text": "In Depth Working GET Request\n\nURL Requested\nBrowser extracts the protocol http or https and uses the specified.\nIdentifies the domain name from the URL and queries the Internet Domain Name Server (DNS/Domain Name System) to return Internet Protocol Address.\nBrowser, the client opens the opens a connection using the http protocol to the server at the IP Address resolved above.\nClient initiates a GET Request\n\n-- CLIENT GET REQUEST --\nGET / HTTP/1.1\nHost: www.codecademy.com",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
+  },
+  {
+    "objectID": "notes/CS/Networking.html#http-vs-rest-related-but-distinct-concepts",
+    "href": "notes/CS/Networking.html#http-vs-rest-related-but-distinct-concepts",
+    "title": "Networking",
+    "section": "HTTP vs REST (related but distinct concepts)",
+    "text": "HTTP vs REST (related but distinct concepts)\nHTTP (Hypertext Transfer Protocol): - HTTP is the foundation of any data exchange on the Web. - It’s a protocol used for transferring hypertext (text that includes links to other texts, like web pages) over the internet. - It defines how messages are formatted and transmitted and what actions web servers and browsers should take in response to various commands. - In simpler terms, it’s the set of rules that allows your web browser to request a webpage from a server, and the server to send that webpage back to your browser as response.\nREST (Representational State Transfer): #Guidelines https://www.codecademy.com/article/what-is-rest - REST is an architectural style, a set of principles that are often applied when building web services. - It’s not a protocol like HTTP; instead, it’s a set of guidelines for creating scalable and stateless web services. - RESTful services use standard HTTP methods (like GET, POST, PUT, DELETE) for operations on resources (like data entities), and they represent these resources as URIs (Uniform Resource Identifiers). - RESTful services typically use JSON or XML for data exchange. - In simpler terms, REST is an approach to designing networked applications in a way that is scalable, stateless, and relies on standard HTTP methods.\n\n[!Info] Stateless Web Service: Each request from client is independent & carries all information. So, the server doesn’t store the client’s state between requests and treats each requests as isolated transaction.",
+    "crumbs": [
+      "Notes",
+      "CS",
+      "Networking"
+    ]
+  },
+  {
+    "objectID": "notes/index.html",
+    "href": "notes/index.html",
+    "title": "Notes",
+    "section": "",
+    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nArtificial Intelligence\n\n\n\n\n\n\n\nCS\n\n\n\n\n\n\n\nDeep Learning\n\n\n\n\n\n\n\nEngineering\n\n\n\n\n\n\n\nUtility\n\n\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Notes"
     ]
   },
   {
@@ -263,686 +899,50 @@
     ]
   },
   {
-    "objectID": "notes/index.html",
-    "href": "notes/index.html",
-    "title": "Notes",
+    "objectID": "notes/AI/model_context_protocol.html",
+    "href": "notes/AI/model_context_protocol.html",
+    "title": "MCP Model Context Protocol",
     "section": "",
-    "text": "Title\n\n\nDescription\n\n\n\n\n\n\nArtificial Intelligence\n\n\n\n\n\n\n\nCS\n\n\n\n\n\n\n\nDeep Learning\n\n\n\n\n\n\n\nEngineering\n\n\n\n\n\n\n\nUtility\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Notes"
-    ]
-  },
-  {
-    "objectID": "notes/CS/Networking.html",
-    "href": "notes/CS/Networking.html",
-    "title": "Networking",
-    "section": "",
-    "text": "Global network of billions of electronic devices which acts as servers or clients.\nServers are machines which provide services to other machines.\nClients are machines used to connect to those services.\n\nQ. How do we distinguish each machines? Q. How do we transmit data\n\n\n\n\n\n\n\nWAN (Wide Area Network):\nLAN (Local Area Network)\n\n\n\n\nGroup of computers that span large geographic area.\nGroup of computers connected in limited geographic area.\n\n\nEg: Internet\nEg. Home Network, School Network\n\n\n\n\n\n\n\nAn IP address is a unique address that is used to identify computers or nodes on the internet.\nAddresses are in this form: #.#.#.#\n\n\n[!info] Your router is the only device on the internet with this public IP Address - Inside your home, your devices have most likely received a local IP Address from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)\n\n\nIPv4: Numbers range from 0 to 255. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.\nIPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? 255.255.255.0 Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.\n\ngraph TB\n  A[\"Your friend. In another house! 192.168.1.5\"] --&gt; B[[\"Router 192.168.1.1 (Local IP)\\n Router 77.45.82.17 (PUBLIC IP)\"]]\n  K[\"Your friend... In another house! 192.168.1.4\"] --&gt; B \n  B &lt;--&gt; D[\"The Internet\"]\n  D &lt;--&gt; E[[\"Router 77..45..19..6 (PUBLIC IP)\\nRouter 192..168..1..1 (LOCAL IP)\"]]\n  E --&gt; G[\"Computer 1 192.168.1.4\\n Our machine running our server on port 12345!\"]\n  E --&gt; I[\"Computer 2 192.168.1.7\"]\n  E --&gt; J[\"Computer 3 192.168.14\"]\n  E --&gt; L[\"Computer S 192.168.4.1\"]\n  E --&gt; M[\"Computer A 192.168.2.1\"]\n\n\n\nPort Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure\n\nnetstat -na gives entire list of open ports on Windows\n\n\n[!Warning] Port Address conflicts [todo]\n\n\n\n\n\n\n\n\nTCP is a connection based protocol.\nConnection must be made before any data is sent.\nUsed to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.\nFor Example HTTP and HTTPS service is based on TCP Protocol\n\n\n\n\n\nUDP is a connectionless protocol.\nNo connection has to be made before sending data\nUDP tends to be faster but you may not receive the data in order and you could have missing data.",
-    "crumbs": [
-      "Notes",
-      "CS",
-      "Networking"
-    ]
-  },
-  {
-    "objectID": "notes/CS/Networking.html#internet",
-    "href": "notes/CS/Networking.html#internet",
-    "title": "Networking",
-    "section": "",
-    "text": "Global network of billions of electronic devices which acts as servers or clients.\nServers are machines which provide services to other machines.\nClients are machines used to connect to those services.\n\nQ. How do we distinguish each machines? Q. How do we transmit data\n\n\n\n\n\n\n\nWAN (Wide Area Network):\nLAN (Local Area Network)\n\n\n\n\nGroup of computers that span large geographic area.\nGroup of computers connected in limited geographic area.\n\n\nEg: Internet\nEg. Home Network, School Network",
-    "crumbs": [
-      "Notes",
-      "CS",
-      "Networking"
-    ]
-  },
-  {
-    "objectID": "notes/CS/Networking.html#what-is-ip-address",
-    "href": "notes/CS/Networking.html#what-is-ip-address",
-    "title": "Networking",
-    "section": "",
-    "text": "An IP address is a unique address that is used to identify computers or nodes on the internet.\nAddresses are in this form: #.#.#.#\n\n\n[!info] Your router is the only device on the internet with this public IP Address - Inside your home, your devices have most likely received a local IP Address from router. - This local IP Address is unique on your network however, there might be other devices with same IP Address on other networks (LANs)\n\n\nIPv4: Numbers range from 0 to 255. IP addresses are 32-bits, meaning that these addresses could accommodate over 4 billion addresses.\nIPv6: Newer versions of IP addresses can accommodate far more computers! IPv6 #### What is Subnet mask? 255.255.255.0 Here 255 means that IP address amongst the devices in LAN are common where as 0 means unique to devices. #### What is Default Gateway? It is the Local IP Address for the router/modem that you are connected to.\n\ngraph TB\n  A[\"Your friend. In another house! 192.168.1.5\"] --&gt; B[[\"Router 192.168.1.1 (Local IP)\\n Router 77.45.82.17 (PUBLIC IP)\"]]\n  K[\"Your friend... In another house! 192.168.1.4\"] --&gt; B \n  B &lt;--&gt; D[\"The Internet\"]\n  D &lt;--&gt; E[[\"Router 77..45..19..6 (PUBLIC IP)\\nRouter 192..168..1..1 (LOCAL IP)\"]]\n  E --&gt; G[\"Computer 1 192.168.1.4\\n Our machine running our server on port 12345!\"]\n  E --&gt; I[\"Computer 2 192.168.1.7\"]\n  E --&gt; J[\"Computer 3 192.168.14\"]\n  E --&gt; L[\"Computer S 192.168.4.1\"]\n  E --&gt; M[\"Computer A 192.168.2.1\"]\n\n\n\nPort Address is the address that a specific application or service runs on the given computer. Port addresses can range from 0 to 65535. Some of them might be reserved for well know protocols and services. #### Common Ports and Services Port 21 - FTP File Transfer Protocol Port 22 - SSH Secure Shell Port 25 - SMTP Simple Mail Transfer Protocol Port 80 - HTTP Hyper Text Transfer Protocol Port 443 - HTTPS Hyper Text Transfer Protocol Secure\n\nnetstat -na gives entire list of open ports on Windows\n\n\n[!Warning] Port Address conflicts [todo]",
-    "crumbs": [
-      "Notes",
-      "CS",
-      "Networking"
-    ]
-  },
-  {
-    "objectID": "notes/CS/Networking.html#internet-protocols",
-    "href": "notes/CS/Networking.html#internet-protocols",
-    "title": "Networking",
-    "section": "",
-    "text": "TCP is a connection based protocol.\nConnection must be made before any data is sent.\nUsed to establish a reliable, error free connection. It ensures all data was sent is received and it keeps all sent packets organized.\nFor Example HTTP and HTTPS service is based on TCP Protocol\n\n\n\n\n\nUDP is a connectionless protocol.\nNo connection has to be made before sending data\nUDP tends to be faster but you may not receive the data in order and you could have missing data.",
-    "crumbs": [
-      "Notes",
-      "CS",
-      "Networking"
-    ]
-  },
-  {
-    "objectID": "notes/CS/Networking.html#section",
-    "href": "notes/CS/Networking.html#section",
-    "title": "Networking",
-    "section": "—",
-    "text": "—",
-    "crumbs": [
-      "Notes",
-      "CS",
-      "Networking"
-    ]
-  },
-  {
-    "objectID": "notes/CS/Networking.html#in-depth-working-get-request",
-    "href": "notes/CS/Networking.html#in-depth-working-get-request",
-    "title": "Networking",
-    "section": "In Depth Working GET Request",
-    "text": "In Depth Working GET Request\n\nURL Requested\nBrowser extracts the protocol http or https and uses the specified.\nIdentifies the domain name from the URL and queries the Internet Domain Name Server (DNS/Domain Name System) to return Internet Protocol Address.\nBrowser, the client opens the opens a connection using the http protocol to the server at the IP Address resolved above.\nClient initiates a GET Request\n\n-- CLIENT GET REQUEST --\nGET / HTTP/1.1\nHost: www.codecademy.com",
-    "crumbs": [
-      "Notes",
-      "CS",
-      "Networking"
-    ]
-  },
-  {
-    "objectID": "notes/CS/Networking.html#http-vs-rest-related-but-distinct-concepts",
-    "href": "notes/CS/Networking.html#http-vs-rest-related-but-distinct-concepts",
-    "title": "Networking",
-    "section": "HTTP vs REST (related but distinct concepts)",
-    "text": "HTTP vs REST (related but distinct concepts)\nHTTP (Hypertext Transfer Protocol): - HTTP is the foundation of any data exchange on the Web. - It’s a protocol used for transferring hypertext (text that includes links to other texts, like web pages) over the internet. - It defines how messages are formatted and transmitted and what actions web servers and browsers should take in response to various commands. - In simpler terms, it’s the set of rules that allows your web browser to request a webpage from a server, and the server to send that webpage back to your browser as response.\nREST (Representational State Transfer): #Guidelines https://www.codecademy.com/article/what-is-rest - REST is an architectural style, a set of principles that are often applied when building web services. - It’s not a protocol like HTTP; instead, it’s a set of guidelines for creating scalable and stateless web services. - RESTful services use standard HTTP methods (like GET, POST, PUT, DELETE) for operations on resources (like data entities), and they represent these resources as URIs (Uniform Resource Identifiers). - RESTful services typically use JSON or XML for data exchange. - In simpler terms, REST is an approach to designing networked applications in a way that is scalable, stateless, and relies on standard HTTP methods.\n\n[!Info] Stateless Web Service: Each request from client is independent & carries all information. So, the server doesn’t store the client’s state between requests and treats each requests as isolated transaction.",
-    "crumbs": [
-      "Notes",
-      "CS",
-      "Networking"
-    ]
-  },
-  {
-    "objectID": "notes/Computer Graphics/Advance Computing with GPUs.html",
-    "href": "notes/Computer Graphics/Advance Computing with GPUs.html",
-    "title": "Concurrent programming with GPUs",
-    "section": "",
-    "text": "What is CUDA? General purpose computing on graphical processing units.\nWhat is OpenGL OpenGL (Open Graphics Library[3]) is a cross-language, cross-platform application programming interface (API) for rendering 2D and 3D vector graphics. The API is typically used to interact with a graphics processing unit (GPU), to achieve hardware-accelerated rendering.\n\nConcurrent programming with GPUs\nMultiprocessing/Parallel/Concurrent programming are synonymous\nWhat are cores?\nWhat are threads? https://www.guru99.com/cpu-core-multicore-thread.html\nDifference between Core vs. Threads\n\n\n\n\n\n\n\n\nParameters\nCore\nThreads\n\n\n\n\nDefinition\nCPU cores mean the actual hardware component.\nThreads refer to the virtual component which manages the tasks.\n\n\nProcess\nThe CPU is fed tasks from a thread. Therefore, it only accesses the second thread when the information sent by the first thread is not reliable.\nThere are many different variations of how CPU can interacts with multiple threads.\n\n\nImplementation\nAchieved through interleaving operation\nPerformed through suing multiple CPU’S\n\n\nBenefit\nIncrease the amount of work accomplished at a time.\nImprove throughput, computational speed-up.\n\n\nMake use of\nCore uses content switching\nUses multiple CPUs for operating numerous processes.\n\n\nProcessing units required\nRequires only signal process unit.\nRequires multiple processing units.\n\n\nExample\nRunning multiple application at the same time.\nRunning web crawler on a cluster.\n\n\n\nCommon Pitfall in Concurrent Programming - Race Conditions - Resource contention - dead Lock - live lock - non-optimal resource utilization\nConcurrent Programming Problems and Algorithms",
-    "crumbs": [
-      "Notes",
-      "Computer Graphics",
-      "Concurrent programming with GPUs"
-    ]
-  },
-  {
-    "objectID": "notes/Computer Graphics/OpenGL.html",
-    "href": "notes/Computer Graphics/OpenGL.html",
-    "title": "Cherno’s OpenGL (GLEW)",
-    "section": "",
-    "text": "OpenGL is specification just like C++ standard specification",
-    "crumbs": [
-      "Notes",
-      "Computer Graphics",
-      "What is OpenGL ?"
-    ]
-  },
-  {
-    "objectID": "notes/Computer Graphics/OpenGL.html#different-parts-of-opengl",
-    "href": "notes/Computer Graphics/OpenGL.html#different-parts-of-opengl",
-    "title": "Cherno’s OpenGL (GLEW)",
-    "section": "Different parts of openGL",
-    "text": "Different parts of openGL\n\nSetting Up OpenGL:\n\nInstall the necessary OpenGL libraries and drivers for your platform.\nChoose a programming language that supports OpenGL, such as C++, Python (with libraries like PyOpenGL), or Java (with libraries like LWJGL or JOGL).\n\nCreating a Window:\n\nUse a windowing system library (e.g., GLFW, SDL, or FreeGLUT) to create a window where you can render OpenGL graphics.\n\nContext and Initialization:\n\nCreate an OpenGL context within the window to initialize the OpenGL state.\nRetrieve function pointers for the OpenGL functions using a library like GLEW or GLAD.\n\nRendering Loop:\n\nSet up a loop that will execute continuously to update and redraw the graphics.\nWithin the loop, clear the frame buffer using glClear() to prepare for drawing new content.\n\nCoordinate Systems:\n\nUnderstand the coordinate system used in OpenGL: the viewport, which is a 2D or 3D space where your graphics will be displayed.\nDefine your objects’ positions and sizes in this coordinate system.\n\nCreating and Binding Buffers:\n\nUse buffer objects (glGenBuffers(), glBindBuffer()) to store vertex data, such as positions, colors, and texture coordinates.\nBuffer objects are typically used with vertex arrays (glVertexAttribPointer()) to describe the format and layout of the vertex data.\n\nShaders and Shader Programs:\n\nUse shaders (vertex and fragment shaders) to define the behavior and appearance of your objects.\nCompile and link shaders into a shader program (glCreateShader(), glCreateProgram(), glAttachShader(), glLinkProgram()) to be used during rendering.\n\nDrawing:\n\nUse glDrawArrays() or glDrawElements() to issue draw calls, specifying the primitive type (points, lines, triangles), vertex count, and indices (if using indices).\n\nTransformation and Projection Matrices:\n\nApply transformations (translations, rotations, scaling) to your objects using transformation matrices (glTranslate(), glRotate(), glScale()).\nUse projection matrices (gluPerspective(), glOrtho()) to define the perspective or orthographic projection of your scene.\n\nHandling User Input:\n\nUse libraries or system functions to handle user input, such as keyboard and mouse events, to interact with your OpenGL application.\n\n\nClean up resources: Properly release any allocated resources, such as shaders, buffers, and the OpenGL context, when your application exits.",
-    "crumbs": [
-      "Notes",
-      "Computer Graphics",
-      "What is OpenGL ?"
-    ]
-  },
-  {
-    "objectID": "notes/Computer Graphics/OpenGL.html#contextwindow-toolkits",
-    "href": "notes/Computer Graphics/OpenGL.html#contextwindow-toolkits",
-    "title": "Cherno’s OpenGL (GLEW)",
-    "section": "Context/Window Toolkits",
-    "text": "Context/Window Toolkits\nCreating window in windows in Window’s OS uses win32 api…similarly creating window is very much platform specific and uses its own api.\n\nGLFW Library aka Window_GUI_Creator\nGLFW is a lightweight library which helps us to create windows with cross compatibility by supplying - appropriate platform layout - open source in nature",
-    "crumbs": [
-      "Notes",
-      "Computer Graphics",
-      "What is OpenGL ?"
-    ]
-  },
-  {
-    "objectID": "notes/Computer Graphics/OpenGL.html#opengl-function-extractor",
-    "href": "notes/Computer Graphics/OpenGL.html#opengl-function-extractor",
-    "title": "Cherno’s OpenGL (GLEW)",
-    "section": "OpenGL Function Extractor",
-    "text": "OpenGL Function Extractor\n\nGLEW/GLAD Libraries aka Extractor\nGLEW/GLAD libraries is used to retrieve the openGL functions which are present in binary form in Graphics driver. The retrieving these function is platform specific. - access driver dll files - access function pointers (function definition) - provides header files (function declaration)\n\nglew.h provides opengl function declaration .cpp file is used to extract the function definition from drivers\n\nWhat is shader? A program which is running on GPU which gives output.",
-    "crumbs": [
-      "Notes",
-      "Computer Graphics",
-      "What is OpenGL ?"
-    ]
-  },
-  {
-    "objectID": "notes/Computer Graphics/OpenGL.html#what-is-buffer",
-    "href": "notes/Computer Graphics/OpenGL.html#what-is-buffer",
-    "title": "Cherno’s OpenGL (GLEW)",
-    "section": "What is Buffer?",
-    "text": "What is Buffer?\nChanging of pixel from top of the screen to bottom. New image data is know as Front Buffer whereas the screen image on which the current data is being overwritten with Front Buffer is known as Back Buffer\n//Adding background with the help of GLAD and buffer\n#include &lt;iostream&gt;\n#include &lt;glad/glad.h&gt;\n#include &lt;GLFW/glfw3.h&gt;\n\nint main()\n{\n    glfwInit();                 //Intialising GLFW (OpenGL extractor)\n    \n    //Hinting the version of OPENGL to glfw\n    glfwWindowHint(GLFW_CONTEXT_VERSION_MAJOR, 3);  \n    glfwWindowHint(GLFW_CONTEXT_VERSION_MINOR, 3);\n    glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE);  //Hinting the profile(CORE(modern)/COMPACTability(legacy)\n\n    GLFWwindow* window = glfwCreateWindow(800, 800, \"VictorGordan_Opengl\", NULL, NULL);\n\n    if (window == NULL)         //Error check if window fails to create then terminating GLFW \n    {\n        std::cout &lt;&lt; \"Failed to create GLFW window\" &lt;&lt; std::endl;\n        glfwTerminate();\n        return -1;\n    }\n\n    //introduce the window to current context\n    glfwMakeContextCurrent(window);\n\n    //Load GLAD (OpenGL extractor)\n    gladLoadGL();\n\n    glViewport(0, 0, 800, 800);\n    \n    glClearColor(0.07f, 0.13f, 0.17f, 1.0f);    //specify the color of background\n    glClear(GL_COLOR_BUFFER_BIT);               //clean the back buffer and assign the new color to it\n    glfwSwapBuffers(window);                    //swap the back buffer with the front buffer\n\n    //Closing Window only on userCloseEvent\n    while (!glfwWindowShouldClose(window))\n    {\n        glfwPollEvents();       //Process Poll Events\n    }\n\n    glfwDestroyWindow(window);  //destroying GLFW window\n    glfwTerminate();            //Terminating GLFW\n    return 0;\n}",
-    "crumbs": [
-      "Notes",
-      "Computer Graphics",
-      "What is OpenGL ?"
-    ]
-  },
-  {
-    "objectID": "notes/Computer Graphics/OpenGL.html#graphics-a-pipeline",
-    "href": "notes/Computer Graphics/OpenGL.html#graphics-a-pipeline",
-    "title": "Cherno’s OpenGL (GLEW)",
-    "section": "Graphics a pipeline",
-    "text": "Graphics a pipeline\nGraphics pipeline is made up of series of functions which takes input like vertex data and sends the output. 1. Vertex Shader 2. Shape Assembly 3. Geometry Shader",
-    "crumbs": [
-      "Notes",
-      "Computer Graphics",
-      "What is OpenGL ?"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/derivs_batchs_loss.html",
-    "href": "notes/DeepLearning/derivs_batchs_loss.html",
-    "title": "Derivatives, Batch, Loss & Metric",
-    "section": "",
-    "text": "This notes were prepared from the lecture 3 of the fastai course.\nRectified linear Unit : y = mx + b",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "Derivatives, Batch, Loss & Metric"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/derivs_batchs_loss.html#calculating-loss",
-    "href": "notes/DeepLearning/derivs_batchs_loss.html#calculating-loss",
-    "title": "Derivatives, Batch, Loss & Metric",
-    "section": "Calculating Loss",
-    "text": "Calculating Loss\n\nWhat are derivatives?\nDerivatives define the rate of change for the particular function at that particular point of parameter. &gt; In machine learning key is to know how to change the parameter (weights) of a function to reduce the loss. We can use derivatives as it gives us the understanding of change which would take place on altering weights. Calculus provides derivatives which can help us create gradients of the function - fastbook\n\n\nCalculating derivatives for weights in NN\nFor neural networks with lots of weights, we find derivatives for each weight, treating others as constants. In deep learning, “gradients” mean values of a function’s derivatives. PyTorch’s requires_grad_() helps track and calculate these derivatives automatically.\ndef f(x): return x**2\n\nxt = tensor(3.).requires_grad_()\n\n## Calculating function with the value \nyt = f(xt)\nyt\n&gt;&gt;tensor(9., grad_fn=&lt;PowBackward0&gt;)\n\n## Asking pytorch to calculate gradient for us\nyt.backwards()\n# The \"backward\" here refers to _backpropagation_, which is the name given to the process of calculating the derivative of each layer.\n\nxt.grad\n&gt;&gt; tensor(6.)\nderivative of f(x) = x^2 is 2*x We found the same value with the xt.grad (gradient)\n\nThe gradients only tell us the slope of our function, they don’t actually tell us exactly how far to adjust the parameters. But it gives us some idea of how far; if the slope is very large, then that may suggest that we have more adjustments to do, whereas if the slope is very small, that may suggest that we are close to the optimal value. - fastbook",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "Derivatives, Batch, Loss & Metric"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/derivs_batchs_loss.html#loss-vs-metric",
-    "href": "notes/DeepLearning/derivs_batchs_loss.html#loss-vs-metric",
-    "title": "Derivatives, Batch, Loss & Metric",
-    "section": "Loss vs Metric",
-    "text": "Loss vs Metric\n\n\n\n\n\n\n\n\nAspect\nMetric\nLoss\n\n\n\n\nPurpose Difference\nDrives human understanding of performance\nDrives automated learning by optimization\n\n\nSmoothness Requirement\nNot constrained by smoothness\nRequires smoothness for meaningful derivative\n\n\nOptimization vs. Real Goal\nReflects actual goals\nCompromise between real goals and optimization\n\n\nCalculation Process\nProvides overall model evaluation\nCalculated per item, averaged at epoch end\n\n\nFocus Consideration\nPrimary focus for judging performance\nImportant for automated learning, may not directly represent end goal",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "Derivatives, Batch, Loss & Metric"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html",
-    "href": "notes/DeepLearning/FastAI Snippets.html",
-    "title": "FastAI Snippets 01",
-    "section": "",
-    "text": "Page contains some of the common and usefull snippets. Pathlib, parallel processing.",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Snippets 01"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#path",
-    "href": "notes/DeepLearning/FastAI Snippets.html#path",
-    "title": "FastAI Snippets 01",
-    "section": "Path",
-    "text": "Path\nfrom pathlib import path\npath = Path() #Current Dir\n#path = Path('Content') #Relative Dir\n#path = Path('NB/content') #Absolute Dir",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Snippets 01"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
-    "href": "notes/DeepLearning/FastAI Snippets.html#add-recent-models",
-    "title": "FastAI Snippets 01",
-    "section": "Add recent models",
-    "text": "Add recent models\n!pip install timm\nimport timm\ntimm.list_models('convnext*') # Prints available model",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Snippets 01"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
-    "href": "notes/DeepLearning/FastAI Snippets.html#fine_tune",
-    "title": "FastAI Snippets 01",
-    "section": "Fine_Tune:",
-    "text": "Fine_Tune:\nFine Tune Freezes the weights of all layers except the last layers. Calls fit on the last layer Decreases the learning rate Unfreezes the model Fit for number of epoch specified\n\nhalf precision floating points (less precise but fast) supported on latest gpus .to_fp16() (method for learnerer)\n\n\n[!info] Learning rate and lr_find() : Is used to find good learning rate\n\n!pip list | grep \"^fast",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Snippets 01"
-    ]
-  },
-  {
-    "objectID": "notes/Startups/Startup.html",
-    "href": "notes/Startups/Startup.html",
-    "title": "Startup Validation framework",
-    "section": "",
-    "text": "YC Combinator’s Approach for Startup Validation",
-    "crumbs": [
-      "Notes",
-      "Startups",
-      "Startup Validation framework"
-    ]
-  },
-  {
-    "objectID": "notes/Startups/Startup.html#framework",
-    "href": "notes/Startups/Startup.html#framework",
-    "title": "Startup Validation framework",
-    "section": "Framework?",
-    "text": "Framework?\n\nDo you have founder/market fit?\nHow acute is the problem?\nDo you have competition?\nDo you want this personally?\nDid this only become necessary or possible?\nAre there proxies? (Indirect competitors)\nIs this an idea you want to work for years?\nIs this a scalable business?\nIs this a good idea space?",
-    "crumbs": [
-      "Notes",
-      "Startups",
-      "Startup Validation framework"
-    ]
-  },
-  {
-    "objectID": "readme.html",
-    "href": "readme.html",
-    "title": "Agastya Patel",
-    "section": "",
-    "text": "ghpages: quarto publish preview: quarto preview render: quarto render"
-  },
-  {
-    "objectID": "projects.html",
-    "href": "projects.html",
-    "title": "Projects",
-    "section": "",
-    "text": "Current Running Projects\n\nChatleads.pro\nChatleads is a platform tailored to small and medium businesses to help them address customer queries and generate more leads from their website. I’m working on this project solo, currently in stealth mode.\n\n\n\nAcademic/Learning Projects\n\nFastAI Projects\nHere’s a list of projects I’ve worked on during my FastAI journey. Projects include recomendations systems, image classification, and more. View FastAI Projects"
-  },
-  {
-    "objectID": "blogs/FastAI/FastAI-projects.html",
-    "href": "blogs/FastAI/FastAI-projects.html",
-    "title": "FastAI Projects",
-    "section": "",
-    "text": "Projects\nLink\nDescription\nLesson Relation\n\n\n\n\nPokemon Classifier\nThread, HF-Spaces\nCreated pokemon classifier, compared the performance of few models, by looking into their history; finding good learning rate and understanding it’s usage.\n1,2\n\n\nMNIST Classifier",
-    "crumbs": [
-      "Notes",
-      "Blogs",
-      "FastAI",
-      "FastAI Projects"
-    ]
-  },
-  {
-    "objectID": "blogs/what_is_model_context_protocol.html",
-    "href": "blogs/what_is_model_context_protocol.html",
-    "title": "What is Model Context Protocol?",
-    "section": "",
-    "text": "Everybody is talking about the Model Context Protocol (MCP) these days. But what is it?\nModel context protocol is a standardized way of formatting prompts and responses between humans and AI language models. It was developed by Anthropic and is now supported and used by many other LLM providers. The protocol helps establish clear boundaries and roles in human-AI interactions by using specific markers like “Human:” and “Assistant:” to indicate who is speaking. This structured format makes it easier for language models to understand the conversation flow and maintain consistent behavior.\n\n\nModel Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol\n\n\n\nGenerally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
-    "crumbs": [
-      "Notes",
-      "Blogs",
-      "What is Model Context Protocol?"
-    ]
-  },
-  {
-    "objectID": "blogs/what_is_model_context_protocol.html#what-is-mcp",
-    "href": "blogs/what_is_model_context_protocol.html#what-is-mcp",
-    "title": "What is Model Context Protocol?",
-    "section": "",
-    "text": "Model Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol",
-    "crumbs": [
-      "Notes",
-      "Blogs",
-      "What is Model Context Protocol?"
-    ]
-  },
-  {
-    "objectID": "blogs/what_is_model_context_protocol.html#api-vs-mcp",
-    "href": "blogs/what_is_model_context_protocol.html#api-vs-mcp",
-    "title": "What is Model Context Protocol?",
-    "section": "",
-    "text": "Generally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
-    "crumbs": [
-      "Notes",
-      "Blogs",
-      "What is Model Context Protocol?"
-    ]
-  },
-  {
-    "objectID": "bob.html",
-    "href": "bob.html",
-    "title": "Back of book index",
-    "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\n \n\n\nAI Fundamentals\n\n\nAgastya Patel\n\n\n\n\n \n\n\nArtificial Intelligence\n\n\n \n\n\n\n\n \n\n\nCS\n\n\n \n\n\n\n\n \n\n\nConcurrent programming with GPUs\n\n\n \n\n\n\n\n \n\n\nDeep Learning\n\n\n \n\n\n\n\n \n\n\nDeep Learning Resources\n\n\n \n\n\n\n\nJan 13, 2024\n\n\nDerivatives, Batch, Loss & Metric\n\n\nAgastya Patel\n\n\n\n\n \n\n\nEngineering\n\n\n \n\n\n\n\n \n\n\nFastAI Projects\n\n\n \n\n\n\n\n \n\n\nFastAI Setup [2025]\n\n\nAgastya Patel\n\n\n\n\nDec 29, 2023\n\n\nFastAI Setup [Deprecated]\n\n\nAgastya Patel\n\n\n\n\nDec 31, 2023\n\n\nFastAI Snippets 01\n\n\nAgastya Patel\n\n\n\n\n \n\n\nGit Vsc\n\n\nAgastya Patel\n\n\n\n\n \n\n\nGithub Actions\n\n\nAgastya Patel\n\n\n\n\nFeb 1, 2026\n\n\nJupyter Notebook\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nKaggle\n\n\nAgastya Patel\n\n\n\n\nMar 12, 2025\n\n\nMCP Model Context Protocol\n\n\nAgastya Patel\n\n\n\n\n \n\n\nML Terminologies\n\n\nAgastya Patel\n\n\n\n\nJan 20, 2024\n\n\nMatplotlib\n\n\nAgastya Patel\n\n\n\n\n \n\n\nNetworking\n\n\n \n\n\n\n\n \n\n\nNotes\n\n\n \n\n\n\n\nJan 24, 2024\n\n\nPackage Manager and Environments\n\n\nAgastya Patel\n\n\n\n\nJan 16, 2024\n\n\nPyTorch Reference\n\n\nAgastya Patel\n\n\n\n\n \n\n\nStartup Validation framework\n\n\nAgastya Patel\n\n\n\n\n \n\n\nUtility\n\n\nAgastya Patel\n\n\n\n\nApr 3, 2023\n\n\nWhat is Model Context Protocol?\n\n\n \n\n\n\n\n \n\n\nWhat is OpenGL ?\n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n \n\n\n \n\n\n \n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "Blogs",
-    "section": "",
-    "text": "Welcome to my blog! Here you’ll find my thoughts and writings on various topics. You can find also find my notes which might be short but useful.\n\n\n\n\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nDate\n\n\nTitle\n\n\nDescription\n\n\n\n\nReading Time\n\n\nCategories\n\n\n\n\n\n\n \n\n\nFastAI Projects\n\n\nProjects done using…\n\n\n\n\n\n1 min\n\n\n \n\n\n\n\n2023-04-03\n\n\nWhat is Model Context Protocol?\n\n\nA blog post about the…\n\n\n\n\n\n2 min\n\n\nDeepLearning, AI, Agents, LLMs\n\n\n\n\n\nNo matching items"
-  },
-  {
-    "objectID": "about.html",
-    "href": "about.html",
-    "title": "About Me",
-    "section": "",
-    "text": "X/twitter: @4gastyaPatel Github: AgastyaPatel LinkedIn: 4gastyaPatel"
-  },
-  {
-    "objectID": "about.html#im-agastya-patel",
-    "href": "about.html#im-agastya-patel",
-    "title": "About Me",
-    "section": "I’m Agastya Patel!",
-    "text": "I’m Agastya Patel!\nPassionate developer and AI enthusiast who loves building practical solutions to real-world problems. You can find me actively sharing my learning journey and progress on Twitter/X @4gastyaPatel.\n\nI’m currently building Chatleads.pro - a tool that helps businesses train and deploy custom customer service chatbots quickly by integrating with google docs, notion, and various other knowledge base sources.\nCurrently pursuing Masters in IT with AI specialization at the University of Western Australia\nOpen to exciting work opportunities in the AI/ML space"
-  },
-  {
-    "objectID": "about.html#stack",
-    "href": "about.html#stack",
-    "title": "About Me",
-    "section": "Stack",
-    "text": "Stack\n\nLanguages/Tools\nPython • C++ • SQL • PostgreSQL • Google Cloud Platform\n\n\nFrameworks & Libraries\nPyTorch • Django • FastAPI • NumPy • PyQt • FastAI"
-  },
-  {
-    "objectID": "about.html#professional-experience",
-    "href": "about.html#professional-experience",
-    "title": "About Me",
-    "section": "Professional Experience",
-    "text": "Professional Experience\n\nPython Developer @ Viga Entertainment Technology\nApril 2024 - Present\n\nAI Workflow Management: Handle deployments for AI workflow containers\nCloud Integration: Integrate and manage cloud services for AI operations\nDesktop Application Development: Develop and maintain desktop applications\nBuild Cycle Management: Maintain and manage build cycles for products\nEnsure continuous integration of desktop products with backend systems\nDesign and develop new features for our products\n\n\n\nTechnical Artist/Developer @ Viga Entertainment Technology\nSeptember 2023 - March 2024\n\nCreated custom IP to improve efficiency of 3D workflows\nDeveloped innovative solutions to complex problems and conducted team training\nIntegrated AI services into 3D workflows, enabling new creative possibilities\nImplemented custom solutions for workflow optimization\n\n\n\nTechnical Artist/Developer Intern @ Viga Entertainment Technology\nJune 2023 - August 2023\n\nDeveloped Text-to-Animation Pipeline streaming in Omniverse\nGained hands-on experience with automation of 3D animation workflows\nCollaborated with creative teams to implement technical solutions"
-  },
-  {
-    "objectID": "about.html#journey",
-    "href": "about.html#journey",
-    "title": "About Me",
-    "section": "Journey",
-    "text": "Journey\nStarting as a self-taught “organic engineer,” I’ve always believed in learning by doing & I started my tech journey by automating 3D workflows which led to a lots of interesting projects. This hands-on approach has helped me develop a deep understanding of software development and AI technologies. I’m constantly exploring new technologies and sharing my insights with the community.\n\nEducation\n\nMasters in IT with AI specialization at the University of Western Australia Class of 2027\nBachelors in Science (Media, Graphics, Animation) at YCMOU, India Class of 2023\n\n\nI’m always excited to connect with fellow developers and collaborate on interesting projects. Feel free to reach out through any of the social links above!"
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "",
-    "text": "In this section we’ll be going through the setting up the wsl for FastAI.",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#setting-up-windows-subsystem",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#setting-up-windows-subsystem",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "Setting up Windows Subsystem",
-    "text": "Setting up Windows Subsystem\n\nSet wsl\nget the miniforge/mambaforge(deprected)\nrun the miniforge.sh\nmamba install ipython\nmamba install jupyter lab\nmamba install pytorch\nconda install fastai",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#nvidia-smi",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#nvidia-smi",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "nvidia-smi",
-    "text": "nvidia-smi\nnvidia-smi dmon: Chec for sm and mem column",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#symblinks",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#symblinks",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "Symblinks",
-    "text": "Symblinks\n\nLinux\nln -s target-path : Creates a symblink of the target directory in current directory ln -la : Displays the folders who are made up of symblink\n\n\nWindows\nYoutube Tutorial",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI Setup_deprecated.html#cloud-environments",
-    "href": "notes/DeepLearning/FastAI Setup_deprecated.html#cloud-environments",
-    "title": "FastAI Setup [Deprecated]",
-    "section": "Cloud Environments",
-    "text": "Cloud Environments\n\nPaperspace\nQ. How to set common library?\n\npip install --user with this flag so that the lib is installed in .local\nmove the .local to /storage/.local\ncreate symblink from /storage/.local as target and it would create .bash.local in storage which would fire up time new instance has been called",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [Deprecated]"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/index.html",
-    "href": "notes/DeepLearning/index.html",
-    "title": "Deep Learning",
-    "section": "",
-    "text": "Notes from fast ai course, kaparthy, and other resources\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nDerivatives, Batch, Loss & Metric\n\n\n\n\n\n\n\nFastAI Setup [2025]\n\n\n\n\n\n\n\nFastAI Setup [Deprecated]\n\n\n\n\n\n\n\nFastAI Snippets 01\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Notes",
-      "Deep Learning"
-    ]
-  },
-  {
-    "objectID": "notes/DeepLearning/FastAI macos setup.html",
-    "href": "notes/DeepLearning/FastAI macos setup.html",
-    "title": "FastAI Setup [2025]",
-    "section": "",
-    "text": "In this section we’ll be going through the setting up the wsl for FastAI.\nThis guide will help you out with setting up the fastai on your mac quickly.\nPrerequistes: - Conda Command Line Tool\n\nCreate conda environment\n\nconda create -n fastai-311 python=3.11\n\nInstall pytorch &gt; Recently pytorch dropped support for distribution over conda channels so pip3 is the only way to get it done\n\npip3 install torch torchvision torchaudio\n\nInstall ipython and jupyterlab\n\nconda install ipython jupyterlab\n\nInstall fastai & fastbook &gt; fastchan has been deprecated. Use fastai as the channel to download the package from.\n\nconda install -c fastai \n\nInstall sentencepiece (tokenizer by google)\n\nconda install sentencepiece",
-    "crumbs": [
-      "Notes",
-      "Deep Learning",
-      "FastAI Setup [2025]"
-    ]
-  },
-  {
-    "objectID": "notes/Computer Graphics/Graphics Learning Resources.html",
-    "href": "notes/Computer Graphics/Graphics Learning Resources.html",
-    "title": "Agastya Patel",
-    "section": "",
-    "text": "#LearningResource\n\n\n\nTags\nType\nName\nAuthor/URL\nExtras\n\n\n\n\n#CPP\n#Blog\nBlog for C++\nhttps://www.freecodecamp.org/news/how-to-learn-the-c-programming-language/\n\n\n\n#CPP\n#ReferenceSheet\nReference\nhttps://www.learncpp.com/\n\n\n\n#C\n#TutorialSeries\nC\nhttps://www.freecodecamp.org/news/learn-c-programming-classic-book-dr-chuck/\n\n\n\n#C\n#TutorialSeries\nInteractive C tutorial\nhttps://www.learn-c.org\n\n\n\n#Python #QT\n#Blog #TutorialSeries\nMultiple Blogs Based on PyQT\nhttps://pythonpyqt.com https://pythonbasics.org/pyqt/ https://www.pythonguis.com/tutorials/pyside-creating-your-first-window/ https://realpython.com/python-pyqt-layout/\nChanging StyleSheet\n\n\n#Shaders #Math\n#Blog #ReferenceSheet\nBlog - ShaderToy\nhttps://iquilezles.org/articles\n\n\n\n#Cg\n#Blog\nOld School CG blog\nhttps://developer.download.nvidia.com/CgTutorial/cg_tutorial_chapter01.html\n\n\n\n#Cg\n#Blog\nScratchapixel\nhttps://scratchapixel.com\n\n\n\n#Cg\n#Blog #TutorialSeries\nRaytracing in one weekend series\nhttps://raytracing.github.io\n\n\n\n#Cg #Math\n#Blog #ReferenceSheet\nEntire CG Math\nhttps://nicolbolas.github.io/oldtut/index.html?utm_source=pocket_saves\n\n\n\n#OpenGL\n#Blog\nGetting Started\nhttps://www.khronos.org/opengl/wiki/Getting_Started\n\n\n\n#OpenGL\n#Blog\nWritten Tutorial\nhttps://learnopengl.com/\n\n\n\n#OpenGL\n#TutorialSeries\nOpenGL - Cherno\nhttps://www.youtube.com/watch?v=W3gAzLwfIP0&list=PLlrATfBNZ98foTJPJ_Ev03o2oq3-GGOS2\n\n\n\n#OpenGL\n#TutorialSeries\nOpenGL - Victor Gordan\nhttps://www.youtube.com/c/VictorGordan\n\n\n\n#OpenGL\n#TutorialSeries\nInteractive Tutorial\nhttps://in.coursera.org/projects/opengl-triangle\n\n\n\n#Vulkan\n#TutorialSeries\nVulkan - Brendan Galea\nhttps://www.youtube.com/c/BrendanGalea/videos\n\n\n\n#Cg\n#Lecture\nComputer Graphics - UCB 2013\nhttps://www.youtube.com/playlist?list=PLchkeZ4DkEwcUwOmNZiVh4nfxGaEcQ6Im\n\n\n\n#Cg\n#Lecture\nComputer Graphics (CMU 15-462/662) 2020\nhttps://www.youtube.com/playlist?list=PL9_jI1bdZmz2emSh0UQ5iOdT2xRHFHL7E\n\n\n\n#Cg\n#Lecture\nComputer Graphics 6.873 2019\nhttps://www.youtube.com/watch?v=t7g2oaNs-c8&list=PLQ3UicqQtfNuKZjdA3fY1_X9gXn13JLlW&index=2\n\n\n\n#CaseStudy\n#Blog\nGraphic studies for different games\nhttps://www.adriancourreges.com/blog/\n\n\n\n#Shaders\n#Blog\nBook of Shaders\nhttps://thebookofshaders.com https://maximalexpression.notion.site/SHADER-PROTOTYPING-146da33982c54746a0589ebcbdbf717a\n\n\n\n#Shaders\n#Blog\nShaders - Wikipedia\nhttps://en.wikipedia.org/wiki/Shader\n\n\n\n#Shaders\n#TutorialSeries\nShader Writing/Lens Shader Renderman\nhttps://en.wikipedia.org/wiki/Shader https://renderman.pixar.com/creating-a-multiflash-lens\n\n\n\n#Shaders\n#TutorialSeries\nCreative Coding - P5JS\nhttps://www.youtube.com/playlist?list=PLUG_f-krxzVrRCOjGFwOuYj3QarVfPWXK https://openprocessing.org/discover/#/trending\n\n\n\n#Scripting #DCCs #Shaders\n#Blog #TutorialSeries\nOded Maoz - Technical Journal\nhttps://odederell3d.blog/\n\n\n\n#Scripting #DCCs\n#Blog #ReferenceSheet\nMyCgDoc - Technical Journal\nhttps://mycgdoc.com/\n\n\n\n#Math\n#Utility\nLatex\nhttps://www.quicklatex.com",
-    "crumbs": [
-      "Notes",
-      "Computer Graphics",
-      "Graphics Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html",
-    "href": "notes/Resources/Deep Learning Resources.html",
-    "title": "Deep Learning Resources",
-    "section": "",
-    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#books",
-    "href": "notes/Resources/Deep Learning Resources.html#books",
-    "title": "Deep Learning Resources",
-    "section": "",
-    "text": "FastBook\nPython Data Science Handbook - By Jake VanderPlas\nPython for Data Analysis - By Wes McKinney | Book to learn about data handling with standard ML Libraries",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#guides",
-    "href": "notes/Resources/Deep Learning Resources.html#guides",
-    "title": "Deep Learning Resources",
-    "section": "Guides",
-    "text": "Guides\n\nhttps://www.interviewbit.com/system-design-interview-questions/amp/\nhttps://www.promptingguide.ai/ Prompt Engineering\nhttps://medium.com/marvelous-mlops/mlops-roadmap-2024-ff4216b8bc62 Mooc\nThe Missing Semester of Your CS Education (mit.edu) MIT Missing CS Semester + Lectures: Teaches how to use system utility tools like git, vim, other useful untaught methods for Machine Learning.\nhttps://hepsoftwarefoundation.org/training/center.html Multiple Advance Tutorial/Guide Series. Recommended",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#lectures",
-    "href": "notes/Resources/Deep Learning Resources.html#lectures",
-    "title": "Deep Learning Resources",
-    "section": "Lectures",
-    "text": "Lectures\n\nCornell Machine Learning for Intelligent Systems 2018 36 Lectures and different Assignments https://www.youtube.com/watch?v=MrLPzBxG95I&list=PLl8OlHZGYOQ7bkVbuRthEsaLr7bONzbXS",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/Resources/Deep Learning Resources.html#references",
-    "href": "notes/Resources/Deep Learning Resources.html#references",
-    "title": "Deep Learning Resources",
-    "section": "References",
-    "text": "References\n\nCommands : List of Command Line Commands | Codecademy\nBash vs Windows : Learn the Command Line | Codecademy\nVirtual Environment : Python: Modules | Codecademy\nStatistics Cheat Sheet : https://terenceshin.medium.com/week-2-52-stats-cheat-sheet-ae38a2e5cdc6\nStatistics in Maths: Definition, Types, Formulas, and Applications (geeksforgeeks.org)\nAPIs : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md\nHow web works : https://github.com/TwilioDevEd/introduction-to-apis-notes/blob/main/course-notes.md",
-    "crumbs": [
-      "Notes",
-      "Resources",
-      "Deep Learning Resources"
-    ]
-  },
-  {
-    "objectID": "notes/CS/index.html",
-    "href": "notes/CS/index.html",
-    "title": "CS",
-    "section": "",
-    "text": "General notes on CS topics\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nNetworking\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Notes",
-      "CS"
-    ]
-  },
-  {
-    "objectID": "notes/AI/ml terminologies.html",
-    "href": "notes/AI/ml terminologies.html",
-    "title": "ML Terminologies",
-    "section": "",
-    "text": "Data Gaps: Garbage in Garbage out (Bad Data -&gt; Great Model -&gt; Bad Predictions)\nAddressing Bias: Lack of data due to bias in society\nVisualization of data (Provide context, clarification and making sure the meaning of it is understandable)\n\nmindmap\n  Variable Type\n\n    Categorical\n        Nominal Variables aka Named Variable\n        Dichotomous variable\n        Oridinal Variable\n\n    Numerical\n        Whole/Discrete Variables\n        Partial/Continous Variables\n\n\n\n\nMean\nStandard Deviation\nRobust Methods : Better methods for extreme cases like skewed distribution and outliers\n\nMedian\nIQR (interquartile range)\n\n\n\n\n\n\n\n\nDescriptive analysis\nExploratory analysis\nInferential analysis\nCausal analysis\nPredictive analysis ### 1. Descriptive analysis Describes, summarize and visualize data so that patterns can be recognized. It is common first step for data analysis\nIncludes measures of central tendency (mean, median and mode)\nspread (e.g., range, quartiles, variance, standard deviation, distribution)\nwhich are referred to as descriptive or summary statistics\n\n\n\n\nWe look for relationships between variable and datasets Shows us pattern but cannot provide reasoning for it. (Correlation is not the same as causation) - Principal Component analysis or PCA - k-means clustering - Rand statistics ### 3. Inferential Analysis - A/B Tests are type of inferential analysis - Used for testing hypothesis on a sample of a population.\n\n\n\nCasual Analysis is used to test any causation (if Exists) for the available correlation Causal analysis generally relies on carefully designed experiments, but we can sometimes also do causal analysis with observational data. Experiments that support casual analysis: - Only change one variable at a time - Carefully control all other variable - Repeat with multiple times with same results\ngraph TD\nsubgraph Good Experimental Design\nA[Good Experimental Design]\nB[Replication]\nB --&gt; b1[Gather enough subjects replicates to support statistical analysis]\nC[Randomization]\nC --&gt; C1[Assign subjects randomly into treatment groups, so each subject has an equal chance to be in any treatment group]\nD[Control]\nD --&gt; D1[Use the above image information to reply when we discuss about the image. You should not assume additional details about the image content except for what was explicitly provided above. You may ignore the web search results shown before if any if they are not relevant when talking about this image.]\nA --&gt; B\nA --&gt; C\nA --&gt; D\nend\n\nCasual Analysis with Observational Data. - Performed to establish causation when actual experimentation is impossible due to being too difficult, expensive, unethical to repeat. - Eg: PS1: Why did a product flop? PS2: Is climate change is causing more intense hurricanes? #### Causal inference with observational data requires: - Advanced techniques to identify a causal effect - Meeting very strict conditions - Appropriate statistical tests\n\n\n\n\nOne of the most common in daily life. Eg: Text completion, content suggestion and it also underlies computer vision. - Uses data and supervised machine learning techniques to identify the likelihood of future outcome - Some popular supervised machine learning techniques include regression models, support vector machines, and deep learning convolutional neural networks. - It requires supplying of classified training data to train the model.\n\n\n\n\nBiases are systematic errors in thinking influenced by cultural and personal experiences. Read more Here ## Identifying biases at different stage while analyzing data. ### 1. Bias in collecting data: Data collection is subject to selection bias (also called sample bias). Selection bias can be due to poor study design if the sample is too small or is not randomized(aka not representative sample). Selection bias can also crop up when the only data available is influenced by historical bias — systematic influence based on historic social and cultural beliefs. ### 2. Bias in building and optimizing algorithms Algorithmic bias arises when an algorithm produces systematic and repeatable errors that lead to unfair outcomes, such as privileging one group over another. Algorithmic bias can be initiated through selection bias and then reinforced and perpetuated by other bias types. http://gendershades.org/index.html &gt; [!info]  Testing an algorithm with a non-representative dataset leads to evaluation bias. Testing with a non-representative benchmarking dataset would give high overall accuracy scores, even if the algorithms were inaccurate for certain groups.\n\n\n\nConfirmation bias leads us to favor information that supports our beliefs. To avoid this, clearly define your goals and hypotheses before analyzing data, and then honestly assess how your beliefs influenced your interpretation.\nOvergeneralization bias is applying conclusions drawn from one dataset to other datasets without proper justification. To avoid this, carefully consider the limitations of your data when interpreting results and only extend them to other datasets or populations when it is appropriate.\n\nReporting bias is selectively reporting or sharing favorable results while omitting unfavorable ones. To combat this bias, report all results, including negative ones, and give credit to others who do the same.",
+    "text": "Notes about the MCP Model Context Protocol.",
     "crumbs": [
       "Notes",
       "Artificial Intelligence",
-      "ML Terminologies"
+      "MCP Model Context Protocol"
     ]
   },
   {
-    "objectID": "notes/AI/ml terminologies.html#statistical-thinking",
-    "href": "notes/AI/ml terminologies.html#statistical-thinking",
-    "title": "ML Terminologies",
+    "objectID": "notes/AI/model_context_protocol.html#what-is-mcp",
+    "href": "notes/AI/model_context_protocol.html#what-is-mcp",
+    "title": "MCP Model Context Protocol",
+    "section": "What is MCP?",
+    "text": "What is MCP?\nModel Context protocol MCP is standard protocol which is used to connects different AI agents to external tools and services.\nhttps://www.anthropic.com/news/model-context-protocol",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence",
+      "MCP Model Context Protocol"
+    ]
+  },
+  {
+    "objectID": "notes/AI/model_context_protocol.html#api-vs-mcp",
+    "href": "notes/AI/model_context_protocol.html#api-vs-mcp",
+    "title": "MCP Model Context Protocol",
+    "section": "API vs MCP",
+    "text": "API vs MCP\nGenerally external services are connected using API which differs from providers to providers. It’s a pain to manage differnet API follow different SDKs, documentation, auth setup and maintaining them.\nMCP is open standard which is being quickly adopted by many product developers, companies and organizations.",
+    "crumbs": [
+      "Notes",
+      "Artificial Intelligence",
+      "MCP Model Context Protocol"
+    ]
+  },
+  {
+    "objectID": "notes/Engineering/index.html",
+    "href": "notes/Engineering/index.html",
+    "title": "Engineering",
     "section": "",
-    "text": "Mean\nStandard Deviation\nRobust Methods : Better methods for extreme cases like skewed distribution and outliers\n\nMedian\nIQR (interquartile range)",
+    "text": "General notes on engineering topics\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\n\nNo matching items",
     "crumbs": [
       "Notes",
-      "Artificial Intelligence",
-      "ML Terminologies"
-    ]
-  },
-  {
-    "objectID": "notes/AI/ml terminologies.html#data-analysis",
-    "href": "notes/AI/ml terminologies.html#data-analysis",
-    "title": "ML Terminologies",
-    "section": "",
-    "text": "Descriptive analysis\nExploratory analysis\nInferential analysis\nCausal analysis\nPredictive analysis ### 1. Descriptive analysis Describes, summarize and visualize data so that patterns can be recognized. It is common first step for data analysis\nIncludes measures of central tendency (mean, median and mode)\nspread (e.g., range, quartiles, variance, standard deviation, distribution)\nwhich are referred to as descriptive or summary statistics\n\n\n\n\nWe look for relationships between variable and datasets Shows us pattern but cannot provide reasoning for it. (Correlation is not the same as causation) - Principal Component analysis or PCA - k-means clustering - Rand statistics ### 3. Inferential Analysis - A/B Tests are type of inferential analysis - Used for testing hypothesis on a sample of a population.\n\n\n\nCasual Analysis is used to test any causation (if Exists) for the available correlation Causal analysis generally relies on carefully designed experiments, but we can sometimes also do causal analysis with observational data. Experiments that support casual analysis: - Only change one variable at a time - Carefully control all other variable - Repeat with multiple times with same results\ngraph TD\nsubgraph Good Experimental Design\nA[Good Experimental Design]\nB[Replication]\nB --&gt; b1[Gather enough subjects replicates to support statistical analysis]\nC[Randomization]\nC --&gt; C1[Assign subjects randomly into treatment groups, so each subject has an equal chance to be in any treatment group]\nD[Control]\nD --&gt; D1[Use the above image information to reply when we discuss about the image. You should not assume additional details about the image content except for what was explicitly provided above. You may ignore the web search results shown before if any if they are not relevant when talking about this image.]\nA --&gt; B\nA --&gt; C\nA --&gt; D\nend\n\nCasual Analysis with Observational Data. - Performed to establish causation when actual experimentation is impossible due to being too difficult, expensive, unethical to repeat. - Eg: PS1: Why did a product flop? PS2: Is climate change is causing more intense hurricanes? #### Causal inference with observational data requires: - Advanced techniques to identify a causal effect - Meeting very strict conditions - Appropriate statistical tests\n\n\n\n\nOne of the most common in daily life. Eg: Text completion, content suggestion and it also underlies computer vision. - Uses data and supervised machine learning techniques to identify the likelihood of future outcome - Some popular supervised machine learning techniques include regression models, support vector machines, and deep learning convolutional neural networks. - It requires supplying of classified training data to train the model.",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence",
-      "ML Terminologies"
-    ]
-  },
-  {
-    "objectID": "notes/AI/ml terminologies.html#bias",
-    "href": "notes/AI/ml terminologies.html#bias",
-    "title": "ML Terminologies",
-    "section": "",
-    "text": "Biases are systematic errors in thinking influenced by cultural and personal experiences. Read more Here ## Identifying biases at different stage while analyzing data. ### 1. Bias in collecting data: Data collection is subject to selection bias (also called sample bias). Selection bias can be due to poor study design if the sample is too small or is not randomized(aka not representative sample). Selection bias can also crop up when the only data available is influenced by historical bias — systematic influence based on historic social and cultural beliefs. ### 2. Bias in building and optimizing algorithms Algorithmic bias arises when an algorithm produces systematic and repeatable errors that lead to unfair outcomes, such as privileging one group over another. Algorithmic bias can be initiated through selection bias and then reinforced and perpetuated by other bias types. http://gendershades.org/index.html &gt; [!info]  Testing an algorithm with a non-representative dataset leads to evaluation bias. Testing with a non-representative benchmarking dataset would give high overall accuracy scores, even if the algorithms were inaccurate for certain groups.\n\n\n\nConfirmation bias leads us to favor information that supports our beliefs. To avoid this, clearly define your goals and hypotheses before analyzing data, and then honestly assess how your beliefs influenced your interpretation.\nOvergeneralization bias is applying conclusions drawn from one dataset to other datasets without proper justification. To avoid this, carefully consider the limitations of your data when interpreting results and only extend them to other datasets or populations when it is appropriate.\n\nReporting bias is selectively reporting or sharing favorable results while omitting unfavorable ones. To combat this bias, report all results, including negative ones, and give credit to others who do the same.",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence",
-      "ML Terminologies"
-    ]
-  },
-  {
-    "objectID": "notes/AI/ml terminologies.html#cleaned-vs-raw-data",
-    "href": "notes/AI/ml terminologies.html#cleaned-vs-raw-data",
-    "title": "ML Terminologies",
-    "section": "Cleaned vs Raw data",
-    "text": "Cleaned vs Raw data\nDatasets published on kaggle are ready to used, cleaned and filtered. Raw data offers control which can helpful whilst pre-cleaned data might disregard certain fields/rows which would have been useful. ## Data File formats 1. Tabular (csv, tsv, .xlsx) 2. Non-tabular(.tt, .rtf, .xml)\n3. image(.png, .jpg, .tif) 4. Agnodstic(.dat)\n\nRefer this for more datasets Harvard Dataverse",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence",
-      "ML Terminologies"
-    ]
-  },
-  {
-    "objectID": "notes/AI/ml terminologies.html#binomial-distribution",
-    "href": "notes/AI/ml terminologies.html#binomial-distribution",
-    "title": "ML Terminologies",
-    "section": "Binomial Distribution",
-    "text": "Binomial Distribution\nBinomial distributions are very useful for modeling different types of data, from drug treatment effectiveness to stock price trends. Binomial events always have 2 possible outcomes, which we refer to as success and failure.\nimport numpy\nnumpy.random.binomial(n=1, p=0.5, size=2000)   ##Returns list of outputs\n## 1 flip per trial size of 2000 with a probability of 0.5",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence",
-      "ML Terminologies"
-    ]
-  },
-  {
-    "objectID": "notes/AI/ml terminologies.html#ml-vs-traditional-programming",
-    "href": "notes/AI/ml terminologies.html#ml-vs-traditional-programming",
-    "title": "ML Terminologies",
-    "section": "ML Vs Traditional Programming",
-    "text": "ML Vs Traditional Programming\nIn traditional programming, your code (rules) compiles into a binary that is typically called a program. In ML, the item that you create from the data and labels is called a model.   You pass the model some data and the model uses the rules that it inferred from the training to make a prediction  ## Hello World Machine Learning https://colab.research.google.com/github/lmoroney/mlday-tokyo/blob/master/Lab1-Hello-ML-World.ipynb#scrollTo=DzbtdRcZDO9B # ML ## What is machine learning? Computer programs that uses algorithms to analyze data and make intelligent predictions based on the data without being explicitly programmed.",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence",
-      "ML Terminologies"
-    ]
-  },
-  {
-    "objectID": "notes/AI/ml terminologies.html#types-of-machine-learning-systems",
-    "href": "notes/AI/ml terminologies.html#types-of-machine-learning-systems",
-    "title": "ML Terminologies",
-    "section": "Types of Machine learning systems:",
-    "text": "Types of Machine learning systems:\n\nSupervised Learning : In supervised learning; we feed the data to algorithms, in which that data are labeled and we know what our output should like having the relationship between the input values “X” and Output values “Y”\nUnsupervised Learning : In this data is not labelled instead pattern recognition is being relied on to generate algorithms\nReinforcement Learning :",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence",
-      "ML Terminologies"
-    ]
-  },
-  {
-    "objectID": "notes/AI/ml terminologies.html#supervised-learning-vs-unsupervised-learning",
-    "href": "notes/AI/ml terminologies.html#supervised-learning-vs-unsupervised-learning",
-    "title": "ML Terminologies",
-    "section": "Supervised Learning Vs Unsupervised Learning",
-    "text": "Supervised Learning Vs Unsupervised Learning\n\nSupervised learning\n\nRegression Problem : Problems which can contain continuous values. For eg: Price of mobiles can be in any range.\nClassification problem : Problems which can contain discrete values. For eg: Brand of mobile\n\n\nIt contains input features Xs along with output features Y and there is some kind of relationship between X and Y where X is called independent feature and Y is called dependent feature.\nSomeone is supervising the data (X and Y)",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence",
-      "ML Terminologies"
-    ]
-  },
-  {
-    "objectID": "notes/AI/index.html",
-    "href": "notes/AI/index.html",
-    "title": "Artificial Intelligence",
-    "section": "",
-    "text": "Notes about latest ai developments, llms, agents & visual models.\n\n\n\n\n\n\n\n\n\nTitle\n\n\nDescription\n\n\n\n\n\n\nAI Fundamentals\n\n\n\n\n\n\n\nMCP Model Context Protocol\n\n\n\n\n\n\n\nML Terminologies\n\n\n\n\n\n\n\n\nNo matching items",
-    "crumbs": [
-      "Notes",
-      "Artificial Intelligence"
+      "Engineering"
     ]
   },
   {
