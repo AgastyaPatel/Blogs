@@ -1,0 +1,6 @@
+listing:
+  fields: [title]
+  type: table
+  sort-ui: true
+  filter-ui: true
+  max-description-length: 25

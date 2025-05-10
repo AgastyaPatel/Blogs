@@ -1,14 +1,17 @@
 ---
 title: "Blogs"
-sidebar: true
 listing:
   contents: blogs
   sort: "date desc"
   type: default
   categories: true
-  sort-ui: false
+  sort-ui: true
   filter-ui: true
   fields: [date, title, description, image, reading-time, categories]
   date-format: "YYYY-MM-DD"
   image-placeholder: "placeholder.png"  # Optional: default image if no thumbnail
+metadata-files: ["_listing_meta.yml"]
+sidebar_position: 1
 ---
+
+Welcome to my blog! Here you'll find my thoughts and writings on various topics. You can find also find my notes which might be short but useful.

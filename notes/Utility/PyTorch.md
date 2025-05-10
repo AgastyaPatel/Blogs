@@ -3,7 +3,7 @@ title: PyTorch Reference
 author: Agastya Patel
 date: 2024-01-16
 date-modified: today
-categories: ['Reference']
+categories: ['Reference', 'PyTorch']
 ---
 ### Getting started
 Creating tensor: `tns = torch.tensor(2500, dtype = torch.int)` ## torch.float is another dtype

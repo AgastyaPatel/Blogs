@@ -3,6 +3,7 @@ title: "Package Manager and Environments"
 author: "Agastya Patel"
 date: "2024-01-24"
 date-modified: "2023-12-30"
+categories: ['Package', 'Env']
 ---
 >[!info]- Common used python packages\
 >- numPy for working with custom data types\
